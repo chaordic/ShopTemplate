@@ -1,0 +1,98 @@
+var products = [
+	{
+		"name": "Samsung Galaxy S7 Edge 128GB B. Piano",
+		"price": 1549.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G935F-PRETO-128GB-PPB-PI107-04/p/TGSA295K2000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1849",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h62/hdd/8888938856478/1200x850-Recortes-LO-Samsung-GalaxyS7-Edge32GB-Pretodsfdsf.png"
+	},
+	{
+		"name": "Galaxy S7 Edge 32GB - 4G Dourado",
+		"price": 1099.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G935F-SMART-DOURADO-PPB-PI107-04/p/TGSA28732000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1399",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h94/h7e/8889144836126/1200x850-Recortes-LO-Samsung-GalaxyS7-Edge32GB-Golddsfdsfsdfds.png"
+	},
+	// {
+	// 	"name": "Galaxy S7 Edge 32GB - 4G Prata",
+	// 	"price": 1099.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G935F-SMART-PRATA-PPB-PI107-04/p/TGSA28742000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1399",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hc9/h04/8889146015774/1200x850-Recortes-LO-Samsung-GalaxyS7-Edge32GB-Pratadsfsdfdsfds.png"
+	// },
+	// {
+	// 	"name": "Galaxy S7 Edge 32GB - 4G Azul",
+	// 	"price": 1099.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G935F-SMART-AZUL-PPB-PI107-04/p/TGSA28712000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1399",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hb8/he6/8889020776478/1200x850-Recortes-LO-Samsung-GalaxyS7-Edge32GB-Azulsdfdsfsd.png"
+	// },
+	// {
+	// 	"name": "Galaxy S7 Edge 32GB - 4G Preto",
+	// 	"price": 1099.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G935F-SMART-PRETO-PPB-PI107-04/p/TGSA28762000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1399",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h09/hc1/8889147392030/1200x850-Recortes-LO-Samsung-GalaxyS7-Edge32GB-Pretogdsgds.png"
+	// },
+	{
+		"name": "Galaxy S7 32GB - 4G Dourado",
+		"price": 799.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G930F-SMART-DOURADO-PPB-PI107-04/p/TGSA28632000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1099",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h19/h79/8889098305566/1200x850-Recortes-LO-Samsung-GalaxyS7-32GB-Goldsfsdfsdfsdf.png"
+	},
+	{
+		"name": "Galaxy S7 32GB - 4G Preto",
+		"price": 799.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G930F-SMART-PRETO-PPB-PI107-04/p/TGSA28662000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1099",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hbb/h14/8889123471390/1200x850-Recortes-LO-Samsung-GalaxyS7-32GB-Blackwqwedwwe.png"
+	},
+	{
+		"name": "Galaxy S7 32GB - 4G Prata",
+		"price": 799.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-G930F-SMART-PRATA-PPB-PI107-04/p/TGSA28642000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1099",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hd9/h8e/8853984313374/-0002-SM-G930F-001-Front-Silverasdasd.png"
+	},
+	// {
+	// 	"name": "LG G6 - 4G Platinum",
+	// 	"price": 799.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/LG-H870-SMARTPHONE-PLATINUM-PPB-PI769-07/p/TGLG276C2000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=1099",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hfa/h32/9402640990238/1200x850-Recortes-LO-LGG6-Platinumgdfgdfgdfs.png"
+	// },
+	// {
+	// 	"name": "Moto G5 - 4G Cinza",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/MOTOROLA-XT1672-PLATINUM-PPB-PI769-07/p/TGMO346C2000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/he0/h8e/8888947867678/recortes-motog5-0004-Moto-G-5-DkGryDv-FrntSide.png"
+	// },
+	// {
+	// 	"name": "Galaxy J5 - 4G Dourado",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-J500-DS-SMART-DOUR%C2%A0-PPB-PI107-04/p/TGSA28132007?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h9b/h72/8891219116062/1200x850-Recortes-LO-J5-Goldfgdfg.png"
+	// },
+	// {
+	// 	"name": "Galaxy J5 - 4G Branco",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-J500-DS-SMART-BRCO%C2%A0-PPB-PI107-04/p/TGSA28122007?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h8e/h43/8889720832030/1200x850-Recortes-LO-Samsung-J5-LTE-Brancodsffpng-ConversionFormat-96Wx96H.png"
+	// },
+	// {
+	// 	"name": "Galaxy J5 - 4G Preto",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-J500-DS-SMART-PRTO-PPB-PI107-04/p/TGSA28162000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hfc/h79/8889723584542/1200x850-Recortes-LO-Samsung-J5-LTE-Pretouhiujoij.png"
+	// },
+	// {
+	// 	"name": "Galaxy J5 - 4G Branco",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/SAMSUNG-J500-DS-SMART-BRCO-PPB-PI107-04/p/TGSA28122000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/ha0/hc5/8889731448862/1200x850-Recortes-LO-Samsung-J5-LTE-Brancofsedfdsf.png"
+	// },
+	{
+		"name": "Moto C Plus - 4G Preto",
+		"price": 49.00,
+		"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/MOTOROLA-XT1726-SMARTPHONE-PRETO/p/TGMO35462000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+		"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/hb4/h9d/8878216052766/recortes-0006-MotoCPlus-Frontal-blackdkjsgfdfghdfsghjgfdhgjdfhg.png"
+	},
+	// {
+	// 	"name": "Moto C Plus - 4G Dourado",
+	// 	"price": 49.00,
+	// 	"url": "https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/MOTOROLA-XT1726-SMARTPHONE-DOURADO/p/TGMO35432000?bestPlanCode=PLSMT6GB2016CF&bestPlpPrice=49",
+	// 	"image": "https://lojaonline.vivo.com.br/medias/sys_master/root/h5e/h70/8878213693470/recortes-0000-MotoCPlus-Frontalkjyrksfkfkfxkxfhk.png"
+	// }
+   ];

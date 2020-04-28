@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+        Document
+
+    </title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+        body,
+        body * {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .main,
+        .section {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .main.s--lead {
+            width: 748px;
+            height: 450px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -225px auto 0;
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/vitacon/2018/1/8/lead/bg.png);
+            border-radius: 8px;
+            background-position: 0 center;
+
+            -webkit-transition: all ease-in 620ms;
+            -moz-transition: all ease-in 620ms;
+            -ms-transition: all ease-in 620ms;
+            -o-transition: all ease-in 620ms;
+            transition: all ease-in 620ms;
+
+        }
+
+        .is--hide {
+            opacity: 0;
+            display: none;
+        }
+
+        .btn {
+            cursor: pointer;
+            outline: none;
+            background-color: transparent;
+            font-size: 0;
+        }
+
+        .btn.s--close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 18px;
+            width: 36px;
+            height: 36px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .section.s--home {
+            padding-top: 80px;
+        }
+
+        .header.s--header {
+            text-align: center;
+        }
+
+        .section.s--content {
+            padding-top: 40px;
+        }
+
+        .section.s--content h3 {
+            font-size: 22px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .section.s--content h5 {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 100;
+            margin: 10px 0 15px;
+        }
+
+        form {
+            text-align: center;
+            width: 70%;
+            margin: 0 auto;
+            font-size: 0;
+        }
+
+        form * {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        form input {
+            width: 45%;
+            margin: 10px 2.5%;
+            background-color: #fff;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+
+        form input::placeholder {
+            font-style: italic;
+            font-size: 12px;
+            color: #4c4c4c;
+        }
+
+        .btn.s--submit {
+            font-size: 16px;
+            color: #FFFFFF;
+            font-weight: bold;
+            outline: solid 2px #FFFFFF;
+            width: 44%;
+            padding: 7px 0;
+            margin: 10px 2.5%;
+        }
+
+        .section.s--thanks {
+            padding-top: 140px;
+        }
+
+        .section.s--thanks .row {
+            text-align: center;
+        }
+
+        .section.s--thanks .row > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .figure.s--brand {
+            padding: 40px 40px 40px 0;
+        }
+
+        .figure.s--border-right {
+            border-right: solid 1px #FFFFFF;
+        }
+
+        .article.s--thanks {
+            padding-left: 50px;
+        }
+
+        .article.s--thanks h2 {
+            color: #ffffff;
+            font-size: 26px;
+            display: block;
+            text-align: left;
+        }
+
+        .article.s--thanks h5 {
+            display: block;
+            text-align: left;
+            color: #FFFFFF;
+            font-weight: 300;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .btn.s--cta {
+            margin-top: 20px;
+            font-size: 16px;
+            display: block;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-top: 20px;
+            padding: 8px 50px;
+            outline: solid 2px #FFFFFF;
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -30px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+<div style="display: none;opacity: 0;" class="main s--lead">
+    <button class="btn s--close" onclick="top.spl.close();"> <i class="fa fa-times" aria-hidden="true"></i> </button>
+    <div class="section s--home">
+        <div class="header s--header"><img src="http://via.placeholder.com/295x69?text=LOGO" alt="Vitacon" /></div>
+        <div class="section s--content">
+            <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR <br> ADIPISICING ELIT. FUGA NAM NOSTRUM SED SUSCIPIT UT.</h3>
+            <h5>Lorem ipsum dolor sit amet, consectetur.</h5>
+            <form>
+                <input type="text" required="" placeholder="Nome" name="Nome" id="name" />
+                <input type="text" required="" placeholder="E-mail" name="Email" id="email" />
+                <input type="text" required="" placeholder="Telefone" name="Telefone" id="phone" />
+                <button class="btn s--submit"> ENVIAR </button>
+            </form>
+        </div>
+    </div>
+    <div class="section s--thanks is--hide">
+        <div class="row">
+            <figure class="figure s--brand s--border-right"><img src="http://via.placeholder.com/295x69?text=LOGO" alt="Vitacon" /></figure>
+            <div class="article s--thanks">
+                <h2>OBRIGADO</h2>
+                <h5>Em breve, entraremos em contato!</h5>
+                <button class="btn s--cta" onclick="top.spl.redirect();"> VOLTAR AO SITE </button>
+            </div>
+        </div>
+    </div>
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/9484a7aa31.js"></script>
+<script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/assets/libs/plugins/jquery.mask.input.js"></script>
+<script>
+    // <![CDATA[
+    $("#phone").mask("(99) 9 9999-9999");
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                setTimeout(function(){
+                    $("body").removeClass("js-hide");
+                }, 1000);
+
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".main").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".main").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".main").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+    var beginPos = 750,
+        carrousselBG = setInterval(function(){
+
+            $('.main.s--lead').css({
+
+                'background-position': "-" + beginPos + "px center"
+
+            });
+
+            beginPos += 750;
+
+        }, 4820);
+
+    $("form").submit(function() {
+        return false;
+
+    });
+    // ]]>
+</script>
+</body>
+
+</html>

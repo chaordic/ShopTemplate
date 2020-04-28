@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'House Gothic HG23 Text';
+  src: url('HouseGothicHG23Text-Bold.eot');
+  src: url('HouseGothicHG23Text-Bold.woff2') format('woff2'),
+       url('HouseGothicHG23Text-Bold.woff') format('woff'),
+       url('HouseGothicHG23Text-Bold.ttf') format('truetype'),
+       url('HouseGothicHG23Text-Bold.svg#HouseGothicHG23Text-Bold') format('svg'),
+       url('HouseGothicHG23Text-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'House Gothic HG23 Text';
+  src: url('HouseGothicHG23Text-Light.eot');
+  src: url('HouseGothicHG23Text-Light.woff2') format('woff2'),
+       url('HouseGothicHG23Text-Light.woff') format('woff'),
+       url('HouseGothicHG23Text-Light.ttf') format('truetype'),
+       url('HouseGothicHG23Text-Light.svg#HouseGothicHG23Text-Light') format('svg'),
+       url('HouseGothicHG23Text-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+

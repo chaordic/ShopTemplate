@@ -1,0 +1,349 @@
+body {
+  font-family: "Dosis", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+b {
+  font-weight: bold; }
+
+img {
+  max-width: 100%; }
+
+.c-list--footer, .c-footer {
+  position: relative; }
+
+.c-list--division:after {
+  content: "";
+  display: block; }
+
+.txt-center, .c-carousel__title, .c-carousel__label, .c-footer__copyright-label {
+  text-align: center; }
+
+.txt-left {
+  text-align: left; }
+
+.txt-right {
+  text-align: right; }
+
+.c-form, .c-form__input, .c-carousel, .c-carousel__item {
+  box-sizing: border-box; }
+
+.c-list {
+  list-style: none;
+  padding: 0;
+  display: block; }
+  .c-list--footer {
+    padding: 0 0 10px 0; }
+  .c-list__item {
+    padding: 5px 0; }
+  .c-list--division {
+    width: 100%; }
+    .c-list--division:after {
+      width: 1px;
+      height: 90%;
+      background-color: #959595;
+      position: absolute;
+      right: 0;
+      top: -10px; }
+
+.c-footer{
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+@media only screen and (max-width: 960px) {
+  .c-list--division-md:after {
+    display: none; } }
+
+.c-link {
+  text-decoration: none; }
+  .c-link--list-footer {
+    font-size: 14px;
+    color: #484848;
+    font-weight: 400; }
+  .c-link--redes-sociais {
+    width: 100%;
+    display: inline; }
+
+.c-btn {
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer; }
+  .c-btn--send {
+    background-color: #FA9E23;
+    font-size: 14px;
+    line-height: 25px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-style: italic;
+    vertical-align: middle; }
+  .c-btn--newsletter {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .c-btn--prev, .c-btn--next {
+    position: absolute;
+    top: 50%;
+    margin-top: -46px;
+    width: 20px;
+    background-color: transparent; }
+  .c-btn--prev {
+    left: 15px; }
+  .c-btn--next {
+    right: 15px; }
+
+@media only screen and (max-width: 768px) {
+  .c-btn--newsletter {
+    display: block;
+    margin-left: 1%;
+    margin-top: 5px; } 
+
+    .custom-mobile-offset-1{
+      
+      margin-left: 8% !important;
+
+    }
+
+  }
+
+.c-figure {
+  max-width: 100%;
+  margin: 0;
+  outline: none;
+  border: none; }
+  .c-figure--redes-sociais {
+    width: 50%;
+    margin: 5px auto;
+    display: block; }
+
+.c-newsletter {
+  background-color: #4c247d;
+  padding: 20px 0; }
+  .c-newsletter__title {
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 15px;}
+
+.c-form {
+  position: relative; }
+  .c-form--newsletter {
+    font-size: 0;
+    padding: 10px 0 0;
+    width: 100%;
+    margin: 0 auto; }
+  .c-form--newsletter .c-form__input {
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 25px; }
+    .c-form--newsletter .c-form__input::placeholder {
+      font-style: italic; }
+  .c-form__input {
+    border: none;
+    outline: none; }
+
+.is-relative{
+
+  position: relative;
+
+}
+
+.c-iframe{
+  
+  display: block;
+  margin: 0;
+  outline: none;
+  border: none;
+
+}
+
+
+.c-iframe--video-shopad{
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
+
+@media only screen and (min-width: 1200px){
+
+  .c-iframe--video-shopad{
+    
+    width: 72%;
+    top: 20px;
+    height: 280px;
+
+  }
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1200px){
+  
+  .c-iframe--video-shopad{
+    
+    top: 4%;
+    width: 87%;
+    height: 63%;
+
+  }
+
+}
+
+@media only screen and (min-width: 328px) and (max-width: 960px){
+  
+  .c-iframe--video-shopad{
+    
+    top: 4%;
+    width: 86%;
+    height: 63%;
+
+  }
+
+}
+
+
+@media only screen and (min-width: 960px) {
+  .c-form--newsletter {
+    width: 960px; }
+  .c-form--newsletter .c-form__input {
+    width: 33%;
+    margin: 0 1%; } }
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .c-form--newsletter {
+    width: 768px; }
+  .c-form--newsletter .c-form__input {
+    width: 38%;
+    margin: 0 1%; } }
+
+@media only screen and (max-width: 768px) {
+  .c-form--newsletter {
+    width: 95%; }
+  .c-form--newsletter .c-form__input {
+    width: 100%;
+    margin: 5px 1%; }
+}
+
+.c-carousel {
+  padding: 15px 0;
+  background-color: #EEEEEE; }
+  .c-carousel--shopad .c-carousel__content {
+    padding: 30px 0; }
+  .c-carousel__title {
+    font-size: 24px;
+    color: #4c247d; }
+  .c-carousel__content {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto; }
+  .c-carousel__items {
+    position: relative; }
+  .c-carousel__item {
+    padding: 0 15px; }
+  .c-carousel__label {
+    font-size: 14px;
+    padding: 10px 0;
+    color: #959595; }
+
+@media only screen and (min-width: 1200px) {
+  .c-carousel__content {
+    height: 360px; }
+  .c-carousel__content .owl-item {
+    width: 15vw !important; } }
+
+.footer {
+  background-color: #f8f8f8; }
+
+.c-footer {
+  padding: 15px 0 0; }
+  .c-footer__content {
+    padding: 10px 0; }
+  .c-footer__label {
+    padding: 20px 0; }
+  .c-footer__title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #484848; }
+  .c-footer__endereco {
+    font-size: 16px;
+    color: #484848; }
+  .c-footer__box-endereco {
+    margin-top: 10px; }
+  .c-footer__copyright {
+    background-color: #959595;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  .c-footer__copyright-label {
+    color: #484848;
+    font-size: 14px; }
+
+@media only screen and (max-width: 960px) {
+  .c-footer__box-endereco {
+    margin-top: 0; } }
+
+.c-link--list-footer.is-active {
+  color: #FA9E23; }
+
+.monitor-screen{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 73%;
+    top: 15px;
+}
+
+.owl-carousel .owl-item .notebook-screen{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 15px;
+    width: 66% !important;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    .monitor-screen{
+        width: 88%;
+    }
+    .owl-carousel .owl-item .notebook-screen{
+        width: 70% !important;
+        top: 13px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 570px) {
+    .monitor-screen{
+        width: 493px;
+    }
+
+    .owl-carousel .owl-item .notebook-screen{
+        width: 70% !important;
+        top: 13px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .monitor-screen{
+        width: 68%;
+    }
+
+    .owl-carousel .owl-item .notebook-screen{
+        width: 73% !important;
+        top: 13px;
+    }
+}
+
+@media only screen and (max-width: 543px) {
+
+    .owl-carousel .owl-item .notebook-screen{
+        width: 70% !important;
+        top: 12px;
+    }
+}

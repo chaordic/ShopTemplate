@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead</title>
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+        body,
+        body *{
+
+            padding 				: 0;
+            margin 					: 0;
+            outline 				: none;
+            border 					: none;
+            background-color 		: transparent;
+            font-family 			: 'Lato', Arial, "Helvetica Neue", Helvetica, sans-serif;
+            max-width 				: 100%;
+
+        }
+
+        button{
+
+            cursor 					: pointer;
+
+        }
+
+        .Lead.close{
+
+            position 				: absolute;
+            top 					: 3%;
+            right 					: 1%;
+            width 					: 30px;
+            height 					: 30px;
+
+        }
+
+        .Lead.close:before,
+        .Lead.close:after{
+
+            width 					: 24px;
+            height 					: 2px;
+            background-color 		: #aaaaaa;
+            position 				: absolute;
+            left 					: 4px;
+            top 					: 13px;
+
+        }
+
+        .Lead.close:before{
+
+            -webkit-transform 		: rotateZ(-45deg);
+            -moz-transform 			: rotateZ(-45deg);
+            -o-transform 			: rotateZ(-45deg);
+            transform 				: rotateZ(-45deg);
+
+        }
+
+        .Lead.close:after{
+
+            -webkit-transform 		: rotateZ(45deg);
+            -moz-transform 			: rotateZ(45deg);
+            -o-transform 			: rotateZ(45deg);
+            transform 				: rotateZ(45deg);
+
+        }
+
+
+        .Lead.box{
+
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: 0 auto;
+            width: 800px;
+            height: 480px;
+            background-color: #ffffff;
+            margin-top: -240px;
+            background-image: url(http://via.placeholder.com/300x480?text=Banner);
+            background-position: center left;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+
+        }
+
+        .Lead.container{
+
+            font-size 				: 0;
+            width 					: auto;
+            background-color 		: #ffffff;
+            max-width 				: 56%;
+            height 					: 480px;
+            position 				: relative;
+            margin-left 			: 300px;
+
+        }
+
+        .Lead.container:before,
+        .Lead.close:before,
+        .Lead.close:after{
+
+            content 				: "";
+            display 				: block;
+
+        }
+
+        .Lead.container *{
+
+            font-size 				: 14px;
+
+        }
+
+        .Lead.question,
+        .Lead.thanks{
+
+            display 				: inline-block;
+            -webkit-box-sizing 		: border-box;
+            -moz-box-sizing 		: border-box;
+            box-sizing 				: border-box;
+            padding 				: 5%;
+            width 					: 100%;
+
+        }
+
+        .Lead.question .Lead.header{
+
+            width 					: 100%;
+            text-align 				: center;
+            margin-top 				: 15px;
+
+        }
+
+        .Lead.question .Lead.header h2{
+
+            font-size 				: 26px;
+            display 				: inline-block;
+            font-weight 			: 500;
+            color 					: #3a3a3a;
+            text-align: left;
+            padding-top: 30px;
+
+        }
+
+        .Lead.question .Lead.header h2 b{
+            font-size: 32px;
+            color: #333333;
+            display: block;
+            text-align: center;
+        }
+
+        .Lead.question .Lead.header h2 span,
+        .Lead.question .Lead.header h4 span{
+
+            color: #fc8031;
+            font-weight: bold;
+
+        }
+
+        .Lead.question .Lead.header h2 span{
+
+            font-size: 26px;
+
+        }
+
+        .Lead.question .Lead.header h4{
+
+            font-size 				: 23px;
+            font-weight 			: 100;
+            margin-top 				: 5px;
+            color 					: #262f2e;
+            text-align: left;
+            padding: 0 25px;
+
+        }
+
+        .Lead.question .Lead.header h4 span{
+
+            font-size: 23px;
+
+        }
+
+        .Lead.send{
+
+            padding-top 			: 40px;
+
+        }
+
+        .Lead.send input,
+        .Lead.send .Lead.submit{
+
+            width 					: 70%;
+            margin 					: 0 15%;
+            -webkit-box-sizing 		: border-box;
+            -moz-box-sizing 		: border-box;
+            box-sizing 				: border-box;
+
+        }
+
+        .Lead.send input{
+
+            padding 				: 10px 4%;
+            border 					: none;
+            font-weight 			: 100;
+            background-color 		: #ebebeb;
+            margin: 5px 15%;
+            font-size: 12px;
+
+        }
+
+        .Lead.send input::placeholder{
+
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+
+        }
+
+        .Lead.send .Lead.submit,
+        .Lead.submit{
+
+            background-color 		: #333333;
+            margin 				: 10px auto 0;
+            font-size 				: 18px;
+            padding 				: 5px 0;
+            cursor 					: pointer;
+            overflow 				: hidden;
+            color 					: #fff;
+            max-width: 50%;
+            display: block;
+            border-radius: 3px;
+            font-weight: bold;
+
+        }
+
+        .Lead.submit{
+            padding: 15px;
+            width: 240px;
+            max-width: 100%;
+        }
+
+        .Lead.send .Lead.submit,
+        .Lead.send .Lead.submit:hover{
+
+            -webkit-transition 		: all 220ms cubic-bezier( .420, -0.850, .620, 1.980);
+            -moz-transition 		: all 220ms cubic-bezier( .420, -0.850, .620, 1.980);
+            -o-transition 			: all 220ms cubic-bezier( .420, -0.850, .620, 1.980);
+            transition 				: all 220ms cubic-bezier( .420, -0.850, .620, 1.980);
+
+        }
+
+        .Lead.send .Lead.submit:hover{
+
+            -webkit-transform 		: scale(.9);
+            -moz-transform 			: scale(.9);
+            -o-transform 			: scale(.9);
+            transform 				: scale(.9);
+
+        }
+
+        .Lead.thanks{
+
+            padding-top 			: 25%;
+            text-align 				: center;
+
+        }
+
+        .Lead.thanks h2{
+
+            font-size 				: 24px;
+            line-height 			: 28px;
+            color 					: #000000;
+            display 				: inline-block;
+            padding 				: 0 0 8px 0;
+            font-weight: 500;
+
+        }
+
+        .Lead.thanks h2 span{
+
+            font-size: 20px;
+            font-weight: bold;
+            color: #2e5790;
+
+        }
+
+        .Lead.thanks h3{
+
+            font-size 				: 26px;
+            font-weight 			: 300;
+            margin-top 				: 5px;
+
+        }
+
+        .Lead.redirect{
+
+            background-color 		: #000000;
+            padding 				: 7px 10%;
+            font-size 				: 14px;
+            font-weight 			: bold;
+            margin-top 				: 30px;
+            color 					: #FFFFFF;
+
+        }
+
+        .c-figure{
+
+            max-width: 100%;
+            margin: 0;
+            display: inline-block;
+            outline: none;
+            border: none;
+
+        }
+
+        .c-figure--brand{
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+
+        .c-figure--check{
+
+            margin-bottom: 20px;
+
+        }
+
+        .c-figure--float{
+
+            position: absolute;
+            bottom: 15px;
+            right: -40px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<section style="display: none;opacity: 0;" class="Lead box">
+
+    <button class="Lead close" onclick="top.spl.close();"></button>
+
+    <section class="Lead container">
+
+        <div class="Lead question" >
+
+            <header class="Lead header">
+
+                <img src="http://via.placeholder.com/273x49?text=Logo" alt="" class="c-figure c-figure--brand">
+
+                <h2>
+
+                    CADASTRE-SE, PARA RECEBER <br>
+                    RECOMENDAÇÕES E OFERTAS <br>
+                    <b>EXCLUSIVAS!!</b>
+
+                </h2>
+
+            </header>
+
+            <form class="Lead send">
+
+                <input required type="text" placeholder="Nome" name="Nome" id="nome">
+
+                <input required type="email" placeholder="E-mail" name="Email" id="email">
+                <button class="Lead submit">
+                    ENVIAR
+                </button>
+
+            </form>
+
+        </div>
+        <div class="Lead thanks" style="display: none; opacity: 0;">
+
+            <img src="https://static.shopback.net/shopconvert/uploads/imagens/dentalmedsul/2018/04/20/lead/check.png" alt="" class="c-figure c-figure--check">
+
+            <h2>
+
+					<span>
+
+						OBRIGADO, <br><br>
+
+					</span>
+
+                LOGO ENVIAREMOS NOSSAS <br>OFERTAS PRA VOCÊ!
+
+            </h2>
+
+            <button onclick="top.spl.redirect();" class="Lead submit">
+                CONTINUAR NO SITE
+            </button>
+
+        </div>
+
+    </section>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</section>
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+    top.spl.redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Lead'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        top.spl.click_only(_link);
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+</script>
+<script type="text/javascript">
+
+    $(function(){
+
+        $("form").submit(function(){
+
+            return false;
+
+        });
+
+        if(!top.spl){
+            var _show = false;
+            $(window.top).mouseout(function(_evt){
+                if(!_show && _evt.clientY < 0){
+                    _show = true;
+                    $("#ovteste, #m-backdrop", top.document).show();
+                    $(".Lead.box").css("display", "block").stop().animate({
+                        opacity: "1"
+                    }, 500);
+                    top.spl = {};
+                    top.spl.close = function(){
+                        $(".Lead.box").animate({
+                            opacity: "0"
+                        }, 500, function(){
+                            $(this).css("display", "none");
+                            $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                        });
+                    };
+                }
+            });
+        }
+
+        setTimeout(function () {
+            if(!_show){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".Lead.box").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".Lead.box").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        }, 2000);
+
+    });
+
+</script>
+
+</body>
+</html>

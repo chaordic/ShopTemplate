@@ -1,0 +1,608 @@
+@charset "UTF-8";
+
+@import url("https://shopbackbr.github.io/ShopTemplate/assets/fonts/FuturaSTD-all/font.css");
+
+@import url("https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css");/*
+	Theme Name: Themes for Shopback - 2017
+	Description: Themes for Shopback
+	Version: 4.0
+*//* RESET */html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}/* HTML5 display-role reset for older browsers */article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+blockquote,q {
+  quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+  content: none;
+}/* remember to highlight inserts somehow! */ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+abbr[title] {
+  border: none;
+}
+
+*,*:before,*:after,input[type="search"] {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}/* VARIABLES *//* HELPERS *//* ---------------------------------------------------------------------- *//*  Mixin
+/* ---------------------------------------------------------------------- *//* ---------------------------------------------------------------------- *//* 
+ /* Triangle helper mixin
+ /* @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+ /* @param {Color} $color [currentcolor] - Triangle color 
+ /* @param {Length} $size [1em] - Triangle size
+ /* 
+ /* ---------------------------------------------------------------------- *//* ---------------------------------------------------------------------- *//*	Basic Class
+/* ---------------------------------------------------------------------- */.poweredby {
+  display: block;
+  background-image: url(https://app.shopconvert.com.br/facebook/completo/assets/img/powered-by-shopback.png?44123);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 10px;
+  bottom: -30px;
+  width: 152px;
+  height: 25px;
+  opacity: .8;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  color: transparent;
+}
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  border: 0;
+}
+
+.btn-product {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  background: #ff0000;
+  border: 0;
+  margin-bottom: 4px;
+  padding: 5px 20px;
+}
+
+.btn-facebook {
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  max-width: 312px;
+  text-transform: none;
+}
+
+.btn-facebook i {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: url(https://static.sback.tech/shoptarget/uploads/imagens/icon-facebook.png) center center no-repeat;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn-facebook strong,.btn-facebook span {
+  font-family: Arial, sans-serif;
+}
+
+.btn-facebook strong {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.btn-facebook span {
+  color: #a5a5a5;
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+
+.btn-facebook:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.loader {
+  position: absolute;
+  display: block;
+  width: 84px;
+  height: 84px;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 12px solid #e6e6e6;
+  border-top: 12px solid #b3b3b3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  animation: a .9s linear infinite;
+  -webkit-animation: a .9s linear infinite;
+}/* PLUGINS *//* ---------------------------------------------------------------------- *//*	Slick Plugins
+/* ---------------------------------------------------------------------- */.section-carrousel {
+  margin: 0 auto;
+  width: 100%;
+  height: 385px;
+  position: relative;
+  padding: 0 30px;
+}
+
+#left,#right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 80px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#left:after,#left:before,#right:after,#right:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 3px;
+  height: 40px;
+  left: 10px;
+  background: #ff0000;
+}
+
+#left:after,#right:after {
+  bottom: 0;
+}
+
+#left:before,#right:before {
+  top: 0;
+}
+
+#left {
+  left: -29px;
+}
+
+#left:after {
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg);
+}
+
+#left:before {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+#right {
+  right: -26px;
+}
+
+#right:after {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+#right:before {
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg);
+}/* ASSETS *//* ---------------------------------------------------------------------- *//*	Base Elements
+/* ---------------------------------------------------------------------- */* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #202020;
+  background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/bg.png?nocache);
+  background-position: center center;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "FuturaStd", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+ /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+input,select,textarea,button {
+  font-family: "FuturaStd", Arial, sans-serif;
+  color: #202020;
+  -webkit-font-smoothing: antialiased;
+ /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}/* ---------------------------------------------------------------------- *//*	Product
+/* ---------------------------------------------------------------------- */.figure-product {
+  padding: 0 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.figure-product > span {
+  display: block;
+  font-size: 0;
+  height: 200px;
+  line-height: 200px;
+}
+
+.figure-product > span img {
+  display: inline-block !important;
+  vertical-align: middle;
+  max-height: 200px;
+}
+
+.figure-product h3 {
+  margin-top: 10px;
+  height: 49px;
+  overflow: hidden;
+  font-weight: 300;
+  color: #202020;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.figure-product .old-price {
+  margin: 5px 0;
+  font-weight: 300;
+  color: #202020;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.figure-product .old-price span {
+  text-decoration: line-through;
+}
+
+.figure-product .price {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #202020;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.figure-product .price span {
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.figure-product .installments {
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #202020;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.figure-product [installments=''],.figure-product [old-price=''] {
+  display: none;
+  visibility: hidden;
+}/* OVERLAY *//* ---------------------------------------------------------------------- *//*	Overlay
+/* ---------------------------------------------------------------------- */.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay .overlay-main {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  padding: 20px;
+  background: transparent;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.overlay .overlay-main .close {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9;
+}
+
+.overlay .overlay-main .close-text {
+  top: -20px;
+  right: 10px;
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: bold;
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+.overlay .overlay-main .close-x {
+  width: 26px;
+  height: 26px;
+  right: 15px;
+  top: 15px;
+  font-size: 0;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.overlay .overlay-main .close-x:before,.overlay .overlay-main .close-x:after {
+  content: "";
+  display: block;
+  background-color: #acacac;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.overlay .overlay-main .close-x:before {
+  height: 2px;
+  width: 22px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.overlay .overlay-main .close-x:after {
+  height: 22px;
+  width: 2px;
+  top: 2px;
+}
+
+.overlay .overlay-content {
+  position: relative;
+  background: #fff;
+  margin: 0 22px;
+}/* ---------------------------------------------------------------------- *//*	Overlay - Header
+/* ---------------------------------------------------------------------- */.overlay-header {
+  position: relative;
+  top: -40px;
+  text-align: center;
+  z-index: 5;
+  margin: 0 22px;
+}
+
+.overlay-header .logo {
+  height: 68px;
+  line-height: 68px;
+  margin-bottom: 15px;
+}
+
+.overlay-header .logo img {
+  max-height: 68px;
+}
+
+.overlay-header h2 {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 30px;
+  font-size: 3rem;
+}/* ---------------------------------------------------------------------- *//*	Overlay - Footer
+/* ---------------------------------------------------------------------- */.overlay-footer {
+  padding: 0 22px;
+}
+
+.overlay-footer .facebook-first {
+  padding-top: 10px;
+}
+
+.overlay-footer .facebook-first h5 {
+  float: left;
+  color: #343130;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.overlay-footer .facebook-first .btn-facebook {
+  float: right;
+}
+
+.overlay-footer .facebook-first:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.overlay-footer .facebook-thanks {
+  padding-top: 10px;
+  display: none;
+}
+
+.overlay-footer .facebook-thanks .figure-user {
+  float: left;
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background: #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.overlay-footer .facebook-thanks h4 {
+  color: #343130;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 60px;
+}
+
+.overlay-footer .facebook-thanks:after {
+  content: '';
+  display: block;
+  clear: both;
+}/* DEFAULT *//* ---------------------------------------------------------------------- *//*	Overlay Recomendação White
+/* ---------------------------------------------------------------------- */html.overlay-social-white body {
+  background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/bg-white.png?nocache);
+}
+
+html.overlay-social-white .logo,html.overlay-social-white .logo-black-friday {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+html.overlay-social-white .logo {
+  left: -32%;
+}
+
+html.overlay-social-white .logo-black-friday {
+  right: -60%;
+}
+
+html.overlay-social-white .overlay-main {
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+html.overlay-social-white .overlay-main .overlay-header {
+  top: 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+html.overlay-social-white .overlay-main .overlay-header h2 {
+  color: #333333;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+html.overlay-social-white .overlay-main .overlay-footer {
+  border-top: 1px solid #ebebeb;
+}
+
+html.overlay-social-white .overlay-main .btn-facebook {
+  color: #343130;
+}
+
+html.overlay-social-white .overlay-main .btn-facebook i {
+  border-color: #343130;
+  -webkit-filter: brightness(0);
+  -moz-filter: brightness(0);
+  -ms-filter: brightness(0);
+  -o-filter: brightness(0);
+  filter: brightness(0);
+}
+
+html.overlay-social-white .overlay-main .btn-facebook span {
+  color: #a5a5a5;
+}
+
+html.overlay-social-white .overlay-main .btn-product {
+  width: 100%;
+}
+
+@-webkit-keyframes a {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes a {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

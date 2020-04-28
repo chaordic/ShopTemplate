@@ -1,0 +1,548 @@
+.bg-all {
+    background-image: url(../../assets/img/bg-header.png);
+    background-position: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.menu-flutuante {
+    font-family: 'Dosis', sans-serif;
+}
+
+.menu {
+    padding: 30px 0 20px 0;
+    box-shadow: 0px 6px 10px -8px #3a1753;
+}
+
+.menu ul {
+    float: right;
+    padding: 40px 0 0 0;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li.productsMenu {
+    position: relative;
+}
+
+
+.menu ul li.productsMenu a {
+    margin: 0 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu ul li.productsMenu a i {
+    background-image: url(../../assets/img/icon-off.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 0 -30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.menu ul li.color a {
+    color: #f6881c;
+}
+
+.menu ul li a:hover {
+    color: #f6881c;
+}
+
+/*MENU-PRODUTOS-DESK*/
+
+.sidenav-desk {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: -moz-linear-gradient( -30deg, rgba(81, 37, 135, 0.7) 0%, rgba(39, 1, 68, 1) 100%);
+    background-image: -webkit-linear-gradient( -30deg, rgba(81, 37, 135, 0.7) 0%, rgba(39, 1, 68, 1) 100%);
+    background-image: -ms-linear-gradient( -30deg, rgba(81, 37, 135, 0.7) 0%, rgba(39, 1, 68, 1) 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 160px;
+}
+
+.sidenav-desk .bg-sidenav-menu {
+    right: 0;
+    position: absolute;
+}
+
+.sidenav-desk a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    padding: 8px 40px 8px 32px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.sidenav-desk a:hover {
+    color: #f6881c;
+}
+
+.sidenav-desk .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*MENU-PRODUTOS-MOBILE*/
+
+.menuMobile {
+    background-image: url(../../assets/img/icon-mobile-off.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 0 -30px;
+    right: 20%;
+    margin-top: 41px;
+    cursor: pointer;   
+}
+
+.sidenav-mob {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-image: -moz-linear-gradient( -30deg, rgba(81, 37, 135, 1) 0%, rgba(39, 1, 68, 1) 100%);
+    background-image: -webkit-linear-gradient( -30deg, rgba(81, 37, 135, 1) 0%, rgba(39, 1, 68, 1) 100%);
+    background-image: -ms-linear-gradient( -30deg, rgba(81, 37, 135, 1) 0%, rgba(39, 1, 68, 1) 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 66px;
+}
+
+.sidenav-mob ul li {
+    list-style: none;
+}
+
+.sidenav-mob .bg-sidenav-menu {
+    left: 0;
+    position: absolute;
+}
+
+.sidenav-mob a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    padding: 8px 40px 8px 0px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.sidenav-mob .bg-sidenav-menu ul:first-child > li:first-child > a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    padding: 8px 40px 8px 0px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.sidenav-mob ul {
+    padding-left: 25px;
+}
+
+.sidenav-mob ul .itens {
+    display: none;
+}
+
+.sidenav-mob a:hover {
+    color: #f6881c;
+}
+
+.sidenav-mob .color a {
+    color: #f6881c;
+    font-weight: bold;
+}
+
+.sidenav-mob .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menublackout {
+    position: relative;
+    z-index: 0;
+}
+
+.menublackout.show {
+    opacity: 0.8;
+}
+
+
+/*MENU-FLUTUANTE*/
+.menu-flutuante {
+    padding: 30px 0 30px 0;
+    background: #ffffff;
+    min-height: 90px;
+    max-height: 119px;
+}
+
+.menu-flutuante ul {
+    float: right;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.menu-flutuante ul li {
+    display: inline-block;
+}
+
+.menu-flutuante ul li.productsMenuFlut {
+    position: relative;
+}
+
+
+.menu-flutuante ul li.productsMenuFlut a {
+    margin: 0 50px;
+    font-weight: bold;
+    position: relative;
+    color: #f6881c;
+}
+
+.menu-flutuante ul li.productsMenuFlut a i {
+    background-image: url(../../assets/img/icon-off.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 0 -30px;
+}
+
+.menu-flutuante ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.menu-flutuante ul li.color a {
+    color: #f6881c;
+}
+
+.menu-flutuante ul li a:hover {
+    color: #f6881c;
+}
+
+.menu-flutuante.opac-none {
+    opacity: 0;
+    display: none !important;
+}
+
+.flutuante-products {
+    height: 50px;  
+    margin-top: 5px;
+}
+
+.flutuante-products.opac-none {
+    opacity: 0;
+    display: none !important;
+}
+
+.flutuante-products .space {
+    float: left;
+}
+
+.flutuante-products .itens {
+    float: left;
+    padding-top: 10px;    
+    border-top: 1px solid #e8e8e8;
+    max-width: 73%; 
+    padding-left: 0;
+}
+
+.flutuante-products ul {
+    float: left;
+}
+
+.flutuante-products ul li:first-child a {
+    margin-left: 0;
+}
+
+/*MEDIA-QUERIES*/
+@media (min-width: 0px) and (max-width: 575px) {
+    .bg-all {
+        height: auto;
+        font-family: 'Dosis', sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .textHeader {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .textHeader h1 {
+        font-size: 25px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .textHeader h1 .color {
+        font-size: 25px;
+        color: #f6881c;
+    }
+
+    .textHeader p:nth-child(2) {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .textHeader p:nth-child(3) {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .textHeader .btnContact {
+        font-size: 16px;
+        color: #f6881c;
+        font-weight: bold;
+        border: 4px solid #f6881c;
+        width: 100%;
+        border-radius: 6px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+    .logo {
+        z-index: inherit;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .bg-all {
+        height: 548px;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .textHeader {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .textHeader h1 {
+        font-size: 25px;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+
+    .textHeader h1 .color {
+        font-size: 25px;
+        color: #f6881c;
+    }
+
+    .textHeader p:nth-child(2) {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .textHeader p:nth-child(3) {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .textHeader .btnContact {
+        font-size: 16px;
+        color: #f6881c;
+        font-weight: bold;
+        border: 4px solid #f6881c;
+        width: 200px;
+        border-radius: 6px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+    .logo {
+        z-index: inherit;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-all {
+        height: 568px;
+    }
+
+    .textHeader {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .textHeader h1 {
+        font-size: 28px;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+
+    .textHeader h1 .color {
+        font-size: 28px;
+        color: #f6881c;
+    }
+
+    .textHeader p:nth-child(2) {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .textHeader p:nth-child(3) {
+        font-size: 26px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .textHeader .btnContact {
+        font-size: 20px;
+        color: #f6881c;
+        font-weight: bold;
+        border: 4px solid #f6881c;
+        width: 300px;
+        border-radius: 6px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+    .logo {
+        z-index: inherit;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .bg-all {
+        height: 688px;
+    }
+
+    .textHeader {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .textHeader h1 {
+        font-size: 42px;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+
+    .textHeader h1 .color {
+        font-size: 42px;
+        color: #f6881c;
+    }
+
+    .textHeader p:nth-child(2) {
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .textHeader p:nth-child(3) {
+        font-size: 35px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .textHeader .btnContact {
+        font-size: 26px;
+        color: #f6881c;
+        font-weight: bold;
+        border: 4px solid #f6881c;
+        width: 400px;
+        border-radius: 6px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+    .logo {
+        z-index: inherit;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg-all {
+        height: 688px;
+    }
+
+    .textHeader {
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .textHeader h1 {
+        font-size: 48px;
+        color: #ffffff;
+    }
+
+    .textHeader h1 .color {
+        font-size: 48px;
+        color: #f6881c;
+    }
+
+    .textHeader p:nth-child(2) {
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+
+    .textHeader p:nth-child(3) {
+        font-size: 35px;
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .textHeader .btnContact {
+        font-size: 26px;
+        color: #f6881c;
+        font-weight: bold;
+        border: 4px solid #f6881c;
+        width: 400px;
+        border-radius: 6px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+    .logo {
+        z-index: 999;
+    }
+}

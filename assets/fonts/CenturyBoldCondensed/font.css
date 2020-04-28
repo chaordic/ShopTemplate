@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'CenturyCondBold';
+  src: url('CenturyCondBold.woff') format('woff'),
+       url('CenturyCondBold.ttf') format('truetype'),
+       url('CenturyCondBold.svg#CenturyCondBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ufonts.com_century-condensed-bold';
+  src: url('ufonts.com_century-condensed-bold.eot');
+  src: url('ufonts.com_century-condensed-bold.woff2') format('woff2'),
+       url('ufonts.com_century-condensed-bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

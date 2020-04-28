@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Modern H';
+  src: url('ModernH-Bold.eot');
+  src: url('ModernH-Bold.woff2') format('woff2'),
+       url('ModernH-Bold.woff') format('woff'),
+       url('ModernH-Bold.ttf') format('truetype'),
+       url('ModernH-Bold.svg#ModernH-Bold') format('svg'),
+       url('ModernH-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Modern H';
+  src: url('ModernH-Light.eot');
+  src: url('ModernH-Light.woff2') format('woff2'),
+       url('ModernH-Light.woff') format('woff'),
+       url('ModernH-Light.ttf') format('truetype'),
+       url('ModernH-Light.svg#ModernH-Light') format('svg'),
+       url('ModernH-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss-721-thin.eot');
+  src: url('Swiss-721-thin.woff2') format('woff2'),
+       url('Swiss-721-thin.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss721BT-Thin.woff') format('woff'),
+       url('Swiss721BT-Thin.ttf') format('truetype'),
+       url('Swiss721BT-Thin.svg#Swiss721BT-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss-721-light.eot');
+  src: url('Swiss-721-light.woff2') format('woff2'),
+       url('Swiss-721-light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss721BT-Light.woff') format('woff'),
+       url('Swiss721BT-Light.ttf') format('truetype'),
+       url('Swiss721BT-Light.svg#Swiss721BT-Light') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss 721.eot');
+  src: url('Swiss 721.woff2') format('woff2'),
+       url('Swiss 721.eot?#iefix') format('embedded-opentype'),
+       url('Swiss721BT-RomanCondensed.woff') format('woff'),
+       url('Swiss721BT-RomanCondensed.ttf') format('truetype'),
+       url('Swiss721BT-RomanCondensed.svg#Swiss-721') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss 721 Bold.eot');
+  src: url('Swiss 721 Bold.woff2') format('woff2'),
+       url('Swiss 721 Bold.eot?#iefix') format('embedded-opentype'),
+       url('Swiss721BT-BlackCondensed.woff') format('woff'),
+       url('Swiss721BT-BlackCondensed.ttf') format('truetype'),
+       url('Swiss721BT-BlackCondensed.svg#Swiss-721') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+

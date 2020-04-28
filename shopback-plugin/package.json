@@ -1,0 +1,40 @@
+{
+  "name": "shopback-plugin",
+  "version": "0.1.2",
+  "description": "Overlay Shopback - Criação e funcionalidades.",
+  "main": "dist/shopback-plugin.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --build"
+  },
+  "repository": {
+    "url": "https://github.com/ShopBackBR/ShopTemplate/shopback-plugin.git",
+    "type": "git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "authors": [
+    "Danilo Augusto Matos <da@shopback.com.br>",
+    "Mizael Silva Lemos <ms@shopback.com.br>",
+    "Carlos Eduardo Gomes <carlitoshxcx@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/ShopBackBR/ShopTemplate/shopback-plugin/issues"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "homepage": "https://github.com/ShopBackBR/ShopTemplate/shopback-plugin/",
+  "devDependencies": {
+    "browser-sync": "2.11.1",
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.0",
+    "gulp-header": "1.7.1",
+    "gulp-notify": "2.2.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "^2.0.0"  
+  }
+}

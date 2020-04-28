@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Harlow Solid Plain';
+  src: url('HarlowSolidPlain.woff') format('woff'),
+       url('HarlowSolidPlain.ttf') format('truetype'),
+       url('HarlowSolidPlain.svg#HarlowSolidPlain') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harlow Solid Plain';
+  src: url('harlow-solid-plain.eot');
+  src: url('harlow-solid-plain.woff2') format('woff2'),
+       url('harlow-solid-plain.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+

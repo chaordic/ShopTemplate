@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Post Note';
+  src: url('PostNote.woff') format('woff'),
+       url('PostNote.ttf') format('truetype'),
+       url('PostNote.svg#PostNote') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Post Note';
+  src: url('Post_Note.eot');
+  src: url('Post_Note.woff2') format('woff2'),
+       url('Post_Note.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

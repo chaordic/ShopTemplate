@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bree Rg';
+    src: url('Bree-Regular.eot');
+    src: url('Bree-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Bree-Regular.woff2') format('woff2'),
+        url('Bree-Regular.woff') format('woff'),
+        url('Bree-Regular.ttf') format('truetype'),
+        url('Bree-Regular.svg#Bree-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

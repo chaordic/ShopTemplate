@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'A Garamond Pro';
+    src: url(AGaramondPro-Bold.eot.css);
+    src: url(AGaramondPro-Bold.eot.css?#iefix) format('embedded-opentype'),url(AGaramondPro-Bold.woff.jpg) format('woff'),url(AGaramondPro-Bold.ttf.jpg) format('truetype'),url(AGaramondPro-Bold.svg.jpg#AGaramondPro-Bold) format('svg');
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'A Garamond Pro';
+    src: url(AGaramondPro-Regular.eot.css);
+    src: url(AGaramondPro-Regular.eot.css?#iefix) format('embedded-opentype'),url(AGaramondPro-Regular.woff.jpg) format('woff'),url(AGaramondPro-Regular.ttf.jpg) format('truetype'),url(AGaramondPro-Regular.svg.jpg#AGaramondPro-Bold) format('svg');
+    font-weight: normal;
+    font-style: normal
+}

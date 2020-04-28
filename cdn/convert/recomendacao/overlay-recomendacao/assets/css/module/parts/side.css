@@ -1,0 +1,20 @@
+.c-side{
+    display: inline-block;
+    vertical-align: middle;
+    height: 500px;
+    width: 50%;
+    font-size: initial;
+    position: relative;
+    padding: 0 15px;
+}
+
+.c-side--left:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 450px;
+    background-color: #CCCCCC;
+    position: absolute;
+    right: -1px;
+    top: 25px;
+}

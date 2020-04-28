@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Houschka';
+    src: url('HouschkaBold.eot');
+    src: url('HouschkaBold.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaBold.woff2') format('woff2'),
+        url('HouschkaBold.woff') format('woff'),
+        url('HouschkaBold.ttf') format('truetype'),
+        url('HouschkaBold.svg#HouschkaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka';
+    src: url('HouschkaMedium.eot');
+    src: url('HouschkaMedium.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaMedium.woff2') format('woff2'),
+        url('HouschkaMedium.woff') format('woff'),
+        url('HouschkaMedium.ttf') format('truetype'),
+        url('HouschkaMedium.svg#HouschkaMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka';
+    src: url('HouschkaLight.eot');
+    src: url('HouschkaLight.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaLight.woff2') format('woff2'),
+        url('HouschkaLight.woff') format('woff'),
+        url('HouschkaLight.ttf') format('truetype'),
+        url('HouschkaLight.svg#HouschkaLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

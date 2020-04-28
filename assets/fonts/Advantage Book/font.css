@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Advantage Book';
+  src: url('Advantage Book.eot');
+  src: url('Advantage Book.woff2') format('woff2'),
+       url('Advantage Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Advantage-Book';
+  src: url('Advantage-Book.woff') format('woff'),
+       url('Advantage-Book.ttf') format('truetype'),
+       url('Advantage-Book.svg#Advantage-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

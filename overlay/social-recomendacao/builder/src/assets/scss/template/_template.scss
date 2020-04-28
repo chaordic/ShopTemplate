@@ -1,0 +1,145 @@
+// SHOPBACK OVERLAY UTIL
+@import 'components/overlay-util';
+
+// SHOPBACK OVERLAY LAYOUT CONFIG
+@import 'shopback-overlay-layout';
+
+
+body.shopback_overlay {
+	// background-color: rgba(0,0,0,0.8);
+	
+	// OVERLAY SHOPBACK POPUP
+	// =====================================================
+	.shopback_overlay_popup {
+		width: map-get($sb_overlay_size, width);
+		height: map-get($sb_overlay_size, height);
+
+		position: fixed;
+		top: 50%;
+		left: initial;
+		right: initial;
+
+		margin: 0 auto;
+		margin-top: -(map-get($sb_overlay_size, height)/2);
+		padding: 0;
+		
+		background-color: 	map-get($sb_overlay_bg, color);
+		border-radius:  	map-get($sb_overlay_bg, radius);
+
+ 		overflow: visible;
+
+		@include breakpoint(medium) 	{ width: map-get($sb_overlay_size, width); }
+		@include breakpoint(small only) { 
+			width: 90%; 
+			height: 92vh; 
+			max-height: 99vh; 
+			top: 2vh !important;
+			left: 5%; 
+			margin-top: initial;
+			position: absolute;
+		}
+		// @include breakpoint(large only) { width: 800px; }
+
+		// HEADER
+		// =====================================================
+		header.sb_overlay_header {
+			height: 105px;
+			@include breakpoint(small only) { height: auto;}
+
+			.logo {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		} 
+		// [end] HEADER
+		// =====================================================
+
+
+		// SB_OVERLAY_CONTENT
+		// =====================================================
+		.sb_overlay_content {
+			height: 440px;
+			// background-color: #fff;
+
+			// SB_OVERLAY_CARROSEL_TEMPLATE
+			@import 'components/overlay-carrosel-template';
+			// [end] SB_OVERLAY_CARROSEL_TEMPLATE
+
+
+			// SB_OVERLAY_CARROSEL
+			@import 'components/overlay-carrosel';
+			// [end] SB_OVERLAY_CARROSEL
+
+
+			// SB_OVERLAY_SOCIAL
+			@import 'components/overlay-social';
+			// [end] SB_OVERLAY_SOCIAL
+
+		} 
+		// =====================================================
+		// [end] SB_OVERLAY_CONTENT
+
+
+		// FOOTER
+		// =====================================================
+		footer.sb_overlay_footer {
+			height: 20px;
+			margin-top: 5px;
+			margin-left: 10px;
+			position: absolute;
+			bottom: -30px;
+
+			@include breakpoint(small only) { bottom: -25px; }
+
+
+			.sb_overlay_footer {
+				a {
+					img {}
+				}
+			}
+		} 
+		// =====================================================
+		// [end] FOOTER
+
+	} 
+	// =====================================================
+	// [end] OVERLAY SHOPBACK POPUP
+
+
+
+	// OVERLAY SHOPBACK TEXTO CONFIG
+	@import 'components/overlay-texto';
+
+	// OVERLAY SHOPBACK IMAGE CONFIG
+	@import 'components/overlay-image';
+
+
+	// BASICS
+	// =====================================================
+	.separator {
+		margin: 10px auto 0px auto;
+	}
+
+	// MOBILE-SIDE-SPACING
+	.mobile-side-spacing {
+		@include breakpoint(small only) { padding: 0 10px; }
+	}
+
+	a {
+		color: inherit !important;
+		text-decoration: none !important;
+		font-size: inherit !important;
+		font-family: inherit !important;
+		font-weight: inherit !important;
+		line-height: inherit !important;
+		outline: none !important;
+	}
+
+	p {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		line-height: 16px;
+	}
+	// [end] BASICS
+	// =====================================================
+}

@@ -1,0 +1,29 @@
+@font-face {font-family: "Myriad Pro";
+  src: url("a89cf050c859a23e4b6d9cf5989acf9e.eot"); /* IE9*/
+  src: url("a89cf050c859a23e4b6d9cf5989acf9e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("a89cf050c859a23e4b6d9cf5989acf9e.woff2") format("woff2"), /* chrome、firefox */
+  url("a89cf050c859a23e4b6d9cf5989acf9e.woff") format("woff"), /* chrome、firefox */
+  url("a89cf050c859a23e4b6d9cf5989acf9e.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("a89cf050c859a23e4b6d9cf5989acf9e.svg#Myriad Pro") format("svg"); /* iOS 4.1- */
+  font-weight: 300;
+}
+
+@font-face {font-family: "Myriad Pro";
+  src: url("5361d2e98a1caca7fda1f9faf5841f26.eot"); /* IE9*/
+  src: url("5361d2e98a1caca7fda1f9faf5841f26.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("5361d2e98a1caca7fda1f9faf5841f26.woff2") format("woff2"), /* chrome、firefox */
+  url("5361d2e98a1caca7fda1f9faf5841f26.woff") format("woff"), /* chrome、firefox */
+  url("5361d2e98a1caca7fda1f9faf5841f26.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("5361d2e98a1caca7fda1f9faf5841f26.svg#Myriad Pro") format("svg"); /* iOS 4.1- */
+  font-weight: 600;
+}
+
+@font-face {font-family: "Myriad Pro";
+  src: url("c37920f95595038e0868564341c71133.eot"); /* IE9*/
+  src: url("c37920f95595038e0868564341c71133.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("c37920f95595038e0868564341c71133.woff2") format("woff2"), /* chrome、firefox */
+  url("c37920f95595038e0868564341c71133.woff") format("woff"), /* chrome、firefox */
+  url("c37920f95595038e0868564341c71133.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("c37920f95595038e0868564341c71133.svg#Myriad Pro") format("svg"); /* iOS 4.1- */
+  font-weight: 100;
+}

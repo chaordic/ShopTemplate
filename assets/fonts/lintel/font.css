@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lintel';
+    src: url('Lintel-Regular.eot');
+    src: url('Lintel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Lintel-Regular.woff2') format('woff2'),
+        url('Lintel-Regular.woff') format('woff'),
+        url('Lintel-Regular.ttf') format('truetype'),
+        url('Lintel-Regular.svg#Lintel-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

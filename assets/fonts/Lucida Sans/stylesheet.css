@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Lucida Sans';
+    src: url('lucida_sans_demibold-webfont.woff2') format('woff2'),
+         url('lucida_sans_demibold-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucida Sans';
+    src: url('lucida_sans_regular-webfont.woff2') format('woff2'),
+         url('lucida_sans_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

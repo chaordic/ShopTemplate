@@ -1,0 +1,238 @@
+/* CSS PRINCIPAL */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+
+@font-face {
+    font-family: "Museo";
+    src: url("./fonts/museo_700-webfont.eot");
+    src: 
+        url(".//fonts/museo_700-webfont.woff") format("woff"),
+        url(".//fonts/museo_700-webfont.woff2") format("woff2"),
+        url("./fonts/museo_700-webfont.otf") format("opentype"),
+        url("./fonts/museo_700-webfont.svg#filename") format("svg");
+}
+
+body,
+body *{
+
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: 'Museo', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+button{
+
+    cursor: pointer;
+}
+
+button img{
+
+    width: 60%;
+}
+
+h1{
+
+    color: #FFF;
+
+    text-align: center;
+    font-size: 21px;
+    margin-top: 240px;
+
+    display: none;
+}
+
+.corda{
+
+    max-width: 7%;
+
+    position: absolute;
+    top: 0;
+    left: 48.7%;
+    z-index: 10;
+}
+
+
+.logo{
+
+    max-width: 23%;
+
+    position: absolute;
+    top: 16%;
+    left: 38%;
+    z-index: 9;
+
+    display: none;
+}
+
+.cupom{
+
+    max-width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+
+    opacity: 1;
+}
+
+.btn--cta{
+
+    width: 40%;
+
+    outline: none;
+    
+    position: absolute;
+    top: 53%;
+    left: 29.5%;
+
+    padding: 15px 60px;
+
+    background: none;
+    display: none;
+
+}
+
+.btn--cta:hover{
+
+    filter: drop-shadow(0 0 8px #FFF);
+}
+
+.btn--cta p{
+
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.btn--cta--img{
+
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.btn--cta--img{
+
+    filter: drop-shadow(0 0 8px #FFF);
+}
+
+.main--abandono{
+    width: 860px;
+    height: 600px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: -280px auto 0;
+    top: 46%;
+    z-index: 999999;
+    border-radius: 10px;
+    background: #000 url("https://static.shopback.net/shopconvert/uploads/imagens/blackfriday/2018/bg-rocha.jpg") no-repeat center -50px;
+}
+
+.main--abandono__body{
+    float: left;
+    width: 770px;
+    height: 580px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+      text-align: center;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.main--abandono__facebook-home,
+.main--abandono__facebook-thanks,
+.main--abandono__form-answer form{
+
+    font-size: 0;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.borda-lateral{
+
+    width: 0%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+
+    background: #df2430;
+}
+
+.btn--facebook{
+
+    font-size: 0;
+    width: 40%;
+    margin: 10px 0 10px 20%;
+
+}
+
+
+.btn--close{
+
+    position: absolute;
+    top: 3.8%;
+    right: 2.1%;
+    z-index: 200;
+
+    background: none;
+
+    display: none;
+}
+
+.btn--close:before,
+.btn--close:after{
+
+    content: "";
+    display: block;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.poweredby {
+    background-image: url(https://static.sback.tech/shopconvert/uploads/imagens//zissou/pesquisa/shopback.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: block;
+    width: 182px;
+    height: 25px;
+    opacity: .8;
+    transition: all .2s linear;
+    color: transparent;
+}
+
+.fundo {
+    float: left;
+    width: 40%;
+    height: 500px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 20px;
+}
+
+.fundo img {
+    position: absolute;
+    bottom: 0px;
+}

@@ -1,0 +1,2 @@
+Sitemap: http://www..com.br/sitemap.xml
+User-agent: *

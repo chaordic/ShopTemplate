@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Helvetica LT Std Condensed';
+	src: url('HelveticaLTStd-LightCond.eot');
+	src: url('HelveticaLTStd-LightCond.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-LightCond.woff') format('woff'),
+		url('HelveticaLTStd-LightCond.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Condensed';
+	src: url('HelveticaLTStd-Cond.eot');
+	src: url('HelveticaLTStd-Cond.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-Cond.woff') format('woff'),
+		url('HelveticaLTStd-Cond.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Condensed';
+	src: url('HelveticaLTStd-BoldCond.eot');
+	src: url('HelveticaLTStd-BoldCond.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-BoldCond.woff') format('woff'),
+		url('HelveticaLTStd-BoldCond.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Condensed';
+	src: url('HelveticaLTStd-BlkCond.eot');
+	src: url('HelveticaLTStd-BlkCond.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-BlkCond.woff') format('woff'),
+		url('HelveticaLTStd-BlkCond.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}

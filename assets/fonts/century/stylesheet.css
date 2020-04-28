@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Century';
+    src: url('CenturyBoldItalicSWFTE.eot');
+    src: url('CenturyBoldItalicSWFTE.eot?#iefix') format('embedded-opentype'),
+        url('CenturyBoldItalicSWFTE.woff2') format('woff2'),
+        url('CenturyBoldItalicSWFTE.woff') format('woff'),
+        url('CenturyBoldItalicSWFTE.ttf') format('truetype'),
+        url('CenturyBoldItalicSWFTE.svg#CenturyBoldItalicSWFTE') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+

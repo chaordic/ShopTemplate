@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopback Black Friday</title>
+
+    <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+    <link rel="stylesheet" type='text/css' href="https://shopbackbr.github.io/ShopTemplate/assets/fonts/Gotham/font.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)">
+
+    <style type="text/css">
+        /*
+        * Reset
+        */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+        body {line-height:1}
+        ol, ul {list-style:none}
+        blockquote, q {quotes:none}
+        blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+        table {border-collapse:collapse;border-spacing:0}
+
+        /* Fonts */
+        @font-face {
+        font-family: 'slick';
+        font-weight: normal;
+        font-style: normal;
+            src: url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.eot');
+            src: url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.woff') format('woff'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.ttf') format('truetype'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.svg#slick') format('svg');
+        }
+
+
+        /*
+        * Grid
+        */
+        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;overflow:hidden}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;width:310px}@media(min-width:480px){.container{width:450px}}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:800px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
+        
+        /*
+        * Structure
+        */
+        #shopback {}
+
+        #shopback .box {
+            background-color: #000000;
+            position: relative;
+        }
+        #shopback .separator {
+            width: 84%
+        }
+        #shopback.black-friday .text {
+            text-align: center;
+        }
+        #shopback.black-friday .headline {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        #shopback .header {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_recomendacao/header_bg.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            padding: 5px 0 0 0;
+        }
+        #shopback .logo {
+            padding: 5px 0;
+            width: 100%;
+        }
+        #shopback .logo img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: auto;
+        }
+        #shopback.black-friday .content .item .item_border .product_name,
+        #shopback.black-friday .content .item .item_border .product_oldPrice,
+        #shopback.black-friday .content .item .item_border .product_price,
+        #shopback.black-friday .content .item .item_border .product_instalments {
+            color: #ffffff;
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        #shopback.black-friday .content .item .item_border .img_border {
+            background-color: #ffffff; 
+        }
+        
+        #shopback.black-friday .content .item .item_border .product_name {
+            height: 45px;
+        }
+        #shopback.black-friday .content .item .item_border .product_oldPrice {
+            font-size: 11px;
+            height: 15px;
+            text-decoration: line-through;
+        }
+        #shopback.black-friday .content .item .item_border .product_price {
+            font-size: 16px;
+        }
+        #shopback.black-friday .content .item .item_border .product_price span {
+            font-size: 20px;
+        }
+        #shopback.black-friday .content .item .item_border .product_instalments {
+            font-size: 11px;
+            height: 15px;
+            margin: 0;
+        }
+        #shopback.black-friday .content .item .item_border .button {
+            background-color: #ff0000;
+            color: #ffffff;
+            margin: 10px 10px 0 10px;
+            padding: 5px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #shopback .footer {}
+        #shopback .footer .text {
+            color: #fff;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        #shopback .thanks .user_image {
+            border: 2px solid #aaaaaa;
+            border-radius: 50%;
+            height: 100px;
+            margin: 30px auto 15px auto;
+            overflow: hidden;
+            width: 100px;
+        }
+
+        #shopback .thanks .user_image .border {
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            height: 96px;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 96px;
+        }
+
+        #shopback .thanks .user_image img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #shopback.black-friday .text {
+            color: #ffffff;
+        }
+
+        #shopback .thanks h1 {
+            margin: 0 auto 10px auto;
+        }
+
+        #shopback .thanks h2 {
+            margin: 0 auto 20px auto;
+        }
+
+        #shopback .thanks .continue {
+            background-color: #ff0000;
+            border: none;
+            cursor: pointer;
+            display: block;
+            font-size: 24px;
+            margin: 20px auto;
+            outline: none;
+            overflow: hidden;
+            padding: 5px 10px;
+            text-transform: uppercase;
+        }
+
+        /*
+        * Fixed styles
+        */
+        #shopback .box.rounded {
+            border-radius: 20px;
+        }
+        #shopback .thanks {
+            display: none;
+            overflow: hidden;
+        }
+        #shopback .poweredby {
+            background-image: url(https://app.shopconvert.com.br/facebook/completo/assets/css/../img/powered-by-shopback.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: transparent;
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            margin: 0 auto;
+            height: 25px;
+            width: 152px;
+        }
+        #shopback .poweredby.black {
+            background-image: url('https://app.shopconvert.com.br/uploads/imagens/shopback/powered-by-shopback_b.png');
+        }
+        #shopback .separator {
+            background-image: url(https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_recomendacao/bullet.png);
+            background-position: center center;
+            background-repeat: repeat-x;
+            margin: 0 auto;
+        }
+        #shopback .header {
+            overflow: hidden;
+        }
+        #shopback.black-friday .header .text {
+            color: #ffffff;
+            font-family: 'Gotham Black';
+            font-size: 32px;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #aaa, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 35px #ffffff;
+        }
+        #shopback.black-friday .header .headline {
+            color: #ffffff;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-weight: 300;
+        }
+        #shopback.black-friday .content {
+            margin: 0 20px;
+        }
+        #shopback.black-friday .content .item .item_border {
+            cursor: pointer;
+            padding: 0 10px;
+        }
+        #shopback.black-friday .content .item .item_border .product_image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        #shopback.black-friday .footer .facebook {
+            border: 2px solid #3067d2;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 2px rgba(48, 103, 210, 1);
+            cursor: pointer;
+            overflow: hidden;
+            text-align: center;
+        }
+        #shopback.black-friday .footer .facebook .flogo,
+        #shopback.black-friday .footer .facebook .ftext {
+            display: block;
+            float: left;
+        }
+        #shopback.black-friday .footer .facebook .flogo {
+            height: 50px;
+            width: 50px;
+        }
+        #shopback.black-friday .footer .facebook .ftext {
+            padding: 10px 0;
+            width: calc(100% - 60px);
+        }
+        #shopback.black-friday .footer .facebook .ftext b,
+        #shopback.black-friday .footer .facebook .ftext small {
+            display: block;
+        }
+        #shopback.black-friday .footer .facebook .ftext b {
+            color: #fff;
+            font-size: 12px;
+        }
+        #shopback.black-friday .footer .facebook .ftext small {
+            color: #a3b1cf;
+            font-size: 8px;
+        }
+        .slick-prev {
+            left: -35px;
+        }
+        .slick-prev, .slick-next {
+            height: auto;
+        }
+        .slick-prev:before, .slick-next:before {
+            font-size: 100px;
+        }
+        .slick-prev:before {
+            content: "‹"
+        }
+        .slick-next:before {
+            content: "›"
+        }
+
+        /* close */
+        #shopback .close {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            display: inline-block;
+            height: 20px;
+            position: absolute;
+            right: 10px; top: 10px;
+            overflow: hidden;
+            width: 20px;
+            z-index: 99;
+        }
+        /*
+        #shopback .close:hover::before,
+        #shopback .close:hover::after {
+            background: #ffffff;
+        }
+        */
+        #shopback .close::before,
+        #shopback .close::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            background: #777777;
+        }
+        #shopback .close::before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        #shopback .close::after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        #shopback .close.big {
+            -webkit-transform: scale(3);
+            -moz-transform: scale(3);
+            -ms-transform: scale(3);
+            -o-transform: scale(3);
+            transform: scale(3);
+        }
+        #shopback .close.hairline::before,
+        #shopback .close.hairline::after {
+            height: 1px;
+        }
+        #shopback .close.thick::before,
+        #shopback .close.thick::after {
+            height: 4px;
+            margin-top: -2px;
+        }
+        #shopback .close.black::before,
+        #shopback .close.black::after {
+            height: 8px;
+            margin-top: -4px;
+        }
+        #shopback .close.heavy::before,
+        #shopback .close.heavy::after {
+            height: 12px;
+            margin-top: -6px;
+        }
+        #shopback .close.pointy::Before,
+        #shopback .close.pointy::after {
+            width: 200%;
+            left: -50%;
+        }
+        #shopback .close.rounded::before,
+        #shopback .close.rounded::after {
+            border-radius: 5px;
+        }
+        #shopback .close.blades::before,
+        #shopback .close.blades::after {
+            border-radius: 5px 0;
+        }
+        #shopback .close.warp::before,
+        #shopback .close.warp::after {
+            border-radius: 120% 0;
+        }
+        #shopback .close.fat::before,
+        #shopback .close.fat::after {
+            border-radius: 100%;
+        }
+        
+        /* Media Queries */
+        @media only screen and (min-width : 320px) {
+            #shopback {
+                margin-top: 40px;
+            }
+            #shopback .close {
+                top: -25px;
+            }
+            #shopback .separator {
+                height: 20px;
+            }
+            #shopback .logo img {
+                width: 50%;
+            }
+            #shopback.black-friday .header .text {
+                font-size: 22px;
+            }
+            #shopback.black-friday .headline {
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            #shopback.black-friday .content .item .item_border .product_image {
+                height: 140px;
+            }
+
+            #shopback .footer {
+                padding: 10px 0 0 0;
+            }
+
+            #shopback .footer .text {
+                font-size: 14px;
+                padding: 0 20px;
+            }
+
+            #shopback .footer .facebook {
+                margin: 10px 20px;
+            }
+        }
+
+        @media only screen and (min-width : 480px) {
+            #shopback.black-friday .headline {
+                padding: 0 20px;
+            }
+            #shopback.black-friday .footer .facebook {
+                margin: 10px auto;
+                width: 300px;
+            }
+            #shopback.black-friday .footer .facebook .ftext {
+                padding: 5px 0;
+            }
+            #shopback.black-friday .footer .facebook .ftext b {
+                font-size: 16px;
+            }
+            #shopback.black-friday .footer .facebook .ftext small {
+                font-size: 10px;
+            }
+        }
+
+        @media only screen and (min-width : 768px) {
+            #shopback .close {
+                top: 5px;
+            }
+
+            #shopback .separator {
+                height: 40px;
+            }
+
+            #shopback .separator.hundred {
+                width: 96%
+            }
+
+            #shopback .logo img {
+                width: auto;
+            }
+
+            #shopback.black-friday .header .text {
+                font-size: 32px;
+            }
+
+            #shopback.black-friday .headline {
+                font-size: 18px;
+                text-align: left;
+            }
+
+            #shopback.black-friday .content .item .item_border .product_image {
+                height: 200px;
+            }
+
+            #shopback.black-friday .content {
+                height: 379px;
+            }
+
+            #shopback .footer {
+                padding: 0;
+            }
+
+            #shopback .footer .text {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+
+            #shopback .poweredby {
+                margin: 0;
+            }
+
+            .no-padding {
+                padding: 0;
+            }
+        }
+
+        @media only screen and (min-width : 992px) {
+            #shopback {
+                height: 620px;
+                margin-left: -400px;
+                margin-top: -310px;
+                max-width: 800px;
+                position: fixed;
+                top: 50%; left: 50%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- NÃO APAGAR * Esse é o template de itens utilizado dentro do carousel -->
+    <div id="item_template" class="item" style="display: none;">
+        <div class="item_border">
+            <div class="img_border">
+                <img class="product_image" src="" data-lazy="{product_image}" alt="{product_title}">
+            </div>
+            <p class="product_name">{product_title}</p>
+            <p class="product_oldPrice">de {old_price}</p>
+            <p class="product_price">por <span>R$ {price}</span></p>
+            <p class="product_instalments">{installments}x de R$ {installments_price}</p>
+            <div class="button">
+                COMPRAR AGORA
+            </div>
+        </div>
+    </div>
+    <!-- NÃO APAGAR * Esse é o template de itens utilizado dentro do carousel -->
+
+    <div id="shopback" class="black-friday container">
+        <div class="box rounded">
+            
+            <div class="recommendations">
+                <div class="header">
+                    <button class="close" onclick="top.spl.close();"></button>
+                    <div class="row">
+                        <div class="hidden-xs col-sm-4 col-md-4">
+                            <div class="separator"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+                            <div class="text">black friday</div>
+                        </div>
+                        <div class="hidden-xs col-sm-4 col-md-4">
+                            <div class="separator"></div>
+                        </div>
+                        <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="logo">
+                                <img src="https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_recomendacao/logo.png?asd" alt="[NOME_DO_CLIENTE]">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <div class="headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="separator hundred"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="row">
+                        
+                        <div class="carousel">
+                            <img style="display: block; margin: 20px auto;" src="https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_recomendacao/load.gif" alt="" class="loading">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <p class="text">Fique por dentro das promoções da nossa Black Friday</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="facebook" onclick="connect();">
+                                <span class="flogo">
+                                    <svg width="50px" height="50px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                                        <g>
+                                            <path d="M176.635,256.001 L176.635,156.864 L209.912,156.864 L214.894,118.229 L176.635,118.229 L176.635,93.561 C176.635,82.375 179.742,74.752 195.783,74.752 L216.242,74.743 L216.242,40.188 C212.702,39.717 200.558,38.665 186.43,38.665 C156.932,38.665 136.738,56.67 136.738,89.736 L136.738,118.229 L103.376,118.229 L103.376,156.864 L136.738,156.864 L136.738,256.001 L176.635,256.001" fill="#3067d2"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="ftext">
+                                    <b>Conecte-se com Facebook</b>
+                                    <small>*Nunca publicaremos nada sem a sua permissão</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thanks">
+                <div class="header">
+                    <button class="close" onclick="top.spl.redirect();"></button>
+                    <div class="row">
+                        <div class="hidden-xs col-sm-4 col-md-4">
+                            <div class="separator"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+                            <div class="text">black friday</div>
+                        </div>
+                        <div class="hidden-xs col-sm-4 col-md-4">
+                            <div class="separator"></div>
+                        </div>
+                        <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="logo">
+                                <img src="https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_recomendacao/logo.png?asd" alt="[NOME_DO_CLIENTE]">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="separator hundred"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="user_image">
+                        <div class="border">
+                            <img id="user_img" src="https://account.socialbakers.com/default_user.png" alt="User" />
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <h1>Obrigado <span class="userName"></span> por se conectar!</h1>
+                        <h2>Continue navegando e aproveite nossas ofertas exclusivas.</h2>
+                        <button class="continue" onclick="javascript:top.spl.redirect();">Continuar no site</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="http://www.shopback.com.br" class="poweredby" target="_blank">ShopBack</a>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+        var SB = {},
+            campaing_id = 3040;
+
+            // Dados para Facebook API
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: 'appId',
+                    status: true,
+                    cookie: true,
+                    xfbml: true,
+                    version: 'v2.4'
+                });
+            };
+
+            // Cria tag script com arquivo do Facebook SDK
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if(d.getElementById(id)) {
+                    return;
+                }
+
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            // Função para conexão no Facebook e coletar informações abertas dos usuários
+            var disabled = false;
+            var force = false;
+
+            function connect() {
+                if(!disabled) {
+                    disabled = true;
+
+                    $(".facebook").css("opacity", "0.3");
+
+                    var link = top.spl.b64(String(top.location.href) + "#conectar-facebook");
+                    var url = top.spl.base_url + '/tr/tc/' + top.spl.acc + '/' + campaing_id + '/' + link;
+                    top.spl.ajax(url, false);
+
+                    if(force) {
+                        var scope_context = {
+                            scope: 'public_profile, email',
+                            auth_type: 'rerequest',
+                            return_scopes: true
+                        };
+                    } else {
+                        var scope_context = {
+                            scope: 'public_profile, email',
+                            return_scopes: true
+                        };
+                    }
+
+                    FB.login(function(response) {
+                        if(response.authResponse && String(response.authResponse.grantedScopes).search("email") > -1) {
+                        
+                            $(".recommendations").hide();
+                            $(".thanks").show();
+
+                            FB.api('/me?fields=name,email,gender', function(user) {
+                                $(".userName").html(String(user.name).split(" ")[0]);
+                                $("#user_img").attr("src", "https://graph.facebook.com/" + user.id + "/picture?type=large");
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "//app.shopconvert.com.br/facebook/callback.php?ref=" + String(top.location.href),
+                                    data: {
+                                        token: response.authResponse.accessToken,
+                                        user_id: user.id,
+                                        user_name: user.name,
+                                        user_email: user.email,
+                                        user_gender: user.gender,
+                                        post: true
+                                    },
+                                    success: function(data) {
+                                        $.post('//app.shopconvert.com.br/tr/tl/' + top.spl.acc + '/' + campaing_id, {
+                                            email: user.email
+                                        });
+
+                                        top.spl.set_cookie('_spl_overlay_social', "disabled", 720);
+
+                                        try {
+                                            top._st_app.ci(String(user.email));
+                                            top._st_app.set_name(String(user.name));
+                                        } catch(e) {}
+                                    },
+                                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                        // error
+                                    }
+                                });
+                            });
+                        } else {
+                            disabled = false;
+                            $(".facebook").css("opacity", "1");
+
+                            if(!force) {
+                                force = true;
+                                $(".facebook").trigger("click");
+                            }
+                        }
+                    }, scope_context);
+                }
+            }
+
+            /*
+             * Função de click e redirecionamento.
+             */
+            function clickURL(l){
+                if(l.search("utm_source=ShopBack") <= -1 && typeof top.spl.link_transform !== 'undefined'){
+                    l = top.spl.link_transform(l);
+                }
+
+                var link = top.spl.b64(l);
+                var url = top.spl.base_url + '/tr/tc/' + top.spl.acc + '/' + campaing_id + '/' + link;
+                top.spl.ajax(url, false);
+
+                setTimeout(function(){
+                    top.location.href = l;
+                }, 800);
+            }
+
+            /*
+             * Number format, função de formatação dos preços dos produtos.
+             */
+            String.prototype.sbNumberFormat = function(){
+                var n        = this,
+                    hasPoint = (/(\.)+/.test(this)) ? true : false;
+                
+                if(hasPoint){
+                    var int = n.split(".")[0],
+                        c   = n.split(".")[1];
+                        n   = int;
+                } else {
+                    c = "00";
+                }
+
+                n = (typeof n == "string") ? n.replace(",","") : n.toString();
+                L = n.length % 3;
+
+                var newValue = false,
+                    loop     = "";
+
+                if(n.toString().length > 3){
+                    if(L > 0){
+                        newValue = n.substring('0', L);
+                    } else {
+                        newValue = "";
+                    }
+
+                    loop = n.substring(L, n.length).length / 3;
+
+                    for (var i = 0; i < loop; i++) {
+                        if(L > 0 || i > 0){
+                            newValue += ".";    
+                        }
+                        newValue += n.substring((L + (i * 3)), (L + (i * 3) + 3)); 
+                    }
+                } else {
+                    newValue = n;
+                }
+
+                if(c.length == 2 && parseInt(c) > 0) {
+                    newValue += ","+c;
+                } else if (c.length > 2 && parseInt(c) > 0) {
+                    newValue += ","+c.substring('0','2');
+                } else if (c.length > 0 && parseInt(c) > 0) {
+                    newValue += ","+c+"0";
+                } else {
+                    newValue += ",00";
+                }
+                return newValue;
+            };
+
+            /*
+             * Pessoal esta é a função do carousel, o nome do plugin é  Slick,
+             * @Refer: http://kenwheeler.github.io/slick/
+             */
+            SB.carousel = function(obj, dots = true, products = 6, arrows = true, centermode = false){
+                $(obj).slick({
+                    lazyLoad: 'ondemand',
+                    centerMode: centermode,
+                    arrows: arrows,
+                    dots: dots,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: products,
+                    slidesToScroll: products,
+                    responsive:[
+                        {
+                          breakpoint: 992,
+                          settings: {
+                            centerMode: centermode,
+                            arrows: arrows,
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: false,
+                            dots: dots
+                          }
+                        },
+                        {
+                          breakpoint: 768,
+                          settings: {
+                            centerMode: centermode,
+                            arrows: arrows,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: false,
+                            dots: dots
+                          }
+                        },
+                        {
+                          breakpoint: 480,
+                          settings: {
+                            centerMode: centermode,
+                            arrows: arrows,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: dots
+                          }
+                        }
+                    ]
+                });
+            };
+
+            /*
+             * Função que cria e acrescenta os box no carousel.
+             */
+            SB.createBox = function(object){
+                // {
+                //  title (string),
+                //  description (string),
+                //  categories (array),
+                //  subcategories (array),
+                //  link (string),
+                //  images (array),
+                //  price (float),
+                //  normal_price (float),
+                //  installments (int),
+                //  installments_price (float),
+                //  availability (string),
+                //  more_info: {
+                //      brand (string),
+                //      manufacturer (string),
+                //      gender (string),
+                //      color (string),
+                //      quantity (string|int),
+                //      size (string),
+                //      material (string),
+                //      age_group (string),
+                //      shipping (string),
+                //      condition (string)
+                //  },
+                //  product_id (string|int),
+                //  product_sku (string|int)
+                // }
+
+                object.title = (object.title.length > 50) ? object.title.substring(0, 47)+"..." : object.title;
+
+                object.normal_price = (object.normal_price) ? object.normal_price.toString().sbNumberFormat() : "";
+                object.price = (object.price) ? object.price.toString().sbNumberFormat() : "";
+                object.installments =  (object.installments) ? parseInt(object.installments) : "";
+                object.installments_price = (object.installments_price) ? object.installments_price.toString().sbNumberFormat() : "";
+
+                if(typeof object.more_info != "undefined"){
+
+                    object.more_info.brand = (typeof object.more_info.brand != "undefined") ? object.more_info.brand : "";
+                    object.more_info.manufacturer = (typeof object.more_info.manufacturer != "undefined")?object.more_info.manufacturer:"";
+                    object.more_info.gender = (typeof object.more_info.gender != "undefined")?object.more_info.gender:"";
+                    object.more_info.color = (typeof object.more_info.color != "undefined")?object.more_info.color:"";
+                    object.more_info.quantity = (typeof object.more_info.quantity != "undefined")?object.more_info.quantity:"";
+                    object.more_info.size = (typeof object.more_info.size != "undefined")?object.more_info.size:"";
+                    object.more_info.material = (typeof object.more_info.material != "undefined")?object.more_info.material:"";
+                    object.more_info.age_group = (typeof object.more_info.age_group != "undefined")?object.more_info.age_group:"";
+                    object.more_info.shipping = (typeof object.more_info.shipping != "undefined")?object.more_info.shipping:"";
+                    object.more_info.condition = (typeof object.more_info.condition != "undefined")?object.more_info.condition:"";
+
+                }else{
+
+                    object.more_info = {};
+                    object.more_info.brand = "";
+                    object.more_info.manufacturer = "";
+                    object.more_info.gender = "";
+                    object.more_info.color = "";
+                    object.more_info.quantity = "";
+                    object.more_info.size = "";
+                    object.more_info.material = "";
+                    object.more_info.age_group = "";
+                    object.more_info.shipping = "";
+                    object.more_info.condition = "";
+
+                }
+
+                var template = $('#item_template').clone();
+                    template.removeAttr("id");
+
+                if ( object.normal_price == object.price || object.normal_price == "" ) {
+                    template.find(':contains({old_price})')[1].textContent = "";
+                }
+
+                if ( object.installments_price == object.price  || object.installments_price == "" ) {
+                    template.find(':contains({installments_price})')[1].textContent = "";
+                }
+
+                var code = template.html();
+
+                    code = code.split("{product_image}").join(object.images[0]).split("{product_title}").join(object.title).split("{old_price}").join(object.normal_price).split("{price}").join(object.price).split("{installments}").join(object.installments).split("{installments_price}").join(object.installments_price).split("{brand}").join(object.more_info.brand).split("{manufacturer}").join(object.more_info.manufacturer).split("{gender}").join(object.more_info.gender).split("{color}").join(object.more_info.color).split("{quantity}").join(object.more_info.quantity).split("{size}").join(object.more_info.size).split("{material}").join(object.more_info.material).split("{age_group}").join(object.more_info.age_group).split("{shipping}").join(object.more_info.shipping).split("{condition}").join(object.more_info.condition);
+
+                    template.html(code);
+
+                    template.css("display","block").on("click", function(){
+                        if(typeof window.top.ShopBack == 'object' && typeof window.top.ShopBack.Linkprefix == 'object') object.link = window.top.ShopBack.Linkprefix[0]+object.link+window.top.ShopBack.Linkprefix[1]; 
+                        clickURL(object.link);
+                    });
+
+                $(".carousel").append(template);
+
+            };
+
+            SB.recommendation = function(){
+                var datas;
+
+                var check = setInterval(function(){
+                    top.shopback.api.getRecommendations(function(error, response){
+                        datas = response.data;
+                    });
+
+                    if(typeof datas == "object"){
+                        $('.carousel').html("");
+
+                        $.each(datas, function(k, obj){
+                            SB.createBox(obj);
+                        });
+
+                        SB.carousel(".carousel", false, 3, true, false);
+
+                        clearInterval(check);
+                    }
+                }, 800);
+            };
+
+            SB.recommendation();
+    </script>
+</body>
+</html>

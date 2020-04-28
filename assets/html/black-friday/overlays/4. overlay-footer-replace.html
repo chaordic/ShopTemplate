@@ -1,0 +1,510 @@
+<!--
+[ID] = id da campanha
+ff0000 = cor do botão
+[cliente] = pasta FTP
+
+se já tiver algum footer ativo mudar isso:
+vitrine		 = false,
+para isso:
+vitrine		 = ID DO FOOTER ANTIGO,
+chamado de footer, vitrine ou contador
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Overlay Footer Black Friday</title>
+	
+	<link rel="stylesheet" type='text/css' href="https://shopbackbr.github.io/ShopTemplate/assets/fonts/Gotham/font.css">
+	<link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:300">
+	<style type="text/css">
+		/* reset */
+		a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+		/* the code */
+		html, body {height:100%;overflow:hidden;width:100%}
+
+		#shopback {
+			background-color: #000000;
+			background-image: url(https://app.shopconvert.com.br/uploads/imagens/shopback/blackfriday/overlay_footer/bg.jpg?asd);
+			background-position: center center;
+			background-repeat: no-repeat;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			color: #ffffff;
+			height: 130px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#shopback .logo,
+		#shopback .timer,
+		#shopback .separator,
+		#shopback .text,
+		#shopback .button {
+			float: left;
+		}
+		
+		#shopback .close {
+			background-color: transparent;
+			border: 0;
+			color: #555555;
+			cursor: pointer;
+			font-size: 36px;
+			height: 36px;
+			position: absolute;
+			right: 10px; top: -5px;
+		}
+
+		#shopback .logo {
+			display: table;
+		}
+
+		#shopback .logo span {
+			display: block;
+			font-family: 'Gotham Black', "Arial Black", "Arial Bold", Gadget, sans-serif;
+			font-size: 24px;
+			margin: 15px auto 5px auto;
+			text-align: center;
+			text-shadow: 0 0 5px #fff, 0 0 30px #fff;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+
+		#shopback .logo .holder {
+			height: 85px;
+			position: relative;
+		}
+
+		#shopback .logo .holder img {
+			max-height: 100%;
+			max-width: 100%;
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#shopback .separator {
+			font-size: 24px;
+			letter-spacing: 5px;
+			line-height: 130px;
+			margin: 0 10px;
+			text-align: center;
+			text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 35px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 75px #ffffff;
+		}
+	
+		#shopback .text {
+			color: #ffffff;
+			display: table;
+			font-family: 'Gotham Black', "Arial Black", "Arial Bold", Gadget, sans-serif;
+			padding: 0 10px;
+		}
+
+		#shopback .text p {
+			display: table-cell; 
+			vertical-align: middle; 
+			text-align: center;
+			text-shadow: 0 0 5px #fff, 0 0 30px #fff;
+			text-transform: uppercase;
+		}
+
+		#shopback .timer {
+			border-radius: 5px;
+			color: #f00;
+			font-family: 'Gotham Black', "Arial Black", "Arial Bold", Gadget, sans-serif;
+			position: relative;
+			text-align: center;
+		}
+		
+		#shopback .timer::after,
+		#shopback .timer::before {
+			background-color: #fff;
+			border-radius: 2px;
+			content: "";
+			position: absolute;
+		}
+
+		#shopback .button span {
+			background-color: #ff0000;
+			color: #ffffff;
+			cursor: pointer;
+			display: block;
+			font-family: 'Roboto', sans-serif;
+			margin: 0 auto;
+			padding: 5px 10px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	
+		@media only screen and (min-width : 320px) {
+        	#shopback {
+        		margin: 0 auto;
+        		width: 90%;
+        	}
+
+        	#shopback .mobile-click {
+        		cursor: pointer;
+        		height: 100px;
+        		position: absolute;
+        		bottom: 0; left: 0;
+        		width: 100%;
+        		z-index: 999;
+        	}
+
+        	#shopback .logo {
+				height: 90px;
+				margin: 0 auto;
+				width: 140px;
+			}
+
+        	#shopback .timer {
+        		border: 4px solid #ffffff;
+        		float: right;
+        		font-size: 36px;
+        		margin: 30px 10px 20px 0;
+        		padding: 0 5px;
+        		width: 180px;
+        	}
+
+        	#shopback .timer::after,
+			#shopback .timer::before {
+				height: 0px;
+				width: 0px;
+			}
+
+			#shopback .button {
+				clear: both;
+				float: none;
+			}
+
+			#shopback .button span {
+				padding: 10px;
+			}
+
+			#shopback .separator,
+			#shopback .text {display: none;}
+	    }
+
+	    @media only screen and (min-width : 480px) {
+			#shopback .logo {
+				width: 220px;
+			}
+	    }
+
+	    @media only screen and (min-width : 620px) {
+	    	#shopback .logo {
+				width: 30%;
+			}
+
+			#shopback .text {
+				display: table;
+				font-size: 18px;
+				height: 94px;
+				margin: 0 auto;
+				width: 30%;
+			}
+
+			#shopback .timer {
+        		border: 4px solid #ffffff;
+        		float: right;
+        		font-size: 30px;
+        		margin: 30px 10px 20px 0;
+        		padding: 0 5px;
+        		width: 30%;
+        	}
+	    }
+
+	    @media only screen and (min-width : 768px) {
+			#shopback .mobile-click {display: none;}
+	    }
+
+	    @media only screen and (min-width : 992px) {
+			#shopback .separator {
+				display: block;
+			}
+
+			#shopback .logo {
+				height: 130px;
+				width: 20%;
+			}
+
+			#shopback .timer {
+				float: left;
+				font-size: 36px;
+				margin: 46px 5px;
+				width: 20%;
+			}
+
+			#shopback .timer::after,
+			#shopback .timer::before {
+				bottom: -8px;
+				height: 8px;
+				width: 20px;
+			}
+
+			#shopback .timer::after {
+				right: 10px;
+			}
+
+			#shopback .timer::before {
+				left: 10px;
+			}
+
+			#shopback .text {
+				font-size: 18px;
+				height: 130px;
+				width: 20%;
+			}
+
+			#shopback .button {
+				clear: none;
+				float: right;
+				margin: 47px 20px 47px 0;
+				width: calc(20% - 20px);
+			}
+
+			#shopback .hide-md {
+				display: none;
+			}
+	    }
+
+	    @media only screen and (min-width : 1200px) {
+			#shopback {
+				left: 50%;
+				margin-left: -645px;
+				width: 1290px;
+			}
+
+			#shopback .text {
+				width: 240px;
+			}
+
+			#shopback .timer {
+				font-size: 36px;
+				margin: 37px 5px;
+				width: 220px;
+			}
+
+			#shopback .button {
+				font-size: 18px;
+				margin: 45px 20px 45px 0;
+				width: 320px;
+
+			}
+
+			#shopback .hide-md {
+				display: block;
+			}
+	    }
+	#shopback .recommendations .header .logo img{
+		max-height:235px !important;
+		max-width:50px !important;
+	}
+	.V.container .V.columns.brand .V.img img{
+		width:auto;
+		max-width:105px !important;
+		max-height:80px !important;
+	}
+	#shopback .logo .holder img{
+		width:auto;
+		max-width:258px !important;
+		max-height:85px !important;
+	}
+	.F.container .F.center .F.header .F.brand img{
+		width:auto;
+		max-width:125px !important;
+		max-height:95px !important;
+	}
+
+	@media only screen and (max-width: 768px) and (min-width: 420px){
+		#shopback .recommendations .header .logo img{
+			width:auto;
+			max-height:235px !important;
+			max-width:50px !important;
+		}
+		.V.container .V.columns.brand .V.img img{
+			width:auto;
+			max-width:105px !important;
+			max-height:80px !important;
+		}
+		#shopback .logo .holder img{
+			width:auto;
+			max-width:258px !important;
+			max-height:85px !important;
+		}
+		.F.container .F.center .F.header .F.brand img{
+			width:auto;
+			max-width:125px !important;
+			max-height:95px !important;
+		}
+	};
+
+	@media only screen and (max-width: 420px){
+		#shopback .recommendations .header .logo img{
+			width:auto;
+			max-height:235px !important;
+			max-width:50px !important;
+		}
+		.V.container .V.columns.brand .V.img img{
+			width:auto;
+			max-width:105px !important;
+			max-height:80px !important;
+		}
+		#shopback .logo .holder img{
+			width:auto;
+			max-width:258px !important;
+			max-height:85px !important;
+		}
+		.F.container .F.center .F.header .F.brand img{
+			width:auto;
+			max-width:125px !important;
+			max-height:95px !important;
+		}
+	};
+	</style>
+
+</head>
+<body>
+
+	<div id="shopback">
+		<button class="close" onclick="sb_close();">×</button>
+		
+		<div class="mobile-click" onclick="redirect();"></div>
+
+		<div class="logo">
+			<span>Black Friday</span>
+			<div class="holder">
+				<img src="https://app.shopconvert.com.br/uploads/imagens/[cliente]/black-friday-2016/logo.png" class="logo-footer" />
+			</div>
+		</div>
+		<div class="separator">&bullet;&bullet;&bullet;&bullet;&bullet;</div>
+		<div class="text">
+			<p>O tempo está passando, aproveite!</p>
+		</div>
+		<div class="separator hide-md">&bullet;&bullet;&bullet;&bullet;&bullet;</div> 
+		<div class="timer">00:00:00</div> 
+		<div class="button">
+			<span onclick="redirect();">clique e aproveite</span>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/g/jquery@1.12.4,jquery.countdown@2.2.0"></script>
+	<script type="text/javascript">
+
+		var campanha_bf  = [ID], // ID DA CAMPANHA DE BLACK FRIDAY
+			vitrine		 = false, // ID DA CAMPANHA-VITRINE ATIVA
+			tempo_cookie = 720, // VALOR EM HORAS 
+			deadline 	 = '2016/11/25 23:59:59'; // DATA FINAL DA CONTAGEM DO RELÓGIO
+
+		var cookie = top.spl.get_cookie('spl_close_'+campanha_bf);
+
+		if ( cookie == "true" ) {
+			top.spl.blockeds.push(campanha_bf);
+		} else {
+			var overlay = $('#shopback'),
+				frame = $("#f-content-" + campanha_bf, window.parent.document),
+				style = {
+		            height: overlay.innerHeight(),
+		            bottom: -Math.abs(overlay.innerHeight()),
+		            width: '100%',
+		            overflow: 'hidden',
+		            position: 'fixed',
+		            top: 'inherit',
+		            left: 'inherit',
+		            display: 'block'
+		        };
+		        frame.css(style);
+
+		    // Função do contador 
+	        $('.timer').countdown(deadline).on('update.countdown', function(event) {
+
+		        var format = '%Hh %M:%S';
+
+		        if ( event.offset.totalDays > 2 ) {
+					format = '%D dias';
+					$(this).html(event.strftime(format));
+				} else if ( event.offset.totalDays == 0 ) {
+					$(this).html(event.strftime(format));
+		        } else {
+					var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+					$(this).html(event.strftime(totalHours + 'h %M:%S'));
+		        }
+
+		    }).on('finish.countdown', function() {
+		    	sb_close();
+		    });
+
+		    // Exibe Overlay
+		    if(!cookie){
+		    	var showCountdown = setTimeout(function(){
+
+		    	frame.animate({
+		    		bottom: 0
+		    	}, 500, function(){
+		    		top.spl.view(campanha_bf);	
+		    	});
+
+		    	// Verifica se tem uma vitrine no site
+		    	if ( vitrine != false ){
+
+		    		var temVitrine = setInterval(function(){
+
+		    			if ( parseInt($('#f-content-'+vitrine, window.parent.document).css('bottom')) == 0 ) {
+		    				frame.animate({
+					    		bottom: style.bottom
+					    	}, 500);
+		    			} else {
+		    				frame.animate({
+					    		bottom: 0
+					    	}, 500);
+		    			}
+
+		    		}, 500);
+
+		    	}
+
+		    	}, 500);	
+		    }
+		    
+
+		    // Função de CLOSE
+		    function sb_close() {
+		    	top.spl.cid = campanha_bf;
+		    	top.spl.set_cookie('spl_close_'+campanha_bf, true, tempo_cookie);
+		    	frame.animate({
+		    		bottom: style.bottom
+		    	}, 500, function(){
+		    		top.spl.close();
+		    	});
+		    }
+
+		    // Função de Redirect
+		    function redirect(l = false){
+		    	top.spl.cid = campanha_bf;
+
+		    	var link = top.spl.b64(window.top.location.href);
+				var url = top.spl.base_url + '/tr/tc/' + top.spl.acc + '/' + campanha_bf + '/' + link;
+				top.spl.ajax(url, false);
+				top.spl.set_cookie('_spl_tr', campanha_bf, tempo_cookie);
+				top.spl.set_cookie('spl_close_'+campanha_bf, true, tempo_cookie);
+
+		    	if ( l != false ){
+
+		    		if (!/(utm)+/.test(l)) {
+		    			l = top.spl.link_transform(l);
+	                }
+
+					setTimeout(function(){
+						top.location.href = l;
+					}, 500);
+
+		    	} else { 
+		    		top.spl.redirect();
+		    	}
+		    }
+		}
+
+	</script>
+
+</body>
+</html>

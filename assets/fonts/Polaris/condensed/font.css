@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Polaris Condensed';
+  src: url('PolarisCondensed-Medium.eot');
+  src: url('PolarisCondensed-Medium.woff2') format('woff2'),
+       url('PolarisCondensed-Medium.woff') format('woff'),
+       url('PolarisCondensed-Medium.ttf') format('truetype'),
+       url('PolarisCondensed-Medium.svg#Polaris%20Condensed') format('svg'),
+       url('PolarisCondensed-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Polaris Condensed';
+  src: url('PolarisCondensed-Bold.eot');
+  src: url('PolarisCondensed-Bold.woff2') format('woff2'),
+       url('PolarisCondensed-Bold.woff') format('woff'),
+       url('PolarisCondensed-Bold.ttf') format('truetype'),
+       url('PolarisCondensed-Bold.svg#Polaris%20Condensed') format('svg'),
+       url('PolarisCondensed-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+

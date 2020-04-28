@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>shopback - alerta usuários</title><!-- v0.0.11 -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" type="text/css" rel="stylesheet">
+	<style>
+		body,
+		body *{
+			background-color: transparent;
+			outline: none;
+			border: 0;
+			padding: 0;
+			margin: 0;
+			font-family: 'Roboto', arial, helvetica, sans-serif !important;
+		}
+
+		/*
+
+		.box:before{
+			content: '';
+			z-index: 1;
+			position: absolute;
+			display: block;
+			border-style: solid;
+			border-width: 0 10px 10px;
+			border-color: #9e2224 transparent;
+			width: 0;
+			top: -10px;
+			left: 159px;
+		}
+		*/
+
+		.box{
+			text-align: center;
+			width: 480px;
+			box-sizing: border-box;
+			position: fixed;
+			left: 0;
+			background-color: #ff740c;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			/* border: 1px solid #ff740c; */
+		}
+
+		.box,.img1,.img2{
+			height: 64px;
+		}
+
+		.box div{
+			display: inline-block;
+			position:relative;
+			left:-7px;
+		}
+
+		p.img1{
+			margin-right: 15px;
+		}
+
+		p.img2{
+			margin-left: 15px;
+		}
+
+		p.center{
+			padding: 13px 0px;
+			text-align: center;
+			font-size: 16px;
+			color: #9e2224;
+			position: relative;
+			top: 0px;
+			left: 0px;
+			font-weight: 700;
+		}
+
+		.color{
+			color: #9e2224;
+			font-weight: 700;
+		}
+
+		b{
+			font-weight: 700;
+		}
+
+		.close{
+			cursor: pointer;
+			position: absolute;
+			top: 5px;
+			right: 7px;
+			z-index: 1;
+		}
+
+		.close *{
+			cursor: pointer;
+			position: relative;
+			top: 0px;
+			left: 0px;
+		}
+		.close *:active{
+			top: 1px;
+			left: 1px;
+		}
+
+		.box p{
+			float:left;
+		}
+
+		.img1{
+			width: 48px; /* tamanho da imagem */
+			background: url('https://static.sback.tech/shopconvert/uploads/imagens/safari-shop/alerta-usuarios/olhos.png?2');
+			background-position: right center;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="box">
+		<section class="close">
+			<img src="https://static.sback.tech/shopconvert/uploads/imagens/safari-shop/alerta-usuarios/btn-close.png?2" />
+		</section>
+		<div>
+			<p class="img1"></p>
+			<p class="center">
+				<span class="usuarios color">2</span> pessoas também estão de olho neste produto!<br/>
+				<span>Garanta já o seu</span>
+			</p>
+			<!-- <p class="img2"></p> -->
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+				var campaign_id = 5439,
+					show = 0;
+
+				if( $('.close').length == 0 ){
+					$('.box').children().css('left','0');
+				};
+				frame = $('#f-content-' + campaign_id, window.top.document),
+				target = $('#buy-box', window.top.document).find('#btn-compra-text').eq(0),
+				style = {
+					'bottom' : '15px',
+					'display' : 'none',
+					'height' : '64px',
+					'left' : '10px',
+					'opacity' : '0',
+					'position' : 'fixed',
+					'right' : 'inherit',
+					'top' : 'initial',
+					'width' : '480px'
+				};
+
+				//lado do alerta de usuários
+				if( style.left.match(/[0-9]/g) != null ){
+					var ladoDoAlertaUsuarios = 'esquerdo';
+				}else{
+					var ladoDoAlertaUsuarios = 'direito';
+				};
+				//console.log( ladoDoAlertaUsuarios );
+
+				shopPushNoConflict();
+				chatNoConflict();
+
+				frame.css(style);
+
+
+
+				/* GERA A QUANTIDADE DE USUÁRIOS */
+				var users_min = 2,
+					users_max = 27;
+
+				var users = Math.floor( ( Math.random() * (users_max + 1 - users_min) ) + users_min );
+
+				var usersToView = users;
+
+				/* SETANDO NO COOKIE */
+				//se o cookie não existir, seta o valor gerado acima
+				if( top.spl.get_cookie('usuarios-sb') == false ){
+					set_cookie2('usuarios-sb', usersToView, 2, window.top.location.pathname );
+				}else{
+					//se já existir, use o valor do cookie
+					usersToView = Number( top.spl.get_cookie('usuarios-sb') );
+				};
+				/* /SETANDO NO COOKIE */
+
+				//setando no HTML
+				$('.usuarios').text(usersToView);
+
+				$('.close').on('click',function(){
+					escondeOAlerta();
+				});
+
+
+
+				/* TIPO DO ALERTA */
+				//alerta AUTOMÁTICO, aparece sem precisar de evento
+				setTimeout(function(){
+					mostrarAlerta();
+				}, 0);
+				/* /TIPO DO ALERTA */
+
+
+
+				/* JOGA O IFRAME EMBAIXO DO Z-INDEX DO OBJETO */
+				function zIndexDoAlertaMenorQue( objeto ){
+					var zIndex = objeto.css('z-index');
+					zIndex = Number( zIndex ) - 1;
+					frame.css( 'z-index', zIndex );
+				};
+
+				/* AJUSTA UM POUCO PRA CIMA SE EXISTIR ZOPIM (ZENDESK), JIVO CHAT, PRECHAT E NEOASSIST */
+				function chatNoConflict(){
+					//roda isso apenas se o alerta não estiver muito alto
+					if( Number( style.bottom.replace('px', '') ) < 122 ){
+						//se contiver zopim chat (zendesk) ou jivo chat adiciona uma altura extra para não sobrepor,
+						//e garante que ao abrir o chat o alerta não ficará em cima
+
+						if( $('.zopim', window.top.document).length > 0 ){
+							if( Number( $('.zopim', window.top.document).css('left').replace('px', '') ) < 100 ){
+								var ladoDoChat = 'esquerdo';
+							}else{
+								var ladoDoChat = 'direito';
+							};
+							//console.log( ladoDoChat );
+
+							if( ladoDoAlertaUsuarios == ladoDoChat ){
+								style.bottom = Number( style.bottom.replace('px', '') ) + 30 + 'px';
+
+								zIndexDoAlertaMenorQue( $('.zopim', window.top.document) );
+							};
+						};
+
+						if( $('.jivo-iframe-container-bottom', window.top.document).length > 0 ){
+							if( Number( $('.jivo-iframe-container-bottom', window.top.document).css('left').replace('px', '') ) < 100 ){
+								var ladoDoChat = 'esquerdo';
+							}else{
+								var ladoDoChat = 'direito';
+							};
+							//console.log( ladoDoChat );
+
+							if( ladoDoAlertaUsuarios == ladoDoChat ){
+								style.height = Number( style.height.replace('px', '') ) + 38 + 'px';
+
+								zIndexDoAlertaMenorQue( $('.jivo-iframe-container-bottom', window.top.document) );
+							};
+						};
+
+						if( $('#lc_chat_layout', window.top.document).length > 0 ){
+							if( Number( $('#lc_chat_layout', window.top.document).css('left').replace('px', '') ) < 100 ){
+								var ladoDoChat = 'esquerdo';
+							}else{
+								var ladoDoChat = 'direito';
+							};
+							//console.log( ladoDoChat );
+
+							if( ladoDoAlertaUsuarios == ladoDoChat ){
+								style.height = Number( style.height.replace('px', '') ) + 43 + 'px';
+
+								zIndexDoAlertaMenorQue( $('#lc_chat_layout', window.top.document) );
+							};
+						};
+
+						if( $('.elCentralClient', window.top.document).length > 0 ){
+							if( Number( $('.elCentralClient', window.top.document).css('left').replace('px', '') ) < 100 ){
+								var ladoDoChat = 'esquerdo';
+							}else{
+								var ladoDoChat = 'direito';
+							};
+							//console.log( ladoDoChat );
+
+							if( ladoDoAlertaUsuarios == ladoDoChat ){
+								style.height = Number( style.height.replace('px', '') ) + 53 + 'px';
+
+								zIndexDoAlertaMenorQue( $('.elCentralClient', window.top.document) );
+							};
+						};
+
+					};
+				};
+
+				/* IMPEDE CONFLITO COM O SHOPPUSH */
+				function shopPushNoConflict(){
+					if( $('.shoppush-container-show', window.top.document).length > 0 && $('.shoppush-container-show', window.top.document).css('display') == 'block' ){
+
+						//lado do shopPush
+						if( $('.shoppush-container-show', window.top.document).length > 0 ){
+							if( $('.shoppush-container-show', window.top.document).children('.prompt-left').length ){
+								var ladoDoShopPush = 'esquerdo';
+							}else{
+								var ladoDoShopPush = 'direito';
+							};
+							//console.log( ladoDoShopPush );
+
+							zIndexDoAlertaMenorQue( $('.shoppush-container-show', window.top.document).children().eq(0) );
+						};
+
+						//se o lado do alerta for igual ao lado do shopPush, então apareça em cima do shopPush
+						if( ladoDoAlertaUsuarios == ladoDoShopPush ){
+							style.bottom = Number( style.bottom.replace('px', '') ) + 123 + 'px';
+						};
+					};
+				};
+
+
+
+				function mostrarAlerta(){
+					//define as condições para mostrar o alerta de usuários
+					mostraAlerta = true;
+					//não mostre se o botão comprar não existir
+					if( target.length != 1 ){
+						mostraAlerta = false;
+					};
+
+					//não mostre o alerta em telas muito pequenas
+					tamanhoDaTela = $(window.top.window).innerWidth();
+					if( tamanhoDaTela <= 600 ){
+						mostraAlerta = false;
+					};
+
+					//se o alerta passou por todos os IFs... mostre-o
+					if( mostraAlerta == true ){
+						var bottomTotal = style.bottom;
+						frame.css({
+							'bottom' : '-200px',
+							'display' : 'block'
+						}).stop().animate({
+							'opacity' : '1',
+							'bottom' : bottomTotal
+						}, 400, function(){
+							if( show == 0 ){
+								show = 1;
+								top.spl.view(campaign_id);
+							};
+							setTimeout(function(){
+								escondeOAlerta();
+							}, 10000);
+						});
+					}else{
+						escondeOAlerta();
+					};
+				};
+
+
+
+				function escondeOAlerta(){
+					frame.stop().animate({
+						'bottom' : '-200px'
+					}, 400, function(){
+						frame.css({
+							'display' : 'none'
+						});
+					});
+				};
+
+				/* COOKIE */
+				//o set_cookie2 é igual ao top.spl.set_cookie ***SÓ QUE PERMITE DEFINIR O PATH***
+				function set_cookie2(name, value, hours, path) {
+					var date = new Date();
+					var now = date.getTime();
+					date.setTime(now + hours * 36e5);
+					var expire = date.toUTCString();
+					var dominio = location.host.replace(/^www\.|^m\.|^checkout\.|^loja\.|^cart\.|^carrinho\.|^seguro\.|^secure\.|^ssl\./, ".");
+					document.cookie = name + "=" + value + "; expires=" + expire + "; domain=" + dominio + "; path=" + path;
+				};
+				/* /COOKIE */
+			}, 2500);
+		});
+	</script>
+</body>
+</html>

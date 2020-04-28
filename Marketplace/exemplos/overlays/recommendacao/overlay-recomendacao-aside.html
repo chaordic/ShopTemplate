@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Document
+
+    </title>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+        @import url('https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)');
+
+        body,
+        body *{
+
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        img{
+
+            max-width: 100%;
+            display: block;
+
+        }
+
+        .main{
+
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: fixed;
+
+        }
+
+        .main--recomendacao{
+
+            background-color: #fff;
+            width: 800px;
+            height: 563px;
+            top: 50%;
+            margin-top: -281px;
+            border-radius: 16px;
+
+        }
+
+        .header{
+
+            padding: 0;
+
+        }
+
+        .header--recomendacao{
+
+            font-size: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 18px 18px 0 0;
+            position: relative;
+            height: 523px;
+
+        }
+
+        .header--recomendacao > *{
+
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .header--recomendacao img{
+
+            margin: 0;
+            display: block;
+
+        }
+
+        .header--recomendacao h2{
+
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 800;
+            text-align: left;
+            padding: 15px 0 10px 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #700323;
+            width: 80%;
+
+        }
+
+        .header--recomendacao h3{
+
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 300;
+            padding: 0 10% 0 10%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #700323;
+            text-align: left;
+
+        }
+
+        .header--recomendacao p{
+
+            text-align: center;
+            color: #ffffff;
+            font-size: 13px;
+            margin: 10px 0;
+
+        }
+
+        .header--recomendacao h2 span{
+
+            color: #ff484b;
+
+        }
+
+        .header--recomendacao h2 small{
+
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+
+        }
+
+        .loading{
+
+            display: block;
+            margin: 0 auto 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            position: relative;
+            top: 120px;
+
+        }
+
+        .section--carrousel {
+
+            margin: 0 auto;
+            width: 90%;
+            height: 345px;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0 30px;
+
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+
+        #left,
+        #right{
+
+            position: absolute;
+            top: 60%;
+            width: 45px !important;
+            height: 45px;
+            margin-top: -70px;
+            cursor: pointer;
+            -webkit-background-size: 100% !important;
+            background-size: 100%;
+
+        }
+
+        #left{
+
+            left: 0;
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/etna/recomendacao/left.png);
+
+        }
+
+        #right{
+
+            right: 0;
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/etna/recomendacao/right.png);
+
+        }
+
+        .figure-product {
+
+            padding: 10px 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+
+        }
+
+        .figure-product h3{
+
+            font-size: 14px;
+            padding: 5px 0;
+            text-align: center;
+            color: #183250;
+            height: 50px;
+            font-weight: 600;
+
+        }
+
+        .figure-product p,
+        .figure-product p > *{
+
+            font-size: 14px;
+            text-align: center;
+
+        }
+
+        .figure-product p b{
+
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333;
+
+        }
+
+        .figure-product p del{
+            color: #adadad;
+            text-decoration: line-through;
+            font-size: 12px;
+        }
+
+        .figure-product p b small{
+
+            font-weight: bold;
+            color: #333333;
+
+        }
+
+        .figure-product p span{
+
+            color: #1f6db2;
+            font-weight: 600;
+            font-size: 16px;
+
+        }
+
+        .figure-product img{
+
+            margin: 30px auto 0;
+            height: 128px;
+
+        }
+
+        .figure-product p small{
+
+            font-size: 12px;
+            font-weight: 500;
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: transparent;
+
+        }
+
+        .btn--close{
+
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 26px;
+            height: 26px;
+            -webkit-transform: rotateZ(-45deg);
+            -moz-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+            -o-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+            z-index: 9999999;
+
+        }
+
+        .btn--close:before,
+        .btn--close:after{
+
+            content: "";
+            display: block;
+            background-color: #acacac;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+        }
+
+        .btn--close:before{
+
+            height: 2px;
+            width: 22px;
+            top: 50%;
+            margin-top: -1px;
+
+        }
+
+        .btn--close:after{
+
+            height: 22px;
+            width: 2px;
+            top: 2px;
+
+        }
+
+        [installments]{
+
+            font-size: 17px;
+            font-weight: 500;
+            color: #3f3f3f;
+
+        }
+
+        [installments='']{
+
+            visibility: hidden;
+
+        }
+
+        .footer{
+
+            padding: 5px 0;
+
+        }
+
+        .section--facebook,
+        .footer--recomendacao{
+
+            text-align: center;
+            font-size: 0;
+
+        }
+
+        .footer--recomendacao{
+
+            border-top: solid 1px #CCCCCC;
+            padding-top: 20px;
+            width: 90%;
+            margin: 0 auto;
+
+        }
+
+        .section--facebook > *{
+
+            vertical-align: middle;
+            display: inline-block;
+            font-size: initial;
+
+        }
+
+        .section--facebook > h2{
+
+            padding: 10px 0 10px 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #666666;
+
+        }
+
+        .btn--facebook{
+
+            display: inline-block;
+            width: 300px;
+
+        }
+
+        .figure{
+
+            margin: 0;
+            overflow: hidden;
+
+        }
+
+        .figure--facebook{
+
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+
+        }
+
+        .blockquote{
+
+            overflow: hidden;
+
+        }
+
+        .blockquote--facebook{
+
+            padding: 0 0 0;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .blockquote--facebook p{
+
+            font-weight: 500;
+            text-transform: initial;
+            font-size: 15px;
+            color: #054268;
+
+        }
+
+        .blockquote--facebook span{
+
+            font-weight: 600;
+            color: #333333;
+            font-size: 18px;
+        }
+
+        .blockquote--facebook p small{
+
+            color: #000000;
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 400;
+            display: block;
+            padding: 2px;
+
+        }
+
+        .btn--product{
+
+            background-color: transparent;
+            padding: 0;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 4px;
+            line-height: 18px;
+
+
+        }
+
+        .btn--product img{
+
+            height: auto;
+            width: 200px;
+            background: transparent;
+            display: block;
+            margin: 0;
+
+        }
+
+        .loader {
+            position: relative;
+            top: 110px;
+        }
+
+        .main--recomendacao{
+
+            font-size: 0;
+            text-align: center;
+
+        }
+
+        .section.s--divs{
+
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .section.s--divs.s--header{
+
+            width: 40%;
+            background-color: #FFFFFF;
+            border-radius: 16px 0 0 16px;
+            overflow: hidden;
+
+        }
+
+        .section.s--divs.s--content{
+
+            width: 60%;
+            position: relative;
+
+
+        }
+
+        .header.header--recomendacao .aside-banner{
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 0 8px;
+            max-width: initial;
+            max-height: 100%;
+
+        }
+
+        ul.slick-dots {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            left: 0;
+            right: 0;
+        }
+
+        .slick-dots li{
+
+            width: 10px;
+            height: 10px;
+            background: #cccccc;
+            overflow: hidden;
+            margin: 0 2px;
+            border-radius: 100%;
+
+        }
+
+        .slick-dots li.slick-active{
+
+            background-color: #333333;
+        }
+
+
+        .c-columns{
+
+            font-size: 0;
+            width: 90%;
+            margin: 0 5%;
+
+        }
+
+        .c-columns > *{
+
+            display: inline-block;
+            vertical-align: top;
+            font-size: initial;
+            margin-top: 20px;
+
+        }
+
+        .c-btn{
+
+            cursor: pointer;
+
+        }
+
+        .c-btn--push-decline{
+
+            padding: 3px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            border: solid 1px #cccccc;
+            border-radius: 5px;
+            line-height: 22px;
+
+        }
+
+        .c-btn--push-accept{
+
+            padding: 3px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #000;
+            border: solid 1px #000000;
+            border-radius: 5px;
+            line-height: 22px;
+            margin-left: 5px;
+
+        }
+
+        .c-icon--push{
+
+            margin-right: 35px;
+
+        }
+
+        .blockquote--facebook{
+
+            margin-top: 10px;
+
+        }
+
+        .blockquote--facebook h2{
+
+            text-align: center;
+            font-weight: 900;
+            color: #666666;
+            font-size: 24px;
+            margin-bottom: 5px;
+
+        }
+
+        .blockquote--facebook h5{
+
+            font-weight: 500;
+            text-align: center;
+            color: #AAAAAA;
+            font-size: 18px;
+
+        }
+
+        .c-blockquote{
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px 5%;
+        }
+
+        .c-blockquote--float{
+            position: absolute;
+            left: 0;
+            top: 10%;
+        }
+
+        .c-blockquote--float .c-blockquote__text{
+            font-family: "Low Casat Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: #333333;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .s--content__title {
+            font-size: 27px;
+            padding: 15px 5%;
+            font-style: italic;
+            color: #183250;
+            font-weight: 600;
+        }
+
+    </style>
+
+    <style>
+
+        /*LOADING :)*/
+
+        .loader{color:#333;font-size:90px;text-indent:-9999em;overflow:hidden;width:1em;height:1em;border-radius:50%;margin: 0 auto 72px;position:relative;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load6 1.7s infinite ease,round 1.7s infinite ease;animation:load6 1.7s infinite ease,round 1.7s infinite ease}@-webkit-keyframes load6{0%,100%,5%,95%{box-shadow:0 -.83em 0 -.4em,0 -.83em 0 -.42em,0 -.83em 0 -.44em,0 -.83em 0 -.46em,0 -.83em 0 -.477em}10%,59%{box-shadow:0 -.83em 0 -.4em,-.087em -.825em 0 -.42em,-.173em -.812em 0 -.44em,-.256em -.789em 0 -.46em,-.297em -.775em 0 -.477em}20%{box-shadow:0 -.83em 0 -.4em,-.338em -.758em 0 -.42em,-.555em -.617em 0 -.44em,-.671em -.488em 0 -.46em,-.749em -.34em 0 -.477em}38%{box-shadow:0 -.83em 0 -.4em,-.377em -.74em 0 -.42em,-.645em -.522em 0 -.44em,-.775em -.297em 0 -.46em,-.82em -.09em 0 -.477em}}@keyframes load6{0%,100%,5%,95%{box-shadow:0 -.83em 0 -.4em,0 -.83em 0 -.42em,0 -.83em 0 -.44em,0 -.83em 0 -.46em,0 -.83em 0 -.477em}10%,59%{box-shadow:0 -.83em 0 -.4em,-.087em -.825em 0 -.42em,-.173em -.812em 0 -.44em,-.256em -.789em 0 -.46em,-.297em -.775em 0 -.477em}20%{box-shadow:0 -.83em 0 -.4em,-.338em -.758em 0 -.42em,-.555em -.617em 0 -.44em,-.671em -.488em 0 -.46em,-.749em -.34em 0 -.477em}38%{box-shadow:0 -.83em 0 -.4em,-.377em -.74em 0 -.42em,-.645em -.522em 0 -.44em,-.775em -.297em 0 -.46em,-.82em -.09em 0 -.477em}}@-webkit-keyframes round{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes round{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+
+    </style>
+
+</head>
+
+<body>
+
+<main style="display: none;opacity: 0;" class="main main--recomendacao">
+
+    <button class="btn btn--close" onclick="top.spl.close();"></button>
+
+    <div id="ghost" style="display: none;">
+
+        <figure class="figure figure-product">
+
+            <img data-lazy="{image}" alt="{name}">
+
+            <figcaption class="figure_caption--product">
+
+                <h3>
+
+                    {name}
+
+                </h3>
+
+                <p installments="{old_price}">
+                    <del>
+                        de R$ {old_price}
+                    </del>
+                </p>
+
+                <p>
+
+                    <b>
+
+                        <small>
+
+                            por
+
+                        </small>
+
+                        R$ {price}
+
+                    </b>
+
+                </p>
+
+                <p installments="{installments_price}">
+
+                    {installments}x de R$ {installments_price}
+
+                </p>
+
+                <button class="btn btn--product">
+
+                    <img src="http://via.placeholder.com/288x53?text=COMPRAR" alt="">
+
+                </button>
+
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+    <section class="section s--divs s--header">
+
+        <header class="header header--recomendacao">
+
+            <img src="https://via.placeholder.com/340x600?text=ASIDE" class="aside-banner">
+
+            <blockquote class="c-blockquote c-blockquote--float">
+
+                <p class="c-blockquote__text">
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Quidem, quos!
+
+                </p>
+
+            </blockquote>
+
+        </header>
+
+    </section>
+
+    <section class="section s--divs s--content">
+        <section class="section section--carrousel">
+
+            <div class="loader">Loading...</div>
+
+        </section>
+        <footer class="footer footer--recomendacao">
+
+            <section class="section section--facebook">
+
+                <h2>
+
+                    Que tal ficar por dentro do que acontece na loja?
+
+                </h2>
+
+                <div class="c-columns">
+
+                    <img src="https://static.sback.tech/shopconvert/uploads/imagens/sua-casa-shop/2018/03/23/recomendacao/icon-push.png" alt="" class="c-icon c-icon--push">
+
+                    <button class="c-btn c-btn--push-decline js-decline">Agora não</button>
+                    <button class="c-btn c-btn--push-accept js-accept">Permitir</button>
+
+                </div>
+
+            </section>
+
+            <section style="display: none; opacity: 0;"  class="section section--facebook js-thanks">
+
+                <blockquote class="blockquote blockquote--facebook">
+
+                    <h2>
+
+                        Obrigado!
+
+                    </h2>
+
+                    <h5>
+
+                        Em breve, você receberá nossas ofertas e novidades!
+
+                    </h5>
+
+                </blockquote>
+
+            </section>
+
+        </footer>
+    </section>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="../../../products/products.js"></script>
+<script type="text/javascript">
+    top.shopback = top.shopback || {
+        getRecommendations: function(_obj, _callback){
+            _callback({data: $STEP}, null);
+        }
+    };
+</script>
+<script type="text/javascript">
+
+    var link_transform = function(_link){
+
+        var _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Recomendacao'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        return _link;
+
+    };
+
+    var redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Recomendacao'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        top.spl.click_only(_link);
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+
+
+    String.prototype.sbNumberFormat = function(){
+        var n              = this,
+            hasPoint = (/(\.)+/.test(this)) ? true : false;
+
+        if(hasPoint){
+            var int = n.split(".")[0],
+                c   = n.split(".")[1];
+            n   = int;
+        } else {
+            c = "00";
+        }
+
+        n = (typeof n == "string") ? n.replace(",","") : n.toString();
+        L = n.length % 3;
+
+        var newValue = false,
+            loop   = "";
+
+        if(n.toString().length > 3){
+            if(L > 0){
+                newValue = n.substring('0', L);
+            } else {
+                newValue = "";
+            }
+
+            loop = n.substring(L, n.length).length / 3;
+
+            for (var i = 0; i < loop; i++) {
+                if(L > 0 || i > 0){
+                    newValue += ".";
+                }
+                newValue += n.substring((L + (i * 3)), (L + (i * 3) + 3));
+            }
+        } else {
+            newValue = n;
+        }
+
+        if(c.length == 2 && parseInt(c) > 0) {
+            newValue += ","+c;
+        } else if (c.length > 2 && parseInt(c) > 0) {
+            newValue += ","+c.substring('0','2');
+        } else if (c.length > 0 && parseInt(c) > 0) {
+            newValue += ","+c+"0";
+        } else {
+            newValue += ",00";
+        }
+        return newValue;
+    };
+
+    var $ID = 8485,
+        _SCOPE_ = window.top.document,
+        $FRAME = $("#f-content-" + $ID, _SCOPE_);
+
+
+    var createBox = function(_products) {
+
+        var _template =  $("#ghost figure").clone();
+
+        _products = Array.from(_products);
+
+        $(".section--carrousel").html("");
+
+        _products.forEach(function(_product, _ind) {
+
+            var _code = _template.html(),
+                _name = _product.title,
+                _image = _product.image[0],
+                _price = _product.price.toString().sbNumberFormat(),
+                _o_price = (typeof _product.normal_price != "undefined" && _product.normal_price != "") ? _product.normal_price.toString().sbNumberFormat() : "",
+                _installments = (typeof _product.installments != 'undefined') ? _product.installments : "",
+                _installments_price = (typeof _product.installments_price != 'undefined') ? _product.installments_price.toString().sbNumberFormat() : "";
+
+            _code = _code.split("{name}").join(_name);
+            _code = _code.split("{image}").join(_image);
+            _code = _code.split("{installments}").join(_installments);
+            _code = _code.split("{installments_price}").join(_installments_price);
+            _code = _code.split("{old_price}").join(_o_price);
+            _code = _code.split("{price}").join(_price);
+
+            _template.html(_code);
+            _template.on("click", function() {
+
+                top.spl.click_only(_product.link);
+                top.spl.set_cookie('_spl_tr', $ID, 720);
+
+                setTimeout(function() {
+
+                    top.location = link_transform(_product.link);
+
+                }, 500);
+
+
+            });
+
+            $(".section--carrousel").append(_template);
+
+            _template = $("#ghost figure").clone();
+
+        });
+
+    }, getProducts = function(){
+
+        top.shopback.getRecommendations({}, function(response, erro) {
+
+            createBox(Array.from(response.data));
+
+            $("<button id='left'></button>").insertAfter(".section--carrousel");
+            $("<button id='right'></button>").insertAfter(".section--carrousel");
+            $(".section--carrousel").slick({
+
+                infinite: false,
+                dots: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: true,
+                prevArrow: $("#left"),
+                nextArrow: $("#right")
+
+            });
+
+        });
+
+    };
+
+    $(".js-decline").click(function(){
+
+        $(".footer--recomendacao").stop().animate({
+
+            opacity: "0"
+
+        }, 120, function(){
+
+            $(".footer--recomendacao").css("display", "none");
+
+        });
+
+    });
+
+    $(".js-accept").click(function(){
+
+
+        if(typeof window.top.shopback.showPushRequest != "undefined"){
+
+            window.top.shopback.showPushRequest();
+
+        }
+
+        $(".section--facebook").stop().animate({
+
+            opacity: "0"
+
+        }, 120, function(){
+
+            $(".section--facebook").css("display", "none");
+            $(".js-thanks").css("display","block").stop().animate({
+
+                opacity: "1"
+
+            }, 120);
+
+            $(".btn--close").attr("onclick","top.spl.close();redirect();")
+
+        });
+
+    });
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".main--recomendacao").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500, getProducts);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main--recomendacao").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".main--recomendacao").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500, getProducts);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".main--recomendacao").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+</script>
+
+</body>
+
+</html>

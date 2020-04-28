@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'FuturaStd-Book';
+  src: url('FuturaStd-Book.eot');
+  src: url('FuturaStd-Book.woff2') format('woff2'),
+       url('FuturaStd-Book.woff') format('woff'),
+       url('FuturaStd-Book.ttf') format('truetype'),
+       url('FuturaStd-Book.svg#FuturaStd-Book') format('svg'),
+       url('FuturaStd-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

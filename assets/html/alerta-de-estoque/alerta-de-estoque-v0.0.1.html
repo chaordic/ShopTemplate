@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>shopback - alerta estoque</title><!--  v0.0.2 -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+	<style>
+		body,
+		body *{
+			background-color: transparent;
+			outline: none;
+			border:0;
+			padding:0;
+			margin:0;
+			font-family: 'Roboto', arial, helvetica, sans-serif !important;
+			font-weight: 700 !important;
+		}
+
+		.box:before{
+			content:'';
+			position:absolute;
+			display:block;
+			width:0;
+			z-index:1;
+			top:-9px;
+			left:0px;
+		}
+
+		.box{
+			width:157px;
+			height:46px;
+			box-sizing:border-box;
+			padding: 8px 0px;
+			position:fixed;
+			left:0;
+			background-color:#ed3237;
+			border-top-left-radius:75px;
+			border-bottom-left-radius:75px;
+			border-top-right-radius:0;
+			border-bottom-right-radius:0;
+			border:1px solid #ed3237;
+		}
+
+		p{
+			text-align:center;
+			font-size:13px;
+			color:#ffffff;
+			position:relative;
+			top:-1px;
+			left:6px;
+			font-weight:700;
+		}
+
+		.color{
+			color:#fed230;
+			font-weight:700;
+		}
+
+		b{
+			font-weight:700;
+		}
+	</style>
+	<link href="https://shopbackbr.github.io/ShopTemplate/assets/fonts/Roboto/stylesheet.css" rel="stylesheet" />
+</head>
+
+<body>
+	<section class="box">
+		<p>
+			<span class="singularOuPlural" data-singular="Último" data-plural="Últimos">Últimos</span> <span class="estoque color">2</span> <span class="singularOuPlural" data-singular="produto" data-plural="produtos">produtos</span><br/>
+			em estoque</span>.
+		</p>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+
+				var campaign_id = 5071,
+					show = 0;
+
+				frame = $('#f-content-' + campaign_id, window.top.document),
+				target = $('.buy-button.buy-button-ref', window.top.document),
+				posicaoAPartirDe = $('.box h1.title', window.top.document),
+				style = {
+					'position' : 'absolute',
+					'opacity' : '0',
+					'width' : '157px',
+					'height' : '46px',
+					'top' : 'inherit',
+					'right' : 'inherit',
+					'bottom' : 'inherit',
+					'left' : 'inherit',
+					'z-index' : '2'
+				};
+
+				frame.css(style);
+
+				/* GERA O VALOR DO ESTOQUE */
+				var stock_min = 20,
+					stock_max = 50;
+
+				//pega a lista de estoque real vtex e retorna em array
+				stocks = $.map(window.top.dataLayer[0].skuStocks, function(value, index){
+					return [value];
+				});
+				//console.log(stocks);
+
+				//garante que todos os valores estejam entre o stock_min e stock_max e ATÉ UM ÚNICO ITEM
+				for( i = 0; i < stocks.length; i++ ){
+					if( stocks[i] < stock_min || stocks[i] > stock_max ){//se isso acontecer, gere um valor e substitui o real
+						stocks[i] = Math.floor( ( Math.random() * (stock_max + 1 - stock_min) ) + stock_min );
+					};
+				};
+				//console.log(stocks);
+
+				stockToView = stocks[0]; //define o estoque que será visualizado pelo cliente
+				//console.log(stockToView);
+				/* /GERA O VALOR DO ESTOQUE */
+
+				/* SETANDO NO COOKIE */
+				//se o cookie não existir, seta o valor gerado acima
+				if( top.spl.get_cookie('stocks-sb') == false ){
+					set_cookie2('stocks-sb', stockToView, 24, window.top.location.pathname );
+				}else{
+					//se já existir, use o valor do cookie
+					stockToView = Number( top.spl.get_cookie('stocks-sb') );
+				};
+				/* /SETANDO NO COOKIE */
+
+				/* SINGULAR/PLURAL */
+				//seta no HTML, diferenciando o estoque singular e plural
+				if( stockToView == 1 ){
+					$('.estoque').css('display','none');
+					$('.singularOuPlural').eq(0).addClass('color'); //dá destaque pra palavra Último
+				}else{
+					$('.estoque').text(stockToView);
+				};
+
+				//diferencia singular e plural das palavras
+				if( stockToView == 1 ){
+					$('.singularOuPlural').each(function(){
+						$(this).text( $(this).attr('data-singular') );
+					});
+				}else{
+					$('.singularOuPlural').each(function(){
+						$(this).text( $(this).attr('data-plural') );
+					});
+				};
+				/* /SINGULAR/PLURAL */
+
+				/* personalizado para o site casabaher */
+				$('.seller-name', window.top.document).find('a').css('display','block');
+				/* /personalizado para o site casabaher */
+
+				/* TIPO DO ALERTA */
+				//alerta AUTOMÁTICO, aparece sem precisar de evento
+				setTimeout(function(){
+					mostrarAlerta();
+				}, 0);
+
+				/*
+				//alerta EVENTO, aparece e desaparece com eventos do mouse no target
+				target.mouseenter(function(){
+					mostrarAlerta();
+				});
+				target.mouseleave(function(){
+					escondeOAlerta();
+				});
+				*/
+				/* /TIPO DO ALERTA */
+
+				function mostrarAlerta(){
+					if( posicaoAPartirDe.length == 1 ){
+						//coordenadas da posição do alerta
+						topAlerta = ( posicaoAPartirDe.offset().top ) + posicaoAPartirDe.innerHeight() + 5 + 'px';
+						leftAlerta = ( posicaoAPartirDe.offset().left + posicaoAPartirDe.innerWidth() ) - frame.innerWidth() + 10 + 'px';
+
+						//define as condições para mostrar o alerta de usuários
+						mostraAlerta = true;
+						//não mostre se o botão comprar não existir
+						//e não mostre o alerta se o produto for um KIT (em vtex, kits são produtos com tipos, como camiseta P, M e G)
+						if( target.length != 1 || stocks.length != 1 ){
+							mostraAlerta = false;
+						};
+
+						//não mostre o alerta em telas muito pequenas
+						tamanhoDaTela = $(window.top.window).innerWidth();
+						if( tamanhoDaTela <= 600 ){
+							mostraAlerta = false;
+						};
+
+						//se o alerta passou por todos os IFs... mostre-o
+						if( mostraAlerta == true ){
+							frame.css({
+								'display' : 'block',
+								'top' : topAlerta,
+								'left' : leftAlerta
+							}).stop().animate({
+								'opacity' : '1',
+								'top' : topAlerta
+							}, 200, function(){
+								if( show == 0 ){
+									show = 1;
+									top.spl.view(campaign_id);
+								};
+							});
+						}else{
+							escondeOAlerta();
+						};
+					};
+				};
+
+				function escondeOAlerta(){
+					posicao = posicaoAPartirDe.offset();
+					left = $(window.top.window).innerWidth() - posicao.left,
+					topAlerta = posicao.top + posicaoAPartirDe.innerHeight() + 'px';
+
+					frame.stop().animate({
+						'opacity' : '0',
+						'top' : topAlerta
+					}, 200, function(){
+						frame.css({
+							'display' : 'none'
+						});
+					});
+				};
+
+
+
+				//atualiza a posição do alerta ao usar o zoom do navegador
+				$(window).resize(function(){
+					atualizaPosicaoDoAlerta();
+					j = 0;
+					delay = setInterval(function(){
+						atualizaPosicaoDoAlerta();
+						j++;
+						if( j > 4 ){
+							clearInterval(delay);
+						};
+					},100);
+				});
+
+				function atualizaPosicaoDoAlerta(){
+					//define a posição do alerta
+					if( posicaoAPartirDe.length == 1 ){
+						topAlerta = ( posicaoAPartirDe.offset().top ) + posicaoAPartirDe.innerHeight() + 5 + 'px';
+						leftAlerta = ( posicaoAPartirDe.offset().left + posicaoAPartirDe.innerWidth() ) - frame.innerWidth() + 10 + 'px';
+
+						frame.css({
+							'top' : topAlerta,
+							'left' : leftAlerta
+						});
+					};
+				};
+
+				/* COOKIE */
+				//o set_cookie2 é igual ao top.spl.set_cookie ***SÓ QUE PERMITE DEFINIR O PATH***
+				function set_cookie2(name, value, hours, path) {
+					var date = new Date();
+					var now = date.getTime();
+					date.setTime(now + hours * 36e5);
+					var expire = date.toUTCString();
+					var dominio = location.host.replace(/^www\.|^m\.|^checkout\.|^loja\.|^cart\.|^carrinho\.|^seguro\.|^secure\.|^ssl\./, ".");
+					document.cookie = name + "=" + value + "; expires=" + expire + "; domain=" + dominio + "; path=" + path;
+				};
+				/* /COOKIE */
+			}, 250);
+		});
+	</script>
+</body>
+</html>

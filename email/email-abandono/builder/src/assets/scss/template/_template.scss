@@ -1,0 +1,200 @@
+// COLORS
+$laranja: #f8a23d;
+$dark-laranja: #f4921f;
+$bege: #f3f3f3;
+$branco: #ffffff;
+$preto: #333333;
+$preto-2: #000000;
+
+body,
+html,
+.body {
+	// background: $branco !important;
+	background: #eeeeee !important;
+
+	a { color: $preto-2; }
+
+	.conteudo-email { 
+		width: 680px; 
+	}
+
+	th.columns.shopback-conteudo,
+	th.columns.container-shopback {
+		&.first {
+			padding-left: 0px;
+			padding-right: 0px;
+			.shopback-logo {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.shopback-conteudo-text,
+			.shopback-conteudo-text * {
+				background-color: $branco;
+			}
+			.shopback-conteudo-text {
+				padding-left: 0px;
+				padding-right: 0px;
+
+				@media only screen and (max-width: #{$global-breakpoint}) {
+					margin-left: 31px !important;
+					margin-right: 27px !important;
+				}
+				&.mobile-no-margin {
+					@media only screen and (max-width: #{$global-breakpoint}) {
+						margin-left: 0px !important;
+						margin-right: 0px !important;
+					}
+				}
+			}
+			.shopback-conteudo-text-footer {
+				padding-left: 0px;
+				padding-right: 0px;
+
+				@media only screen and (max-width: #{$global-breakpoint}) {
+					margin-left: 15px !important;
+					margin-right: 11px !important;
+				}
+			}
+		}
+	}
+
+	hr {
+		border: none !important;
+		height: 2px;
+		background-color: #e6e6e6;
+	}
+
+}
+
+@media only screen and (max-width: 596px) {
+	table.body .container {
+		width: 100% !important;
+	}
+}
+
+.sb_link_pattern {
+	font-size: 12px; 
+
+	> a {
+		font-size: 12px; 
+		color: #1a0dab;
+		cursor: pointer;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+	outline: none !important;
+}
+
+.container.header { background: $bege; }
+
+.body-drip { border-top: 8px solid #663399; }
+
+// shopback Header
+.shopback-header {
+	width: 680px;
+
+	.wrapper-inner {
+		width: 680px;
+
+		.container {
+			width: 680px;
+			background: #000000;
+
+			.container-shopback {
+				width: 680px;
+				text-align: center;
+
+				@media only screen and (max-width: #{$global-breakpoint}) {}
+
+				.shopback-logo {
+					outline: none;
+					border: none;
+					
+					@media only screen and (max-width: #{$global-breakpoint}) {}
+				}
+			}
+		}
+	}
+}
+
+.shopback-footer { background-color: $laranja; }
+
+p .negrito {
+	font-weight: bold;
+	color: red;
+}
+
+p { margin-top: 0px; margin-bottom: 0px; line-height: 16px; }
+
+.texto {
+
+	// CORES
+	&.laranja 	{ color: $laranja; }
+	&.bege 		{ color: $bege; }
+	&.branco 	{ color: $branco; }
+	&.preto 	{ color: $preto; }
+	&.preto-2 	{ color: $preto-2; }
+
+	// ESTILOS
+	&.normal	{ font-weight: normal !important; }
+	&.bold 		{ font-weight: bold; }
+	&.caixa-alta{ text-transform: uppercase; }
+	
+
+	// TAMANHOS
+	&.tamanho-1 { font-size: 24px; line-height: 28px; }
+	&.tamanho-2 { font-size: 17px; line-height: 24px; }
+	&.tamanho-3 { font-size: 12px; }
+	&.tamanho-4 { font-size: 11px; }
+	&.tamanho-5 { font-size: 14px; }
+	&.tamanho-6 { font-size: 11px; }
+}
+
+.block-link-text-center {
+	width: 100%; 
+	text-align: center;
+	display: inline-block; 
+	a {
+		display: inline-block;
+	}
+}
+
+.link-text-center {
+	width: 100%; 
+	text-align: center;
+	display: inline-block; 
+	p {
+		display: inline-block;
+	}
+}
+
+.button-comprar {
+	width: 160px;
+	line-height: 40px !important;
+	font-size: 16px !important;
+
+	color: $branco !important;
+	background-color: $laranja;
+	border: 1px solid $dark-laranja;
+	border-radius: 5px;
+	
+	text-align: center;
+	text-decoration: none;
+	-webkit-text-size-adjust: none;
+	mso-hide: all;
+
+	display: inline-block;
+
+	&:hover {
+		background-color: $dark-laranja;
+		border: 1px solid $laranja;
+	}
+}
+

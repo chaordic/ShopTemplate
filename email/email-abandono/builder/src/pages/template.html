@@ -1,0 +1,129 @@
+---
+subject: _TEMPLATE
+layout: template
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> <!-- utf-8 é a codificação mais compatível com a maioria dos clientes de email usados -->
+	<meta name="viewport" content="width=device-width"> <!-- Força o tamanho da viewport não deveria ser necessário -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Quando IE, utilizamos a última engine de renderização -->
+	<meta name="x-apple-disable-message-reformatting">  <!-- Desativa o auto-scale no iOS 10 Mail -->
+	<title>Shopback Modular Email Template Min v1.0.1</title> <!-- O title é exibido nas notificações mobile -->
+
+	<!-- Web Font / @font-face : BEGIN -->
+
+	<!-- Desktop Outlook não entende web font e volta para Times New Roman, então forço uma fonte sans-serif como fallback. -->
+	<!--[if mso]>
+		<style type="text/css">
+			* {
+				font-family: sans-serif !important;
+			}
+		</style>
+	<![endif]-->
+
+	<!-- Os outros clientes entendem a requisição da web font -->
+	<!--[if !mso]><!-->
+		<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+	<!--<![endif]-->
+
+	<!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset -->
+	{{> css-reset}}
+
+	<!-- Estilos complementares não obrigatórios -->
+	{{> css-email}}
+
+</head>
+<body width="100%" bgcolor="#ffffff" style="margin: 0; mso-line-height-rule: exactly; padding: 0;">
+	<center style="background: #ffffff; width: 100%;">
+
+		{{> preheader}}
+
+		{{> webversion}}
+
+		<a href="#" target="_blank" style="display: block; margin: 0; outline: none; padding: 0; text-decoration: none;">
+			<!--
+				Define a largura máxima do email em dois lugares.
+				1. max-width para todos os clientes de email, exceto Desktop Windows Outlook, permitindo o email diminuir, mas nunca indo além dos 680px.
+				2. MSO tags para Desktop Windows Outlook para forçar 680px.
+			-->
+			<div style="margin: auto; max-width: 680px;" class="email-container">
+				<!--[if mso]>
+				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
+				<tr>
+				<td>
+				<![endif]-->
+				<table bgcolor="#ffffff" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+
+					<!-- Strip : BEGIN -->
+					{{> strip}}
+					<!-- Strip : END -->
+
+					<!-- Image Full-Width : BEGIN -->
+					{{> image-full-width}}
+					<!-- Image Full-Width : END -->
+
+					<!-- Logo : BEGIN -->
+					{{> logo}}
+					<!-- Logo : END -->
+
+					<!-- 2 Even Columns : BEGIN -->
+					{{> 2-even-columns}}
+					<!-- 2 Even Columns : END -->
+
+					<!-- 3 Even Columns : BEGIN -->
+					{{> 3-even-columns}}
+					<!-- 3 Even Columns : END -->
+
+					<!-- Image Left, Text Right : BEGIN -->
+					{{> image-left-text-right}}
+					<!-- Image Left, Text Right : END -->
+
+					<!-- Text Full-Width : BEGIN -->
+					{{> text-full-width}}
+					<!-- Text Full-Width : END -->
+
+					<!-- Buy Button : BEGIN -->
+					{{> buy-button}}
+					<!-- Buy Button : END -->
+
+					<!-- Abandonment : BEGIN -->
+					{{> abandonment}}
+					<!-- Abandonment : END -->
+
+					<!-- Products : BEGIN -->
+					{{> products}}
+					<!-- Products : END -->
+
+					<!-- Recommendation : BEGIN -->
+					{{> recomendation}}
+					<!-- Recommendation : END -->
+
+					<!-- Social : BEGIN -->
+					{{> social}}
+					<!-- Social : END -->
+
+					<!-- Payment : BEGIN -->
+					{{> payment}}
+					<!-- Payment : END -->
+					
+					<!-- Disclaimer : BEGIN -->
+					{{> disclaimer}}
+					<!-- Disclaimer : END -->
+
+				</table>
+				<!--[if mso]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+			</div>
+		</a>
+
+		{{> optout }}
+
+	</center>
+</body>
+</html>

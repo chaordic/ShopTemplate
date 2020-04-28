@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url('ArialRoundedMTBold.eot');
+    src: url('ArialRoundedMTBold.eot?#iefix') format('embedded-opentype'),
+        url('ArialRoundedMTBold.woff2') format('woff2'),
+        url('ArialRoundedMTBold.woff') format('woff'),
+        url('ArialRoundedMTBold.ttf') format('truetype'),
+        url('ArialRoundedMTBold.svg#ArialRoundedMTBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url('ArialRoundedMTStd.eot');
+    src: url('ArialRoundedMTStd.eot?#iefix') format('embedded-opentype'),
+        url('ArialRoundedMTStd.woff2') format('woff2'),
+        url('ArialRoundedMTStd.woff') format('woff'),
+        url('ArialRoundedMTStd.ttf') format('truetype'),
+        url('ArialRoundedMTStd.svg#ArialRoundedMTStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

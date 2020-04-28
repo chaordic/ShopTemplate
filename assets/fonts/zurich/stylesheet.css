@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Zurich';
+    src: url('zuricbi-webfont.woff2') format('woff2'),
+         url('zuricbi-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zurich';
+    src: url('zurich_bt_bold-webfont.woff2') format('woff2'),
+         url('zurich_bt_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Zurich';
+    src: url('zurich_bt_italic-webfont.woff2') format('woff2'),
+         url('zurich_bt_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zurich';
+    src: url('zurich_bt_roman-webfont.woff2') format('woff2'),
+         url('zurich_bt_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

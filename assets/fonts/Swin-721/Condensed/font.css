@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss-721-light-condensed.eot');
+  src: url('Swiss-721-light-condensed.woff2') format('woff2'),
+       url('Swiss-721-light-condensed.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss721BT-LightCondensed.woff') format('woff'),
+       url('Swiss721BT-LightCondensed.ttf') format('truetype'),
+       url('Swiss721BT-LightCondensed.svg#Swiss721BT-LightCondensed') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss-721-condensed.eot');
+  src: url('Swiss-721-condensed.woff2') format('woff2'),
+       url('Swiss-721-condensed.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss721BT-RomanCondensed.woff') format('woff'),
+       url('Swiss721BT-RomanCondensed.ttf') format('truetype'),
+       url('Swiss721BT-RomanCondensed.svg#Swiss721BT-RomanCondensed') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss-721-bold-condensed.eot');
+  src: url('Swiss-721-bold-condensed.woff2') format('woff2'),
+       url('Swiss-721-bold-condensed.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('Swiss721BT-BoldCondensed.woff') format('woff'),
+       url('Swiss721BT-BoldCondensed.ttf') format('truetype'),
+       url('Swiss721BT-BoldCondensed.svg#Swiss721BT-BoldCondensed') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+

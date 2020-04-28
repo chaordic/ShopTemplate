@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'LocalizaDINDisplay-Bold';
+  src: url('LocalizaDINDisplay-Bold.eot');
+  src: url('LocalizaDINDisplay-Bold.woff2') format('woff2'),
+       url('LocalizaDINDisplay-Bold.woff') format('woff'),
+       url('LocalizaDINDisplay-Bold.ttf') format('truetype'),
+       url('LocalizaDINDisplay-Bold.svg#LocalizaDINDisplay-Bold') format('svg'),
+       url('LocalizaDINDisplay-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Localiza DIN Display Light Italic';
+  src: url('Localiza DIN Display Light Italic.eot');
+  src: url('Localiza DIN Display Light Italic.woff2') format('woff2'),
+       url('Localiza DIN Display Light Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LocalizaDINDisplay-LightItalic';
+  src: url('LocalizaDINDisplay-LightItalic.woff') format('woff'),
+       url('LocalizaDINDisplay-LightItalic.ttf') format('truetype'),
+       url('LocalizaDINDisplay-LightItalic.svg#LocalizaDINDisplay-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Localiza DIN Display Medium Italic';
+  src: url('Localiza DIN Display Medium Italic.eot');
+  src: url('Localiza DIN Display Medium Italic.woff2') format('woff2'),
+       url('Localiza DIN Display Medium Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LocalizaDINDisplay-MediumItalic';
+  src: url('LocalizaDINDisplay-MediumItalic.woff') format('woff'),
+       url('LocalizaDINDisplay-MediumItalic.ttf') format('truetype'),
+       url('LocalizaDINDisplay-MediumItalic.svg#LocalizaDINDisplay-MediumItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

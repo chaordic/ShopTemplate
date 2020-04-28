@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Document
+
+    </title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+        body, body *{
+
+            padding: 0;
+            border: none;
+            margin: 0;
+            outline: none;
+            background-color: transparent;
+            font-size: 12k;
+            font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        script{
+
+            display: none;
+
+        }
+
+        h1, h2, h3, h4, h5, form button,
+        .section.s--body form > label{
+
+            font-family: "DubielPlain", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        .is--hide{
+
+            opacity: 0;
+            display: none;
+
+        }
+
+        .main.s--lead{
+
+            width: 700px;
+            height: 525px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: -263px auto 0;
+            top: 50%;
+            background-image: url(http://via.placeholder.com/700x525?text=BG);
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+            outline: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .btn.s--close{
+
+            color: #333;
+            font-size: 24px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+
+        }
+
+        .screen{
+
+            width: 80%;
+            margin: 0 auto;
+
+        }
+
+        .header.s--home,
+        .header.s--thanks{
+
+            padding-top: 110px;
+
+        }
+
+        .header.s--home h1, .header.s--home h5, .header.s--home h2,
+        .header.s--thanks h1{
+
+            text-align: center;
+            font-weight: 500;
+
+        }
+
+        .header.s--home h1,
+        .header.s--thanks h1{
+
+            font-size: 64px;
+
+        }
+
+        .header.s--thanks p{
+
+            font-size: 19px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 5px;
+
+        }
+
+        .header.s--thanks p b{
+
+            display: inline;
+
+        }
+
+        .header.s--thanks{
+
+            padding-bottom: 10px;
+
+        }
+
+        .header.s--home h5{
+
+            font-size: 38px;
+
+        }
+
+        .header.s--home h2{
+
+            font-size: 56px;
+
+        }
+
+        .section.s--body form{
+
+            font-size: 0;
+            text-align: left;
+            padding: 10px 0 10px 0;
+
+        }
+
+        .section.s--body form > *{
+
+            display: inline-block;
+
+        }
+
+        .section.s--body form > label{
+
+            width: 20%;
+            color: #666;
+
+        }
+
+        .section.s--body form > input{
+
+            width: 70%;
+
+        }
+
+        .section.s--body form > label,
+        .section.s--body form > input{
+
+            margin-bottom: 10px;
+            font-size: 22px;
+
+        }
+
+        .section.s--body form > input{
+
+            background-color: #e7e7e7;
+            border-radius: 18px;
+            color: #333;
+            padding: 5px 15px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+        }
+
+        .section.s--body form > .btn.s--submit{
+
+            display: block;
+            margin: 10px auto 5px;
+            width: 180px;
+            font-size: 18px;
+            background-color: #333333;
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 4px;
+
+        }
+
+        .little-text{
+
+            font-size: 12px;
+            text-align: center;
+            color: #333;
+            width: 100%;
+
+        }
+
+        .s--code{
+
+            width: 200px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #f7941d;
+            text-align: center;
+            padding: 5px 0;
+            margin: 5px auto;
+            letter-spacing: 1px;
+
+        }
+
+        .btn.s--cta{
+
+            background-color: #f7941d;
+            font-size: 16px;
+            color: #fff;
+            display: block;
+            width: 150px;
+            border-radius: 18px;
+            padding: 10px 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 15px auto 20px;
+
+        }
+
+
+        .poweredby {
+            background-image: url(https://app.shopconvert.com.br/facebook/completo/assets/img/powered-by-shopback.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 152px;
+            height: 25px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<main style="display: none;opacity: 0;" class="main s--lead">
+
+    <button class="btn s--close" onclick="top.spl.close();">
+
+        <i class="fa fa-times" aria-hidden="true"></i>
+
+    </button>
+
+    <section class="screen s--home">
+
+        <header class="header s--home">
+
+            <h1>
+
+                CADASTRE-SE
+
+            </h1>
+
+            <h5>
+
+                em nossa newsletter e ganhe
+
+            </h5>
+
+            <h2>
+
+                15% de desconto.
+
+            </h2>
+
+        </header>
+
+        <section class="section s--body">
+
+            <form>
+
+                <label for="name">
+
+                    Nome:
+
+                </label>
+
+                <input type="text" name="Nome" required id="name" class="input">
+
+                <label for="name">
+
+                    E-mail:
+
+                </label>
+
+                <input type="email" name="Email" required id="name" class="input">
+
+                <button class="btn s--submit">
+
+                    CADASTRE-SE
+
+                </button>
+
+                <small class="little-text">
+
+                    *Promoção válida para compras acima de R$ 180,00
+
+                </small>
+
+            </form>
+
+        </section>
+
+    </section>
+    <section class="screen s--thanks is--hide">
+
+        <header class="header s--thanks">
+
+            <h1>
+
+                SEJA BEM-VINDA!
+
+            </h1>
+
+            <p>
+
+                Obrigada por efetuar o cadastro. Agora você ficará <br>
+                por dentro dos lançamentos e promoções exclusivas.
+
+            </p>
+
+            <p>
+
+                Utilize o código e ganhe <b>15% de desconto</b>
+
+            </p>
+
+        </header>
+
+        <section class="section s--body">
+
+            <code class="s--code">
+
+                PRIMEIRACOMPRA15
+
+            </code>
+
+            <button class="btn s--cta" onclick="top.spl.redirect();">
+
+                COMPRE AQUI
+
+            </button>
+
+            <small class="little-text">
+
+                *Promoção válida para compras acima de R$ 180,00
+
+            </small>
+
+        </section>
+
+    </section>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/9484a7aa31.js"></script>
+
+<script>
+
+    top.spl.redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Lead'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+
+</script>
+
+<script type="text/javascript">
+
+    $("form").submit(function(){
+
+        return false;
+
+    });
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".s--lead").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".s--lead").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".s--lead").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".s--lead").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+</script>
+
+</body>
+
+</html>

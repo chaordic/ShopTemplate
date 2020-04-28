@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gloss And Bloom';
+    src: url('GlossAndBloom.eot');
+    src: url('GlossAndBloom.eot?#iefix') format('embedded-opentype'),
+        url('GlossAndBloom.woff2') format('woff2'),
+        url('GlossAndBloom.woff') format('woff'),
+        url('GlossAndBloom.ttf') format('truetype'),
+        url('GlossAndBloom.svg#GlossAndBloom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,43 @@
+// SHOPBACK OVERLAY LAYOUT CONFIG
+@import 'shopback-overlay-layout';
+
+
+// SB_OVERLAY_CARROSEL_ITEM
+// =====================================================
+.sb_overlay_carrosel_item {
+	margin: 0 auto;
+	padding: 0;
+	outline: none;
+	// width: 234px;
+	// @include breakpoint(small only) { width: auto; }	
+
+	.sb_overlay_carrosel_item_content {
+		padding: 0 30px;
+		@include breakpoint(small only) { padding: 0 15px; } 
+
+		.sb_o_c_product_image 		{ 
+			width: 100%;
+			height: 175px;
+			cursor: pointer; 
+			display: block;
+
+			@include breakpoint(small only) { 
+				height: auto !important;
+				img {
+					margin: 0 auto;
+					width: 65%; 
+				}
+			}
+		}
+		.sb_o_c_product_name 		{}
+		.sb_o_c_product_oldprice	{ margin-top: 20px; @include breakpoint(small only) { margin-top: 5px; } }
+		.sb_o_c_product_price 		{ margin-top: 4px; 	@include breakpoint(small only) { margin-top: 2px; } }
+		.sb_o_c_product_instalments { margin-top: 4px; 	@include breakpoint(small only) { margin-top: 2px; } }
+		.sb_o_c_product_btn 		{ margin-top: 7px; 	@include breakpoint(small only) { margin-top: 2px; } }
+
+	} // [end] SB_OVERLAY_CARROSEL_CONTENT
+
+
+}
+// =====================================================
+// [end] SB_OVERLAY_CARROSEL_ITEM

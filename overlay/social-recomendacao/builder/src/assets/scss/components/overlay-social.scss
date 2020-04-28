@@ -1,0 +1,81 @@
+ // SHOPBACK OVERLAY LAYOUT CONFIG
+@import 'shopback-overlay-layout';
+
+
+// SB_OVERLAY_SOCIAL
+// =====================================================
+
+.sb_overlay_social {
+	overflow: hidden;
+	@include breakpoint(small only) { height: auto; }
+
+	// SOCIAL_TEXT_BUTTON
+	.social_text_button {
+		@include breakpoint(small only) { 
+			// padding: 0 15px; 
+		} 
+
+		.sb_text {
+			padding-top: 10px;
+			@include breakpoint(small only) { 
+				padding-top: 5px;
+				padding-bottom: 5px;
+				text-align: center;
+			}
+		}
+
+		.sb_button {
+			.icon-facebook {
+				width: 50px;
+				height: 34px;
+				padding: 8px 0px;
+				border-right: 2px solid rgba(0,0,0,0.2);
+				display: block;
+			}
+			.sb_button_text {
+				margin-top: 5px;
+			}
+		}
+
+	} // [end] SOCIAL_TEXT_BUTTON
+
+	// SOCIAL_THANKS
+	.social_thanks {
+		@include breakpoint(small only) { 
+			// padding: 0 15px; 
+		} 
+
+		.sb_text {
+			padding-top: 15px;
+			@include breakpoint(small only) { 
+				padding-top: 5px;
+				padding-bottom: 5px;
+				text-align: left;
+			}
+		}
+
+		.sb_image {
+			@include breakpoint(small only) { 
+				width: inherit !important;
+				margin-top: 4px; 
+			}
+		}
+
+		.sb_button {
+			.icon-facebook {
+				width: 50px;
+				height: 34px;
+				padding: 8px 0px;
+				border-right: 2px solid rgba(0,0,0,0.2);
+				display: block;
+			}
+			.sb_o_r_s_t_button_text {
+				margin-top: 5px;
+			}
+		}
+		
+	} // [end] SOCIAL_THANKS
+}
+
+// =====================================================
+// [end] SB_OVERLAY_SOCIAL

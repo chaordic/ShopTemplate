@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AveFedan';
+    src: url('avefedan_personal_use-webfont.woff2') format('woff2'),
+         url('avefedan_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

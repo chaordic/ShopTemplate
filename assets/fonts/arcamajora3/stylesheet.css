@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Arca Majora 3';
+    src: url('ArcaMajora3-Bold.eot');
+    src: url('ArcaMajora3-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ArcaMajora3-Bold.woff2') format('woff2'),
+        url('ArcaMajora3-Bold.woff') format('woff'),
+        url('ArcaMajora3-Bold.ttf') format('truetype'),
+        url('ArcaMajora3-Bold.svg#ArcaMajora3-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arca Majora 3';
+    src: url('ArcaMajora3-Heavy.eot');
+    src: url('ArcaMajora3-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('ArcaMajora3-Heavy.woff2') format('woff2'),
+        url('ArcaMajora3-Heavy.woff') format('woff'),
+        url('ArcaMajora3-Heavy.ttf') format('truetype'),
+        url('ArcaMajora3-Heavy.svg#ArcaMajora3-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

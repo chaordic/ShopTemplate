@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Darwin Pro';
+    src: url('DarwinPro-Regular.eot');
+    src: url('DarwinPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DarwinPro-Regular.woff2') format('woff2'),
+        url('DarwinPro-Regular.woff') format('woff'),
+        url('DarwinPro-Regular.ttf') format('truetype'),
+        url('DarwinPro-Regular.svg#DarwinPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Darwin Pro';
+    src: url('DarwinPro-Bold.eot');
+    src: url('DarwinPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DarwinPro-Bold.woff2') format('woff2'),
+        url('DarwinPro-Bold.woff') format('woff'),
+        url('DarwinPro-Bold.ttf') format('truetype'),
+        url('DarwinPro-Bold.svg#DarwinPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Darwin Pro';
+    src: url('DarwinPro-Light.eot');
+    src: url('DarwinPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('DarwinPro-Light.woff2') format('woff2'),
+        url('DarwinPro-Light.woff') format('woff'),
+        url('DarwinPro-Light.ttf') format('truetype'),
+        url('DarwinPro-Light.svg#DarwinPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

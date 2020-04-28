@@ -1,0 +1,300 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>shopback - overlay fullscreen</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" />
+		<style>
+			*{
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				text-decoration: none;
+				outline: none;
+			}
+
+			body{
+				background:rgba(86,137,178,0.95);
+			}
+
+			b,strong{
+				font-weight: 700;
+			}
+
+			a,button,.close,.fakeButton,.continue{
+				cursor:pointer;
+			}
+
+			button{
+				position:relative;
+			}
+			button:active{
+				top:1px;
+				left:1px;
+			}
+
+			.close{
+				position:absolute;
+				top: 14px;
+				right: 15px;
+
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				text-align: center;
+				text-decoration: none;
+				text-transform: none;
+			}
+
+			.fakeButton{
+				position:relative;
+			}
+			.fakeButton:active{
+				user-select:none;
+				top:1px;
+				left:1px;
+			}
+
+			.box1-texto1{
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 700;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.box1-texto2{
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 22px;
+				font-style: normal;
+				font-weight: 400;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.box2-texto1{
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 700;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.box2-texto2{
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 22px;
+				font-style: normal;
+				font-weight: 400;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+
+			/* FORMULÁRIO */
+			form{
+				width: 100%;
+			}
+
+			form input:first-child{
+				margin-top:20px;
+			}
+
+			form input:last-child(1){
+				margin-bottom:20px;
+			}
+
+			form input{
+				width:100%;
+				margin:0 auto 10px auto;
+				background:none;
+				padding:7px;
+				box-sizing:border-box;
+				border:1px solid #ffffff;
+				border-radius:3px;
+				height:40px;
+
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				text-align: left;
+				text-decoration: none;
+				text-transform: none;
+			}
+			/* //FORMULÁRIO */
+
+			.box-inner{
+				display:inline-block;
+				margin:0 auto;
+				text-align:left;
+			}
+			.box-5{width:5%;}
+			.box-10{width:10%;}
+			.box-15{width:15%;}
+			.box-20{width:20%;}
+			.box-25{width:25%;}
+			.box-30{width:30%;}
+			.box-35{width:35%;}
+			.box-40{width:40%;}
+			.box-45{width:45%;}
+			.box-50{width:50%;}
+			.box-55{width:55%;}
+			.box-60{width:60%;}
+			.box-65{width:65%;}
+			.box-70{width:70%;}
+			.box-75{width:75%;}
+			.box-80{width:80%;}
+			.box-85{width:85%;}
+			.box-90{width:90%;}
+			.box-95{width:95%;}
+			.box-10{width:100%;}
+
+			#shopback{
+				left:50%;
+				top:50%;
+				position:fixed;
+
+				width:430px;
+				margin-top:-215px;
+				height:430px;
+				margin-left:-215px;
+				overflow:hidden;
+
+				background:none;
+			}
+
+			.inCenter{
+				display:block;
+				margin:0 auto;
+				text-align:left;
+			}
+
+			.miniLabel{
+				position:relative;
+				top:20px;
+				left:5px;
+
+				color: #ffffff;
+				font-family: 'Roboto', arial, helvetica, sans-serif;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				text-align: left;
+				text-decoration: none;
+				text-transform: none;
+			}
+
+			.botao-principal{
+				width:100%;
+				margin-top:10px;
+				border:0;
+				border-radius:3px;
+				padding:10px;
+				background:#ffffff;
+
+				color: #5689b2;
+				font-family: 'Lato', arial, helvetica, sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 900;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="close" onclick="top.spl.close();">
+			<div class="fakeButton">☓</div>
+		</div>
+		<section id="shopback" class="recomendacao custom" data-facebook="" data-id="5362">
+			<section class="box1 inCenter recommendations box-inner box-100" style="display: block;">
+				<div class="box1-texto1">
+					Cadastre-se
+				</div>
+				<div class="box1-texto2">
+					E ganhe muitas vantagens!<br/>
+					Junte-se a mais de <b>54.000 pacientes.</b>
+				</div>
+				<form action="">
+					<label for="Nome:" class="miniLabel">Nome</label>
+					<input class="validaNome" type="text" name="Nome:" placeholder="" maxlength="48" required />
+					<label for="Email:" class="miniLabel">Email</label>
+					<input class="validaEmail" type="text" name="Email:" placeholder="" maxlength="48" required />
+					<button class="botao-principal" type="submit">Enviar</button>
+				</form>
+			</section>
+			<section class="box2 inCenter thanks box-inner box-100" style="display: none;">
+				<div style="height:100px;"></div>
+				<div class="box2-texto1">
+					Obrigado
+				</div>
+				<div class="box2-texto2">
+					<!-- Continue navegando e <br/>aproveite nossas ofertas. -->
+				</div>
+				<button class="botao-principal continuar" onclick="redirect();">Continuar no site</button>
+			</section>
+		</section>
+		<script src="//shopbackbr.github.io/ShopTemplate/assets/libs/js/v0.1.0/shopback.plugin.v0.1.0-overlay-lead.min.js"></script>
+		<script>
+			SB.ready(function(){
+				$(function(){
+
+					var campaign_id = 5362,
+					show = 0;
+					top.spl.cid = campaign_id;
+
+					//ativa a função social
+					//SB.social( '#facebookConnectButton', SB.ov.data('facebook') );
+
+					//evento perda de foco
+					$(window.top).mouseout(function(event){
+						if( event.clientY < 0 && show == 0 ){
+							show = 1;
+							top.spl.show_overlay( top.spl.events['custom_' + campaign_id] );
+							SB.impression = 0;
+						};
+					});
+
+					$('form').submit(function(event){
+						event.preventDefault();
+						top.spl.click_only( top.window.location.href );
+						$.post('{base_url}/tr/tl/' + top.spl.acc + '/' + campaign_id, $(this).serialize(), function(response){
+							$('.box1').css('display', 'none');
+							$('.box2').css('display', 'block');
+							$('.close').attr('onclick', 'redirect();');
+							setTimeout(function(){
+								redirect();
+							},3000);
+							return false;
+						});
+					});
+
+
+
+					//validação via regex
+					$("input.validaNumeros").keyup(function(){texto=$(this).val(),texto=texto.match(/[0-9]/g),null!=texto?(texto=texto.join(""),$(this).val(texto)):$(this).val("")}),$("input.validaEmail").keyup(function(){texto=$(this).val(),texto=texto.match(/[a-zA-Z0-9\_\@\.\-]/g),null!=texto?(texto=texto.join(""),$(this).val(texto)):$(this).val("")}),$("input.validaNome, input.validaTextoSimples").keyup(function(){texto=$(this).val(),texto=texto.match(/[\ a-zA-ZÁÀÂÃáàâãÉÈÊéèêÌÍÎìíîÓÒÔÕóòôõÚÙÛúùûÑñÇç]/g),null!=texto?(texto=texto.join(""),$(this).val(texto)):$(this).val("")});
+
+					$('input').focusin(function(){
+						$(this).prev().css('opacity','0');
+					});
+					$('input').focusout(function(){
+						if( $(this).val().length == 0 ){
+							$(this).prev().css('opacity','1');
+						};
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Fabada';
+    src: url('Fabada.eot');
+    src: url('Fabada.eot?#iefix') format('embedded-opentype'),
+        url('Fabada.woff2') format('woff2'),
+        url('Fabada.woff') format('woff'),
+        url('Fabada.ttf') format('truetype'),
+        url('Fabada.svg#Fabada') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,60 @@
+
+// SHOPBACK OVERLAY LAYOUT
+$sb_overlay_size: (
+	width: 800px,
+	height: 555px,
+);
+
+// BACKGROUND
+$sb_overlay_bg: (
+	color: #ffffff,
+	radius: 10px
+);
+
+// BUTTON
+$sb_overlay_btn_config: (
+	radius: 2px,
+	btn_height_padding: 14px,
+);
+
+// FONT
+$sb_overlay_font_config: (
+	line_height_padding: 4px,
+);
+$sb_overlay_font_family: (
+	1: ('Hind',Verdana,helvetica,sans-serif),
+	2: (Verdana,helvetica,sans-serif),
+	3: ('Open Sans',Verdana,helvetica,sans-serif),
+	4: (Arial,helvetica,sans-serif)
+);
+
+// SIZES
+$sb_overlay_font_sizes: (
+	1: 30px,
+	2: 26px,
+	3: 24px,
+	4: 22px,
+	5: 20px,
+	6: 18px,
+	7: 16px,
+	8: 14px,
+	9: 12px,
+	10: 9px
+);
+
+$sb_overlay_image_sizes: (
+	1: 200px,
+	2: 50px
+);
+
+
+// CORES
+$sb_overlay_color: (
+	1: #000000,
+	2: #ffffff,
+	3: #888888,
+	4: #d71a20,
+	5: #054268,
+	6: #4460a0,
+	7: #e6e6e6
+);

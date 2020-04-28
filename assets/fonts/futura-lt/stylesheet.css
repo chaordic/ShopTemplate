@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('futuralt-webfont.woff2') format('woff2'),
+         url('futuralt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('futuralt-bold-webfont.woff2') format('woff2'),
+         url('futuralt-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FuturaLT Condensed';
+    src: url('futura-lt-condensed-webfont.woff2') format('woff2'),
+         url('futura-lt-condensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

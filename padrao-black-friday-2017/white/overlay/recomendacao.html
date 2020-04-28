@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="overlay-social-white" data-campaign="6376" data-facebook="447946525587703">
+<head>
+  <meta charset="UTF-8">
+
+  <title>
+
+    Shopback
+  </title>
+
+  <link rel="stylesheet" href="https://shopbackbr.github.io/ShopTemplate/padrao-black-friday-2017/css/recomendacao-white.css">
+</head>
+
+<body>
+
+  <div id="ghost" style="display: none;">
+    <figure class="figure figure-product">
+      <span><img data-lazy="{image}" alt="{name}"></span>
+      <figcaption class="figure_caption--product">
+        <h3>
+          {name}
+        </h3>
+        <p class="old-price" old-price="{old_price}">
+          de R${old_price}
+        </p>
+        <p class="price">
+          <span>Por:</span>
+          
+          R$ {price}
+        </p>
+        <p class="installments" installments="{installments_price}">
+          ou {installments}x de R$ {installments_price}
+        </p>
+        <button class="btn btn-product">
+          Comprar
+        </button>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="overlay">
+
+    <!-- Main -->
+    <div class="overlay-main">
+
+      <!-- Close -->
+      <span class="close close-x js-close" onclick="top.spl.close();">Fechar [x]</span>
+      <!-- Fim Close -->
+
+      <!-- Logo -->
+      <figure class="logo"><img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/logo2.png" alt=""></figure>
+      <!-- Fim Logo -->
+
+      <!-- Black Friday -->
+      <figure class="logo-black-friday"><img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/blackfriday2.png" alt=""></figure>
+      <!-- Fim Black Friday -->
+
+      <!-- Header -->
+      <div class="overlay-header">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+      </div>
+      <!-- Fim Header -->
+
+      <!-- Container Principal -->
+      <div class="overlay-content">
+        <div class="section-carrousel">
+          <span class="loader"></span>
+
+          
+        </div>
+      </div>
+      <!-- Fim Container Principal -->
+
+      <!-- Footer -->
+      <div class="overlay-footer">
+        <div class="facebook-first">
+          <h5>Fique por dentro das novidades!</h5>
+
+          <button class="btn btn-facebook" onclick="connect();">
+            <i class="ico ico-facebook"></i>
+            <strong>Conecte-se com Facebook</strong>
+            <span>*Nunca publicaremos nada sem a sua permissão</span>
+          </button>
+          
+        </div>
+        <div class="facebook-thanks">
+
+          <figure class="figure-user">
+            <img src="" alt="">
+          </figure>
+
+          <h4>
+            Obrigado por se conectar. Confira nossas ofertas exclusivas. 
+          </h4>
+
+        </div>
+      </div>
+      <!-- Fim Footer -->
+
+      <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby" target="_blank">ShopBack</a>
+    </div>
+    <!-- Fim Main -->
+
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/assets/libs/js/bf/shopback.bf.js?nocache"></script> <script>
+    top.spl.redirect = function(){
+
+      var _link = window.top.location.href,
+      _hash = "",
+      _utms = {
+
+        'utm_source': 'ShopBack',
+        'utm_medium': 'ShopConvert_Social_Recommendation'
+
+      };
+
+      if(/(\#)+/.test(_link)){
+
+        _link = _link.split("#");
+        _hash = "#" + _link[1],
+        _link = _link[0];
+
+      }
+
+      if(/(\?)+/.test(_link)){
+
+        _link += "&";
+
+      }else{
+
+        _link += "?";
+
+      }
+
+      for(_utm in _utms){
+
+        _link += _utm + "=" + _utms[_utm] + "&" 
+
+      }
+
+      _link = _link.replace(/(\&)$/g, "") + _hash;
+
+      top.spl.click_only(_link);
+      top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+      setTimeout(function(){
+
+        top.location = _link;
+
+      }, 800);
+
+    };
+
+    top.spl.link_transform = function(_link){
+
+      var _hash = "",
+      _utms = {
+
+        'utm_source': 'ShopBack',
+        'utm_medium': 'ShopConvert_Social_Recommendation'
+
+      };
+
+      if(/(\#)+/.test(_link)){
+
+        _link = _link.split("#");
+        _hash = "#" + _link[1],
+        _link = _link[0];
+
+      }
+
+      if(/(\?)+/.test(_link)){
+
+        _link += "&";
+
+      }else{
+
+        _link += "?";
+
+      }
+
+      for(_utm in _utms){
+
+        _link += _utm + "=" + _utms[_utm] + "&" 
+
+      }
+
+      _link = _link.replace(/(\&)$/g, "") + _hash;
+
+      return _link;
+
+    };
+  </script>
+</body>
+</html>

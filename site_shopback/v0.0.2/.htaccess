@@ -1,0 +1,72 @@
+RewriteEngine On
+
+ErrorDocument 404 /404.php
+
+#URL amigavel
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^$ index.php [L]
+RewriteRule ^shopad$ shopad.php [L]
+RewriteRule ^quem-somos$ quem-somos.php [L]
+RewriteRule ^fale-conosco$ fale-conosco.php [L]
+RewriteRule ^shopalert$ shopalert.php [L]
+RewriteRule ^shopconvert$ shopconvert.php [L]
+RewriteRule ^shopimobi$ shopimobi.php [L]
+RewriteRule ^shoppush$ shoppush.php [L]
+RewriteRule ^shopsmart$ shopsmart.php [L]
+RewriteRule ^shoptarget$ shoptarget.php [L]
+
+<IfModule mod_deflate.c>
+	
+	<IfModule mod_headers.c>
+	    Header append Vary User-Agent env=!dont-vary
+	</IfModule>
+	    AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+	<IfModule mod_mime.c>
+	    # DEFLATE by extension
+	    AddOutputFilter DEFLATE js css htm html xml
+	</IfModule>
+
+	# Files and Text to compress
+	#***************************
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/x-httpd-php
+	AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+	AddOutputFilterByType DEFLATE application/x-httpd-eruby
+	# Files and Text to exclude from compression
+	#***************************
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.avi$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mov$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mp3$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mp4$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.rm$ no-gzip dont-vary
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_USER_AGENT} ^w3af.sourceforge.net [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} dirbuster [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} nikto [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SF [OR]
+RewriteCond %{HTTP_USER_AGENT} sqlmap [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} fimap [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} nessus [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} whatweb [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Openvas [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} jbrofuzz [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} libwhisker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} webshag [NC,OR]
+RewriteCond %{HTTP:Acunetix-Product} ^WVS
+RewriteRule ^.* http://127.0.0.1/ [R=301,L]
+</IfModule>

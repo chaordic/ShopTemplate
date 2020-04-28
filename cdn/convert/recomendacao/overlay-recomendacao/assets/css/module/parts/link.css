@@ -1,0 +1,15 @@
+.c-link{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.c-link--powered{
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}

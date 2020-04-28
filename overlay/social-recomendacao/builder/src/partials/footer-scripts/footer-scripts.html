@@ -1,0 +1,26 @@
+{{> footer-scripts-app}}
+
+{{> footer-scripts-google-code-lead}}
+
+{{> footer-scripts-utm}}
+
+{{> footer-scripts-shopback-plugin}}
+
+<script type="text/javascript">
+	"use strict";
+	var jQuerySBOverlay = jQuery.noConflict();
+	jQuerySBOverlay(function( $ ) {
+		
+		window.sb_campaign_id = {{overlay_social_rec.id_campanha}};
+		window.val_close_redirect = "close";
+
+		window.sb_close_redirect = function() {
+			if ( window.val_close_redirect == "close" ) { top.spl.close(); } 
+			else 										{ top.spl.redirect(); top.spl.close(); }
+		};
+
+		// BOTÃO FECHAR
+		$('.sb_overlay_header .close-button').on('click',function(e){ e.preventDefault(); window.sb_close_redirect(); });
+
+	});
+</script>

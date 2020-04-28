@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Harabara Mais Demo';
+    src: url('HarabaraMaisBold-HarabaraMaisBold.eot');
+    src: url('HarabaraMaisBold-HarabaraMaisBold.eot?#iefix') format('embedded-opentype'),
+        url('HarabaraMaisBold-HarabaraMaisBold.woff2') format('woff2'),
+        url('HarabaraMaisBold-HarabaraMaisBold.woff') format('woff'),
+        url('HarabaraMaisBold-HarabaraMaisBold.ttf') format('truetype'),
+        url('HarabaraMaisBold-HarabaraMaisBold.svg#HarabaraMaisBold-HarabaraMaisBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

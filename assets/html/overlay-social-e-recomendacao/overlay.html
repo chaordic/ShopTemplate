@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-https://W3Chttps://DTD XHTML 1.0 Transitionalhttps://EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>Template</title>
+		 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)">
+		<link rel="stylesheet" type='text/css' href="https://static.sback.tech/shopconvert/uploads/imagens/shopback/css/recomendacao.css?v0.0.1"> 
+		<style type="text/css">
+			/*
+			* - CUSTOM
+			* --- Aqui ficam as propriedades que são modificadas na maioria das vezes
+			*/
+			/* Caso o overlay tenha borda redonda */
+			#shopback.recomendacao .box{
+				border-radius: 7px;				
+			}
+
+			/* cor do X dentro do botão fechar */
+			#shopback.recomendacao .close { 
+				color: #24a1ac;
+				font-size: 22px;
+				border: 0;
+				border-radius: 5px;
+				cursor: pointer;
+				float: right;
+				position: absolute;
+				right: 9px;
+    			top: 9px;
+			}
+ 
+
+			/* cor do background quando botão fechar for redondo */
+			#shopback.recomendacao .close.rounded {}
+			/* cor e espessura da borda */
+			#shopback.recomendacao .close.bordered {}
+			/* propriedades do texto do header */
+			#shopback.recomendacao .header .text {
+				font-family: 'Roboto', serif; 
+				padding: 10px 0 0 20px;
+				width: 500px;
+			    line-height: 26px;
+		        margin-right: 65px;
+			}
+
+			#shopback.recomendacao .header .text .first {
+				color: #0a528f;
+			}
+
+			#shopback.recomendacao .header .text .second {
+				color: #fdc648;
+			}
+
+			.header{
+				padding: 0px;
+			}
+ 
+
+			#shopback.recomendacao .header .store_logo {
+			    margin: 0 0 0 20px;
+			}
+
+			#shopback.recomendacao .header .store_logo img{
+				width: 90%;
+			}
+			#shopback.recomendacao .thanks .content{
+				height: 500px;
+			background-color: #ffffff;
+			}
+			#shopback.recomendacao .thanks .text h1 { 
+    			color: #4d5e6d;
+			}
+
+			#shopback.recomendacao .thanks .text h2 {
+				color: #5d5d5d;
+			}
+
+
+			#shopback.recomendacao .thanks .user_image{
+				border-color: transparent;
+			    margin:0px 0 0 30px;
+			    float: left;
+			    height: 74px;
+			    border: 0;
+			}
+
+			
+			#shopback.recomendacao .thanks .user_image .border {
+				border: 2px solid #ffffff;
+			    border-radius: 50%;
+			    height: 70px;
+			    margin: 0 auto;
+			    overflow: hidden;
+			    width: 86px;
+			}
+
+			#shopback.recomendacao .thanks .text {
+				font-family: 'Roboto', serif;
+			    padding: 0px 10px;
+			    width: 610px;
+			    margin: 6px 0 0 150px;
+			    text-align: left;	
+			}
+
+
+			#shopback.recomendacao .thanks .text h2{
+				color: #a3a3a3;
+			}
+			#shopback.recomendacao .content .carousel{
+				
+			}
+			/* cor da seta esquerda */
+			#shopback.recomendacao .content .carousel .slick-prev {
+				border-right-color: #666 !important;
+			}
+			/* cor da seta direita */
+			#shopback.recomendacao .content .carousel .slick-next {
+				border-left-color: #666;
+			}
+			/* cor do dot ativo */
+			#shopback.recomendacao .content .carousel .slick-dots li button:hover::before,
+			#shopback.recomendacao .content .carousel .slick-dots li button:focus::before,
+			#shopback.recomendacao .content .carousel .slick-dots li.slick-active button::before {
+				color: #000000;
+			}
+			/* se tiver borda em torno de todo item */
+			#shopback.recomendacao .content .carousel .item_border {
+				border: 1px solid transparent;
+			}
+			/*
+			* (!!) não é recomendado usar borda na imagem quando estiver usando borda no item inteiro (!!)
+			* se conter borda em torno da imagem */
+			#shopback.recomendacao .content .carousel .item .img_border {
+				height: 210px;
+			}
+			#shopback.recomendacao .content .carousel .item .img_border img{
+				width: 85%;
+			}
+			/* estilo para o título do produto */
+			#shopback.recomendacao .content .carousel .item .product_name {
+				color: #000;
+				font-family: 'Roboto', serif;
+				font-size: 13px;  
+				font-weight: bold;
+				line-height: 19px;
+				height: 40px;
+				text-align: center;
+			}
+
+			button.btn-product {
+				cursor: pointer;
+			    border: none;
+			    display: block;
+			    margin: 0 auto 0 auto; 
+			    background: url(https://static.sback.tech/shopconvert/uploads/imagens/multi-ar/social-rec/btn-comprar.png);
+			    background-repeat: no-repeat;
+		        width: 200px;
+		        height: 45px;
+			}
+
+			.fa.fa-shopping-cart {
+				color: #fff;
+			    margin: 0 10px 0 0px;
+			}
+			
+			/* estilo para o preço antigo */
+			#shopback.recomendacao .content .carousel .item .product_oldPrice {
+				font-family: 'Roboto', serif;
+				text-align: center;
+			}
+			/* estilo do preço */
+			#shopback.recomendacao .content .carousel .item .product_price {
+				font-family: 'Roboto', serif;
+				font-size: 20px;
+				font-weight: 500;
+				text-align: center;
+				color: #586a7b;
+			}
+
+			#shopback.recomendacao .content .carousel .item .product_price > small {
+			    font-size: 12px;
+			}
+
+			#shopback.recomendacao .content .carousel .item .product_price > span {
+				color: #000;
+				font-size: 14px;
+			}
+
+			#shopback.recomendacao .content .carousel .item .product_instalments {
+				font-family: 'Roboto', serif;
+				font-size: 12px;
+				font-weight: 500;
+				color: #586a7b;
+				height: 25px;
+				text-align: center;
+				opacity: 1;
+			}
+			#shopback.recomendacao .content .carousel .item .product_instalments span{
+				color: #0a3560;  
+			}
+			#shopback.recomendacao .content .carousel .item .button {
+				background-color: green;
+				color: #ffffff;
+				font-family: 'Roboto', serif;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 40px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			.footer{
+				padding-top: 0px;
+			} 
+
+			#shopback.recomendacao .footer .primary {
+				padding-top: 10px;
+			}
+
+			#shopback.recomendacao .footer .primary .left .text {
+			    color: #0a528f;
+			    font-family: 'Roboto', serif; 
+			    font-size: 20px;
+			    margin-top: 25px;
+			    line-height: 25px;
+			}
+			#shopback.recomendacao .thanks .text {
+				font-family: 'Roboto', serif; 
+				padding: 0 10px;
+			}
+			#shopback.recomendacao .thanks h1 {
+				font-size: 36px;
+				line-height: 42px;
+			}
+			#shopback.recomendacao .thanks h2 {
+				font-size: 30px;
+			}
+			#shopback.recomendacao .thanks .continue {
+		        background-color: #ef9529;
+			    color: #fff;
+			    font-family: 'Roboto', serif;
+			    font-size: 26px;
+			    line-height: 1;
+			    padding: 16px 60px; 
+			    margin-top: 5px;
+			}
+
+			#shopback.recomendacao .thanks .text h1 {
+				color: #0a528f;
+			}
+
+
+			@media only screen and (min-width: 480px) {
+				#shopback.recomendacao .header .store_logo img {
+				    left: 60%;
+				    position: absolute;
+				    top: 50%;
+				    transform: translate(-50%, -50%);
+				    max-height: 140px;
+				    max-width: 180px;
+				}
+
+				#shopback.recomendacao .thanks .text h2 {
+					font-size: 20px;
+					
+				}
+
+				#shopback.recomendacao .thanks .text h1 {
+					font-size: 20px; 
+					font-weight: bold;
+					line-height: 26px;
+					margin: 0;
+				}
+
+				#shopback.recomendacao .thanks .text .continue {
+					font-size: 20px;
+				}
+
+			}
+
+
+			@media only screen and (min-width: 768px){
+				#shopback.recomendacao .header .store_logo {
+				    float: left;
+				    height: 90px;
+				    position: relative;
+				    width: 180px;
+				}	 
+
+				#shopback.recomendacao .content::before {
+				    content: "";
+				    display: block;
+				    height: 6px;
+				    margin: 0 auto;
+				    width: 90%;
+				    border-radius: 100%; 
+				    background: none;
+				    border-top: 1px solid #ebebeb;
+				}
+
+				#shopback.recomendacao .thanks .content::before {
+					border: 0;
+				}
+
+				#shopback.recomendacao .header .text .first {
+					font-weight: bold;
+					font-size: 19px;
+					
+				}
+
+				#shopback.recomendacao .header .text .second {
+					font-size: 19px; 
+				}
+
+				#shopback.recomendacao .footer::before {
+					background: none;
+					border-bottom: 1px solid #ebebeb;
+					width: 90%;
+				}
+
+				#shopback.recomendacao .footer .primary .left, #shopback.recomendacao .footer .primary .right {
+				    float: left;
+    				width: 370px;
+				}
+
+			}
+
+			@media only screen and (min-width: 992px) {
+				#shopback.recomendacao .footer .primary .left, #shopback.recomendacao .footer .primary .right {
+				    float: left;
+				    width: 400px;
+				}
+
+				#shopback.recomendacao .content {
+					height: 405px;
+				}
+			}
+ 
+
+			.facebook-custom{
+				background-color: transparent;
+				outline: none;
+				border: none;
+				margin: 7px 0 0 40px;
+				cursor: pointer;
+				width: 320px;
+			}
+
+			.facebook-custom img {
+				width: 100%;
+			}
+
+			#shopback.recomendacao .thanks .header .store_logo img{
+				transform: translate(-50%, -50%);
+			}
+
+			#shopback.recomendacao .thanks .header .store_logo {
+				margin: 2px auto;
+			}
+
+			#shopback.recomendacao .content .slick-list{
+				height: 390px;
+			}
+		</style>
+	</head>
+	<body style="background-color: rgba(0, 0, 0, 0.5);">
+		<p></p>
+		<!-- NÃO APAGAR * Esse é o template de itens utilizado dentro do carousel -->
+		<div id="item_template" class="item" style="display: none;">
+			<div class="item_border">
+				<div class="img_border"><img class="product_image" data-lazy="{image}" alt="{title}" /></div>
+				<p class="product_name">{title}</p>
+				<p class="product_oldPrice">de R$ {price}</p>
+				<p class="product_price">R$ {price}</p> 
+				<p class="product_instalments" installments="{installments}">ou  <span>{installments}x</span>  de <span>R$ {installments_price}</span> s/ juros</p>
+			<button class="btn-product"></button></div>
+		</div>
+		<!-- NÃO APAGAR * Esse é o template de itens utilizado dentro do carousel -->
+		<div id="shopback" class="recomendacao" data-facebook="447259648999201" data-id="5326">
+			<div class="box">
+				<div class="recommendations">
+					<div class="header"><button class="close" onclick="top.spl.close();">X</button>
+						<div class="store_logo"><img src="https://static.sback.tech/shopconvert/uploads/imagens/multi-ar/social-rec/logo.png" /></div>
+						<div class="text"><span class="first">Que tal contar com a ajuda de um especialista para <br />
+						descobrir o aparelho de ar-condicionado ideal para você?!</span> <span class="second">Confira nossas sugestões</span></div>
+					</div>
+					<div class="content">
+						<div class="carousel" data-slick="{&quot;dots&quot;: false, &quot;arrows&quot;: true, &quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 3}"><img src="https://static.sback.tech/shopconvert/uploads/imagens/shopback/loading_transparent.gif" alt="Carregando" class="loading" /></div>
+					</div>
+					<div class="footer">
+						<div class="primary">
+							<div class="left">
+								<div class="text">Fique por dentro das novidades!</div>
+							</div>
+							<div class="right">
+								<button id="facebookConnectButton" class="facebook-custom"> <img src="https://static.sback.tech/shopconvert/uploads/imagens/multi-ar/social-rec/btn-face.png" alt="Conecte-se com Facebook." /> </button>
+							</div>
+						</div> 
+						<div class="thanks">
+							<div class="content">
+								<div class="user_image">
+									<div class="border"><img id="user_img" src="https://account.social-recbakers.com/default_user.png" alt="User" /></div>
+								</div>
+								<div class="text">
+									<h1 class="">Obrigado por se conectar</h1>
+									<h2 class="">Encontre o aparelho ideal para você e aproveite ofertas imperdíveis!</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<a href="https://www.shopback.com.br" class="poweredby" target="_blank">ShopBack</a></div>
+			<script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/assets/libs/js/v0.2.0/shopback.plugin.v0.2.0.min.js"></script>
+			<script type="text/javascript">// <![CDATA[
+			SB.ready(function() {
+						var installments = setInterval(function(){
+							if(SB.impression == "1" && ($("[data-correct]").length > 2 || $("[installments]").length > 2)){
+								$(".item [data-correct]").each(function(k,v){
+									if($(this).data("correct") != ""){
+										$(this).html("De R$ "+$(this).data("correct")+" por");
+									}
+								});
+								$(".item [installments]").each(function(k,v){
+									if($(this).attr("installments") == ""){
+										$(this).css({
+											visibility: 'hidden'
+										});
+									}
+								});
+								clearInterval(installments);
+							}
+						}, 300);
+					});
+			// ]]></script>
+		</body>
+	</html>

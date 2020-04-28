@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Dear Jane';
+    src: url('DearJane.eot');
+    src: url('DearJane.eot?#iefix') format('embedded-opentype'),
+        url('DearJane.woff2') format('woff2'),
+        url('DearJane.woff') format('woff'),
+        url('DearJane.ttf') format('truetype'),
+        url('DearJane.svg#DearJane') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

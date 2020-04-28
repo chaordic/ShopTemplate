@@ -1,0 +1,27 @@
+{
+	"name": "shopback-plugin",
+	"version": "0.1.2",
+	"homepage": "https://github.com/ShopBackBR/ShopTemplate/shopback-plugin",
+	"repository": {
+		"url": "https://github.com/ShopBackBR/ShopTemplate/shopback-plugin.git",
+		"type": "git"
+	},
+	"authors": [
+		"Danilo Augusto Matos <da@shopback.com.br>",
+		"Mizael Silva Lemos <ms@shopback.com.br>",
+		"Carlos Eduardo Gomes <carlitoshxcx@gmail.com>"
+	],
+
+	"description": "Overlay Shopback - Criação e funcionalidades.",
+	"main": "dist/shopback.plugin.js",
+	"keywords": [
+		"javascript"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

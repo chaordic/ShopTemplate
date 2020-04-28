@@ -1,0 +1,19 @@
+.c-header,
+.c-carosel--text{
+    position: relative;
+    -webkit-transition: all ease-in 220ms;
+    -moz-transition: all ease-in 220ms ;
+    -ms-transition: all ease-in 220ms ;
+    -o-transition: all ease-in 220ms ;
+    transition: all ease-in 220ms;
+    -webkit-transition-delay: 620ms;
+    -moz-transition-delay: 620ms;
+    -ms-transition-delay: 620ms;
+    -o-transition-delay: 620ms;
+    transition-delay: 620ms;
+    left: 0;
+}
+.is-hide .c-header,
+.is-hide .c-carosel--text{
+    left: -340px;
+}

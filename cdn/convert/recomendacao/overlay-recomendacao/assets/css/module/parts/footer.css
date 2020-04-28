@@ -1,0 +1,14 @@
+.c-footer{
+    width: 100%;
+    height: 70px;
+    background-color: #EEEEEE;
+    font-size: 0;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.c-footer__push{
+    display: inline-block;
+    width: 53%;
+    vertical-align: middle;
+}

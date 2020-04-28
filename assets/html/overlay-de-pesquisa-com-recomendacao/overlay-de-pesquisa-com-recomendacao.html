@@ -1,0 +1,984 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Pesquisa</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link href="https://shopbackbr.github.io/ShopTemplate/assets/fonts/Bree-Serif/stylesheet.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        /* Reset */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+        body {line-height: 1;}
+        ol, ul {list-style: none;}
+        blockquote, q {quotes: none;}
+        blockquote:before, blockquote:after,
+        q:before, q:after {content: '';content: none;}
+        table {border-collapse: collapse;border-spacing: 0;}
+        html, body {overflow: hidden;}
+
+		*{
+			outline: none;
+		}
+
+        #sb_overlay {
+            height: 500px;
+            margin: -250px 0 0 -400px;
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 800px;
+        }
+
+        #sb_overlay .overlay-titulo {
+			margin-top: 20px;
+            color: #e70000;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        #sb_overlay .overlay-titulo2 {
+            color: #666666;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        #sb_overlay .left_side,
+        #sb_overlay .right_side {
+            float: left;
+            max-height: 500px;
+			overflow: hidden;
+        }
+
+        #sb_overlay .left_side {
+            position: relative;
+            width: 340px;
+        }
+
+        #sb_overlay .right_side {
+            /*box-sizing: border-box;*/
+            /*padding: 25px 20px 20px 20px;*/
+			padding-left: 40px;
+            width: 420px;
+        }
+
+
+
+
+
+
+
+		#sb_overlay .ov_content .questions li {
+            clear: both;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            margin: 15px 0;
+        }
+
+		#sb_overlay .ov_content .questions li:nth-child(1) {
+			margin-top:40px;
+		}
+
+        #sb_overlay .ov_content .questions li:before {
+            border-radius: 50%;
+            border: 2px solid #ff0000;
+            content: "\20";
+            display: block;
+            float: left;
+            height: 20px;
+            width: 20px;
+        }
+
+        #sb_overlay .ov_content .questions li:after {
+            background-color: #ff0000;
+            border-radius: 50%;
+            content: "\20";
+            display: block;
+            height: 0px;
+            position: absolute;
+            top: 16px; left: 16px;
+            width: 0px;
+
+            -webkit-transition-duration: 0.2s;
+            -webkit-transition-property: all;
+            -webkit-transition-timing-function: ease-in-out;
+        }
+
+        #sb_overlay .ov_content .questions li.active {
+            cursor: default;
+            margin: 10px 0 10px 0;
+        }
+
+        #sb_overlay .ov_content .questions li.active:after,
+        #sb_overlay .ov_content .questions li:hover:after {
+            height: 16px;
+            top: 4px; left: 4px;
+            width: 16px;
+        }
+
+        #sb_overlay .ov_content .questions li.active span {
+            text-transform: initial;
+        }
+
+        #sb_overlay .ov_content .questions li span {
+            display: block;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            float: left;
+            height: 24px;
+            margin: 4px 0 0 10px;
+            color: #000000;
+            font-weight: 400; 
+        }
+
+        #sb_overlay .ov_content .answer .questions li span {
+            display: block;
+            color: #666666;
+            font-family: 'Lato', Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            float: left;
+            height: 24px;
+            margin: 4px 0 0 10px;
+            font-weight: 700; 
+        }
+
+		form {
+            display: block;
+            overflow: hidden;
+            margin: 0px auto 0 auto;
+            padding: 0;
+        }
+
+		form input {
+            border: 1px solid #4a4a4a;
+            box-sizing: border-box;
+            box-shadow: inset 0 0 2px #c3c3c3;
+            margin: 0 0 20px 0;
+            padding: 10px 5px;
+            width: 100%;
+        }
+
+        form input#email {
+            width: calc(100% - 100px);
+        }
+
+        form button {
+            background-color: #4a4a4a;
+            border: 0;
+            color: #ffffff;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin: 0 0 0 15px;
+            padding: 10px 0;
+            text-align: center;
+            text-transform: uppercase;
+            width: 80px;
+        }
+
+        .form_successful {
+            display: none;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #sb_overlay .ov_content .item {
+            cursor: pointer;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        #sb_overlay .ov_content .item .product_image {
+            display: block;
+            margin: 0 auto;
+            max-height: 160px;
+            max-width: 100%;
+			width:100px;
+			height:100px;
+        }
+
+        #sb_overlay .ov_content .item .product_name{
+            color: #000000;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            height: 14px;
+            margin: 0 0 10px 0;
+            text-align: center;
+            text-transform: uppercase;
+            overflow: hidden;
+        }
+
+        .slick-dotted.slick-slider {
+            margin-top: 16px;
+			position:relative;
+			left:-20px;
+        }
+
+        #sb_overlay .ov_content .item .button {
+            background-color: #000;
+            color: #ffffff;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 6px 0;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        #sb_overlay .ov_footer {
+            bottom: 0;
+            border-top: 1px solid #aaaaaa;
+            box-sizing: border-box;
+            height: 85px;
+            position: absolute;
+            width: calc(100% - 250px);
+        }
+
+        #sb_overlay .ov_footer .logged_in {
+            display: none;
+        }
+
+        #sb_overlay .ov_footer .logged_out {
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        #sb_overlay .ov_footer .logged_out .phrase,
+        #sb_overlay .ov_footer .logged_out .fb_connect {
+            float: left;
+            width: 50%;
+        }
+
+        #sb_overlay .ov_footer .logged_out .phrase p {
+            color: #054268;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect {
+            background-color: #4661b0;
+            border: 0;
+            cursor: pointer;
+            overflow: hidden;
+            padding: 0;
+            height: 45px;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect .logo,
+        #sb_overlay .ov_footer .logged_out .fb_connect .text {
+            display: block;
+            float: left;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect .logo {
+            border-right: 1px solid #344989;
+            height: 45px;
+            width: 45px;
+        }
+        
+        #sb_overlay .ov_footer .logged_out .fb_connect,
+        #sb_overlay .ov_footer .logged_out .fb_connect .logo svg {
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+            -webkit-transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+                    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect .text {
+            box-sizing: border-box;
+            color: #ffffff;
+            padding: 8px;
+            text-align: left;
+            width: calc(100% - 46px);
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect .text span {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect .text small {
+            color: #a3b1cf;
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect:hover {
+            background-color: #2D4897;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect:hover .logo svg {
+            height: 35px;
+            margin-top: 4px;
+            width: 35px;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect:active {
+            background-color: #132E7D;
+        }
+
+        #sb_overlay .ov_footer .logged_out .fb_connect:active .logo svg {
+            height: 30px;
+            margin-top: 6px;
+            width: 30px;
+        }
+
+        #sb_overlay .ov_footer .logged_in {
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
+        #sb_overlay .ov_footer .logged_in .user_photo {
+            /*border: 2px solid #aaaaaa;*/
+            border-radius: 50%;
+            float: left;
+            height: 65px;
+            overflow: hidden;
+            position: relative;
+            width: 65px;
+        }
+
+        #sb_overlay .ov_footer .logged_in .user_photo img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #sb_overlay .ov_footer .logged_in .connected_phrase {
+            color: #054268;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            float: left;
+            line-height: 22px;
+            margin: 10px 0;
+            text-align: left;
+            padding: 0 0 0 20px;
+            width: calc(100% - 85px);
+        }
+        /*
+        #sb_overlay .ov_footer .logged_in .user_photo:before {
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            content: "\20";
+            display: block;
+            height: 63px;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 63px;
+        }
+        */
+        #sb_overlay .poweredby {
+            background-image: url('https://app.shopconvert.com.br/facebook/completo/assets/css/../img/powered-by-shopback.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            color: transparent;
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            margin: 0;
+            height: 25px;
+            width: 152px;
+        }
+
+        #sb_overlay .voltar {
+			/*
+            color: #959595;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            position: absolute;
+            bottom: 90px; right: 25px;
+            text-transform: uppercase;
+			*/
+        }
+
+		#sb_overlay .close {
+            cursor: pointer;
+            display: inline-block;
+            height: 18px;
+            overflow: hidden;
+            position: absolute;
+            right: 15px;
+			top: 15px;
+            width: 18px;
+        }
+
+        #sb_overlay .close:hover::before,
+        #sb_overlay .close:hover::after {
+            background: #1ebcc5;
+        }
+
+		/* Load */
+        #sb_overlay .circ{
+            background-color: transparent;
+            border-radius: 0px 0px 50px 50px;
+            height: 180px;
+            margin: 60px auto;
+            overflow: hidden;
+            position: relative;
+            top: 20%; left: 0%;
+            width: 180px;
+            z-index: 0;  
+            -webkit-backface-visibility: hidden;
+        }
+        #sb_overlay .hands{
+            background-color: transparent;
+            border-radius:20px;
+            box-shadow:-1px -4px 0px 0px #000;
+            height: 120px;
+            margin-top: 140px;
+            position: absolute;
+            top:75%; left: 16%;
+            width: 120px;
+            z-index: 1;
+            -webkit-animation:node2 1.5s infinite alternate;
+            -webkit-animation-timing-function:ease-out;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform:rotate(45deg);
+        }
+        #sb_overlay .body{ 
+            background-color: transparent;
+            border-radius: 50px/25px ;
+            box-shadow: inset -5px 2px 0px 0px #000;
+            height: 120px;
+            margin: 90px auto;
+            position: relative;
+            width: 140px; 
+            -webkit-animation:node2 1.5s infinite alternate;
+            -webkit-animation-timing-function:ease-out;
+        }
+        #sb_overlay .head{
+            background-color: #fff;
+            border-radius:50px;
+            box-shadow: inset -4px 2px 0px 0px #000;
+            height: 80px;
+            margin: -250px auto;
+            position: relative;
+            width: 80px; 
+            -webkit-animation:node 1.5s infinite alternate;
+            -webkit-animation-timing-function:ease-out;
+            -webkit-backface-visibility: hidden;
+        }
+        #sb_overlay .eye{
+            background-color: #111;
+            border-radius:0px 0px 20px 20px;
+            box-shadow: 40px 0px 0px 0px #000;
+            height: 8px;
+            position: relative;
+            top: 40px;left: 10px;
+            width: 20px; 
+        }
+        @-webkit-keyframes node {
+            0%{ top:0px; }
+            50%{ top:10px; }
+            100% { top:0px;}
+        }
+
+        @-webkit-keyframes node2 {
+            0%{ top:-5px; }
+            50%{ top:10px; }
+            100% { top:-5px;} 
+        }
+
+		.blue{
+			background:rgba(0,0,255,0.3);
+		}
+
+		.myButton{
+			cursor:pointer;
+			margin-left:35px;
+		}
+
+		.slick-arrow,.slick-prev,.slick-next{
+			top:100px;
+		}
+
+		.slick-prev{
+			left:-10px;
+			/*content:'←';*/
+		}
+
+		.slick-next{
+			right:-10px;
+			/*content:'→';*/
+		}
+
+		.carousel{
+			height:220px;
+		}
+
+		.slick-prev:before, .slick-next:before{
+			color:#000000;
+		}
+
+		/* FONTES DO CARROSSEL */
+
+		#sb_overlay .ov_content .item .product_name{
+			height:33px; /* font-size + 3 * 3 */
+			line-height:11px; /* = font-size + 3 */
+
+			color:#e60014;
+			font-family:'Bree Serif',arial,helvetica,sans-serif;
+			font-size:11px;
+			font-style:normal;
+			font-weight:400;
+			text-align:center;
+			text-decoration:none;
+			text-transform:uppercase;
+		}
+
+		/* texto preço DE | preco DE */
+		#sb_overlay .ov_content .item .product_oldPrice::before{
+			display:none;
+			content:'De: R$';
+			text-decoration:none;
+		}
+		#sb_overlay .ov_content .item .product_oldPrice{
+			display:block;
+			margin-bottom:5px;
+
+			color:#333333;
+			font-family:'Lato',arial,helvetica,sans-serif;
+			font-size:12px;
+			font-style:normal;
+			font-weight:400;
+			text-align:center;
+			text-decoration:line-through;
+			text-transform:none;
+		}
+
+		/* texto preço POR | preco POR */
+		#sb_overlay .ov_content .item .product_price::before{
+			display:inline;
+			color:#333333;
+			content:'Por: ';
+			font-size:12px;
+			font-weight: 700;
+		}
+		#sb_overlay .ov_content .item .product_price{
+			display:block;
+			margin-bottom:5px;
+
+			color:#5e9b20;
+			font-family:'Lato',arial,helvetica,sans-serif;
+			font-size:14px;
+			font-style:normal;
+			font-weight:400;
+			text-align:center;
+			text-decoration:none;
+			text-transform:none;
+		}
+
+		/* texto parcelas | parcelamento */
+		#sb_overlay .ov_content .item .product_instalments{
+			display:none;
+			color:#666666;
+			font-family:'Lato',arial,helvetica,sans-serif;
+			font-size:12px;
+			font-style:normal;
+			font-weight:400;
+			text-align:center;
+			text-decoration:none;
+			text-transform:none;
+		}
+		#sb_overlay .ov_content .item .product_instalments span{
+			color:#666666;
+			font-weight:400;
+			font-family:'Lato',arial,helvetica,sans-serif;
+		}
+
+		/* /FONTES DO CARROSSEL */
+
+
+		.answer{
+			min-height: 500px;
+		}
+		.pesquisa{
+			background: #ffffff;
+		}
+
+		.answer{
+			display:none;
+		}
+
+
+		.loader {
+			margin: 0 auto;
+			border: 8px solid #f3f3f3;
+			border-top: 8px solid #999999;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			animation: spin 0.8s linear infinite;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+        #sb_overlay .ov_content .answer .text .subtitle, form label {
+			font-family: 'Roboto', Arial, Helvetica, sans-serif;
+			max-width:360px;
+            color: #666666;
+            font-size: 16px;
+			line-height: 20px;
+        }
+
+		.formAqui{
+			display:block;
+			width:340px;
+		}
+
+		form label{
+			color: #666666;
+			font-size: 12px;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			display:block;
+		}
+
+		.slick-dotted.slick-slider{
+			margin-top:0;
+		}
+
+		/* oculta automaticamente os blocos de informações se o XML do cliente que não possuir */
+		[old-price=''],[installments=''],[installments='1'],[installments_price='']{
+			/*display:none !important;*/
+			opacity:0 !important;
+		}
+	</style>
+
+</head>
+<body class="">
+    <div class="pesquisa" id="sb_overlay">
+        <div>
+            <div class="close" onclick="top.spl.close();">
+				<img src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-close.png" />
+			</div>
+            <div class="left_side"><img alt="" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/background.png"></div>
+            <div class="right_side">
+				<h1 class="overlay-titulo">Já vai embora?</h1>
+				<h1 class="overlay-titulo2">Por quê?</h1>
+				<div class="ov_content">
+                    <div class="first_screen">
+                        <ul class="questions">
+                            <li><span>Não encontrei o que procurava.</span></li>
+                            <li><span>O produto que eu buscava está indisponível.</span></li>
+                            <li><span>Estou conferindo as novidades.</span></li>
+                            <li><span>Estou em duvidas sobre o produto.</span></li>
+						</ul>
+						<div class="myButton" onclick="top.spl.redirect();">
+							<img src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-continuar.png" />
+						</div>
+						<div class="formAqui" style="position:absolute;top:425px;">
+							<form>
+								<label>Fique por dentro das novidades</label>
+								<input id="email" placeholder="EMAIL" name="email" required="required" type="email" style="float:left; height:30px;">
+								<button style="width: 84px; height: 30px; border: 0; background:url('https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-enviar.png') no-repeat center center;"></button>
+							</form>
+							<div class="form_successful">Obrigado!</div>
+						</div>
+                    </div>
+                    <div class="answer">
+                        <i class="close" onclick="top.spl.redirect();"></i>
+						<div style="height:50px;"></div>
+                        <ul class="questions">
+                            <li class="active"><span>Não encontrei o que procurava.</span></li>
+                        </ul>
+                        <div class="text">
+                            <div class="subtitle">
+								Temos outras opções que podem te agradar!<br>
+								Volte ao nosso site agora e confira nossas<br>
+								ofertas feitas especialmente para você!
+							</div>
+							<div class="myButton" style="margin: 0; margin-top:20px;">
+								<img onclick="top.spl.redirect();" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-continuar.png" />
+								<img class="voltar" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-voltar.png" />
+							</div>
+                        </div>
+						<div class="formAqui" style="position:absolute;top:425px;">
+							<form>
+								<label>Fique por dentro das novidades</label>
+								<input id="email" placeholder="EMAIL" name="email" required="required" type="email" style="float:left; height:30px;">
+								<button style="width: 84px; height: 30px; border: 0; background:url('https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-enviar.png') no-repeat center center;"></button>
+							</form>
+							<div class="form_successful">Obrigado!</div>
+						</div>
+					</div>
+                    <div class="answer">
+                        <i class="close" onclick="top.spl.redirect();"></i>
+                        <ul class="questions">
+                            <li class="active"><span>O produto que eu buscava está indisponível.</span></li>
+                        </ul>
+                        <div class="text">
+                            <div class="subtitle">
+								Temos outras opções que podem agradar você!
+							</div>
+							<div style="max-height:222px; position:relative; left:-10px; width:400px;">
+								<div class="carousel">
+									<div style="padding:80px;">
+										<div class="loader"></div>
+									</div>
+								</div>
+							</div>
+							<div class="myButton" style="margin: 0;">
+								<img onclick="top.spl.redirect();" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-continuar.png" />
+								<img class="voltar" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-voltar.png" />
+							</div>
+                        </div>
+						<div class="formAqui" style="position:absolute;top:430px;">
+							<form>
+								<label>Fique por dentro das novidades</label>
+								<input id="email" placeholder="EMAIL" name="email" required="required" type="email" style="float:left; height:30px;">
+								<button style="width: 84px; height: 30px; border: 0; background:url('https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-enviar.png') no-repeat center center;"></button>
+							</form>
+							<div class="form_successful" style="position:relative; top:40px;">Obrigado!</div>
+						</div>
+                    </div> 
+                    
+                    <div class="answer">
+                        <i class="close" onclick="top.spl.redirect();"></i>
+						<div style="height:50px;"></div>
+                        <ul class="questions">
+                            <li class="active"><span>Estou conferindo as novidades.</span></li>
+                        </ul>
+                        <div class="text">
+                            <div class="subtitle">
+                                Receba as nossas novidades por e-mail.<br>
+								Receba as novidades, de produtos a promoções,<br>
+								no seu email antes de todo mundo!
+                            </div> 
+                        </div>
+						<div class="formAqui" style="">
+							<form>
+								<label>Fique por dentro das novidades</label>
+								<input id="email" placeholder="EMAIL" name="email" required="required" type="email" style="float:left; height:30px;">
+								<button style="width: 84px; height: 30px; border: 0; background:url('https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-enviar.png') no-repeat center center;"></button>
+							</form>
+							<div class="form_successful">Obrigado!</div>
+						</div>
+						<div class="myButton" style="margin: 0; margin-top:10px;">
+							<img onclick="top.spl.redirect();" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-continuar.png" />
+							<img class="voltar" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-voltar.png" />
+						</div>
+					</div>
+
+                    <div class="answer">
+                        <i class="close" onclick="top.spl.redirect();"></i>
+						<div style="height:50px;"></div>
+                        <ul class="questions">
+                            <li class="active">
+								<span>Estou em duvidas sobre o produto.</span>
+							</li>
+                        </ul>
+                        <div class="text">
+                            <div class="subtitle">
+								Entre em contato a nossa central de atendimento:<br>
+								(11) 3224-1020 / sac@cirilocabos.com.br
+							</div>
+
+							<div class="myButton" style="margin: 0; margin-top:20px;">
+								<img onclick="top.spl.redirect();" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-continuar.png" />
+								<img class="voltar" src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-voltar.png" />
+							</div>
+                    </div>
+					<div class="formAqui" style="position:absolute;top:425px;">
+						<form>
+							<label>Fique por dentro das novidades</label>
+							<input id="email" placeholder="EMAIL" name="email" required="required" type="email" style="float:left; height:30px;">
+							<button style="width: 84px; height: 30px; border: 0; background:url('https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-de-pesquisa-com-rec/btn-enviar.png') no-repeat center center;"></button>
+						</form>
+						<div class="form_successful">Obrigado!</div>
+					</div>
+				</div>
+			</div>
+        </div><a class="poweredby" href="https://www.shopback.com.br" target="_blank">ShopBack</a>
+    </div>
+
+	<!-- não apagar - template do carrossel -->
+	<div id="item_template" class="item" style="display:none;">
+		<div class="item_border">
+			<div class="img_border">
+				<img alt="{title}" class="product_image" data-lazy="{image}" />
+			</div>
+			<p class="product_name">{title}</p>
+			<p class="product_oldPrice" old-price="{old_price}">
+				<span style="text-decoration:line-through;">De: R$</span> {old_price}
+			</p>
+			<p class="product_price">
+				R$ {price}
+			</p>
+			<p class="product_instalments" installments="{installments}" installments_price="{installments_price}">
+				Ou <span>{installments}x</span> de <span>{installments_price}</span> no cartão
+			</p>
+			<p class="btnComprar">
+				<img src="https://app.shopconvert.com.br/uploads/imagens/cirilo-cabos/overlay-soc-rec/btn-comprar.png" style="width: 100%;" />
+			</p>
+		</div>
+	</div>
+	<!-- /não apagar - template do carrossel -->
+
+
+
+
+
+
+<script type="text/javascript">// <![CDATA[
+
+	var id = 4953;
+	/*top.spl.cid = id;*/
+
+	function clickURL(l){
+		if(l.search("utm_source=ShopBack") <= -1 && typeof top.spl.link_transform !== 'undefined'){
+			l = top.spl.link_transform(l);
+		}
+
+		var link = top.spl.b64(l);
+		var url = top.spl.base_url + '/tr/tc/' + top.spl.acc + '/' + top.spl.cid + '/' + link;
+		top.spl.ajax(url, false);
+
+		setTimeout(function(){
+			top.location.href = l;
+		}, 800);
+	};
+
+	function products(object, question_id){
+		object.title = (object.title.length > 38) ? object.title.substring(0, 35) + '...' : object.title;
+
+		object.normal_price = (object.normal_price) ? object.normal_price.toString().sbNumberFormat() : "";
+		object.price = (object.price) ? object.price.toString().sbNumberFormat() : "";
+		object.installments =  (object.installments) ? parseInt(object.installments) : "";
+		object.installments_price = (object.installments_price) ? object.installments_price.toString().sbNumberFormat() : "";
+
+			if(object.normal_price == object.price){
+				object.normal_price = '';
+			};
+			
+		if(typeof object.more_info != 'undefined'){
+			object.more_info.brand = (typeof object.more_info.brand != 'undefined') ? object.more_info.brand : "";
+			object.more_info.manufacturer = (typeof object.more_info.manufacturer != 'undefined')?object.more_info.manufacturer:"";
+			object.more_info.gender = (typeof object.more_info.gender != 'undefined')?object.more_info.gender:"";
+			object.more_info.color = (typeof object.more_info.color != 'undefined')?object.more_info.color:"";
+			object.more_info.quantity = (typeof object.more_info.quantity != 'undefined')?object.more_info.quantity:"";
+			object.more_info.size = (typeof object.more_info.size != 'undefined')?object.more_info.size:"";
+			object.more_info.material = (typeof object.more_info.material != 'undefined')?object.more_info.material:"";
+			object.more_info.age_group = (typeof object.more_info.age_group != 'undefined')?object.more_info.age_group:"";
+			object.more_info.shipping = (typeof object.more_info.shipping != 'undefined')?object.more_info.shipping:"";
+			object.more_info.condition = (typeof object.more_info.condition != 'undefined')?object.more_info.condition:"";
+		}else{
+			object.more_info = {};
+			object.more_info.brand = "";
+			object.more_info.manufacturer = "";
+			object.more_info.gender = "";
+			object.more_info.color = "";
+			object.more_info.quantity = "";
+			object.more_info.size = "";
+			object.more_info.material = "";
+			object.more_info.age_group = "";
+			object.more_info.shipping = "";
+			object.more_info.condition = "";
+		};
+
+		var template = $('#item_template').clone();
+			template.removeAttr("id");
+
+		var code = template.html();
+		code = code
+			.split("{image}").join(object.images[0])
+			.split("{title}").join(object.title)
+			.split("{old_price}").join(object.normal_price)
+			.split("{price}").join(object.price)
+			.split("{installments}").join(object.installments)
+			.split("{installments_price}").join(object.installments_price)
+			.split("{brand}").join(object.more_info.brand)
+			.split("{manufacturer}").join(object.more_info.manufacturer)
+			.split("{gender}").join(object.more_info.gender)
+			.split("{color}").join(object.more_info.color)
+			.split("{quantity}").join(object.more_info.quantity)
+			.split("{size}").join(object.more_info.size)
+			.split("{material}").join(object.more_info.material)
+			.split("{age_group}").join(object.more_info.age_group)
+			.split("{shipping}").join(object.more_info.shipping)
+			.split("{condition}").join(object.more_info.condition);
+
+			template.html(code);
+
+			template.css('display','block').on("click", function(){
+				if(typeof window.top.ShopBack == 'object' && typeof window.top.ShopBack.Linkprefix == 'object') object.link = window.top.ShopBack.Linkprefix[0]+object.link+window.top.ShopBack.Linkprefix[1]; 
+				clickURL(object.link);
+			});
+
+		$('.answer:eq('+question_id+') .carousel').append(template);
+	};
+
+	String.prototype.sbNumberFormat=function(){var t=this,r=/(\.)+/.test(this)?!0:!1;if(r){var e=t.split(".")[0],n=t.split(".")[1];t=e}else n="00";t="string"==typeof t?t.replace(",",""):t.toString(),L=t.length%3;var s=!1,g="";if(t.toString().length>3){s=L>0?t.substring("0",L):"",g=t.substring(L,t.length).length/3;for(var i=0;g>i;i++)(L>0||i>0)&&(s+="."),s+=t.substring(L+3*i,L+3*i+3)}else s=t;return s+=2==n.length&&parseInt(n)>0?","+n:n.length>2&&parseInt(n)>0?","+n.substring("0","2"):n.length>0&&parseInt(n)>0?","+n+"0":",00"};
+
+// Quando clicar em alguma pergunta
+	$('.questions li:not(.active)').click(function() {
+		// Guardamos as informações sobre a pergunta clicada
+		var question_id = $(this).index(),
+			question_text = $(this).text();
+
+		// Escondemos a tela de perguntas
+		$('.first_screen').animate({
+			opacity: 0
+		}, 200, function(){
+			$(this).css('display','none');
+			// Mostramos a resposta correspondente
+			$('.answer:eq('+question_id+')').css('display','block').animate({
+				opacity: 1
+			}, 200, function(){
+
+			});
+		});
+
+		// Marca o clique na ferramenta
+		var link = top.spl.b64(window.top.window.location.href + '#' + question_id);
+		var url = top.spl.base_url + '/tr/tc/' + top.spl.acc + '/' + top.spl.cid + '/' + link;
+		top.spl.ajax(url, false);
+
+		// Salvamos cookie de conversão
+		top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+		// Enviamos a pergunta clicada para Shopback
+		$.post('{base_url}tr/tp/' + top.spl.acc + '/' + top.spl.cid, {
+			resposta: question_text
+		});
+	});
+
+	$('.voltar').on('click',function(){
+		$('.answer').css('display','none');
+		$('.first_screen').css('display','block');
+		$('.first_screen').css('opacity','1');
+	});
+
+	// Form
+	$('form').submit(function() {
+		top.spl.cid = id;
+		$.post('{base_url}tr/tl/' + top.spl.acc + '/' + top.spl.cid, $(this).serialize(), function(response) {
+			$('form').animate({
+				opacity: 0,
+			}, 300, function() {
+				$('form').css('display', 'none');
+				$(this).next().css('display','inline');
+				$('.close').attr('onclick','top.spl.redirect();');
+			});
+		});
+		return false;
+	});
+// ]]></script>
+</body>
+</html>

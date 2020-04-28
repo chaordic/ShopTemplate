@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Omnes-Light';
+  src: url('Omnes-Light.eot');
+  src: url('Omnes-Light.woff2') format('woff2'),
+       url('Omnes-Light.woff') format('woff'),
+       url('Omnes-Light.ttf') format('truetype'),
+       url('Omnes-Light.svg#Omnes-Light') format('svg'),
+       url('Omnes-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Omnes-Medium';
+  src: url('Omnes-Medium.eot');
+  src: url('Omnes-Medium.woff2') format('woff2'),
+       url('Omnes-Medium.woff') format('woff'),
+       url('Omnes-Medium.ttf') format('truetype'),
+       url('Omnes-Medium.svg#Omnes-Medium') format('svg'),
+       url('Omnes-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Omnes';
+  src: url('Omnes.eot');
+  src: url('Omnes.woff2') format('woff2'),
+       url('Omnes.woff') format('woff'),
+       url('Omnes.ttf') format('truetype'),
+       url('Omnes.svg#Omnes') format('svg'),
+       url('Omnes.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

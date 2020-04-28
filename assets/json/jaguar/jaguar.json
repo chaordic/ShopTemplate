@@ -1,0 +1,397 @@
+{"data":[{
+   "ind": "1",
+   "Brand": "JLR",
+   "Name": "Autostar",
+   "interprise": "AUTOSTAR COMERCIAL E IMPORTADORA LTDA",
+   "fantasy_name": "Autostar - Jardins",
+   "location": "São Paulo, SP",
+   "address": "Rua Colômbia, 683 - Jardim Paulista - CEP 01438001"
+ },
+ {
+   "ind": "2",
+   "Brand": "JLR",
+   "Name": "Autostar",
+   "interprise": "AUTOSTAR COMERCIAL E IMPORTADORA LTDA",
+   "fantasy_name": "Autostar - Morumbi",
+   "location": "São Paulo, SP",
+   "address": "Avenida Morumbi, 6989 - Jardim Morumbi - CEP 05650002"
+ },
+ {
+   "ind": "3",
+   "Brand": "JLR",
+   "Name": "Caltabiano",
+   "interprise": "CALMAC VEICULOS LTDA",
+   "fantasy_name": "Caltabiano - Pinheiros",
+   "location": "São Paulo, SP",
+   "address": "Avenida das Nações Unidas, 7885 - Pinheiros - CEP 05425070"
+ },
+
+ {
+   "ind": "4",
+   "Brand": "JLR",
+   "Name": "Caltabiano",
+   "interprise": "CALMAC DF VEICULOS LTDA",
+   "fantasy_name": "Caltabiano - DF",
+   "location": "Brasilia, DF",
+   "address": "Sia Trecho 1, 1570 Parte A - Setor de Indústria - CEP 71200010"
+ },
+
+ {
+   "ind": "5",
+   "Brand": "JLR",
+   "Name": "Caltabiano",
+   "interprise": "CALMAC NORTE VEICULOS LTDA",
+   "fantasy_name": "Caltabiano - Pacaembu",
+   "location": "São Paulo, SP",
+   "address": "Avenida Pacaembu, 410 - Pacamebu - CEP 01155-000"
+ },
+
+ {
+   "ind": "6",
+   "Brand": "JLR",
+   "Name": "Enzo",
+   "interprise": "ENZO COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Enzo",
+   "location": "Campo Grande, MS",
+   "address": "Avenida Costa e Silva, 429 Vila Progresso - CEP 79050-001"
+ },
+ {
+   "ind": "7",
+   "Brand": "JLR",
+   "Name": "Euro Motors",
+   "interprise": "MG NEGOCIOS AUTOMOTIVOS LTDA",
+   "fantasy_name": "Euro Motors",
+   "location": "São José do Rio Preto, SP",
+   "address": "Avenida Pres.Juscelino Kubitschek, 3600 Loja C e D - Jardim Moyses Miguel Haddad - CEP 15093-225"
+ },
+ {
+   "ind": "8",
+   "Brand": "JLR",
+   "Name": "Eurobike",
+   "interprise": "BCLV COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Eurobike - Ribeirão Preto",
+   "location": "Ribeirão Preto, SP",
+   "address": "Avenida Wladimir Meirelles Ferreira,1650 - Jardim Botânico - CEP 14021-180"
+ },
+ {
+   "ind": "9",
+   "Brand": "JLR",
+   "Name": "Eurobike",
+   "interprise": "BCLV COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Eurobike - Uberlândia",
+   "location": "Uberlândia, MG",
+   "address": "Avenida dos Vinhedos, 300 - Morada da Colina - CEP 38411-159"
+ },
+ {
+   "ind": "10",
+   "Brand": "JLR",
+   "Name": "Euro Import",
+   "interprise": "SUL IMPORT VEICULOS E SERVICOS LTDA",
+   "fantasy_name": "Euro Import - Curitiba",
+   "location": "Curitiba, PR",
+   "address": "Avenida Pres. Arthur Bernardes, 118 - Seminário - CEP 80320-300"
+ },
+ {
+   "ind": "11",
+   "Brand": "JLR",
+   "Name": "Euro Import",
+   "interprise": "SUL IMPORT VEICULOS E SERVICOS LTDA",
+   "fantasy_name": "Euro Import - Londrina",
+   "location": "Londrina, PR",
+   "address": "Avenida Tiradentes, 5665 - Jardim Rosicler - CEP 86072-000"
+ },
+ {
+   "ind": "12",
+   "Brand": "JLR",
+   "Name": "Euro Import",
+   "interprise": "SUL IMPORT VEICULOS E SERVICOS LTDA",
+   "fantasy_name": "Euro Import - Maringá",
+   "location": "Maringá, PR",
+   "address": "Rua Gaspar Ricardo, 263 - Bairro Industrial - CEP 87040-365"
+ },
+ {
+   "ind": "13",
+   "Brand": "JLR",
+   "Name": "Extrema",
+   "interprise": "DIVEPEL DISTRIBUIDORA DE VEICULOS PEIXOTO LTDA.",
+   "fantasy_name": "Extrema",
+   "location": "Fortaleza, CE",
+   "address": "Avenida Desembargador Moreira, 3034 - São João do Tatuapé - CEP 60170-002"
+ },
+ {
+   "ind": "14",
+   "Brand": "JLR",
+   "Name": "GB Cars",
+   "interprise": "NHN DISTRIBUIDORA DE VEICULOS LTDA",
+   "fantasy_name": "GB Cars - Villa Lobos",
+   "location": "São Paulo, SP",
+   "address": "Avenida Doutor Gastão Vidigal, 1430 - Vila Leopoldina - CEP 05314-000"
+ },
+ {
+   "ind": "15",
+   "Brand": "JLR",
+   "Name": "Grand Brasil",
+   "interprise": "GRAND POINT COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Grand Brasil",
+   "location": "Barueri, SP",
+   "address": "Estrada da Aldeinha, 184 Alphaville - Jd. Santa Cecília - Saída 23B Rod. Castelo Branco - CEP 06465-100"
+ },
+ {
+   "ind": "16",
+   "Brand": "JLR",
+   "Name": "Intercar",
+   "interprise": "INTERCAR UK MOTORS COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Intercar - Campinas",
+   "location": "Campinas, SP",
+   "address": "Av. José de Souza Campos, 2550 - Jardim Novo Cambui - CEP 13090615"
+ },
+
+ {
+   "ind": "17",
+   "Brand": "LR",
+   "Name": "Intercar",
+   "interprise": "INTERCAR UK MOTORS COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Intercar - Itaipava",
+   "location": "Pretrópolis, RJ",
+   "address": "Estrada União e Indústria, 10490 - Itaipava - CEP 25750226"
+ },
+
+ {
+   "ind": "18",
+   "Brand": "JLR",
+   "Name": "Intercar",
+   "interprise": "INTERCAR UK MOTORS COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Intercar - Moema",
+   "location": "São Paulo, SP",
+   "address": "Avenida Miruna, 633 - Moema -"
+ },
+ {
+   "ind": "",
+   "Brand": "",
+   "Name": "",
+   "interprise": "",
+   "fantasy_name": "",
+   "location": "",
+   "address": "CEP 04084-002"
+ },
+ {
+   "ind": "19",
+   "Brand": "JLR",
+   "Name": "Land Vitória",
+   "interprise": "LAND VITORIA COMERCIO DE VEICULOS",
+   "fantasy_name": "Land Vitória",
+   "location": "Vitória, ES",
+   "address": "Av. Nossa Senhora da Penha, 1885 - Santa Lucia - CEP 29056 - 075"
+ },
+
+ {
+   "ind": "20",
+   "Brand": "JLR",
+   "Name": "Maggi",
+   "interprise": "MAGGI IMPORT SOROCABA LTDA",
+   "fantasy_name": "Maggi",
+   "location": "Sorocaba, SP",
+   "address": "Avenida Afonso Vergueiro, 3140 - Santa Lucy - CEP 18035-370"
+ },
+ {
+   "ind": "21",
+   "Brand": "JLR",
+   "Name": "Newland",
+   "interprise": "NLD VEICULOS E PECAS LTDA",
+   "fantasy_name": "Newland",
+   "location": "Teresina, PI",
+   "address": "Avenida Raul Lopes, 1460 - Noivos -"
+ },
+ {
+   "ind": "",
+   "Brand": "",
+   "Name": "",
+   "interprise": "",
+   "fantasy_name": "",
+   "location": "",
+   "address": "CEP 64049-549"
+ },
+ {
+   "ind": "22",
+   "Brand": "JLR",
+   "Name": "Osten",
+   "interprise": "ENDEAVOUR COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Osten",
+   "location": "São José dos Campos, SP",
+   "address": "Avenida Doutor Eduardo Cury, 220 - Jardim das Colinas - CEP 12242-001"
+ },
+ {
+   "ind": "23",
+   "Brand": "JLR",
+   "Name": "PG Prime",
+   "interprise": "PG PRIME AUTOMOVEIS",
+   "fantasy_name": "PG Prime",
+   "location": "Natal, RN",
+   "address": "Avenida Senador Salgado Filho, 3661 - Candelária - CEP 59086-000"
+ },
+ {
+   "ind": "24",
+   "Brand": "JLR",
+   "Name": "Premium Rio",
+   "interprise": "PREMIUM RIO VEICULOS LTDA",
+   "fantasy_name": "Land Rio - Barra",
+   "location": "Rio de Janeiro, RJ",
+   "address": "Estrada da Barra da Tijuca, 75 - Barra da Tijuca - CEP 22611201"
+ },
+
+ {
+   "ind": "25",
+   "Brand": "LR",
+   "Name": "Premium Rio",
+   "interprise": "PREMIUM RIO VEICULOS LTDA",
+   "fantasy_name": "Land Rio - Américas",
+   "location": "Rio de Janeiro, RJ",
+   "address": "Avenida das Americas, 4001 - Barra da Tijuca - CEP 22631-004"
+ },
+
+ {
+   "ind": "26",
+   "Brand": "JLR",
+   "Name": "Premium Rio",
+   "interprise": "PREMIUM RIO VEICULOS LTDA",
+   "fantasy_name": "Land Rio - Botafogo",
+   "location": "Rio de Janeiro, RJ",
+   "address": "Rua Assunção, 236 - Botafogo - CEP 22251-030"
+ },
+
+ {
+   "ind": "27",
+   "Brand": "JLR",
+   "Name": "Ramasa",
+   "interprise": "SILVER MOTORS LTDA.",
+   "fantasy_name": "Ramasa",
+   "location": "Palmas, TO",
+   "address": "Avenida Joaquim Teotônio Segurado - Plano Diretor Sul - Q 901 Sul Lote: 08, 09 e 10 - CEP 77017­260"
+ },
+ {
+   "ind": "28",
+   "Brand": "JLR",
+   "Name": "Saga",
+   "interprise": "SAGA LONDON COMERCIO DE VEICULOS PECAS E SERVICOS LTDA",
+   "fantasy_name": "Saga",
+   "location": "Cuiabá, MT",
+   "address": "Av. Fernando Correia da Costa, 375 - Areão - CEP 78010-400"
+ },
+ {
+   "ind": "29",
+   "Brand": "JLR",
+   "Name": "Somamotors",
+   "interprise": "SOMAFERTIL LTDA",
+   "fantasy_name": "Somamotors",
+   "location": "Goiania, GO",
+   "address": "Avenida Mutirão, 3199 - Setor Marista - CEP 7415-0340"
+ },
+ {
+   "ind": "30",
+   "Brand": "JLR",
+   "Name": "Terranova",
+   "interprise": "TERRANOVA VEICULOS E PECAS LTDA",
+   "fantasy_name": "Terranova",
+   "location": "Belo Horizonte, MG",
+   "address": "Av. Barão Homem de Melo, 3191 - Estoril -"
+ },
+ {
+   "ind": "",
+   "Brand": "",
+   "Name": "",
+   "interprise": "",
+   "fantasy_name": "",
+   "location": "",
+   "address": "CEP 30494-080"
+ },
+ {
+   "ind": "31",
+   "Brand": "JLR",
+   "Name": "Top Car",
+   "interprise": "PREMIER VEICULOS LTDA",
+   "fantasy_name": "Top Car - Camboriú",
+   "location": "Balneário Camboriu, SC",
+   "address": "Avenida do Estado, 371 - Praia dos Amores - CEP 88331-490"
+ },
+
+ {
+   "ind": "32",
+   "Brand": "JLR",
+   "Name": "Top Car",
+   "interprise": "PREMIER VEICULOS LTDA",
+   "fantasy_name": "Top Car - Blumenau",
+   "location": "Blumenau, SC",
+   "address": "Rua Itajai, 682 - Vorstadt - CEP 89015-200"
+ },
+
+ {
+   "ind": "33",
+   "Brand": "JLR",
+   "Name": "Top Car",
+   "interprise": "PREMIER VEICULOS LTDA",
+   "fantasy_name": "Top Car - Florianópolis",
+   "location": "Florianópolis, SC",
+   "address": "Rua Professor Egidio Ferreira, 206 - Capoeiras - CEP 88090-500"
+ },
+
+ {
+   "ind": "34",
+   "Brand": "JLR",
+   "Name": "Top Car",
+   "interprise": "PREMIER VEICULOS LTDA",
+   "fantasy_name": "Top Car - Porto Alegre",
+   "location": "Porto Alegre, RS",
+   "address": "Avenida Ceará, 724 - São Pedro - CEP 90240-510"
+ },
+
+ {
+   "ind": "35",
+   "Brand": "JLR",
+   "Name": "Way",
+   "interprise": "BOX COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Way - Recife",
+   "location": "Recife, PE",
+   "address": "Aveinda Domingos Ferreira, 1132 - Boa Viagem - CEP 08210-610"
+ },
+
+ {
+   "ind": "36",
+   "Brand": "JLR",
+   "Name": "Way",
+   "interprise": "BOX COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Way - Salvador",
+   "location": "Salvador, BA",
+   "address": "Aveinda Oceânica, 3764 - Rio Vermelho - CEP 41950-000"
+ },
+
+ {
+   "ind": "37",
+   "Brand": "JLR",
+   "Name": "Way",
+   "interprise": "BOX COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Way - João Pessoa",
+   "location": "Cabedelo, PB",
+   "address": "Rodovia BR - 230, 1162 - Parque Esperança - CEP 58108-502"
+ },
+
+ {
+   "ind": "38",
+   "Brand": "JLR",
+   "Name": "Way",
+   "interprise": "BOX COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Way - Manaus",
+   "location": "Manaus, AM",
+   "address": "Avenida Djalma Batista, 3301 - Chapada - CEP 69050-010"
+ },
+
+ {
+   "ind": "39",
+   "Brand": "JLR",
+   "Name": "Way",
+   "interprise": "BOX COMERCIO DE VEICULOS LTDA",
+   "fantasy_name": "Way - São Luis",
+   "location": "São Luis, MA",
+   "address": "Avenida dos Holandeses, 3431 - Olho D'Água - CEP 65071-380"
+ }]
+
+}

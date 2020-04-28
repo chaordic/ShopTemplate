@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Letters for Learners';
+    src: url('LettersforLearners.eot');
+    src: url('LettersforLearners.eot?#iefix') format('embedded-opentype'),
+        url('LettersforLearners.woff2') format('woff2'),
+        url('LettersforLearners.woff') format('woff'),
+        url('LettersforLearners.ttf') format('truetype'),
+        url('LettersforLearners.svg#LettersforLearners') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

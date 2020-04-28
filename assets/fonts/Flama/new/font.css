@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Flama';
+    src: url('FlamaLight.eot');
+    src: url('FlamaLight.eot?#iefix') format('embedded-opentype'),
+        url('FlamaLight.woff2') format('woff2'),
+        url('FlamaLight.woff') format('woff'),
+        url('FlamaLight.ttf') format('truetype'),
+        url('FlamaLight.svg#FlamaLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('FlamaMedium.eot');
+    src: url('FlamaMedium.eot?#iefix') format('embedded-opentype'),
+        url('FlamaMedium.woff2') format('woff2'),
+        url('FlamaMedium.woff') format('woff'),
+        url('FlamaMedium.ttf') format('truetype'),
+        url('FlamaMedium.svg#FlamaMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

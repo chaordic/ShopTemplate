@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Lead</title>
+
+    <style type="text/css">
+
+        @import url('https://shopbackbr.github.io/ShopTemplate/assets/fonts/HelveticaNeue/stylesheet.css');
+
+        body,
+        body *{
+
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: "Helvetica Neue", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+            color: #111;
+            background-color: transparent;
+
+        }
+
+        .main--lead{
+
+            width: 800px;
+            height: 480px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: -240px auto 0;
+            top: 50%;
+            background-image: url(http://via.placeholder.com/800x480?text=BG);
+            border-radius: 8px;
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+            outline: none;
+            border: none;
+
+        }
+
+        .btn--close{
+
+            border: solid 1px #FFFFFF;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: block;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            z-index: 999999;
+
+        }
+
+        .btn--close i{
+
+            position: relative;
+            width: 20px;
+            height: 20px;
+            display: block;
+            -webkit-transform: rotateZ(-45deg);
+            -moz-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+            -o-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+
+        }
+
+        .btn--close i:before,
+        .btn--close i:after{
+
+            content: "";
+            display: block;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+        }
+
+        .btn--close i:before{
+
+            width: 2px;
+            height: 16px;
+            top: 1px;
+
+        }
+
+        .btn--close i:after{
+
+            width: 16px;
+            height: 2px;
+            top: 50%;
+            margin-top: -2px;
+
+        }
+
+        .main--lead__home{
+
+            margin: 60px auto;
+            width: 70%;
+            background-color: rgba(255,255,255, .8);
+            padding: 40px;
+
+        }
+
+        .is-hidden{
+
+            display: none;
+            opacity: 0;
+
+        }
+
+        .main--lead_header h2{
+
+            text-align: left;
+            font-size: 24px;
+            font-weight: 400;
+            color: #333333;
+            margin-bottom: 10px;
+
+        }
+
+        .main--lead_header h2 b{
+
+            color: #333333;
+            font-size: 24px;
+            text-transform: uppercase;
+
+        }
+
+        .form__box,
+        .form__box--send{
+
+            width: 100%;
+            position: relative;
+            background-color: #cccccc;
+            padding: 1px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 5px auto 10px;
+
+        }
+
+        .form__box--send{
+
+            height: 40px;
+            background-color: #333333;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+
+        }
+
+        .form__box:after{
+
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: -12px;
+            bottom: -10px;
+            background-color: #fff;
+            border: solid 1px #ccc;
+            -webkit-transform: rotateZ(-50deg);
+            -moz-transform: rotateZ(-50deg);
+            -ms-transform: rotateZ(-50deg);
+            -o-transform: rotateZ(-50deg);
+            transform: rotateZ(-50deg);
+
+
+        }
+
+        .form__box--send:after{
+
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            position: absolute;
+            right: -20px;
+            bottom: -16px;
+            -webkit-transform: rotateZ(-50deg);
+            -moz-transform: rotateZ(-50deg);
+            -ms-transform: rotateZ(-50deg);
+            -o-transform: rotateZ(-50deg);
+            transform: rotateZ(-50deg);
+
+        }
+
+        .form__box input{
+
+            width: 96%;
+            background-color: #fff;
+            line-height: 34px;
+            padding: 0 2%;
+            font-size: 14px;
+
+        }
+
+        .btn--send{
+
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            color: #FFF;
+
+        }
+
+        .main--lead__thanks{
+
+            width: 800px;
+            height: 480px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(http://via.placeholder.com/800x480?text=BG);
+
+        }
+
+        .main--lead__block--thanks{
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -115px auto 0;
+            width: 50%;
+            height: 230px;
+
+        }
+
+        .form__box--small{
+
+            max-width: 328px;
+
+        }
+
+        .btn--cta{
+
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+
+        }
+
+        .main--lead__block--thanks h2{
+
+            text-align: center;
+            font-size: 54px;
+            font-weight: 600;
+            color: #00a9b5;
+
+        }
+
+        .main--lead__block--thanks h2 small{
+
+            line-height: 33px;
+            display: block;
+            font-size: 33px;
+            text-align: center;
+            color: #00a9b5;
+
+        }
+
+        .main--lead__block--thanks p small{
+
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: #00a9b5;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            display: block;
+
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<main style="display: none;opacity: 0;" class="main main--lead">
+
+    <button class="btn btn--close" onclick="top.spl.close();"><i></i></button>
+
+    <section class="main--lead__home">
+
+        <header class="main--lead_header">
+
+            <h2>
+
+                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT. DOLOR DOLOREMQUE DOLORUM FACERE.
+
+            </h2>
+
+        </header>
+
+        <form>
+
+            <div class="form__box">
+
+                <input type="name" required placeholder="Nome" name="Nome" id="nome">
+
+            </div>
+
+            <div class="form__box">
+
+                <input type="email" required placeholder="E-mail" name="Email" id="email">
+
+            </div>
+
+            <div class="form__box">
+
+                <input type="text" required placeholder="Telefone" name="Telefone" id="phone">
+
+            </div>
+
+            <div class="form__box--send">
+
+                <button class="btn btn--send">
+
+                    QUERO SABER MAIS
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="main--lead__thanks is-hidden">
+
+        <section class="main--lead__block--thanks">
+
+            <h2>
+
+                OBRIGADO<br>
+
+                <small>
+
+                    PELO CADASTRO!
+
+                </small>
+
+            </h2>
+
+            <p>
+
+                <small>
+
+                    EM BREVE, ENTRAREMOS EM CONTATO.
+
+                </small>
+
+            </p>
+
+            <br>
+
+            <div class="form__box--send form__box--small">
+
+                <button class="btn btn--cta" onclick="top.spl.redirect();">
+
+                    VOLTAR AO SITE
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://shopbackbr.github.io/ShopTemplate/assets/libs/plugins/jquery.mask.input.js"></script>
+
+<script type="text/javascript">
+
+    top.spl.redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Lead'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        top.spl.click_only(_link);
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+
+</script>
+<script type="text/javascript">
+
+    $("#phone").mask("(99) 9 9999 9999");
+
+    $(function(){
+
+        $("form").submit(function(){
+
+            return false;
+
+        });
+
+        if(!top.spl){
+            var _show = false;
+            $(window.top).mouseout(function(_evt){
+                if(!_show && _evt.clientY < 0){
+                    _show = true;
+                    $("#ovteste, #m-backdrop", top.document).show();
+                    $(".main--lead").css("display", "block").stop().animate({
+                        opacity: "1"
+                    }, 500);
+                    top.spl = {};
+                    top.spl.close = function(){
+                        $(".main--lead").animate({
+                            opacity: "0"
+                        }, 500, function(){
+                            $(this).css("display", "none");
+                            $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                        });
+                    };
+                }
+            });
+        }
+
+        setTimeout(function () {
+            if(!_show){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".main--lead").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main--lead").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        }, 2000);
+
+    });
+
+</script>
+
+</body>
+
+</html>

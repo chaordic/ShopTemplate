@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Light.woff2') format('woff2'),
+       url('FuturaStd-Light.woff') format('woff'),
+       url('FuturaStd-Light.svg#FuturaStd-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Light.woff2') format('woff2'),
+       url('FuturaStd-Light.woff') format('woff'),
+       url('FuturaStd-Light.svg#FuturaStd-Light') format('svg');
+  font-weight: light;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Medium.woff2') format('woff2'),
+       url('FuturaStd-Medium.woff') format('woff'),
+       url('FuturaStd-Medium.svg#FuturaStd-Medium') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Medium.woff2') format('woff2'),
+       url('FuturaStd-Medium.woff') format('woff'),
+       url('FuturaStd-Medium.svg#FuturaStd-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Bold.woff2') format('woff2'),
+       url('FuturaStd-Bold.woff') format('woff'),
+       url('FuturaStd-Bold.svg#FuturaStd-Bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Bold.woff2') format('woff2'),
+       url('FuturaStd-Bold.woff') format('woff'),
+       url('FuturaStd-Bold.svg#FuturaStd-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Heavy.woff2') format('woff2'),
+       url('FuturaStd-Heavy.woff') format('woff'),
+       url('FuturaStd-Heavy.svg#FuturaStd-Heavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url('FuturaStd-Heavy.woff2') format('woff2'),
+       url('FuturaStd-Heavy.woff') format('woff'),
+       url('FuturaStd-Heavy.svg#FuturaStd-Heavy') format('svg');
+  font-weight: heavy;
+  font-style: normal;
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+        @import "https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)";
+        @import "assets/css/base/base.css";
+        @import "assets/css/layout/layout.css";
+        @import "assets/css/module/module.css";
+        @import "assets/css/state/state.css";
+        @import url('https://fonts.googleapis.com/css?family=Bitter:400,700');
+
+        /*
+         * THEME CODE
+         */
+        body,
+        body *{
+            font-family: "Bitter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <main class="main">
+
+        <figure class="c-figure c-figure--loading">
+            <img src="assets/img/loading.gif" alt="">
+        </figure>
+        
+        <section class="section c-overlay">
+            <button class="c-btn c-btn--close js-close is-hide">
+            </button>
+            <aside class="c-aside c-aside--powered is-hide">
+                <a href="https://shopback.com.br/" target="_blank" class="c-link c-link--powered">
+                    <img src="assets/img/powered-by.png" alt="" class="c-link__img">
+                </a>
+            </aside>
+            <section class="section c-content is-hide">
+                <div class="c-side c-side--left">
+                    <header class="header c-header">
+                        <figure class="c-figure c-figure--brand">
+                            <img src="https://via.placeholder.com/350x150" alt="" class="c-figure__img">
+                        </figure>
+                        <h2 class="c-title c-title--h2">
+                            PRECISANDO DE<br>
+                            COMPONENTES ELETRÔNICOS?
+                        </h2>
+                        <small class="c-text c-text--small">
+                            VEJA NOSSAS RECOMENDAÇÕES ESPECIAIS PARA VOCÊ!
+                        </small>
+                        <hr class="c-hr c-hr--brand">
+                    </header>
+                    <section class="section c-carosel c-carosel--text js-carosel--text">
+                        {{#products}}
+                            <div onclick="redirectTo('{{link}}')" id="set-{{number}}" class="c-product">
+                                <h4 class="c-title c-title--h4">
+                                    {{name}}
+                                </h4>
+                                <del is-empty="{{installments_number}}" class="c-text c-text--old-price">
+                                    R$ {{normal_price}}
+                                </del>
+                                <p class="c-text c-text--price">
+                                    R$ {{price}}
+                                </p>
+                                <p is-empty="{{installments_number}}" class="c-text c-text--installments">
+                                    OU {{installments_number}} DE R${{installments_price}}
+                                </p>
+                                <button class="c-btn c-btn--product">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        {{/products}}
+                    </section>
+                </div>
+                <div class="c-side c-side--right">
+                    <section class="c-carosel c-carosel--large js-carosel--large">
+                        {{#largethumb}}
+                            <figure onclick="redirectTo('{{link}}')" class="c-figure c-figure--large-thumb">
+                                <img src="{{image}}" alt="">
+                            </figure>
+                        {{/largethumb}}
+                    </section>
+                    <section class="c-carosel c-carosel--thumbnail js-carosel--thumbnail">
+                        {{#smallthumb}}
+                        <figure onclick="redirectTo('{{link}}')" class="c-figure c-figure--large-thumb">
+                            <img src="{{image}}" alt="">
+                        </figure>
+                        {{/smallthumb}}
+                    </section>
+                    <section class="c-control js-control">
+                        <button class="c-btn c-btn--left-navigate js-navigate--left">
+                            <i class="fas fa-angle-left"></i>
+                        </button>
+                        <div class="c-text c-text--pages">
+                            1/8
+                        </div>
+                        <button class="c-btn c-btn--left-navigate js-navigate--right">
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                    </section>
+                </div>
+                <footer class="footer c-footer">
+                    <div class="c-footer__push">
+                        <h3 class="c-title c-title--h3">
+                            Receba notificações de promoções e lançamentos em qualquer lugar!
+                        </h3>
+                    </div>
+                    <figure class="c-figure c-figure--push">
+                        <img src="assets/img/img-push.png" alt="" class="c-figure__img">
+                    </figure>
+                    <button class="c-btn c-btn--decline js-decline">Agora não</button>
+                    <button class="c-btn c-btn--success js-success">Permitir</button>
+                </footer>
+            </section>
+        </section>
+
+    </main>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+    <script src="https://shopbackbr.github.io/ShopTemplate/assets/libs/plugins/moustache.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        var _checkShow = setInterval(function () {
+           if($FRAME.is(":visible")){
+               clearInterval(_checkShow);
+               _showOverlay();
+           }
+        }, 800);
+    </script>
+</body>
+</html>

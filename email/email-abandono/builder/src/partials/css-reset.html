@@ -1,0 +1,75 @@
+<!-- CSS Reset -->
+<style type="text/css">
+	/* O que faz: Aplica a web font em qualquer propriedade style que contenha o nome da web font. */
+	* > [style*="{webfont}"]{font-family: "{webfont}", Arial, "Helvetica Neue", Helvetica, sans-serif !important;}
+
+	/* O que faz: Remove espaços ao redor do email. */
+	html,
+	body {
+		margin: 0 auto !important;
+		padding: 0 !important;
+		height: 100% !important;
+		width: 100% !important;
+	}
+
+	/* O que faz: Impede redimensionamento de texto nos clientes de email. */
+	* {
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+
+	/* O que faz: Centraliza o email no Android 4.4. */
+	div[style*="margin: 16px 0"] {
+		margin:0 !important;
+	}
+
+	/* O que faz: Impede o Outlook de adicionar espaços extras nas tabelas. */
+	table,
+	td {
+		mso-table-lspace: 0pt !important;
+		mso-table-rspace: 0pt !important;
+	}
+
+	/* O que faz: Arruma o problema de padding do webkit. Arruma o bug no Yahoo Mail de alinhamento de tabela. Aplica table-layout para os dois primeiros níveis de tabela e depois remove de qualquer tabela filha. */
+	table {
+		border-spacing: 0 !important;
+		border-collapse: collapse !important;
+		table-layout: fixed !important;
+		margin: 0 auto !important;
+	}
+	table table table {
+		table-layout: auto; 
+	}
+
+	/* O que faz: Usa um melhor método de renderização quando redimensiona as imagens no IE. */
+	img {
+		-ms-interpolation-mode:bicubic;
+	}
+
+	/* O que faz: Uma alternativa para iOS modificando links. */
+	*[x-apple-data-detectors] {
+		color: inherit !important;
+		text-decoration: none !important;
+	}
+
+	/* O que faz: Uma alternativa para o Gmail modificando links. */
+	.x-gmail-data-detectors,
+	.x-gmail-data-detectors *,
+	.aBn {
+		border-bottom: 0 !important;
+		cursor: default !important;
+	}
+
+	/* O que faz: Evita o underline no texto do botão no Windows 10. */
+	.button-link {
+		text-decoration: none !important;
+	}
+
+	/* O que faz: Remove o espaço a direita no iOS. */
+	@media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+		.email-container {
+			min-width: 375px !important;
+		}
+	}
+
+</style>

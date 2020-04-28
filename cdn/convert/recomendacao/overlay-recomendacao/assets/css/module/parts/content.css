@@ -1,0 +1,35 @@
+.c-content{
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    width: 85%;
+    padding: 5px 0;
+    font-size: 0;
+    overflow: hidden;
+    height: 570px;
+    background-color: #ffffff;
+    -webkit-transition: all ease-in 320ms;
+    -moz-transition: all ease-in 320ms;
+    -ms-transition: all ease-in 320ms;
+    -o-transition: all ease-in 320ms;
+    transition: all ease-in 320ms;
+}
+
+.is-hide.c-content{
+    height: 0;
+    width: 0;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.is-hide.c-content *{
+    opacity: 0;
+    -webkit-transition-delay: 420ms;
+    -moz-transition-delay: 420ms;
+    -ms-transition-delay: 420ms;
+    -o-transition-delay: 420ms;
+    transition-delay: 420ms;
+}

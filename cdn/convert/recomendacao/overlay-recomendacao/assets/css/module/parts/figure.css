@@ -1,0 +1,47 @@
+.c-figure{
+    margin: 0;
+    padding: 0;
+}
+
+.c-figure--brand{
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: 20px auto 20px;
+}
+
+.c-figure--push {
+    width: 130px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.c-figure__img{
+    display: inline-block;
+}
+
+.c-figure--large-thumb,
+.c-carosel--large,
+.c-carosel--text{
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.c-figure--large-thumb img{
+    width: auto;
+    max-height: 350px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.c-figure--loading{
+    width: 860px;
+    height: 570px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: -285px auto 0;
+}

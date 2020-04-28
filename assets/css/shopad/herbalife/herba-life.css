@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+.c-5be4b1ed63a757af6f4a8ff2-shopad{
+    width: 720px;
+    margin: 0 auto;
+    height: 390px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-btn{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-shopad *{
+    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-section,
+.c-5be4b1ed63a757af6f4a8ff2-footer{
+    font-size: 0;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-content,
+.c-5be4b1ed63a757af6f4a8ff2-aside{
+    font-size: initial;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-content{
+    width: 70%;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-aside{
+    width: 30%;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-header{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-header--content{
+    padding: 10px 0;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-title{
+    font-weight: bold;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-list--options{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-text,
+.c-5be4b1ed63a757af6f4a8ff2-option{
+    font-weight: 500;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-option{
+    padding: 0 0 20px 60px;
+    position: relative;
+    height: 30px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-option:before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 34px;
+    background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/herbalife/shopad/check.png);
+    background-position: center center;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-title--h2{
+    font-size: 19px;
+    color: #4a4a4a;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-footer{
+    text-align: left;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-btn--success,
+.c-5be4b1ed63a757af6f4a8ff2-btn--denied{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 10px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-btn--success{
+    color: #ffffff;
+    background-color: #78be20;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-btn--denied{
+    color: #7e7e7e;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-title--center{
+    text-align: center;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-form{
+    text-align: center;
+    font-size: 0;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-input{
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: solid 1px #CCCCCC
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-input::placeholder{
+    font-weight: 500;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-input.c-5be4b1ed63a757af6f4a8ff2-input--full,
+.c-5be4b1ed63a757af6f4a8ff2-submit{
+    width: 83%;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-submit{
+    text-align: right;
+    margin: 8px auto;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-btn--send{
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #78be20;
+    font-weight: bold;
+    padding: 5px 25px;
+    border-radius: 3px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-checked{
+    font-size: 12px;
+    text-align: left;
+    display: block;
+    width: 83%;
+    margin: 5px auto;
+    padding: 0 0 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check{
+    position: relative;
+    cursor: pointer;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check i{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -25px;
+    top: -3px;
+    background-color: #3e8fd1;
+    border-radius: 6px;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check i span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 2px auto 0;
+    width: 16px;
+    height: 12px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check i span:before,
+.c-5be4b1ed63a757af6f4a8ff2-check i span:after{
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    -webkit-transition: all linear 180ms;
+    -moz-transition: all linear 180ms;
+    -ms-transition: all linear 180ms;
+    -o-transition: all linear 180ms;
+    transition: all linear 180ms;
+}
+
+#check:not(:checked) ~ .c-5be4b1ed63a757af6f4a8ff2-check i span:before{
+    height: 0;
+    -webkit-transition-delay: 185ms;
+    -moz-transition-delay: 185ms;
+    -ms-transition-delay: 185ms;
+    -o-transition-delay: 185ms;
+    transition-delay: 185ms;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check i span:before{
+    top: 2px;
+    left: 0;
+    width: 4px;
+    border-radius: 8px;
+}
+
+#check:checked ~ .c-5be4b1ed63a757af6f4a8ff2-check i span:before{
+    height: 10px;
+
+}
+
+#check:not(:checked) ~ .c-5be4b1ed63a757af6f4a8ff2-check i span:after{
+    width: 0;
+}
+
+#check:checked ~ .c-5be4b1ed63a757af6f4a8ff2-check i span:after{
+    width: 100%;
+    -webkit-transition-delay: 185ms;
+    -moz-transition-delay: 185ms;
+    -ms-transition-delay: 185ms;
+    -o-transition-delay: 185ms;
+    transition-delay: 185ms;
+}
+
+.c-5be4b1ed63a757af6f4a8ff2-check i span:after{
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 8px;
+
+}
+
+#check{
+    display: none;
+}
+
+.hold5be4b1ed63a757af6f4a8ff2.hold .cta,
+.hold5be4b1ed63a757af6f4a8ff2.hold .disclaimer,
+#sback_ads_5be4b1ed63a757af6f4a8ff2_logo{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hold5be4b1ed63a757af6f4a8ff2.hold .text-block{
+    width: 100%;
+    padding: 0;
+}

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="overlay-abandono">
+<head>
+  <meta charset="UTF-8">
+
+  <title>
+
+   Shopback
+ </title>
+ <link rel="stylesheet" href="https://shopbackbr.github.io/ShopTemplate/padrao-black-friday-2017/css/abandono-black.css">
+</head>
+
+<body>
+
+	<div class="overlay">
+
+		<!-- Main -->
+		<div class="overlay-main">
+
+			<!-- Close -->
+			<span class="close close-x js-close" onclick="top.spl.close();">Fechar [x]</span>
+			<!-- Fim Close -->
+
+			<!-- Header -->
+			<div class="overlay-header">
+				<figure class="logo"><img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/logo.png?nocache" alt="Shopback"></figure>
+				<figure class="black-friday"><img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/blackfriday.png?nocache" alt="BLACK FRIDAY"></figure>
+			</div>
+			<!-- Fim Header -->
+
+			<!-- Container Principal -->
+			<div class="overlay-content">
+				<h3>Vai nos abandonar cheio de descontos?</h3>
+				<p>Aproveite a BLACK FRIDAY e faça<br>
+				sua compra com um SUPER desconto!</p>
+				<button class="btn js-click" onclick="top.spl.close();top.spl.redirect();">Continuar no site</button>
+			</div>
+			<!-- Fim Container Principal -->
+
+      <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby" target="_blank">ShopBack</a>
+    </div>
+    <!-- Fim Main -->
+
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+  <script>
+   
+    top.spl.redirect = function(){
+
+     var _link = window.top.location.href,
+     _hash = "",
+     _utms = {
+
+      'utm_source': 'ShopBack',
+      'utm_medium': 'ShopConvert_Abandono'
+
+    };
+
+    if(/(\#)+/.test(_link)){
+
+      _link = _link.split("#");
+      _hash = "#" + _link[1],
+      _link = _link[0];
+
+    }
+
+    if(/(\?)+/.test(_link)){
+
+      _link += "&";
+
+    }else{
+
+      _link += "?";
+
+    }
+
+    for(_utm in _utms){
+
+      _link += _utm + "=" + _utms[_utm] + "&" 
+
+    }
+
+    _link = _link.replace(/(\&)$/g, "") + _hash;
+
+    top.spl.click_only(_link);
+    top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+    setTimeout(function(){
+
+      top.location = _link;
+
+    }, 800);
+
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Peach Milk';
+    src: url('PeachMilk.eot');
+    src: url('PeachMilk.eot?#iefix') format('embedded-opentype'),
+        url('PeachMilk.woff2') format('woff2'),
+        url('PeachMilk.woff') format('woff'),
+        url('PeachMilk.ttf') format('truetype'),
+        url('PeachMilk.svg#PeachMilk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orator Std';
+    src: url('OratorStd.eot');
+    src: url('OratorStd.eot?#iefix') format('embedded-opentype'),
+        url('OratorStd.woff2') format('woff2'),
+        url('OratorStd.woff') format('woff'),
+        url('OratorStd.ttf') format('truetype'),
+        url('OratorStd.svg#OratorStd') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Acids';
+    src: url('AcidsRegular.eot');
+    src: url('AcidsRegular.eot?#iefix') format('embedded-opentype'),
+        url('AcidsRegular.woff2') format('woff2'),
+        url('AcidsRegular.woff') format('woff'),
+        url('AcidsRegular.ttf') format('truetype'),
+        url('AcidsRegular.svg#AcidsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

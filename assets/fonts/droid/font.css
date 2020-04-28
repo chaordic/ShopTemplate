@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('DroidSans-Bold.eot');
+    src: url('DroidSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DroidSans-Bold.woff2') format('woff2'),
+        url('DroidSans-Bold.woff') format('woff'),
+        url('DroidSans-Bold.ttf') format('truetype'),
+        url('DroidSans-Bold.svg#DroidSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('DroidSerif.eot');
+    src: url('DroidSerif.eot?#iefix') format('embedded-opentype'),
+        url('DroidSerif.woff2') format('woff2'),
+        url('DroidSerif.woff') format('woff'),
+        url('DroidSerif.ttf') format('truetype'),
+        url('DroidSerif.svg#DroidSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('DroidSans_1.eot');
+    src: url('DroidSans_1.eot?#iefix') format('embedded-opentype'),
+        url('DroidSans_1.woff2') format('woff2'),
+        url('DroidSans_1.woff') format('woff'),
+        url('DroidSans_1.ttf') format('truetype'),
+        url('DroidSans_1.svg#DroidSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

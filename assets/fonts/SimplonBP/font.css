@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'SimplonBP-Light';
+  src: url('SimplonBP-Light.eot');
+  src: url('SimplonBP-Light.woff2') format('woff2'),
+       url('SimplonBP-Light.woff') format('woff'),
+       url('SimplonBP-Light.ttf') format('truetype'),
+       url('SimplonBP-Light.svg#SimplonBP-Light') format('svg'),
+       url('SimplonBP-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SimplonBPRegular';
+  src: url('SimplonBPRegular.eot');
+  src: url('SimplonBPRegular.woff2') format('woff2'),
+       url('SimplonBPRegular.woff') format('woff'),
+       url('SimplonBPRegular.ttf') format('truetype'),
+       url('SimplonBPRegular.svg#SimplonBPRegular') format('svg'),
+       url('SimplonBPRegular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SimplonBP-Bold';
+  src: url('SimplonBP-Bold.eot');
+  src: url('SimplonBP-Bold.woff2') format('woff2'),
+       url('SimplonBP-Bold.woff') format('woff'),
+       url('SimplonBP-Bold.ttf') format('truetype'),
+       url('SimplonBP-Bold.svg#SimplonBP-Bold') format('svg'),
+       url('SimplonBP-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simplon BP';
+  src: url('SimplonBP-Bold.eot');
+  src: url('SimplonBP-Bold.woff2') format('woff2'),
+       url('SimplonBP-Bold.woff') format('woff'),
+       url('SimplonBP-Bold.ttf') format('truetype'),
+       url('SimplonBP-Bold.svg#SimplonBP-Bold') format('svg'),
+       url('SimplonBP-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simplon BP';
+  src: url('SimplonBP-Light.eot');
+  src: url('SimplonBP-Light.woff2') format('woff2'),
+       url('SimplonBP-Light.woff') format('woff'),
+       url('SimplonBP-Light.ttf') format('truetype'),
+       url('SimplonBP-Light.svg#SimplonBP-Light') format('svg'),
+       url('SimplonBP-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simplon BP';
+  src: url('SimplonBP-Medium.eot');
+  src: url('SimplonBP-Medium.woff2') format('woff2'),
+       url('SimplonBP-Medium.woff') format('woff'),
+       url('SimplonBP-Medium.ttf') format('truetype'),
+       url('SimplonBP-Medium.svg#SimplonBP-Medium') format('svg'),
+       url('SimplonBP-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simplon BP';
+  src: url('SimplonBP-Regular.eot');
+  src: url('SimplonBP-Regular.woff2') format('woff2'),
+       url('SimplonBP-Regular.woff') format('woff'),
+       url('SimplonBP-Regular.ttf') format('truetype'),
+       url('SimplonBP-Regular.svg#SimplonBP-Regular') format('svg'),
+       url('SimplonBP-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+

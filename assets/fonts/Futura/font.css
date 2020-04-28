@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Futura';
+  src: url('FuturaTOT-Bold.eot');
+  src: url('FuturaTOT-Bold.woff2') format('woff2'),
+       url('FuturaTOT-Bold.woff') format('woff'),
+       url('FuturaTOT-Bold.ttf') format('truetype'),
+       url('FuturaTOT-Bold.svg#FuturaTOT-Bold') format('svg'),
+       url('FuturaTOT-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('FuturaTOT-Medi.eot');
+  src: url('FuturaTOT-Medi.woff2') format('woff2'),
+       url('FuturaTOT-Medi.woff') format('woff'),
+       url('FuturaTOT-Medi.ttf') format('truetype'),
+       url('FuturaTOT-Medi.svg#FuturaTOT-Medi') format('svg'),
+       url('FuturaTOT-Medi.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('FuturaTOT-Ligh.eot');
+  src: url('FuturaTOT-Ligh.woff2') format('woff2'),
+       url('FuturaTOT-Ligh.woff') format('woff'),
+       url('FuturaTOT-Ligh.ttf') format('truetype'),
+       url('FuturaTOT-Ligh.svg#FuturaTOT-Ligh') format('svg'),
+       url('FuturaTOT-Ligh.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+

@@ -1,0 +1,38 @@
+// OVERLAY SHOPBACK TEXTO
+.image {
+	margin-bottom: 0px;
+
+	// CORES
+	@each $number, $color in $sb_overlay_color {
+		&.bg_cor_#{$number} { background-color: $color; }
+	}
+
+	// ESTILOS
+	&.link { 
+		cursor: pointer; 
+
+		// HOVER COLOR ON LINKS
+		@each $number, $color in $sb_overlay_color {
+			&.bg_cor_#{$number} { 
+				&:focus { outline: none; } 
+				&:hover { background-color: lighten( $color, 10) !important; } 
+				&:active { background-color: darken( $color, 10) !important; } 
+			}
+		}
+	}
+
+	// TAMANHOS		
+	@each $number, $size in $sb_overlay_image_sizes {
+		
+		// SIZE
+		&.size_#{$number} { 
+			width: $size; 
+			@include breakpoint(small only) { width: inherit !important; }
+		}
+
+		// RADIUS
+		&.radius_#{$number} { border-radius: $number * $size; }
+		&.radius_1#{$number} { border-radius: $number * $size * 10; }
+	}
+
+} //[end] OVERLAY SHOPBACK TEXTO

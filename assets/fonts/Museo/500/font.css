@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Museo 500';
+    src: url('Museo-500.eot');
+    src: url('Museo-500.eot?#iefix') format('embedded-opentype'),
+        url('Museo-500.woff2') format('woff2'),
+        url('Museo-500.woff') format('woff'),
+        url('Museo-500.ttf') format('truetype'),
+        url('Museo-500.svg#Museo-500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+    src: url('Museo-700.eot');
+    src: url('Museo-700.eot?#iefix') format('embedded-opentype'),
+        url('Museo-700.woff2') format('woff2'),
+        url('Museo-700.woff') format('woff'),
+        url('Museo-700.ttf') format('truetype'),
+        url('Museo-700.svg#Museo-700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+    src: url('Museo-300.eot');
+    src: url('Museo-300.eot?#iefix') format('embedded-opentype'),
+        url('Museo-300.woff2') format('woff2'),
+        url('Museo-300.woff') format('woff'),
+        url('Museo-300.ttf') format('truetype'),
+        url('Museo-300.svg#Museo-300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

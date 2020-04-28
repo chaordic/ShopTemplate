@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('Louis George Cafe.eot');
+  src: url('Louis George Cafe.woff2') format('woff2'),
+       url('Louis George Cafe.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('LouisGeorgeCafe.woff') format('woff'),
+       url('LouisGeorgeCafe.ttf') format('truetype'),
+       url('LouisGeorgeCafe.svg#LouisGeorgeCafe') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('Louis George Cafe Light.eot');
+    src: url('Louis George Cafe Light.woff2') format('woff2'),
+    url('Louis George Cafe Light.eot?#iefix') format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('LouisGeorgeCafeLight.woff') format('woff'),
+    url('LouisGeorgeCafeLight.ttf') format('truetype'),
+    url('LouisGeorgeCafeLight.svg#LouisGeorgeCafeLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('Louis George Cafe.eot');
+    src: url('Louis George Cafe Bold.woff2') format('woff2'),
+    url('Louis George Cafe Bold.eot?#iefix') format('embedded-opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('LouisGeorgeCafe-Bold.woff') format('woff'),
+    url('LouisGeorgeCafe-Bold.ttf') format('truetype'),
+    url('LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+

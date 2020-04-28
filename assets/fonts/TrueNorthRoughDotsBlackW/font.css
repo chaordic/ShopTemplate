@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'TrueNorthRoughDotsBlackW';
+  src: url('TrueNorthRoughDotsBlackW.woff') format('woff'),
+       url('TrueNorthRoughDotsBlackW.ttf') format('truetype'),
+       url('TrueNorthRoughDotsBlackW.svg#TrueNorthRoughDotsBlackW') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'd21bb3780f691247d420cd42ad509c36';
+  src: url('d21bb3780f691247d420cd42ad509c36.eot');
+  src: url('d21bb3780f691247d420cd42ad509c36.woff2') format('woff2'),
+       url('d21bb3780f691247d420cd42ad509c36.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

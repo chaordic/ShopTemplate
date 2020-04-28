@@ -1,0 +1,276 @@
+body,
+body *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.main{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.figure{
+    margin: 0;
+    padding: 0;
+}
+
+.c-btn{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.figure img{
+    width: 100%;
+}
+
+.section,
+.c-footer,
+.c-aside{
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: auto;
+    font-size: initial;
+}
+
+.c-body{
+    width: 800px;
+    height: 600px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: -300px auto 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.c-division{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 500px;
+}
+
+.c-aside{
+    width: 90%;
+    height: 440px;
+    margin: 40px auto 0;
+    box-shadow: 0 0 6px #DDDDDD;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.c-figure--brand{
+    width: 110px;
+    margin: 5px 0;
+}
+
+.c-title{
+    padding: 5px 0;
+    margin: 0;
+}
+
+.c-title--h2{
+    font-size: 74px;
+    font-weight: 100;
+}
+
+.c-text{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.c-text--large{
+    font-size: 16px;
+    font-weight: 100;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #CCCCCC;
+    margin-bottom: 5px;
+}
+
+.c-carosel-text{
+    font-size: 0;
+}
+
+.c-figure--products{
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.c-figure--products img{
+    height: 480px;
+    max-width: 90%;
+    width: initial;
+    display: inline-block;
+}
+
+.c-product{
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.c-product__name{
+    font-size: 18px;
+    color: #4a4a4a;
+    height: 50px;
+}
+
+.c-product__old-price{
+    color: #cccccc;
+    font-size: 12px;
+    height: 16px;
+}
+
+.c-product__old-price del{
+    font-size: 14px;
+}
+
+.c-product__price{
+    font-size: 26px;
+}
+
+.c-product__price small{
+    font-size: 15px;
+}
+
+.c-product__installments{
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.c-footer{
+    font-size: 0;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.c-title--h5{
+    font-size: 12px;
+    font-weight: 100;
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.c-figure--push{
+    width: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.c-btn--decline,
+.c-btn--success{
+    padding: 3px 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 10px;
+    border: solid 1px #CCCCCC;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+}
+
+.c-btn--success{
+    border-color: green;
+    color: green;
+    font-weight: bold;
+}
+
+.c-controls{
+    text-align: center;
+    font-size: initial;
+    padding: 13px 0;
+}
+
+.c-btn--left,
+.c-btn--right{
+    font-size: 18px;
+}
+
+.c-numbers{
+    display: inline-block;
+    width: 100px;
+    font-size: 12px;
+}
+
+.c-btn--close{
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    font-size: 24px;
+    z-index: 999999 ;
+}
+
+.c-division--left,
+.c-division--right{
+    -webkit-transition: all cubic-bezier(0.8, -0.44, 0.99, 1.99) 220ms;
+    -moz-transition: all cubic-bezier(0.8, -0.44, 0.99, 1.99) 220ms;
+    -ms-transition: all cubic-bezier(0.8, -0.44, 0.99, 1.99) 220ms;
+    -o-transition: all cubic-bezier(0.8, -0.44, 0.99, 1.99) 220ms;
+    transition: all cubic-bezier(0.8, -0.44, 0.99, 1.99) 220ms;
+    position: relative;
+
+}
+
+.c-division--left{
+    left: 0;
+}
+
+.c-division--right{
+    right: 0;
+}
+
+.is-hide.c-division--left{
+    left: -500px;
+    right: initial;
+}
+
+.is-hide.c-division--right{
+    right: -500px;
+    left: initial;
+}
+
+.c-footer,
+.c-controls{
+    -webkit-transition: all ease-in 220ms;
+    -moz-transition: all ease-in 220ms;
+    -ms-transition: all ease-in 220ms;
+    -o-transition: all ease-in 220ms;
+    transition: all ease-in 220ms;
+    -webkit-transition-delay: 320ms;
+    -moz-transition-delay: 320ms;
+    -ms-transition-delay: 320ms;
+    -o-transition-delay: 320ms;
+    transition-delay: 320ms;
+}
+
+.is-hide.c-footer,
+.is-hide.c-controls{
+    opacity: 0;
+}
+
+[empty='']{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

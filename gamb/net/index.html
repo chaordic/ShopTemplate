@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var _createSession =  setInterval(function(){
+
+			if(top.productsShopBackMagic){
+
+				clearInterval(_createSession);
+				window.sessionStorage.setItem("sbProducts", JSON.stringify(top.productsShopBackMagic));
+
+			}else if(window.sessionStorage.getItem("sbProducts")){
+				clearInterval(_createSession);
+				window.top.producsSB = JSON.parse(window.sessionStorage.getItem("sbProducts"));				
+			}
+
+		}, 800);
+	</script>
+</body>
+</html>

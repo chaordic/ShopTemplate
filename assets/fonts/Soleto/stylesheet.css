@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_it-webfont.woff2') format('woff2'),
+         url('soleto_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_lt-webfont.woff2') format('woff2'),
+         url('soleto_lt-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_ltit-webfont.woff2') format('woff2'),
+         url('soleto_ltit-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_rg-webfont.woff2') format('woff2'),
+         url('soleto_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_th-webfont.woff2') format('woff2'),
+         url('soleto_th-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_thit-webfont.woff2') format('woff2'),
+         url('soleto_thit-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_bd-webfont.woff2') format('woff2'),
+         url('soleto_bd-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_bdit-webfont.woff2') format('woff2'),
+         url('soleto_bdit-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_blk-webfont.woff2') format('woff2'),
+         url('soleto_blk-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Soleto';
+    src: url('soleto_blkit-webfont.woff2') format('woff2'),
+         url('soleto_blkit-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+
+}

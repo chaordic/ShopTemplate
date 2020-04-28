@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Document
+	</title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		var _console = {};
+		_console.message = function(_message){
+
+			console.log("%c"+_message, "padding: 5px 20px; border-radius: 3px; background-color: #416DCE; color: #91C6E5;margin: 15px 0; font-size: 12px;");
+			return true;
+
+		};
+
+		_console.error = function(_message){
+
+			console.log("%c"+_message, "padding: 5px 20px; border-radius: 3px; background-color: #EF052E; color: #FCECDC;margin: 15px 0; font-size: 12px;");
+			return true;
+
+		};
+	</script>
+	<script>
+		var SessionTrack = {},
+			_sessionObserver = top.sessionStorage.getItem('Shopback_track_string');
+
+		SessionTrack.createSession = function(_index, _value){
+			window.sessionStorage.setItem(_index, _value);
+			_console.message('Message: Cookie feito com sucesso!');
+			return window.sessionStorage.getItem(_index);
+		};
+
+		SessionTrack.getSession = function(_index){
+			_console.message('Message: Cookie recuperado com sucesso!');
+			return window.sessionStorage.getItem(_index);	
+		}
+
+		window.top.trackMakeSession = SessionTrack.createSession;
+		window.top.trackGetSession = SessionTrack.getSession;
+
+	</script>
+</body>
+</html>

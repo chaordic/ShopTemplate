@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-mediumitalic-webfont.woff2') format('woff2'),
+         url('azosans-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-regular-webfont.woff2') format('woff2'),
+         url('azosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-thin-webfont.woff2') format('woff2'),
+         url('azosans-thin-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-thinitalic-webfont.woff2') format('woff2'),
+         url('azosans-thinitalic-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-black-webfont.woff2') format('woff2'),
+         url('azosans-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-blackitalic-webfont.woff2') format('woff2'),
+         url('azosans-blackitalic-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-bold-webfont.woff2') format('woff2'),
+         url('azosans-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-bolditalic-webfont.woff2') format('woff2'),
+         url('azosans-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-italic-webfont.woff2') format('woff2'),
+         url('azosans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-light-webfont.woff2') format('woff2'),
+         url('azosans-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-lightitalic-webfont.woff2') format('woff2'),
+         url('azosans-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Azo-Sans';
+    src: url('azosans-medium-webfont.woff2') format('woff2'),
+         url('azosans-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}

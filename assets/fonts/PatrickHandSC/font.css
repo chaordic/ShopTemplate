@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'PatrickHandSC-Regular';
+  src: url('PatrickHandSC-Regular.eot');
+  src: url('PatrickHandSC-Regular.woff2') format('woff2'),
+       url('PatrickHandSC-Regular.woff') format('woff'),
+       url('PatrickHandSC-Regular.ttf') format('truetype'),
+       url('PatrickHandSC-Regular.svg#PatrickHandSC-Regular') format('svg'),
+       url('PatrickHandSC-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

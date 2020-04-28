@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<!-- 
+	Data Everyday
+	"true" = Usado para uma hora especifica durante todos os dias
+	"false" = Caso seja uma data específica
+
+	Data Timer
+	- Caso o data-everyday=true usar somente hora "23:59:59"
+	- Caso o data-everyday=false usar o dia e hora "23/11/2017 23:59:59"
+
+	Data Mostrardia
+	"true" = Mostra os dias faltantes
+	"false" = Mostra somente as horas
+
+-->
+<html lang="pt-BR" data-campaign="6387" data-everyday="true" data-timer="23:59:59" data-mostrardia="true">
+<head>
+	<meta charset="UTF-8">
+
+  <title>
+
+   Shopback
+ </title>
+
+ <link rel="stylesheet" href="https://shopbackbr.github.io/ShopTemplate/padrao-black-friday-2017/css/alerta-black.css">
+ </head>
+
+<body>
+	<div id="ghost" style="display: none;">
+		<figure class="figure figure-product">
+			<span><img data-lazy="{image}" alt="{name}"></span>
+			<figcaption class="figure_caption--product">
+				<h3>
+					{name}
+				</h3>
+				<p class="old-price" old-price="{old_price}">
+					de R${old_price} |
+				</p>
+				<p class="price">
+					<span>por</span>
+					
+					R$ {price}
+				</p>
+				<p class="installments" installments="{installments_price}">
+					ou {installments}x de R$ {installments_price}
+				</p>
+				<button class="btn btn-product">
+					Comprar
+				</button>
+			</figcaption>
+		</figure>
+	</div>
+
+	<main class="main main-contador">
+		<!--
+			btn-close
+			btn-open
+		-->
+		<button class="btn btn-close" onclick="closeVitrine();"></button>
+		<article class="article article-content">
+			<div class="article-header">
+				<h2>Aproveite enquanto é tempo!</h2>
+			</div>
+			<div class="article-timer">
+				<figure class="logo">
+					<img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/contador/logo.png" alt="">
+				</figure>
+				<figure class="blackfriday">
+					<img src="https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/contador/blackfriday.png" alt="">
+				</figure>
+				<time class="time">
+					Esta Oferta acaba em
+					<span class="time--count">
+						<span class="dia" style="display: none;"></span>
+						<span class="hora">00</span>:<span class="minuto">00</span>:<span class="segundos">00</span>
+					</span>
+				</time>
+			</div>
+			<!-- 
+				Carrousel Next/Prev Arrow: carrousel-arrow-arrow
+				Carrousel Next/Prev Text: carrousel-arrow-text
+      -->
+      <div class="section-carrousel carrousel-arrow-text">
+        <div class="carrousel-products">
+         <span class="loader"></span>
+       </div>
+     </div>
+   </article>
+   
+ </main>
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+
+window.top.console.clear();
+
+var	$HTML = $('html'),
+campaing_id = $HTML.attr('data-campaign'),
+mostrardia = $HTML.attr('data-mostrardia'),
+everyday = $HTML.attr('data-everyday'),
+timer = $HTML.attr('data-timer');
+
+var $ID = campaing_id,
+__SCOPE = window.top.document,
+$FRAME = $("#f-content-" + $ID, __SCOPE),
+$SCROLL = top,
+$SHOWED = false,
+showTime = function(){
+
+	if(everyday == 'true'){
+		var dateObj = new Date(),
+   month = dateObj.getUTCMonth() + 1
+   day = dateObj.getUTCDate(),
+   year = dateObj.getUTCFullYear(),
+   timer0 = day + '/' + month + '/' + year + ' ' + timer;
+ }
+
+ var timer0 = timer0.split(' '),
+ timer1 = timer0[0].split('/'),
+ timer2 = timer0[1].split(':');
+
+ /* Definir a data final para o contador */
+ var	ANO = parseInt(timer1[2]),
+ MES = parseInt(timer1[1]),
+ DIA = parseInt(timer1[0]),
+ HORA = parseInt(timer2[0]),
+ MINUTO = parseInt(timer2[1]),
+ SEGUNDOS = parseInt(timer2[2]);
+ /* Fim Definir a data final para o contador */
+
+ var _timeAttack = setInterval(function(){
+
+  var hoje = new Date();  
+  var datafinal = new Date(ANO,MES-1,DIA,HORA,MINUTO,SEGUNDOS);
+
+  var ss = parseInt((datafinal - hoje) / 1000),
+  mm = parseInt(ss / 60),
+  hh = parseInt(mm / 60),
+  dd = parseInt(hh / 24);
+
+  ss = ss - (mm * 60);
+  mm = mm - (hh * 60);
+  
+  if(mostrardia == 'true'){
+    hh = hh - (dd * 24);
+  }
+
+  var dia = (dd > 10) ? dd : ('0' + dd);
+  var hora = (hh > 10) ? hh : ('0' + hh);
+  var minuto = (mm > 10) ? mm : ('0' + mm);
+  var segundo = (ss > 10) ? ss : ('0' + ss);
+
+  if (dd+hh+mm+ss > 0){
+   $('.dia').text(dia);
+   $('.hora').text(hora);
+   $('.minuto').text(minuto);
+   $('.segundos').text(segundo);
+ }else{
+   clearInterval(_timeAttack);
+   closeVitrine();
+ }
+
+}, 1000);
+
+},
+showVitrine = function(){
+
+	var _resolution = $(top).innerWidth();
+
+	$FRAME.css({
+
+		width: "366px",
+		height: "581px",
+		right: "15px",
+		left: "inherit",
+		margin: "0 auto",
+		top: "inherit",
+		bottom: "0",
+		'z-index': "2147483640",
+		opacity: "0",
+		position: "fixed",
+		display: "none"
+
+	});
+
+	if(_resolution <= 1200 && _resolution >= 960){
+
+
+		$FRAME.css({
+
+			bottom: "-40px"
+
+		});
+
+	}else if(_resolution <= 960 && _resolution >= 860){
+
+		$FRAME.css({
+
+			bottom: "-40px"
+
+		});
+
+	}
+
+	showTime();
+
+	$FRAME.css("display", "block").stop().animate({
+
+		opacity: "1",
+		bottom: "10px",
+
+	}, 120, function(){
+
+		if(!$SHOWED){
+
+			top.spl.view($ID);
+
+		}
+
+	});
+
+},
+openVitrine = function(){
+	$FRAME.stop().animate({
+
+		bottom: "10px"
+
+	});
+
+	$('.btn-close').removeClass('btn-open').attr('onclick', 'closeVitrine();');
+},
+closeVitrine = function(){
+
+	$FRAME.stop().animate({
+
+		bottom: "-538px"
+
+	});
+
+	$('.btn-close').addClass('btn-open').attr('onclick', 'openVitrine();');
+
+},
+init = function(){
+
+	var _now = new Date();
+
+	setTimeout(function(){
+
+		showVitrine();
+
+	}, 1200);
+
+
+},
+createBox = function(_products) {
+
+	var _template =  $("#ghost figure").clone();
+
+	_products = Array.from(_products);
+
+	$(".carrousel-products").html("");
+
+	_products.forEach(function(_product, _ind) {
+
+		var _code = _template.html(),
+		_name = _product.title,
+		_image = _product.images[0],
+		_price = _product.price.toString().sbNumberFormat(),
+		_installments = (typeof _product.installments != 'undefined') ? _product.installments : "",
+		_installments_price = (typeof _product.installments_price != 'undefined') ? _product.installments_price.toString().sbNumberFormat() : ""; 
+
+		if(_product.price == _product.normal_price){
+			var _old_price = "";
+		}else if(_product.normal_price){
+			var _old_price = _product.normal_price.toString().sbNumberFormat();
+		}else{
+			var _old_price = "";
+		}
+
+		_code = _code.split("{name}").join(_name);
+		_code = _code.split("{image}").join(_image);
+		_code = _code.split("{installments}").join(_installments);
+		_code = _code.split("{installments_price}").join(_installments_price);
+		_code = _code.split("{price}").join(_price);
+		_code = _code.split("{old_price}").join(_old_price);
+
+		_template.html(_code);
+		_template.on("click", function() {
+
+			top.spl.click_only(_product.link);
+			top.spl.set_cookie('_spl_tr', $ID, 720);
+
+			setTimeout(function() {
+
+				top.location = top.spl.link_transform(_product.link);
+
+			}, 500);
+
+
+		});
+
+		$(".carrousel-products").append(_template);
+
+		_template = $("#ghost figure").clone();
+
+	});
+
+},createCarrossel = function(){
+
+
+}, getProducts = function(){
+
+	top.shopback.getRecommendations({}, function(response, erro) {
+
+		createBox(Array.from(response.data));
+
+		$("<button id='left'></button>").insertAfter(".carrousel-products");
+		$("<button id='right'></button>").insertAfter(".carrousel-products");
+		$(".carrousel-products").slick({
+
+			infinite: false,
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: $("#left"),
+			nextArrow: $("#right")
+
+		});
+		
+	});
+
+};
+
+init();
+
+String.prototype.sbNumberFormat = function(){
+	var n 		 = this,
+	hasPoint = (/(\.)+/.test(this)) ? true : false;
+
+	if(hasPoint){
+		var int = n.split(".")[0],
+		c   = n.split(".")[1];
+		n   = int;
+	} else {
+		c = "00";
+	}
+
+	n = (typeof n == "string") ? n.replace(",","") : n.toString();
+	L = n.length % 3;
+
+	var newValue = false,
+	loop 	 = "";
+
+	if(n.toString().length > 3){
+		if(L > 0){
+			newValue = n.substring('0', L);
+		} else {
+			newValue = "";
+		}
+
+		loop = n.substring(L, n.length).length / 3;
+
+		for (var i = 0; i < loop; i++) {
+			if(L > 0 || i > 0){
+				newValue += ".";    
+			}
+			newValue += n.substring((L + (i * 3)), (L + (i * 3) + 3)); 
+		}
+	} else {
+		newValue = n;
+	}
+
+	if(c.length == 2 && parseInt(c) > 0) {
+		newValue += ","+c;
+	} else if (c.length > 2 && parseInt(c) > 0) {
+		newValue += ","+c.substring('0','2');
+	} else if (c.length > 0 && parseInt(c) > 0) {
+		newValue += ","+c+"0";
+	} else {
+		newValue += ",00";
+	}
+	return newValue;
+};
+
+var checkOV = setInterval(function() {
+
+	if($FRAME.is(":visible")){
+
+		clearInterval(checkOV);
+		getProducts();
+
+	}
+
+}, 200);
+
+// ]]></script>
+</body>
+</html>

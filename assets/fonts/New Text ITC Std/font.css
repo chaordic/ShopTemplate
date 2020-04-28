@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Newtext ITC Std Book';
+    src: url('NewtextITCStd-Book.eot');
+    src: url('NewtextITCStd-Book.eot?#iefix') format('embedded-opentype'),
+        url('NewtextITCStd-Book.woff2') format('woff2'),
+        url('NewtextITCStd-Book.woff') format('woff'),
+        url('NewtextITCStd-Book.ttf') format('truetype'),
+        url('NewtextITCStd-Book.svg#NewtextITCStd-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Newtext ITC Std';
+    src: url('NewtextITCStd-Light.eot');
+    src: url('NewtextITCStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('NewtextITCStd-Light.woff2') format('woff2'),
+        url('NewtextITCStd-Light.woff') format('woff'),
+        url('NewtextITCStd-Light.ttf') format('truetype'),
+        url('NewtextITCStd-Light.svg#NewtextITCStd-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Newtext ITC Std';
+    src: url('NewtextITCStd-Regular.eot');
+    src: url('NewtextITCStd-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NewtextITCStd-Regular.woff2') format('woff2'),
+        url('NewtextITCStd-Regular.woff') format('woff'),
+        url('NewtextITCStd-Regular.ttf') format('truetype'),
+        url('NewtextITCStd-Regular.svg#NewtextITCStd-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

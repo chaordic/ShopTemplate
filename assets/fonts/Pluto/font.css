@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Pluto';
+    src: url('PlutoThin.eot');
+    src: url('PlutoThin.eot?#iefix') format('embedded-opentype'),
+        url('PlutoThin.woff2') format('woff2'),
+        url('PlutoThin.woff') format('woff'),
+        url('PlutoThin.ttf') format('truetype'),
+        url('PlutoThin.svg#PlutoThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('PlutoMedium.eot');
+    src: url('PlutoMedium.eot?#iefix') format('embedded-opentype'),
+        url('PlutoMedium.woff2') format('woff2'),
+        url('PlutoMedium.woff') format('woff'),
+        url('PlutoMedium.ttf') format('truetype'),
+        url('PlutoMedium.svg#PlutoMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('PlutoBold.eot');
+    src: url('PlutoBold.eot?#iefix') format('embedded-opentype'),
+        url('PlutoBold.woff2') format('woff2'),
+        url('PlutoBold.woff') format('woff'),
+        url('PlutoBold.ttf') format('truetype'),
+        url('PlutoBold.svg#PlutoBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('PlutoRegular.eot');
+    src: url('PlutoRegular.eot?#iefix') format('embedded-opentype'),
+        url('PlutoRegular.woff2') format('woff2'),
+        url('PlutoRegular.woff') format('woff'),
+        url('PlutoRegular.ttf') format('truetype'),
+        url('PlutoRegular.svg#PlutoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('PlutoLight.eot');
+    src: url('PlutoLight.eot?#iefix') format('embedded-opentype'),
+        url('PlutoLight.woff2') format('woff2'),
+        url('PlutoLight.woff') format('woff'),
+        url('PlutoLight.ttf') format('truetype'),
+        url('PlutoLight.svg#PlutoLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

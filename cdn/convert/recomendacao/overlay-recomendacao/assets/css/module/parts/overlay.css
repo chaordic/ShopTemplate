@@ -1,0 +1,10 @@
+.c-overlay{
+    width: 860px;
+    height: 570px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    margin-top: -285px;
+}

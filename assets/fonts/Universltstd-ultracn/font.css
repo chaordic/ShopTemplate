@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'UniversLTStd-UltraCn';
+  src: url('UniversLTStd-UltraCn.woff') format('woff'),
+       url('UniversLTStd-UltraCn.ttf') format('truetype'),
+       url('UniversLTStd-UltraCn.svg#UniversLTStd-UltraCn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Universltstd-ultracn-';
+  src: url('Universltstd-ultracn-.eot');
+  src: url('Universltstd-ultracn-.woff2') format('woff2'),
+       url('Universltstd-ultracn-.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

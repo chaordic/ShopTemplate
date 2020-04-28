@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'SamsungInterFace';
+    src: url('samsunginterface-bold-webfont.woff2') format('woff2'),
+         url('samsunginterface-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SamsungInterFace';
+    src: url('samsunginterface-bolditalic-webfont.woff2') format('woff2'),
+         url('samsunginterface-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'SamsungInterFace';
+    src: url('samsunginterface-italic-webfont.woff2') format('woff2'),
+         url('samsunginterface-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'SamsungInterFace';
+    src: url('samsunginterface-regular-webfont.woff2') format('woff2'),
+         url('samsunginterface-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SamsungInterFace';
+    src: url('samsunginterface-black-webfont.woff2') format('woff2'),
+         url('samsunginterface-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}

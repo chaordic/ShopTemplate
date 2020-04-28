@@ -1,0 +1,28 @@
+.c-text--small{
+    font-size: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.c-text--old-price{
+    font-size: 14px;
+    color: #cccccc;
+    height: 22px;
+    display: block;
+}
+
+.c-text--price{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.c-text--installments{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.c-text--pages{
+    font-size: 14px;
+    display: inline-block;
+}

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>vitrine shopback v1.1.1</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)" />
+	<link rel="stylesheet" href="https://static.sback.tech/shopconvert/uploads/imagens/shopback/css/vitrine.css" />
+
+	<style>
+	*{
+		outline: none;
+	}
+
+	/* BOX OVERLAY */
+	#shopback.vitrine .content{
+		height: 355px;
+		padding: 10px 0 0 0;
+		background: #ffffff;
+	}
+	/* /BOX OVERLAY */
+
+
+
+	/* TOPO */
+	#shopback.vitrine .header{
+		background: #ffffff;
+		padding: 5px auto;
+		height: 34px;
+		border-bottom: 1px solid #dcdcdc;
+	}
+
+	/* botão fechar */
+	#shopback.vitrine .header .close{
+		border: 0;
+		position: absolute;
+		top: 0;
+		right: 15px;
+		height: 25px;
+		width: 25px;
+		margin: 0;
+		outline: none;
+	}
+
+	#shopback.vitrine .header .close img{
+		max-width: 25px;
+		max-height: 25px;
+	}
+
+	#shopback.vitrine .header .close::before{
+		display: none;
+		content: '';
+	}
+
+	#shopback.vitrine .header .close{
+		right: 0;
+	}
+
+	#shopback.vitrine .header .closeX{
+		font-size: 0px;
+		position: initial;
+		padding: 0;
+		margin: 0 auto;
+		border: 0;
+		height: 25px;
+		width: 25px;
+		background: none;
+		outline: none;
+	}
+
+	#shopback.vitrine .header .closeX::before,
+	#shopback.vitrine .header .closeX::after{
+		content: '';
+		width: 20px;
+		height: 3px;
+		background: #000000; /* cor do botão fechar */
+		position: absolute;
+		top: 13px;
+		left: 13px;
+		border-radius: 8px;
+	}
+
+	#shopback.vitrine .header .closeX::before{
+		-webkit-transform: rotateZ(-45deg);
+		-moz-transform: rotateZ(-45deg);
+		-o-transform: rotateZ(-45deg);
+		transform: rotateZ(-45deg);
+	}
+
+	#shopback.vitrine .header .closeX::after{
+		-webkit-transform: rotateZ(45deg);
+		-moz-transform: rotateZ(45deg);
+		-o-transform: rotateZ(45deg);
+		transform: rotateZ(45deg);
+	}
+
+	#shopback.vitrine .header .closeX.pequeno::before,
+	#shopback.vitrine .header .closeX.pequeno::after{
+		top: 17px;
+		left: 10px;
+		width: 15px;
+	}
+
+	#shopback.vitrine .header .closeX.pequeno:active:before,
+	#shopback.vitrine .header .closeX.pequeno:active:after{
+		top: 18px;
+		left: 11px;
+	}
+
+	#shopback.vitrine .header .closeX.medio::before,
+	#shopback.vitrine .header .closeX.medio::after{
+		top: 15px;
+		left: 7px;
+		width: 20px;
+	}
+
+	#shopback.vitrine .header .closeX.medio:active:before,
+	#shopback.vitrine .header .closeX.medio:active:after{
+		top: 16px;
+		left: 8px;
+		width: 20px;
+	}
+
+	#shopback.vitrine .header .closeX.grande::before,
+	#shopback.vitrine .header .closeX.grande::after{
+		top: 15px;
+		left: 5px;
+		width: 25px;
+	}
+
+	#shopback.vitrine .header .closeX.grande:active:before,
+	#shopback.vitrine .header .closeX.grande:active:after{
+		top: 16px;
+		left: 6px;
+		width: 25px;
+	}
+	/* /botão fechar */
+	/* /TOPO */
+
+
+
+	/* SLICK CARROSSEL */
+	/* cor das setas ativas */
+	#shopback.vitrine .content .carousel .slick-prev, #shopback.vitrine .content .carousel .slick-next{
+		border-left-color: #666666;
+		border-right-color: #666666;
+	}
+
+	/* posição das setas */
+	#shopback.vitrine .content .carousel .slick-prev::after{
+		border-right: 10px solid #ffffff;
+	}
+	#shopback.vitrine .content .carousel .slick-next::after{
+		border-left: 10px solid #ffffff;
+		left: -12px;
+	}
+
+	/* cor da borda no bloco dos produtos, caso exista */
+	#shopback.vitrine .content .carousel .item_border{
+		border:1px solid #cccccc;
+	}
+
+	/* cor do dot ativo */
+	#shopback.vitrine .content .carousel .slick-dots li button:hover::before,
+	#shopback.vitrine .content .carousel .slick-dots li button:focus::before,
+	#shopback.vitrine .content .carousel .slick-dots li.slick-active button::before{
+		color: #666666;
+	}
+
+	#shopback.vitrine .content .carousel .slick-slider{
+		height: 322px;
+	}
+
+	#shopback.vitrine .content .carousel .slick-list,
+	#shopback.vitrine .content .carousel .slick-track,
+	#shopback.vitrine .content .carousel .slick-slide,
+	#shopback.vitrine .content .carousel .item_border{
+		height:inherit;
+	}
+
+
+	#shopback.vitrine .content .carousel .item .img_border{
+		display: block;
+		float: none;
+		height: 138px;
+		margin: 0 auto;
+		width: 43%;
+	}
+
+	#shopback.vitrine .content .carousel .item .item_border{
+		background: #ffffff;
+		border: 0;
+		border-right: 1px solid #dcdcdc !important;
+		display: block;
+		height: 316px;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		width: 95%;
+	}
+
+	/* remove as bordas cinza dos produtos em que ela é desnecessária */
+	#shopback.vitrine .content .carousel .item:nth-child(4) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-child(8) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-child(12) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-child(16) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-last-child(1) .item_border{
+		border:0 !important;
+	}
+
+	#shopback.vitrine .content .carousel .item:nth-last-child(2) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-last-child(3) .item_border,
+	#shopback.vitrine .content .carousel .item:nth-last-child(4) .item_border{
+		border-right: 1px solid #dcdcdc !important;
+	}
+	/* /remove as bordas cinza dos produtos em que ela é desnecessária */
+
+	/* /SLICK CARROSSEL */
+
+
+
+	/* /FONTES (e bloco de texto do slick) */
+	/* topo */
+	#shopback.vitrine .header .text{
+		color: #000000;
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		text-align: left;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	/* nome do produto */
+	#shopback.vitrine .content .carousel .item .product_name{
+		display: block;
+		margin: 0 0 2px 0;
+		overflow: hidden;
+		padding: 5px 0;
+		box-sizing: border-box;
+
+		color: #333333;
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		height: 63px; /* (font-size + 7) * quantidade de linhas necessárias */
+		line-height: 17px; /* font-size + 3 */
+		text-align: center;
+		text-decoration: none;
+		text-transform: none;
+	}
+
+	/* palavra DE */
+	#shopback.vitrine .content .carousel .item .product_oldPrice span{
+		/*
+		color: #333333;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		text-transform: none;
+		*/
+	}
+
+	/* preço DE | preco DE */
+	#shopback.vitrine .content .carousel .item .product_oldPrice{
+		display: block;
+		margin: 0 0 2px 0;
+
+		color: #999999;
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		height: 18px; /* font-size + 6 */
+		line-height: 15px; /* font-size + 3 */
+		text-align: center;
+		text-decoration: line-through;
+		text-transform: none;
+	}
+
+	/*palavra POR */
+	#shopback.vitrine .content .carousel .item .product_price span{
+		/*
+		color: #333333;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		text-transform: none;
+		*/
+	}
+
+	/* preço POR | preco POR */
+	#shopback.vitrine .content .carousel .item .product_price{
+		display: block;
+		margin-top: 10px;
+
+		color: #333333;
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 700;
+		height: 26px; /* font-size + 6 */
+		line-height: 23px; /* font-size + 3 */
+		text-align: center;
+		text-decoration: none;
+		text-transform: none;
+	}
+
+	/* preço DE e preço POR lado a lado | preco DE e preco POR lado a lado */
+	#shopback.vitrine .content .carousel .item .product_oldPrice.p50,
+	#shopback.vitrine .content .carousel .item .product_price.p50{
+		width: 50%;
+		display: inline;
+		padding: 0 !important;
+	}
+
+	/* preço parcelado | preco parcelado */
+	#shopback.vitrine .content .carousel .item .product_instalments{
+		margin: 5px 0 5px 0;
+
+		color: #333333;
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		height: 18px; /* font-size + 6 */
+		line-height: 15px; /* font-size + 3 */
+		text-align: center;
+		text-decoration: none;
+		text-transform: none;
+	}
+
+	/* palavras em destaque na linha de parcelamento */
+	#shopback.vitrine .content .carousel .item .product_instalments span{
+		/*
+		color: #333333;
+		font-size: 12px;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: none;
+		*/
+	}
+
+	/* botão comprar, quando imagem */
+	#shopback.vitrine .content .carousel .item .item_border img{
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 100%;
+	}
+
+	#shopback.vitrine .content .carousel .item .btnComprar{
+		margin: 5px auto 0 5px;
+		text-align: center;
+		width: auto;
+	}
+	/* /FONTES (e bloco de texto do slick) */
+
+
+
+	/* OUTROS E SOBREPOSIÇÕES */
+	#shopback.vitrine .poweredby{
+		background:url('https://static.sback.tech/shopconvert/uploads/imagens/logo-vitrine.png') no-repeat;
+	}
+
+	/* loader */
+	.loader{
+		margin: 120px auto 0 auto;
+		border: 12px solid rgba(255,255,255,0.7);
+		border-top: 12px solid rgba(0,0,0,0.7);
+		border-radius: 50%;
+		width: 45px;
+		height: 45px;
+		animation: spin 0.6s linear infinite;
+	}
+
+	@-webkit-keyframes spin{0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
+	@-moz-keyframes spin{0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
+	@-o-keyframes spin{0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
+	@keyframes spin{0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
+	/* /loader */
+
+	/* CURSOR */
+	#shopback.vitrine .content .carousel .item,
+	#shopback.vitrine .header .close,
+	#shopback.vitrine .poweredby,
+	#shopback.vitrine .content .carousel .slick-prev,
+	#shopback.vitrine .content .carousel .slick-next,
+	#shopback.vitrine .content .carousel .item .item_border img{
+		cursor: pointer;
+	}
+	.closeX.pequeno,
+	.closeX.medio,
+	.closeX.grande{
+		cursor: pointer;
+	}
+
+	#shopback.vitrine .content .carousel .item .product_name,
+	#shopback.vitrine .content .carousel .item .product_oldPrice,
+	#shopback.vitrine .content .carousel .item .product_price,
+	#shopback.vitrine .content .carousel .item .product_instalments{
+		width: auto;
+		padding: 0 25px !important;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		float: initial;
+	}
+
+	/* se não houver valores nesses campos, ou se o parcelamento for igual a 1, então oculte-os */
+	[installments=''],[installments='1'],
+	[installments-price=''],
+	[old-price='']{
+		opacity: 0 !important;
+	}
+
+	/* tira da tela o old price, é usado display aqui pois ele fica lado a lado, e opacity iria deixar o preço POR um pouco pra direita */
+	.p50[old-price='']{
+		display: none !important;
+	}
+	</style>
+</head>
+
+<body>
+	<!-- NÃO APAGAR - Template do carrossel -->
+	<div id="item_template" class="item" style="display: none;">
+		<div class="item_border">
+			<div class="img_border">
+				<img class="product_image" src="" data-lazy="{image}" alt="{title}" />
+			</div>
+			<p class="product_name">{title}</p>
+			<p class="product_oldPrice p50">
+				<span>de </span> R$ {price}
+			</p>
+			<p class="product_price p50">
+				<span>por </span> R$ {price}
+			</p>
+			<p class="product_instalments" installments="{installments}">
+				em até <span>{installments}x</span> de <span>R$ {installments_price}</span>
+			</p>
+			<p class="btnComprar">
+				<img src="https://app.shopconvert.com.br/uploads/imagens/arsenal-car/vitrine-footer/btn-comprar.png" alt="Comprar" />
+			</p>
+		</div>
+	</div>
+	<!-- NÃO APAGAR - Template do carrossel -->
+
+	<div id="shopback" class="vitrine" data-height-reference="body" data-vpadding="body" data-vpaddingsize="400" data-id="5016">
+		<div class="box">
+			<div class="recommendations">
+
+				<div class="header">
+					<div class="close" onclick="top.spl.close();">
+						<button class="closeX pequeno"></button>
+					</div>
+					<div class="text">
+						Recomendamos especialmente para você
+					</div>
+				</div>
+
+				<div class="content">
+					<div class="carousel" data-slick='{"dots":false,"arrows":true,"slidesToShow":4,"slidesToScroll":4}'>
+						<div class="loader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="https://www.shopback.com.br/" class="poweredby" target="_blank">ShopBack</a>
+	</div>
+
+	<script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/assets/libs/js/v0.1.0/shopback.plugin.v0.1.0-vitrine.min.js"></script>
+
+	<script type="text/javascript">
+		SB.ready(function(){});
+	</script>
+</body>
+</html>

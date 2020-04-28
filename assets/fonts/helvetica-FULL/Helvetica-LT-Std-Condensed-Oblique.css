@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Helvetica LT Std Condensed Oblique';
+	src: url('HelveticaLTStd-CondObl.eot');
+	src: url('HelveticaLTStd-CondObl.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-CondObl.woff') format('woff'),
+		url('HelveticaLTStd-CondObl.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Condensed Oblique';
+	src: url('HelveticaLTStd-BlkCondObl.eot');
+	src: url('HelveticaLTStd-BlkCondObl.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-BlkCondObl.woff') format('woff'),
+		url('HelveticaLTStd-BlkCondObl.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}

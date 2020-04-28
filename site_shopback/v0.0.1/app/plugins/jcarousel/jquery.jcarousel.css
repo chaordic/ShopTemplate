@@ -1,0 +1,40 @@
+.carousel-skin .jcarousel-container{
+	position: relative;
+	padding: 0 10px;
+}
+.carousel-skin .jcarousel-clip {
+    overflow: hidden;
+}
+.carousel-skin .jcarousel-item {
+	width: 114px;
+	height: 105px;
+	border: 1px solid #eee;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.carousel-skin .jcarousel-next-horizontal, .carousel-skin .jcarousel-prev-horizontal {
+    position: absolute;
+    top: -48px;
+    z-index: 12;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    background: #6b6b6b;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.carousel-skin .jcarousel-next-horizontal{
+	right: 0;
+}
+.carousel-skin .jcarousel-prev-horizontal{
+    right: 35px;
+}

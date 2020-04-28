@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeueBold.eot');
+  src: url('BebasNeueBold.woff2') format('woff2'),
+       url('BebasNeueBold.woff') format('woff'),
+       url('BebasNeueBold.ttf') format('truetype'),
+       url('BebasNeueBold.svg#BebasNeueBold') format('svg'),
+       url('BebasNeueBold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeueLight.eot');
+  src: url('BebasNeueLight.woff2') format('woff2'),
+       url('BebasNeueLight.woff') format('woff'),
+       url('BebasNeueLight.ttf') format('truetype'),
+       url('BebasNeueLight.svg#BebasNeueLight') format('svg'),
+       url('BebasNeueLight.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeueBook.eot');
+  src: url('BebasNeueBook.woff2') format('woff2'),
+       url('BebasNeueBook.woff') format('woff'),
+       url('BebasNeueBook.ttf') format('truetype'),
+       url('BebasNeueBook.svg#BebasNeueBook') format('svg'),
+       url('BebasNeueBook.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}

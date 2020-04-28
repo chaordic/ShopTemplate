@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('BrandonGrotesque-Regular.eot');
+  src: url('BrandonGrotesque-Regular.woff2') format('woff2'),
+       url('BrandonGrotesque-Regular.woff') format('woff'),
+       url('BrandonGrotesque-Regular.ttf') format('truetype'),
+       url('BrandonGrotesque-Regular.svg#BrandonGrotesque-Regular') format('svg'),
+       url('BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

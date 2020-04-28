@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+@import url("https://shopbackbr.github.io/ShopTemplate/assets/fonts/FuturaSTD-all/font.css");
+
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+@import url("https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css");/*
+	Theme Name: Themes for Shopback - 2017
+	Description: Themes for Shopback
+	Version: 4.0
+*//* BOOTSTRAP *//* RESET */html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}/* HTML5 display-role reset for older browsers */article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+blockquote,q {
+  quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+  content: none;
+}/* remember to highlight inserts somehow! */ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+abbr[title] {
+  border: none;
+}
+
+*,*:before,*:after,input[type="search"] {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}/* VARIABLES *//* Borda *//* Color *//* Fontes *//* Products *//* HELPERS *//* ---------------------------------------------------------------------- *//*  Mixin
+/* ---------------------------------------------------------------------- *//* ---------------------------------------------------------------------- *//* 
+ /* Triangle helper mixin
+ /* @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+ /* @param {Color} $color [currentcolor] - Triangle color 
+ /* @param {Length} $size [1em] - Triangle size
+ /* 
+ /* ---------------------------------------------------------------------- *//* ---------------------------------------------------------------------- *//*	Basic Class
+/* ---------------------------------------------------------------------- */.poweredby {
+  display: block;
+  background-image: url(https://app.shopconvert.com.br/facebook/completo/assets/img/powered-by-shopback.png?44123);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 10px;
+  bottom: -30px;
+  width: 152px;
+  height: 25px;
+  opacity: .8;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  color: transparent;
+}
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  border: 0;
+}
+
+.btn-product {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+  background: #ff0000;
+  border: 0;
+  padding: 0;
+  line-height: 33px;
+  height: 33px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.btn-facebook {
+  padding: 0;
+  background: #4460a0;
+  color: #fff;
+  width: 100%;
+  max-width: 312px;
+  text-transform: none;
+}
+
+.btn-facebook i {
+  float: left;
+  width: 55px;
+  height: 50px;
+  background: url(https://static.sback.tech/shoptarget/uploads/imagens/icon-facebook.png) center center no-repeat;
+  border-right: 1px solid #3b5494;
+}
+
+.btn-facebook strong,.btn-facebook span {
+  font-family: Arial, sans-serif;
+}
+
+.btn-facebook strong {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.btn-facebook span {
+  color: #a3b1cf;
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+
+.btn-facebook:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.loader {
+  position: absolute;
+  display: block;
+  width: 84px;
+  height: 84px;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 12px solid #e6e6e6;
+  border-top: 12px solid #b3b3b3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  animation: a .9s linear infinite;
+  -webkit-animation: a .9s linear infinite;
+}/* PLUGINS *//* ---------------------------------------------------------------------- *//*	Slick Plugins
+/* ---------------------------------------------------------------------- */.section-carrousel {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 345px;
+  position: relative;
+  padding: 10px;
+  background: #fff;
+}
+
+.section-carrousel .carrousel-products {
+  height: 325px;
+  text-align: center;
+}
+
+.carrousel-arrow-arrow #left,.carrousel-arrow-arrow #right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.carrousel-arrow-arrow #left:after,.carrousel-arrow-arrow #left:before,.carrousel-arrow-arrow #right:after,.carrousel-arrow-arrow #right:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 3px;
+  height: 20px;
+  left: 10px;
+  background: #ff0000;
+}
+
+.carrousel-arrow-arrow #left:after,.carrousel-arrow-arrow #right:after {
+  bottom: 0;
+}
+
+.carrousel-arrow-arrow #left:before,.carrousel-arrow-arrow #right:before {
+  top: 0;
+}
+
+.carrousel-arrow-arrow #left {
+  left: 0;
+}
+
+.carrousel-arrow-arrow #left:after {
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg);
+}
+
+.carrousel-arrow-arrow #left:before {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+.carrousel-arrow-arrow #right {
+  right: 0;
+}
+
+.carrousel-arrow-arrow #right:after {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+.carrousel-arrow-arrow #right:before {
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg);
+}
+
+.carrousel-arrow-text #left,.carrousel-arrow-text #right {
+  cursor: pointer;
+  position: absolute;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  bottom: -23px;
+}
+
+.carrousel-arrow-text #left:before,.carrousel-arrow-text #right:before {
+  display: block;
+  color: #333333;
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.carrousel-arrow-text #left {
+  left: 0;
+}
+
+.carrousel-arrow-text #left:before {
+  content: 'Anterior';
+}
+
+.carrousel-arrow-text #right {
+  right: 0;
+}
+
+.carrousel-arrow-text #right:before {
+  content: 'Próxima';
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -29px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+
+.slick-dots li button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background: #333333;
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  border: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.slick-dots .slick-active button {
+  background: #ff0000;
+}/* ASSETS *//* ---------------------------------------------------------------------- *//*	Base Elements
+/* ---------------------------------------------------------------------- */* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #202020;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "FuturaStd", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+ /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+input,select,textarea,button {
+  font-family: "FuturaStd", Arial, sans-serif;
+  color: #202020;
+  -webkit-font-smoothing: antialiased;
+ /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}/* ---------------------------------------------------------------------- *//*	Product
+/* ---------------------------------------------------------------------- */.figure-product {
+  padding: 0 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.figure-product > span {
+  display: block;
+  font-size: 0;
+  height: 175px;
+  line-height: 175px;
+}
+
+.figure-product > span img {
+  display: inline-block !important;
+  vertical-align: middle;
+  max-height: 175px;
+}
+
+.figure-product h3 {
+  margin-top: 5px;
+  height: 49px;
+  overflow: hidden;
+  line-height: 16px;
+  font-weight: 300;
+  color: #202020;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.figure-product .old-price {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0;
+  font-weight: 300;
+  color: #202020;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.figure-product .old-price span {
+  text-decoration: line-through;
+}
+
+.figure-product .price {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #202020;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+.figure-product .price span {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.figure-product .installments {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #202020;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.figure-product [installments=''],.figure-product [old-price=''] {
+  display: none;
+  visibility: hidden;
+}/* OVERLAY *//* ---------------------------------------------------------------------- *//*	Main
+/* ---------------------------------------------------------------------- */.main {
+  position: relative;
+  width: 366px;
+  background: #e7e7e8 url(https://static.sback.tech/shopconvert/uploads/imagens/blackfriday/2017/contador/bg-white.png) center top no-repeat;
+  padding: 8px 8px 30px 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.main .btn-close {
+  position: absolute;
+  width: 22px;
+  height: 11px;
+  right: 15px;
+  top: 19px;
+  padding: 0;
+  background: transparent;
+}
+
+.main .btn-close:before,.main .btn-close:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 11px;
+  height: 7px;
+  background: #ff0000;
+  top: 0;
+}
+
+.main .btn-close:before {
+  left: 0;
+  -webkit-transform: skewY(35deg);
+  -moz-transform: skewY(35deg);
+  -o-transform: skewY(35deg);
+  transform: skewY(35deg);
+}
+
+.main .btn-close:after {
+  right: 0;
+  -webkit-transform: skewY(-35deg);
+  -moz-transform: skewY(-35deg);
+  -o-transform: skewY(-35deg);
+  transform: skewY(-35deg);
+}
+
+.main .btn-close.btn-open {
+  top: 15px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.main .article-timer {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 150px;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+}
+
+.main .article-timer > figure {
+  display: block;
+  font-size: 0;
+  text-align: center;
+}
+
+.main .article-timer .logo {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  max-width: 150px;
+  max-height: 80px;
+}
+
+.main .article-timer .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main .article-timer .blackfriday {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 100%;
+  max-width: 140px;
+  max-height: 80px;
+}
+
+.main .article-timer .blackfriday img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main .time {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: "Exo", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  border: 1px solid #333333;
+}
+
+.main .time > span {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}/* ---------------------------------------------------------------------- *//*	Main - Header
+/* ---------------------------------------------------------------------- */.article-header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.article-header h2 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff0000;
+  text-transform: uppercase;
+  padding: 5px 0 10px;
+}
+
+@-webkit-keyframes a {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes a {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Flowers';
+    src: url('Flowers.eot');
+    src: url('Flowers.eot?#iefix') format('embedded-opentype'),
+        url('Flowers.woff2') format('woff2'),
+        url('Flowers.woff') format('woff'),
+        url('Flowers.ttf') format('truetype'),
+        url('Flowers.svg#Flowers') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

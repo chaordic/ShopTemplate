@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Flicker DEMO';
+    src: url('FlickerDEMO.eot');
+    src: url('FlickerDEMO.eot?#iefix') format('embedded-opentype'),
+        url('FlickerDEMO.woff2') format('woff2'),
+        url('FlickerDEMO.woff') format('woff'),
+        url('FlickerDEMO.ttf') format('truetype'),
+        url('FlickerDEMO.svg#FlickerDEMO') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

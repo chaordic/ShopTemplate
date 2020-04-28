@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Simplon Oi';
+  src: url('SimplonOi-Headline.eot');
+  src: url('SimplonOi-Headline.woff2') format('woff2'),
+       url('SimplonOi-Headline.woff') format('woff'),
+       url('SimplonOi-Headline.ttf') format('truetype'),
+       url('SimplonOi-Headline.svg#SimplonOi-Headline') format('svg'),
+       url('SimplonOi-Headline.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

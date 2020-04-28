@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Polaris';
+  src: url('Polaris-Medium.eot');
+  src: url('Polaris-Medium.woff2') format('woff2'),
+       url('Polaris-Medium.woff') format('woff'),
+       url('Polaris-Medium.ttf') format('truetype'),
+       url('Polaris-Medium.svg#Polaris-Medium') format('svg'),
+       url('Polaris-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Polaris';
+  src: url('Polaris-Bold.eot');
+  src: url('Polaris-Bold.woff2') format('woff2'),
+       url('Polaris-Bold.woff') format('woff'),
+       url('Polaris-Bold.ttf') format('truetype'),
+       url('Polaris-Bold.svg#Polaris-Bold') format('svg'),
+       url('Polaris-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+

@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Helvetica LT Std Compressed';
+	src: url('HelveticaLTStd-Comp.eot');
+	src: url('HelveticaLTStd-Comp.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-Comp.woff') format('woff'),
+		url('HelveticaLTStd-Comp.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Compressed';
+	src: url('HelveticaLTStd-UltraComp.eot');
+	src: url('HelveticaLTStd-UltraComp.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-UltraComp.woff') format('woff'),
+		url('HelveticaLTStd-UltraComp.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica LT Std Compressed';
+	src: url('HelveticaLTStd-ExtraComp.eot');
+	src: url('HelveticaLTStd-ExtraComp.eot?#iefix') format('embedded-opentype'),
+		url('HelveticaLTStd-ExtraComp.woff') format('woff'),
+		url('HelveticaLTStd-ExtraComp.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}

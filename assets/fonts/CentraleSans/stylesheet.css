@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'CentraleSans';
+    src: url('centralesansregular-webfont.woff2') format('woff2'),
+         url('centralesansregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

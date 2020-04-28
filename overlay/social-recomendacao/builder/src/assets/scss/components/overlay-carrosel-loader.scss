@@ -1,0 +1,43 @@
+// SHOPBACK OVERLAY LAYOUT CONFIG
+@import 'shopback-overlay-layout';
+
+
+// SB_LOADER_CONTENT
+// =====================================================
+.sb_loader_content {
+	height: 		(map-get($sb_overlay_size, height)/4);
+	padding-top: 	(map-get($sb_overlay_size, height)/5);
+	margin-right: 	 initial;
+	padding-bottom: 	(map-get($sb_overlay_size, height)/7);
+	margin-left: 	 initial;
+	// @include breakpoint(small only) { width: auto; }	
+
+	.sb_loader {
+		width:  		60px;
+		height: 		60px;
+
+		margin:0 auto;
+
+		border: 12px solid darken( map-get($sb_overlay_color, 2), 10);
+		border-top: 12px solid lighten( map-get($sb_overlay_color, 1), 70);
+		// lighten( $color, 10) !important;
+		border-radius: 50%;
+
+		animation:spin 0.9s linear infinite;
+		-webkit-animation:spin 0.9s linear infinite;
+		// @include breakpoint(small only) { padding: 0 15px; } 
+
+ 	}
+	@-webkit-keyframes spin{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(360deg);}
+	}
+	@keyframes spin{
+		0%{transform:rotate(0deg);}
+		100%{transform:rotate(360deg);}
+	}
+
+}
+
+// =====================================================
+// [end] SB_LOADER_CONTENT

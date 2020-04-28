@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Novecentowide';
+  src: url('Novecentowide-Light.eot');
+  src: url('Novecentowide-Light.woff2') format('woff2'),
+       url('Novecentowide-Light.woff') format('woff'),
+       url('Novecentowide-Light.ttf') format('truetype'),
+       url('Novecentowide-Light.svg#Novecentowide-Light') format('svg'),
+       url('Novecentowide-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Novecentowide';
+  src: url('Novecentowide-Normal.eot');
+  src: url('Novecentowide-Normal.woff2') format('woff2'),
+       url('Novecentowide-Normal.woff') format('woff'),
+       url('Novecentowide-Normal.ttf') format('truetype'),
+       url('Novecentowide-Normal.svg#Novecentowide-Normal') format('svg'),
+       url('Novecentowide-Normal.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Novecentowide';
+  src: url('Novecentowide-Bold.eot');
+  src: url('Novecentowide-Bold.woff2') format('woff2'),
+       url('Novecentowide-Bold.woff') format('woff'),
+       url('Novecentowide-Bold.ttf') format('truetype'),
+       url('Novecentowide-Bold.svg#Novecentowide-Bold') format('svg'),
+       url('Novecentowide-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+
+        Document
+
+    </title>
+
+    <style type="text/css">
+
+        @import url('https://shopbackbr.github.io/ShopTemplate/assets/fonts/Futura/Std/font.css');
+
+        body, body *{
+
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-family: "Futura Std", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        .main{
+
+            width: 800px;
+            height: 450px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -250px auto 0;
+            border-radius: 8px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 20px;
+
+        }
+
+        .header{
+
+            width: 66%;
+            padding: 10px 0;
+
+        }
+
+        .t-lead .main{
+
+            background-color: #CCCCCC;
+
+        }
+
+        .t-lead .main:before{
+
+            content: "";
+            display: block;
+            width: 247px;
+            height: 408px;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            background-image: url(http://via.placeholder.com/367x408?text=Logo);
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+
+        }
+
+        .c-btn{
+
+            border: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+
+        }
+
+        .c-btn--close{
+
+            position: absolute;
+            top: -30px;
+            height: 20px;
+            width: 20px;
+            right: 15px;
+            border: solid 1px #FFFFFF;
+
+        }
+
+        .c-btn--close:before,
+        .c-btn--close:after{
+
+            content: "";
+            display: block;
+            background-color: #fff;
+            width: 1px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -9px auto 0;
+
+        }
+
+        .c-btn--close:before{
+
+            -webkit-transform: rotateZ(-45deg);
+            -moz-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+            -o-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+
+        }
+
+        .c-btn--close:after{
+
+            -webkit-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+
+        }
+
+        .c-header__title{
+
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            color: #333333;
+
+        }
+
+        .c-header__subtitle{
+
+            font-size: 16px;
+            text-align: center;
+            color: #EDEDED;
+            padding: 15px 20px;
+
+        }
+
+        .c-content{
+
+            width: 66%;
+            position: relative;
+
+        }
+
+        .c-form{
+
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size: 0;
+
+        }
+
+        .c-form .c-form__box{
+
+            display: inline-block;
+            font-size: initial;
+            width: 50%;
+
+        }
+
+        .c-form__label{
+
+            font-size: 14px;
+            padding: 5px 0;
+            color: #585858;
+
+        }
+
+        .c-form__input{
+
+            line-height: 26px;
+            border-radius: 16px;
+            border: solid 1px #c4c4c4;
+            width: 80%;
+            margin: 5px 0 10px;
+            padding: 0 5%;
+
+        }
+
+        .c-btn--enviar{
+
+            font-size: 22px;
+            color: #fff;
+            background-color: #333333;
+            font-weight: 500;
+            padding: 5px 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: 120%;
+            left: 37%;
+
+        }
+
+        .c-screen__thanks{
+
+            padding: 60px 0;
+            text-align: center;
+            width: 66%;
+
+        }
+
+        .c-icon{
+
+            display: inline-block;
+            margin-bottom: 20px;
+
+        }
+
+        .c-screen__thanks-label{
+
+            font-size: 34px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+
+        }
+
+        .c-screen__text{
+
+            font-size: 20px;
+            color: #FFF;
+            font-weight: 500;
+
+        }
+
+        .is-hide{
+
+            display: none;
+            opacity: 0;
+
+        }
+
+        .poweredby {
+
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body class="t-lead">
+
+<main style="display: none;opacity: 0;" class="main">
+
+    <section class="section c-screen">
+
+        <button class="c-btn c-btn--close js-close"></button>
+
+        <section class="c-screen__home js-home">
+
+            <header class="header c-header">
+
+                <h1 class="c-header__title">
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, numquam.
+
+                </h1>
+
+                <h2 class="c-header__subtitle">
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eum illum, inventore ipsam non officia veritatis. Earum, iste.
+
+                </h2>
+
+            </header>
+
+            <section class="c-content">
+
+                <form class="c-form js-form">
+
+                    <div class="c-form__box">
+
+                        <label for="name" class="c-form__label">
+
+                            NOME*
+
+                        </label>
+
+                        <input class="c-form__input" type="text" name="Nome" id="name" required>
+
+                    </div>
+
+                    <div class="c-form__box">
+
+                        <label for="name" class="c-form__label">
+
+                            E-MAIL*
+
+                        </label>
+
+                        <input class="c-form__input" type="text" name="Email" id="email" required>
+
+                    </div>
+
+                    <div class="c-form__box">
+
+                        <label for="name" class="c-form__label">
+
+                            TELEFONE*
+
+                        </label>
+
+                        <input class="c-form__input js-mask-phone" type="text" name="Telefone" id="phone" required>
+
+                    </div>
+
+                    <div class="c-form__box">
+
+                        <label for="name" class="c-form__label">
+
+                            CNPJ*
+
+                        </label>
+
+                        <input class="c-form__input js-mask-cnpj" type="text" name="CNPJ" id="cnpj" required>
+
+                    </div>
+
+                    <button class="c-btn c-btn--enviar">
+
+                        ENVIAR
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <section class="c-screen__thanks js-thanks is-hide">
+
+            <figure class="c-icon">
+
+                <img src="https://static.sback.tech/shopconvert/uploads/imagens/ticketlog/2018/03/08/check.png" alt="" class="c-icon__image">
+
+            </figure>
+
+            <h2 class="c-screen__thanks-label">
+
+                Obrigado pelo cadastro.
+
+            </h2>
+
+            <p class="c-screen__text">
+
+                Em breve, entraremos em contato!
+
+            </p>
+
+        </section>
+
+    </section>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://shopbackbr.github.io/ShopTemplate/assets/libs/plugins/jquery.mask.input.js"></script>
+
+<script>
+
+    top.spl.redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Lead'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        top.spl.click_only(_link);
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+
+</script>
+
+<script type="text/javascript">
+
+    var $FORM = $(".js-form"),
+        _phone =  $(".js-mask-phone"),
+        _cnpj =  $(".js-mask-cnpj");
+
+    _phone.mask("(99) 9 9999-9999");
+    _cnpj.mask("99.999.999/9999-99");
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".main").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".main").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".main").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+    $FORM.submit(function(){
+
+
+
+        return false;
+
+    });
+
+    $(".js-close").click(function(){
+
+        top.spl.close();
+
+    });
+
+</script>
+
+</body>
+
+</html>

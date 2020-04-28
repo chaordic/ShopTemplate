@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+    !IMPORTANTE!
+    Para o funcionamento, é necessário o preenchimento dos campos abaixo de acordo com as informações do cliente
+
+    ***
+    data-campaign   = ID da campanha no painel
+    data-client     = ID do cliente | Para pegar é necessário acessar pelo novo painel ou então adicionar a extenção da Shopback no chrome
+    "https://chrome.google.com/webstore/detail/shopback/oabhoebfokhjkjclambdgcjcibheeamj?utm_source=chrome-app-launcher-info-dialog"
+    ***
+-->
+<html lang="pt-BR" data-campaign="7343" data-client="56d48439785e6158101659c3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pop Decor</title>
+
+    <link rel="stylesheet" href="https://shopbackbr.github.io/ShopTemplate/projects/vitrine-lateral/css/theme.min.css?v1.5.0"><style>
+    /* Botão mobile */
+    .btn-power-sm{}
+
+    /* Botão desktop */
+    .btn-power-md{}
+
+    /* Setas do botão desktop */
+    .btn-power-md .icon-arrow:after,
+    .btn-power-md .icon-arrow:before{}
+
+    /* Botão fechar mobile */
+    .close-x{}
+
+    /* Botão Comprar do produto */
+    .btn-product{}
+
+    /* Produto Imagem */
+    .product .product-figure{}
+    /* Produto Nome */
+    .product .product-name{}
+    /* Produto Preço De */
+    .product .product-old_price{}
+    /* Produto Preço */
+    .product .product-price{}
+    /* Produto Parcelas */
+    .product .product-installments{}
+
+</style>
+</head>
+
+<!-- 
+    Para que o botão mobile apareça na versão desktop
+    utilize a class "button-desk-is-mobile" no body
+
+    .button-desk-is-mobile
+
+    data-style-mobile-button="{"bottom": "0", "right": "0"}"
+    data-style="{"top": "0","right": "-400px"}"
+    data-style-dekmob="{"width": "426px","height": "100vh"}"
+-->
+<body class="button-desk-is-mobile"
+    data-style-mobile-button="{&quot;bottom&quot;: &quot;0&quot;, &quot;right&quot;: &quot;0&quot;}"
+    data-style="{&quot;top&quot;: &quot;0&quot;,&quot;right&quot;: &quot;-400px&quot;}"
+    data-style-dekmob="{&quot;width&quot;: &quot;426px&quot;,&quot;height&quot;: &quot;100vh&quot;}"
+>
+
+    <div id="ghost" style="display: none;">
+        <div class="product" style="opacity: 0;">
+            <div class="product-content">
+                <figure class="product-figure"><img data-src="{imagem}" alt="{name}"></figure>
+                <div class="product-info">
+                    <h3 class="product-name">{name}</h3>
+
+                    <!-- 
+                        Classes disponíveis
+                            .product-prices-inline  = Deixa os preços na mesma linha
+                            .product-prices-block   = Deixa os preços em linhas separadas
+                        -->
+                        <div class="product-prices product-prices-inline">
+                            <span old-price="{old_price}" class="product-old_price">
+                                <span>de:</span> R$ {old_price}
+                            </span>
+                            <span class="product-price">
+                                <span>por:</span> R$ {price}
+                            </span>
+                        </div>
+                        <p installments="{installments}" class="product-installments">
+                            ou {installments}x de R$ {installments_price} sem juros
+                        </p>
+                        <button class="btn btn-product">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 
+        Botão somente exibido no mobile
+        Classes que podem ser usadas:
+
+        Formato do Botão:
+            .btn-squad = Botão quadrado - radius 5px
+            .btn-rounded = Botão redondo - radius 50%
+
+        Animações do Botão
+            .an-shake = Faz o botão tremer
+            .an-pulse = Faz o botão pulsar
+        -->
+        <button class="btn btn-power btn-power-sm btn-squad an-shake">
+            <span><img src="https://static.sback.tech/shopconvert/uploads/imagens/frontend/vitrine/logo2.png?nocache" alt="Pop Decor"></span>
+        </button>
+        <!-- Fim botão mobile -->
+
+        <!-- Vitrine Main -->
+        <div class="vitrine-main">
+
+            <!-- Botão de fechar no mobile -->
+            <span class="close close-x"></span>
+            <!-- Fim Botão de fechar no mobile -->
+
+            <!-- Botão somente exibido no desktop -->
+            <button class="btn btn-power btn-power-md">
+                OFERTAS ESPECIAIS!
+                <i class="icon icon-arrow"></i>
+            </button>
+            <!-- Fim Botão somente exibido no desktop -->
+
+            <!-- Main -->
+            <div class="main">
+
+                <!-- Vitrine Header -->
+                <div class="vitrine-header">
+                    <figure class="logo shadow-down">
+                        <img src="https://static.sback.tech/shopconvert/uploads/imagens/frontend/vitrine/logo.jpg?nocache" alt="Pop Decor">
+                    </figure>
+                </div>
+                <!-- Fim Vitrine Header -->
+                <!-- Content -->
+                <div class="content">
+
+                    <div class="banner">
+                        <button type="button" class="js-link pointer" data-url="https://www.popdecor.com.br/">
+                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/frontend/vitrine/banner2.png?nocache" alt="Pop Decor">
+                        </button>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="content-header">
+
+                        <div class="search">
+                            <button class="btn-search">
+                                <span></span>
+                            </button>
+                            <input class="input input-search" type="text" id="search" placeholder="Pesquisar">
+                            <button class="btn btn-close-history btn-search-trigger"></button>
+                        </div>
+
+                        <ul class="tabs-list">
+
+                            <li data-tab="tab-search" class="tabs tabs-search btn-search-trigger">
+                                Buscar                            
+                            </li>
+
+                            <li data-tab="tab-recomendation" class="tabs tab-active">
+                                Recomendações<strong> (<span id="counter-r">0</span>)</strong>
+                            </li>
+
+                            <li data-tab="tab-history" class="tabs">
+                                Histórico<strong> (<span id="counter-h">0</span>)</strong>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Fim Tabs -->
+                    <!-- Container Produtos -->
+                    <div class="content-products">
+
+                        <!-- Produtos Recomendações -->
+                        <div class="collumns tab-recomendation collumns-active">
+                            <div class="loading">
+                                <span class="loader"></span>
+                            </div>
+                        </div>
+                        <!-- Fim Produtos Recomendações -->
+
+                        <!-- Produtos Histórico -->
+                        <div class="collumns tab-history" style="display: none;">
+                            <div class="loading">
+                                <span class="loader"></span>
+                            </div>
+                        </div>
+                        <!-- Fim Produtos Histórico -->
+
+                        <!-- Produtos Busca -->
+                        <div class="collumns tab-search" style="display: none;">
+                            <div class="loading">
+                                <span class="loader"></span>
+                            </div>
+                        </div>
+                        <!-- Fim Produtos Busca -->
+
+                    </div>
+                    <!-- Fim Container Produtos -->
+
+                </div>
+                <!-- Fim Content -->
+
+            </div>
+            <!-- Fim Main -->
+
+        </div>
+        <!-- Fim Vitrine Main -->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/projects/vitrine-lateral/js/vitrine-lateral.min.js?v2.0.1"></script>
+<script>// <![CDATA[
+top.spl.redirect = function(){
+
+    var _link = window.top.location.href,
+    _hash = "",
+    _utms = {
+
+        'utm_source': 'ShopBack',
+        'utm_medium': 'ShopConvert_Vitrine_recomendacao'
+
+    };
+
+    if(/(\#)+/.test(_link)){
+
+        _link = _link.split("#");
+        _hash = "#" + _link[1],
+        _link = _link[0];
+
+    }
+
+    if(/(\?)+/.test(_link)){
+
+        _link += "&";
+
+    }else{
+
+        _link += "?";
+
+    }
+
+    for(_utm in _utms){
+
+        _link += _utm + "=" + _utms[_utm] + "&" 
+
+    }
+
+    _link = _link.replace(/(\&)$/g, "") + _hash;
+
+    top.spl.click_only(_link);
+    top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+    setTimeout(function(){
+
+        top.location = _link;
+
+    }, 800);
+
+};
+
+top.spl.link_transform = function(_link){
+
+    var _hash = "",
+    _utms = {
+
+        'utm_source': 'ShopBack',
+        'utm_medium': 'ShopConvert_Vitrine_recomendacao'
+
+    };
+
+    if(/(\#)+/.test(_link)){
+
+        _link = _link.split("#");
+        _hash = "#" + _link[1],
+        _link = _link[0];
+
+    }
+
+    if(/(\?)+/.test(_link)){
+
+        _link += "&";
+
+    }else{
+
+        _link += "?";
+
+    }
+
+    for(_utm in _utms){
+
+        _link += _utm + "=" + _utms[_utm] + "&" 
+
+    }
+
+    _link = _link.replace(/(\&)$/g, "") + _hash;
+
+    top.spl.click_only(_link);
+    top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+    return _link;
+
+};
+// ]]></script>
+</body>
+</html>

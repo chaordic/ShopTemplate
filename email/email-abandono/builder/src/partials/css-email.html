@@ -1,0 +1,55 @@
+<!-- Estilos complementares não obrigatórios -->
+<style type="text/css">
+
+	/* Media Queries */
+	@media screen and (max-width: 480px) {
+
+		/* O que faz: Força os elementos para redimensionar para a largura máxima do container. */
+		.fluid {
+			width: 100% !important;
+			max-width: 100% !important;
+			height: auto !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		/* O que faz: Foça as céluas da tabela em linhas com largura 100%. */
+		.stack-column,
+		.stack-column-center {
+			display: block !important;
+			width: 100% !important;
+			max-width: 100% !important;
+			direction: ltr !important;
+		}
+		/* centraliza e justifica elas. */
+		.stack-column-center {
+			text-align: center !important;
+		}
+
+		/* O que faz: Classe genérica de centralização. Pode ser usada em images, buttons e tabelas internas. */
+		.center-on-narrow {
+			text-align: center !important;
+			display: block !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			float: none !important;
+		}
+		table.center-on-narrow {
+			display: inline-block !important;
+		}
+	}
+
+	@media only screen and (min-width: 481px) and (max-width: 680px) {
+		.center-on-narrow {
+			text-align: center !important;
+			display: block !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			float: none !important;
+		}
+		.stack-column,
+		.stack-column-center {
+			max-width: 100% !important;
+		}
+	}
+</style>

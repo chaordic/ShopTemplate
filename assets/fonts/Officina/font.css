@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'OfficinaSerifStd-Bold';
+  src: url('OfficinaSerifStd-Bold.eot');
+  src: url('OfficinaSerifStd-Bold.woff2') format('woff2'),
+       url('OfficinaSerifStd-Bold.woff') format('woff'),
+       url('OfficinaSerifStd-Bold.ttf') format('truetype'),
+       url('OfficinaSerifStd-Bold.svg#OfficinaSerifStd-Bold') format('svg'),
+       url('OfficinaSerifStd-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: 600;
+}
+
+
+
+@font-face {
+  font-family: 'OfficinaSerifStd-BoldItalic';
+  src: url('OfficinaSerifStd-BoldItalic.eot');
+  src: url('OfficinaSerifStd-BoldItalic.woff2') format('woff2'),
+       url('OfficinaSerifStd-BoldItalic.woff') format('woff'),
+       url('OfficinaSerifStd-BoldItalic.ttf') format('truetype'),
+       url('OfficinaSerifStd-BoldItalic.svg#OfficinaSerifStd-BoldItalic') format('svg'),
+       url('OfficinaSerifStd-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: 700;
+}
+
+
+
+@font-face {
+  font-family: 'OfficinaSerifStd-Book';
+  src: url('OfficinaSerifStd-Book.eot');
+  src: url('OfficinaSerifStd-Book.woff2') format('woff2'),
+       url('OfficinaSerifStd-Book.woff') format('woff'),
+       url('OfficinaSerifStd-Book.ttf') format('truetype'),
+       url('OfficinaSerifStd-Book.svg#OfficinaSerifStd-Book') format('svg'),
+       url('OfficinaSerifStd-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: 100;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Cut the crap';
+    src: url('Cutthecrap.eot');
+    src: url('Cutthecrap.eot?#iefix') format('embedded-opentype'),
+        url('Cutthecrap.woff2') format('woff2'),
+        url('Cutthecrap.woff') format('woff'),
+        url('Cutthecrap.ttf') format('truetype'),
+        url('Cutthecrap.svg#Cutthecrap') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

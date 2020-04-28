@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Low Casat Light';
+    src: url('LowCasatLightPERSONALUSE.eot');
+    src: url('LowCasatLightPERSONALUSE.eot?#iefix') format('embedded-opentype'),
+        url('LowCasatLightPERSONALUSE.woff2') format('woff2'),
+        url('LowCasatLightPERSONALUSE.woff') format('woff'),
+        url('LowCasatLightPERSONALUSE.ttf') format('truetype'),
+        url('LowCasatLightPERSONALUSE.svg#LowCasatLightPERSONALUSE') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

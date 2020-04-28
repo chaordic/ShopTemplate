@@ -1,0 +1,218 @@
+@import "https://shopbackbr.github.io/ShopTemplate/assets/fonts/fontawesome/css/all.css";
+@import url("https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css");
+body,
+body *{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.main{
+    width: 300px;
+    position: fixed;
+    top: 110px;
+    left: 10px;
+    background-color: #000000;
+    border-radius: 0 0 18px 18px;
+    padding-bottom: 10px;
+}
+
+.main:before{
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -110px;
+    background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/blackfriday/BF18/welton/2018/contador/head.png);
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 130px;
+}
+
+.c-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.c-btn--close{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    font-size: 14px;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    border: solid 1px #FFF;
+    text-align: center;
+    line-height: 21px;
+    z-index: 9;
+}
+
+.c-figure{
+    margin: 0;
+    outline: none;
+}
+
+.c-figure img{
+    max-width: 100%;
+}
+
+.c-figure--logo{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -70px;
+}
+
+.c-time{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55px;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #CCCCCC;
+}
+
+.c-line{
+    position: absolute;
+    width: 105%;
+    background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/blackfriday/BF18/welton/2018/contador/line.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    height: 40px;
+    left: -2.5%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    top: 120px;
+}
+
+.c-product__image{
+    width: 90%;
+    padding: 10px 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.c-product__image img{
+    width: auto;
+    max-height: 200px;
+    display: inline-block;
+}
+
+.c-product__body{
+    text-align: center;
+}
+
+.c-product__name{
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.c-product__promocao,
+.c-product__body span,
+.c-product__installments{
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.c-product__body .c-product__price{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.c-btn--product{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border: solid red 1px;
+    box-shadow: 0 0 2px #FFFFFF;
+    margin: 10px auto;
+    color: #ffffff;
+    display: block;
+    width: 180px;
+    border-radius: 60px;
+}
+
+.c-btn--prev,
+.c-btn--next{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    border: solid 1px #f3002e;
+    position: absolute;
+    top: 50%;
+}
+
+.slick-disabled{
+    border: solid 1px #EEEEEE;
+}
+
+.c-btn--prev{
+    left: 10px;
+}
+
+.c-btn--next{
+    right: 10px;
+}
+
+.c-btn--prev:before{
+    content: "←";
+    display: inline;
+    font-size: 20px;
+    color: #f3002e;
+}
+
+.c-btn--next:before{
+    content: "→";
+    display: inline;
+    font-size: 20px;
+    color: #f3002e;
+}
+
+.slick-disabled.c-btn--prev:before,
+.slick-disabled.c-btn--next:before{
+    color: #eeeeee;
+}
+
+.js-carosel {
+    position: relative;
+    top: -32px;
+}
+
+.c-seconds{
+    color: #ebcc38;
+}
+
+[empty=""]{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.is-hide{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}

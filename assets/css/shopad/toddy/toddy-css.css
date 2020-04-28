@@ -1,0 +1,308 @@
+@import url('https://shopbackbr.github.io/ShopTemplate/assets/fonts/Gotham/font-unicle.css');
+    @import url('https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)');
+    @import url("https://shopbackbr.github.io/ShopTemplate/assets/fonts/fontawesome/css/all.css");
+
+    .c-toddy-shopad{
+        width: 100%;
+        height: 100vh;
+        max-width: 736px;
+        height: 400px;
+        margin: 0;
+        background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/toddy/shopad/bg.png);
+        background-repeat: no-repeat;
+        font-family: "Gotham", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        box-sizing: initial;
+        position: relative;
+    }
+
+    .c-toddy-shopad *{
+        box-sizing: initial;
+    }
+
+    .c-toddy-shopad img{
+        max-width: 100%;
+    }
+
+    .c-toddy-phones{
+        width: 280px;
+        font-size: 0;
+        margin: 0 0 0 420px;
+        position: relative;
+        top: 10px;
+
+    }
+
+    .c-toddy-phone{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        width: 260px;
+    }
+
+    .c-toddy-list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .c-toddy-phone a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .c-toddy-phone{
+        width: 34%;
+    }
+
+    .c-toddy-phone input{
+        display: none;
+    }
+
+    .c-toddy-phone:first-child,
+    .c-toddy-phone:last-child{
+        width: 30%;
+    }
+
+    .c-toddy-icon{
+        border: solid 1px #CCCCCC;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .c-toddy-icon i{
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: #c8f482;
+        display: block;
+        margin: 2px;
+        -webkit-transition: all 220ms cubic-toddy-bezier(0.45, -0.83, 0.8, 1.99);
+        -moz-transition: all 220ms cubic-toddy-bezier(0.45, -0.83, 0.8, 1.99);
+        -ms-transition: all 220ms cubic-toddy-bezier(0.45, -0.83, 0.8, 1.99);
+        -o-transition: all 220ms cubic-toddy-bezier(0.45, -0.83, 0.8, 1.99);
+        transition: all 220ms cubic-toddy-bezier(0.45, -0.83, 0.8, 1.99);
+    }
+
+    .c-toddy-phone:not(:hover) .c-toddy-line .c-toddy-icon i{
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .c-toddy-product-box{
+        width: 100%;
+        margin: 0;
+        height: 260px;
+    }
+
+    .c-toddy-btn{
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .c-toddy-btn-cta{
+        background-color: #102ed6;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 15px 30px;
+        border-radius: 30px;
+        margin: 20px auto 0;
+        display: block;
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .hold5bd2209421968f04cd269492.hold .cta,
+    .hold5bd2209421968f04cd269492.hold .disclaimer,
+    #sback_ads_5bd2209421968f04cd269492_logo{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .hold5bd2209421968f04cd269492.hold .text-block{
+        width: 100%;
+        padding: 0;
+    }
+
+    .c-toddy-header {
+        width: 555px;
+        margin-left: 181px;
+        padding-top: 5px;
+    }
+
+    .c-toddy-title{
+        margin: 0;
+        padding: 0;
+    }
+
+    .c-toddy-h2{
+        padding-top: 10px;
+        color: #1b4b84;
+        font-size: 26px;
+        letter-spacing: -3px;
+    }
+
+    .c-toddy-text{
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+        color: #1e629b;
+    }
+
+    .c-toddy-carrosel{
+        width: 298px;
+        position: absolute;
+        left: 60px;
+        bottom: 100px;
+    }
+
+    .c-toddy-images{
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .c-toddy-images img{
+        display: inline-block;
+    }
+
+    .c-toddy-left,
+    .c-toddy-right{
+        font-size: 28px;
+        color: #ff1991;
+        position: absolute;
+        bottom: 180px;
+    }
+
+    .c-toddy-left{
+        left: 40px;
+    }
+
+    .c-toddy-right{
+        left: 350px;
+    }
+
+    .c-toddy-btn--accept,
+    .c-toddy-btn--decline{
+        position: absolute;
+        bottom: 30px;
+
+    }
+
+    .c-toddy-btn--accept{
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 18px;
+        background: #2287bf; /* Old browsers */
+        background: -moz-linear-gradient(top, #2287bf 0%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #2287bf 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #2287bf 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2287bf', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+        padding: 10px 10px;
+        letter-spacing: -1px;
+        border-radius: 10px;
+        left: 40px;
+    }
+    
+    .c-toddy-btn--decline{
+        background-color: #ffffff;
+        padding: 15px 10px;
+        font-weight: 900;
+        color: #293896;
+        font-size: 12px;
+        border-radius: 10px;
+        left: 270px;
+    }
+
+    .c-toddy-shopad-form{
+        background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/toddy/shopad/bg-form.png);
+    }
+
+    .c-toddy-form{
+        font-size: 0;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto 0;
+        padding-top: 130px;
+    }
+
+    .c-toddy-input{
+        display: inline-block;
+        width: 48%;
+        margin: 0 0.5% 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5px 3px 25px;
+        border-radius: 3px;
+        border: solid 1px #CCCCCC;
+        font-size: 13px;
+    }
+
+    .c-toddy-box{
+        font-size: 0;
+        text-align: center;
+        width: 60%;
+        padding: 0 5px;
+        display: inline-block;
+    }
+
+    .c-toddy-check{
+        display: inline-block;
+        width: 36%;
+        margin-left: 2%;
+    }
+
+    .c-toddy-check sup{
+        font-size: 14px;
+        color: #AAAAAA;
+    }
+
+    .c-toddy-check-input{
+        width: 14px;
+        height: 14px;
+        position: relative;
+        top: 20px;
+    }
+
+    .c-toddy-label{
+        font-size: 14px;
+        position: relative;
+        top: 20px;
+        color: #aaaaaa;
+        cursor: pointer;
+    }
+    
+    .c-toddy-thanks{
+        background-image: url(https://static.shopback.net/shopconvert/uploads/imagens/toddy/shopad/bg-thanks.png);
+    }
+
+    .c-toddy-check-t{
+        position: absolute;
+        bottom: 35px;
+        left: 46px;
+        width: 300px;
+    }
+
+    .c-toddy-check-t label{
+        font-size: 14px;
+        color: #1a457f;
+        cursor: pointer;
+    }
+
+    .js-submit{
+        left: initial;
+        right: 15px;
+    }

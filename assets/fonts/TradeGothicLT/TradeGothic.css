@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT.woff2') format('woff2'),
+        url('TradeGothicLT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT-Oblique.woff2') format('woff2'),
+        url('TradeGothicLT-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT-Bold.woff2') format('woff2'),
+        url('TradeGothicLT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT-BoldOblique.woff2') format('woff2'),
+        url('TradeGothicLT-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT-Light.woff2') format('woff2'),
+        url('TradeGothicLT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('TradeGothicLT-LightOblique.woff2') format('woff2'),
+        url('TradeGothicLT-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}

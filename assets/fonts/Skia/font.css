@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Skia';
+    src: url('Skia.eot');
+    src: url('Skia.eot?#iefix') format('embedded-opentype'),
+        url('Skia.woff2') format('woff2'),
+        url('Skia.woff') format('woff'),
+        url('Skia.ttf') format('truetype'),
+        url('Skia.svg#Skia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

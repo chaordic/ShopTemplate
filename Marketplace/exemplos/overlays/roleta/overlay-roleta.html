@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+
+        Document
+
+    </title>
+
+    <style>
+
+        @import url('https://shopbackbr.github.io/ShopTemplate/assets/fonts/Flama/new/font.css');
+
+        body,
+        body *{
+
+            padding: 0;
+            margin: 0;
+            outline: none;
+
+            font-family: "Flama", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            outline: none;
+            border: none;
+
+            background-color: transparent;
+            background-repeat: no-repeat;
+
+        }
+
+        body{
+
+            -webkit-transition: all linear 220ms;
+            -moz-transition: all linear 220ms;
+            -ms-transition: all linear 220ms;
+            -o-transition: all linear 220ms;
+            transition: all linear 220ms;
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+            outline: none;
+            background-color: transparent;
+            border: none;
+
+        }
+
+        .btn.s--close{
+
+            position: absolute;
+            top: 80px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: #ff7800;
+            border-radius: 100%;
+            color: #FFF;
+            font-size: 14px;
+            line-height: 14px;
+
+        }
+
+        .main.s--roulet{
+
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -275px auto 0;
+
+            width: 800px;
+            height: 550px;
+
+        }
+
+        .main.s--roulet.is--show .aside.s--roulet{
+
+            opacity: 1;
+
+        }
+
+        .main.s--roulet.is--show.is--form .aside.s--roulet{
+
+            left: -100px;
+
+        }
+
+        .aside.s--roulet{
+
+            position: absolute;
+            top: 21px;
+            left: 127px;
+            width: 508px;
+            height: 508px;
+            overflow: hidden;
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/bg.png);
+            background-size: 505px;
+            background-position: top center;
+            border-radius: 100%;
+
+            opacity: 0;
+
+            -webkit-transition: all ease-in 320ms;
+            -moz-transition: all ease-in 320ms;
+            -ms-transition: all ease-in 320ms;
+            -o-transition: all ease-in 320ms;
+            transition: all ease-in 320ms;
+
+        }
+
+        .div.s--canvas{
+
+            position: relative;
+            top: 11px;
+            left: 13px;
+            width: 480px;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 100%;
+            background-color: #333333;
+
+            -webkit-transition: cubic-bezier(0.43, 0.55, .8, 1.05) 2s all;
+            -moz-transition: cubic-bezier(0.43, 0.55, .8, 1.05) 2s all;
+            -ms-transition: cubic-bezier(0.43, 0.55, .8, 1.05) 2s all;
+            -o-transition: cubic-bezier(0.43, 0.55, .8, 1.05) 2s all;
+            transition: cubic-bezier(0.43, 0.55, .8, 1.05) 2s all;
+
+        }
+
+        .div.s--canvas-square-one{
+
+            width: 480px;
+            height: 480px;
+            position: absolute;
+            margin: -240px auto 0;
+            left: 0;
+            right: 0;
+            top: 50%;
+            background-color: #f1f1f1;
+            -webkit-transform: rotateZ(67.5deg);
+            -moz-transform: rotateZ(67.5deg);
+            -ms-transform: rotateZ(67.5deg);
+            -o-transform: rotateZ(67.5deg);
+            transform: rotateZ(67.5deg);
+
+        }
+
+        .div.s--canvas-square-two{
+
+            width: 100%;
+            height: 240px;
+            font-size: 0;
+
+        }
+
+        .div.s--canvas-square-three{
+
+            height: 240px;
+            width: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+
+        }
+
+        .div.s--canvas-square-four{
+
+            width: 480px;
+            height: 480px;
+            position: relative;
+            background-color: #fff;
+            top: -120px;
+            font-size: 0;
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four{
+
+            -webkit-transform: rotateZ(-45deg);
+            -moz-transform: rotateZ(-45deg);
+            -o-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four{
+
+            -webkit-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+
+        }
+
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four{
+
+            -webkit-transform: rotateZ(-135deg);
+            -moz-transform: rotateZ(-135deg);
+            -o-transform: rotateZ(-135deg);
+            -ms-transform: rotateZ(-135deg);
+            transform: rotateZ(-135deg);
+
+        }
+
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four{
+
+            -webkit-transform: rotateZ(135deg);
+            -moz-transform: rotateZ(135deg);
+            -o-transform: rotateZ(135deg);
+            -ms-transform: rotateZ(135deg);
+            transform: rotateZ(135deg);
+
+        }
+
+        .div.s--canvas-square-three:nth-child(4) .div.s--canvas-square-four{
+
+            -webkit-transform: rotateZ(90deg);
+            -moz-transform: rotateZ(90deg);
+            -o-transform: rotateZ(90deg);
+            -ms-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+
+        }
+
+        .div.s--canvas-square-three:nth-child(1n) .div.s--canvas-square-four{
+
+            left: -120px;
+
+        }
+
+        .div.s--canvas-square-three:nth-child(2n) .div.s--canvas-square-four{
+
+            right: -120px;
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(1),
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(1){
+
+            background-color: #f6f5f6;
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(1) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(1) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(1) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(1) .div.s--concert{
+
+            -webkit-transform: rotateZ(-22.5deg);
+            -moz-transform: rotateZ(-22.5deg);
+            -ms-transform: rotateZ(-22.5deg);
+            -o-transform: rotateZ(-22.5deg);
+            transform: rotateZ(-22.5deg);
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(2),
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(2){
+
+            background-color: #fff0de;
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(2) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(2) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(2) .div.s--concert,
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(2) .div.s--concert{
+
+            -webkit-transform: rotateZ(22.5deg);
+            -moz-transform: rotateZ(22.5deg);
+            -ms-transform: rotateZ(22.5deg);
+            -o-transform: rotateZ(22.5deg);
+            transform: rotateZ(22.5deg);
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(1),
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(1){
+
+            background-color: #ff7800;
+
+        }
+
+        .div.s--canvas-square-two:nth-child(1) .div.s--canvas-square-three:nth-child(2) .div.s--canvas-square-four .div.s--opt:nth-child(2),
+        .div.s--canvas-square-two:nth-child(2) .div.s--canvas-square-three:nth-child(1) .div.s--canvas-square-four .div.s--opt:nth-child(2){
+
+            background-color: #fd9b48;
+
+        }
+
+        .div.s--opt {
+
+            font-size: 14px;
+            text-align: center;
+            color: #333;
+            height: 480px;
+            display: inline-block;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-top: 200px;
+            position: relative;
+        }
+
+        .div.s--option > *{
+
+            position: absolute;
+
+        }
+
+        .div.s--frete,
+        .div.s--heart,
+        .div.s--percent,
+        .div.s--star{
+
+            position: relative;
+            top: 20px;
+
+        }
+
+        .div.s--frete,
+        .div.s--percent{
+
+            left: 45px;
+
+        }
+
+        .div.s--heart,
+        .div.s--star{
+
+            left: -45px;
+
+        }
+
+        .div.s--frete h5,
+        .div.s--heart h5,
+        .div.s--percent h5,
+        .div.s--star h5{
+
+            font-size: 18px;
+            font-weight: 100;
+
+        }
+
+        .div.s--frete img{
+
+            width: 35px;
+
+        }
+
+        .div.s--circle {
+
+            width: 100px;
+            height: 100px;
+            background-color: #000000;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: -50px auto 0;
+            top: 50%;
+            border-radius: 100%;
+            box-shadow: 0 0 8px #000000;
+
+        }
+
+        .div.s--circle .div.s--center{
+
+            background-color: #f2f2f2;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: -30px auto 0;
+            border-radius: 100%;
+
+        }
+
+        .div.s--circle .div.s--center img{
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -45px;
+
+        }
+
+        [data-result].is--selected{
+
+            -webkit-animation: _congratulations 2s ease-in infinite both;
+            -moz-animation: _congratulations 2s ease-in infinite both;
+            -ms-animation: _congratulations 2s ease-in infinite both;
+            -o-animation: _congratulations 2s ease-in infinite both;
+            animation: _congratulations 2s ease-in infinite both;
+
+        }
+
+        .section.s--content {
+
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 70px 0;
+            height: 410px;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-left: 130px;
+            width: 520px;
+            position: relative;
+            -webkit-transition: all ease 140ms;
+            -moz-transition: all ease 140ms;
+            -ms-transition: all ease 140ms;
+            -o-transition: all ease 140ms;
+            transition: all ease 140ms;
+            -webkit-transition-delay: 100ms;
+            -moz-transition-delay: 100ms;
+            -ms-transition-delay: 100ms;
+            -o-transition-delay: 100ms;
+            transition-delay: 100ms;
+            opacity: 0;
+            z-index: -1;
+            left: 260px;
+
+        }
+
+        .main.s--roulet.is--show.is--form .section.s--content{
+
+            left: 280px;
+            opacity: 1;
+
+        }
+
+        .section.s--home,
+        .section.s--thanks{
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 15px;
+
+        }
+
+        .header.s--home{
+
+            text-align: center;
+            padding-bottom: 10px;
+
+        }
+
+        .header.s--home img{
+
+            display: inline-block;
+            width: 160px;
+
+        }
+
+        .section.s--body{
+
+            padding: 0 15px;
+
+        }
+
+        .section.s--body h2{
+
+            font-weight: 900;
+            font-size: 26px;
+            color: #000000;
+
+        }
+
+        .section.s--body h2 small{
+
+            line-height: 20px;
+            font-size: 18px;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #cccccc;
+            font-weight: 200;
+
+        }
+
+        .section.s--body form{
+
+            font-size: 0;
+
+        }
+
+        .section.s--body form input{
+
+            width: 100%;
+            margin: 5px 0;
+            background-color: #eee;
+            line-height: 40px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 15px;
+            border-radius: 2px;
+            font-size: 14px;
+
+        }
+
+        [type='radio']{
+
+            display: none;
+
+        }
+
+        .div.s--ratio{
+
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            margin-top: 5px;
+
+        }
+
+        .div.s--ratio{
+
+            font-size: 16px;
+            color: #666666;
+            text-align: left;
+
+        }
+
+        .div.s--ratio i{
+
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: solid 1px #666666;
+            border-radius: 100%;
+            vertical-align: middle;
+            position: relative;
+
+        }
+
+        .div.s--ratio i:before{
+
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f07137+0,fcae63+50,feeb95+100 */
+            background: #f07137; /* Old browsers */
+            background: -moz-linear-gradient(left, #f07137 0%, #fcae63 50%, #feeb95 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #f07137 0%,#fcae63 50%,#feeb95 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #f07137 0%,#fcae63 50%,#feeb95 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07137', endColorstr='#feeb95',GradientType=1 ); /* IE6-9 */
+            left: 0;
+            right: 0;
+            margin: -7px auto 0;
+            position: absolute;
+            top: 50%;
+
+            -webkit-transition: all 120ms cubic-bezier(.43, -0.83, .66, 1.8);
+            -moz-transition: all 120ms cubic-bezier(.43, -0.83, .66, 1.8);
+            -ms-transition: all 120ms cubic-bezier(.43, -0.83, .66, 1.8);
+            -o-transition: all 120ms cubic-bezier(.43, -0.83, .66, 1.8);
+            transition: all 120ms cubic-bezier(.43, -0.83, .66, 1.8);
+
+        }
+
+        .div.s--ratio input:not(:checked) ~ label i:before{
+
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -o-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+
+        }
+
+        .div.s--ratio input:not(:checked) ~ label{
+
+            cursor: pointer;
+
+        }
+
+        .btn.s--send{
+
+            width: 100%;
+            padding: 15px 0;
+            font-size: 16px;
+            color: #FFF;
+            background-color: #ff7800;
+            border-radius: 3px;
+            margin-top: 10px;
+
+        }
+
+        .is--hide{
+
+            display: none;
+            opacity: 0;
+
+        }
+
+        .header.s--thanks{
+
+            padding-top: 20px;
+
+        }
+
+        .header.s--thanks h5{
+
+            font-size: 28px;
+            color: #333;
+
+        }
+
+        .header.s--thanks h5 span{
+
+            color: #e8833a;
+
+        }
+
+        .code.s--cupom{
+
+            text-align: center;
+            text-decoration: underline;
+            height: 60px;
+            position: relative;
+            line-height: 60px;
+            display: block;
+            color: #e8833a;
+
+        }
+
+        .code.s--cupom span{
+
+            font-size: 48px;
+            position: relative;
+            left: 30px;
+            opacity: 0;
+            -webkit-transition: all 120ms ease-in;
+            -moz-transition: all 120ms ease-in;
+            -ms-transition: all 120ms ease-in;
+            -o-transition: all 120ms ease-in;
+            transition: all 120ms ease-in;
+
+        }
+
+        .footer.s--thanks h5{
+
+            color: #ccc;
+            font-size: 22px;
+
+        }
+
+        .btn.s--cta {
+
+            width: 100%;
+            color: #FFFFFF;
+            margin-top: 10px;
+            padding: 10px 0;
+            border-radius: 3px;
+            background-color: #e8833a;
+            font-size: 18px;
+
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 10px;
+            bottom: 40px;
+            display: block;
+            width: 139px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+        }
+
+
+        .c-hr{
+            width: 570px;
+            position: relative;
+            height: 5px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f07137+0,fcae63+50,feeb95+100 */
+            background: #f07137; /* Old browsers */
+            background: -moz-linear-gradient(left, #f07137 0%, #fcae63 50%, #feeb95 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #f07137 0%,#fcae63 50%,#feeb95 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #f07137 0%,#fcae63 50%,#feeb95 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07137', endColorstr='#feeb95',GradientType=1 ); /* IE6-9 */
+            left: -195px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+    <style>
+
+        @-webkit-keyframes _congratulations{
+
+            0%{
+
+                background-color: #f1f1f1;
+
+            }
+
+            from{
+
+                background-color: #000000;
+
+            }
+
+        }
+
+        @-moz-keyframes _congratulations{
+
+            0%{
+
+                background-color: #f1f1f1;
+
+            }
+
+            from{
+
+                background-color: #000000;
+
+            }
+
+        }
+
+        @-o-keyframes _congratulations{
+
+            0%{
+
+                background-color: #f1f1f1;
+
+            }
+
+            from{
+
+                background-color: #000000;
+
+            }
+
+        }
+
+        @keyframes _congratulations{
+
+            0%{
+
+                background-color: #f1f1f1;
+
+            }
+
+            from{
+
+                background-color: #000000;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<main class="main s--roulet">
+
+    <!-- Botão de fechar -->
+
+    <button class="btn s--close" onclick="top.spl.close();">
+
+        <i class="fa fa-times" aria-hidden="true"></i>
+
+    </button>
+
+    <!-- Fim - Botão de fechar -->
+
+    <!--*****Começo do bloco da roleta.*****-->
+
+    <aside class="aside s--roulet">
+
+        <div class="div s--canvas">
+
+            <div class="div s--canvas-square-one">
+
+                <div class="div s--canvas-square-two">
+
+                    <div class="div s--canvas-square-three">
+
+                        <div class="div s--canvas-square-four">
+
+                            <div data-result="1" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--frete">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/icon-amostra-2.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            AMOSTRAS
+
+                                        </h5>
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div data-result="2" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--heart">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/icon-heart.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            MIMO<br>SURPRESA
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="div s--canvas-square-three">
+
+                        <div class="div s--canvas-square-four">
+
+                            <div data-result="3" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--percent">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/bebe-store/2018/1/24/roleta/i-percent.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            5% OFF
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div data-result="4" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--star">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/bebe-store/2018/1/24/roleta/i-star.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            10% OFF
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="div s--canvas-square-two">
+
+                    <div class="div s--canvas-square-three">
+
+                        <div class="div s--canvas-square-four">
+
+                            <div data-result="7" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--percent">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/bebe-store/2018/1/24/roleta/i-percent.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            5% OFF
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div data-result="8" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--star">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/bebe-store/2018/1/24/roleta/i-star.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            10% OFF
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="div s--canvas-square-three">
+
+                        <div class="div s--canvas-square-four">
+
+                            <div data-result="5" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--frete">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/icon-amostra-2.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            AMOSTRAS
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div data-result="6" class="div s--opt">
+
+                                <div class="div s--concert">
+
+                                    <div class="div s--heart">
+
+                                        <i class="icon s--icon">
+
+                                            <img src="https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/icon-heart.png" alt="">
+
+                                        </i>
+
+                                        <h5>
+
+                                            MIMO<br>SURPRESA
+
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="div s--circle">
+
+            <div class="div s--center">
+
+                <img src="https://static.sback.tech/shopconvert/uploads/imagens/dermage/2018/07/17/roleta/seta.png" alt="">
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!--*****Fim do bloco da roleta.*****-->
+    <!--*****Páginas de interação (Form de Lead, Tela de agradecimento.)*****-->
+
+    <section class="section s--content">
+
+        <!-- Form de Lead -->
+
+        <section class="section s--home">
+
+            <header class="header s--home">
+
+                <!-- Logo --><img src="http://via.placeholder.com/135x48/ff7800/FFFFFF?text=Logo" alt="Dermage">
+
+            </header>
+            <div class="c-hr"></div>
+            <section class="section s--body">
+
+                <header class="header s--body">
+
+                    <h2>
+
+                        SUA SORTE É VOCÊ <br>
+                        QUEM FAZ!
+
+                        <small>
+
+                            Gire a roleta e ganhe <br>
+                            um prêmio.
+
+                        </small>
+
+                    </h2>
+
+                </header>
+
+                <form>
+
+                    <input required name="Nome" id="name" placeholder="Nome" type="text">
+                    <input required name="E-mail" id="email" placeholder="E-mail" type="text">
+
+                    <div class="div s--ratio">
+
+                        <input value="Masculino" type="radio" name="Genero" id="male" required>
+
+                        <label for="male">
+
+                            <i></i>
+                            Masculino
+
+                        </label>
+
+
+                    </div>
+                    <div class="div s--ratio">
+
+                        <input value="Feminino"  type="radio" name="Genero" id="female" required>
+
+                        <label for="female">
+
+                            <i></i>
+                            Feminino
+
+                        </label>
+
+
+                    </div>
+
+                    <button class="btn s--send">
+
+                        Girar a roleta!
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <!-- Fim - Form de Lead -->
+        <!-- Agradecimentos -->
+
+        <section class="section s--thanks is--hide">
+
+            <header class="header s--home">
+
+                <!-- Logo --><img src="http://via.placeholder.com/135x48/ff7800/FFFFFF?text=Logo" alt="Dermage">
+
+            </header>
+            <div class="c-hr"></div>
+            <section class="section s--thanks">
+
+                <header class="header s--thanks">
+
+                    <h5>
+
+                        EBA! VOCÊ <br>
+                        GANHOU <span>XXX</span>! ;)
+
+                    </h5>
+
+                </header>
+
+                <code id="award" class="code s--cupom">
+
+                </code>
+
+                <footer class="footer s--thanks">
+
+                    <h5>
+
+                        Utilize o cupom acima para <br>
+                        a sua primeira compra!
+
+                    </h5>
+
+                    <button class="btn s--cta" onclick="top.spl.redirect();">
+
+                        Voltar ao site
+
+                    </button>
+
+                </footer>
+
+            </section>
+
+        </section>
+
+        <!-- Fim - Agradecimentos -->
+
+    </section>
+
+    <!--*****Fim - Páginas de interação*****-->
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/9484a7aa31.js"></script>
+
+<script>
+
+    top.spl.makecookie = function(_object){
+
+        var _now = new Date(),
+            _cookieName = _object.name,
+            _cookieExpires = new Date(_now.getTime() + _object.timer).toUTCString(),
+            _cookiePath = _object.path,
+            _cookieValue = _object.value;
+
+        window.top.document.cookie = _cookieName + "="+_cookieValue+";expires="+_cookieExpires+";path="+_cookiePath+";";
+
+        return true;
+
+    };
+
+    Array.prototype.toRemove = function(_k){
+
+        var _tmp = [];
+
+        this.forEach(function(_v, _ind){
+
+            if(_v != _k){
+
+                _tmp.push(_v);
+
+            }
+
+        });
+
+        return _tmp;
+
+    };
+
+</script>
+
+<script>
+
+    var __SCOPE = window.top.document,
+        $CUPOM = Math.floor((Math.random() * (7 - 0)) + 0),
+        $AWARDS = ['xxxxxxxxx','xxxxxxxx','xxxxxxxxx','xxxxxxxxx','xxxxxxxx','xxxxxxxxx','xxxxxxxxx','xxxxxxxxx'],
+        $AWARDS_LABELS = ['AMOSTRAS','MIMO \n SURPRESA','5% OFF','10% OFF','AMOSTRAS','MIMO \n SURPRESA','5% OFF','10% OFF'],
+        getACookie = function(_key){
+
+            var _target = top.document.cookie.split(";"),
+                _reponse = false;
+
+            _target.forEach(function(_v, _i){
+
+                _v = _v.trim();
+
+                var _splits = _v.split("="),
+                    _tmp = [];
+
+                _tmp[0] = _splits[0];
+                _tmp[1] = _splits[1];
+
+                if(_splits.length > 2){
+
+                    _tmp[1] = _splits.toRemove(0).join("=");
+
+                }
+
+                var _index = _tmp[0];
+
+
+                if(_key == _index && !_reponse){
+
+                    _reponse = {'key': _index, 'val': _tmp[1]};
+
+                }
+
+            });
+
+            return _reponse;
+
+        },
+        _rotateFunction = function(){
+
+            var _canvas = $('.div.s--canvas'),
+                _award = $AWARDS[$CUPOM],
+                _voltas = 4;
+
+            _canvas.css({
+
+                transform: 'rotateZ(-'+ (((45 * 8) * _voltas) + (45*$CUPOM))+'deg)'
+
+            });
+
+            setTimeout(function(){
+
+                $('[data-result="'+($CUPOM + 1)+'"]').addClass('is--selected');
+
+            }, 2200);
+
+            return {
+
+                cupom: $AWARDS[$CUPOM],
+                label: $AWARDS_LABELS[$CUPOM]
+
+            };
+
+        },
+        _showOverlay = function(){
+
+            var _main = $('.main.s--roulet');
+
+            _main.addClass('is--show');
+
+            setTimeout(function(){
+
+                _main.addClass('is--form');
+
+            }, 300);
+
+        },
+        writeMagicText = function(_text){
+
+            var _string = _text.split(''),
+                _target = $("#award");
+
+            _string.forEach(function(_val, _ind){
+
+                var _template = '<span>'+_val+'</span>';
+                _target.append(_template);
+
+            });
+
+            setTimeout(function(){
+
+                var _time = 120;
+
+                $('span', _target).each(function(){
+
+                    var __target = $(this);
+
+                    setTimeout(function(){
+
+                        __target.css({
+
+                            'left': '0',
+                            'opacity': '1'
+
+                        });
+
+                    }, _time);
+
+                    _time += 50;
+
+                });
+
+            }, 300);
+
+        },
+        animateChangeScreen = function(){
+
+            var _code = $('#awards'),
+                _main = $('.main.s--roulet'),
+                _award = undefined;
+
+            _main.removeClass('is--form');
+            $("body").css('background-color', '#000000');
+
+            setTimeout(function(){
+
+                _award = _rotateFunction();
+                $(".section.s--home").css('display', 'none');
+                $(".section.s--thanks").css({
+
+                    display: 'block',
+                    opacity: '1'
+
+                });
+
+                $('.header.s--thanks h5 span').html(_award.label);
+
+                setTimeout(function(){
+
+                    _main.addClass('is--form');
+
+                    setTimeout(function(){
+
+                        writeMagicText(_award.cupom);
+
+                    }, 400);
+
+                }, 4400);
+
+            }, 600);
+
+        };
+
+</script>
+
+<script>
+
+    var $ID = 8553,
+        $SHOW = false,
+        _preventCupom = function(){
+
+            if(!getACookie('SB__CUPOM_MAKED')){
+
+                return $CUPOM;
+
+            }else{
+
+                $CUPOM = Math.floor((Math.random() * (7 - 0)) + 0);
+
+                if(parseInt(getACookie('SB__CUPOM_MAKED').val) == $CUPOM){
+
+                    _preventCupom();
+
+                }else{
+
+                    return $CUPOM;
+
+                }
+
+            }
+
+        };
+
+    $CUPOM = _preventCupom();
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".main.s--roulet").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500, _showOverlay);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".main.s--roulet").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".main.s--roulet").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500, _showOverlay);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".main.s--roulet").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+    $('form').submit(function(){
+
+        return false;
+
+    });
+
+</script>
+
+</body>
+
+</html>

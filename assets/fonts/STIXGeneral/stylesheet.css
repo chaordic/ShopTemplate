@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'STIXGeneral';
+    src: url('STIXGeneral-Regular.woff2') format('woff2'),
+        url('STIXGeneral-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'STIXGeneral';
+    src: url('STIXGeneral-Bold.woff2') format('woff2'),
+        url('STIXGeneral-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

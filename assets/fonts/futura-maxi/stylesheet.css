@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Futura Maxi';
+    src: url('futura_maxi_cg_light_regular-webfont.woff2') format('woff2'),
+         url('futura_maxi_cg_light_regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Maxi';
+    src: url('futura_maxi_cg_bold_regular-webfont.woff2') format('woff2'),
+         url('futura_maxi_cg_bold_regular-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Maxi';
+    src: url('futura_maxi_cg_book_regular-webfont.woff2') format('woff2'),
+         url('futura_maxi_cg_book_regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Maxi';
+    src: url('futura_maxi_cg_demi_regular-webfont.woff2') format('woff2'),
+         url('futura_maxi_cg_demi_regular-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

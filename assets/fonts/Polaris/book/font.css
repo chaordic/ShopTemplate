@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Polaris Book';
+  src: url('Polaris-Book.eot');
+  src: url('Polaris-Book.woff2') format('woff2'),
+       url('Polaris-Book.woff') format('woff'),
+       url('Polaris-Book.ttf') format('truetype'),
+       url('Polaris-Book.svg#Polaris-Book') format('svg'),
+       url('Polaris-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

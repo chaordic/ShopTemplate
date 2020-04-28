@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'ManusTrial';
+    src: url('ManusTrial.eot');
+    src: url('ManusTrial.eot?#iefix') format('embedded-opentype'),
+        url('ManusTrial.woff2') format('woff2'),
+        url('ManusTrial.woff') format('woff'),
+        url('ManusTrial.ttf') format('truetype'),
+        url('ManusTrial.svg#ManusTrial') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

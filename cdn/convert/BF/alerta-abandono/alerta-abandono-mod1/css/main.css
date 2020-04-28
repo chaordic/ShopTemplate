@@ -1,0 +1,223 @@
+
+*{
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+button{
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+
+.main{
+  
+  background: url('../images/etiqueta.png') no-repeat center center;
+
+  width: 297px;
+  height: 526px;
+  position: absolute;
+  bottom: 19px;
+  left: 19px;
+  overflow: hidden;
+}
+
+.load{
+
+  position: absolute;
+  background: #000;
+  height: 266px;
+  width: 295px;
+  z-index: 800;
+  top: 250px;
+}
+
+.load img{
+
+  margin-left: 72px;
+  margin-top: 60px;
+  width: 140px;
+}
+
+.main .bg{
+
+  position: absolute;
+  top: 44px;
+  left: 37px;
+  z-index: 10;
+}
+
+.close{
+
+  position: relative;
+  top: 100px;
+  right: -256px;
+  z-index: 9999;
+}
+
+.logo-bf{
+
+  position: relative;
+  top: 40px;
+  z-index: 11;
+}
+
+.faixa{
+
+  position: relative;
+  top: 40px;
+}
+
+.faixa .faixa--rolo{
+
+  position: relative;
+  left: -13px;
+  z-index: 14;
+}
+
+.faixa .faixa--fita{
+
+  height: 36px;
+  width: 318px;
+
+  position: relative;
+  top: -42px;
+  left: -3px;
+  z-index: 12;
+
+  background: #6c0809; /* Old browsers */
+  background: -moz-linear-gradient(left, #6c0809 0%, #bf151a 51%, #f02631 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #6c0809 0%,#bf151a 51%,#f02631 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #6c0809 0%,#bf151a 51%,#f02631 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c0809', endColorstr='#f02631',GradientType=1 ); /* IE6-9 */
+
+  border-radius: 0 40px 40px 0;
+}
+
+.faixa .faixa--fita h1{
+
+  color: #FFF;
+  font-weight: 300;
+  font-size: 12px;
+
+  padding: 11px;
+  margin: 0px;
+
+  position: relative;
+  z-index: 13;
+}
+
+
+.carousel img{
+  
+  margin-left: 20px;
+  margin-top: 41px;
+  display: inline-block;
+  width: 86px;
+}
+
+.carousel section{
+
+  width: 154px;
+  display: inline-block;
+  position: relative;
+  bottom: 88px;
+  left: 100px;
+}
+
+.carousel section *{
+
+  display: inline-block;
+}
+
+.carousel section h2, .carousel section h3{
+
+  width: 154px;
+
+  font-weight: 500;
+}
+
+.carousel section h2{
+
+  color: #FFF;
+  font-size: 14px;
+
+  margin-left: 30px;
+  margin-top: 0px; 
+}
+
+.carousel section h3{
+
+  color: #e03139;
+  font-size: 20px;
+
+  margin-top: 0px;
+  margin-left: 29px;
+
+  float: left;
+}
+
+#left, #right{
+
+  position: relative;
+  bottom: 85px;
+}
+
+#left{
+
+  left: 15px;
+}
+
+#right{
+
+  left: 180px;
+}
+
+.cta{
+
+  position: relative;
+  bottom: 75px;
+  z-index: 9999;
+}
+
+.cta span{
+
+  position: relative;
+  bottom: 40px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.cta span{
+
+  position: relative;
+  bottom: 40px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.cta img{
+
+  position: relative;
+  left: 0px;
+}
+
+.cta:hover{
+
+  -webkit-filter: drop-shadow(1px 0px 3px #f94a50 );
+  filter: drop-shadow(1px 0px 3px #f94a50);
+}
+
+.cta p{
+
+  position: relative;
+  text-align: center;
+
+  color: #FFF;
+  font-size: 16px;
+  bottom: 58px;
+  left: 20px;
+}

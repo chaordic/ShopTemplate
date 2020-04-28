@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'FuturaStd-Bold';
+  src: url('FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),  url('FuturaStd-Bold.otf')  format('opentype'),
+	     url('FuturaStd-Bold.woff') format('woff'), url('FuturaStd-Bold.ttf')  format('truetype'), url('FuturaStd-Bold.svg#FuturaStd-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

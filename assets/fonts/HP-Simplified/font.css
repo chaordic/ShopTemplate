@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'HPSimplified';
+  src: url('HPSimplifiedW02-Light.eot');
+  src: url('HPSimplifiedW02-Light.woff2') format('woff2'),
+       url('HPSimplifiedW02-Light.woff') format('woff'),
+       url('HPSimplifiedW02-Light.ttf') format('truetype'),
+       url('HPSimplifiedW02-Light.svg#HPSimplifiedW02-Light') format('svg'),
+       url('HPSimplifiedW02-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HPSimplified';
+  src: url('HPSimplifiedW02-Regular.eot');
+  src: url('HPSimplifiedW02-Regular.woff2') format('woff2'),
+       url('HPSimplifiedW02-Regular.woff') format('woff'),
+       url('HPSimplifiedW02-Regular.ttf') format('truetype'),
+       url('HPSimplifiedW02-Regular.svg#HPSimplifiedW02-Regular') format('svg'),
+       url('HPSimplifiedW02-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+

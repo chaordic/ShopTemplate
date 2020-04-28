@@ -1,0 +1,11 @@
+.section,
+.main,
+.c-aside--powered,
+.c-content,
+.c-side,
+.footer{
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

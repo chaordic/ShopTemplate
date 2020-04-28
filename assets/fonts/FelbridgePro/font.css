@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'FelbridgePro-Light';
+  src: url('FelbridgePro-Light.eot');
+  src: url('FelbridgePro-Light.woff2') format('woff2'),
+       url('FelbridgePro-Light.woff') format('woff'),
+       url('FelbridgePro-Light.ttf') format('truetype'),
+       url('FelbridgePro-Light.svg#FelbridgePro-Light') format('svg'),
+       url('FelbridgePro-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-LightItalic';
+  src: url('FelbridgePro-LightItalic.eot');
+  src: url('FelbridgePro-LightItalic.woff2') format('woff2'),
+       url('FelbridgePro-LightItalic.woff') format('woff'),
+       url('FelbridgePro-LightItalic.ttf') format('truetype'),
+       url('FelbridgePro-LightItalic.svg#FelbridgePro-LightItalic') format('svg'),
+       url('FelbridgePro-LightItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-Thin';
+  src: url('FelbridgePro-Thin.eot');
+  src: url('FelbridgePro-Thin.woff2') format('woff2'),
+       url('FelbridgePro-Thin.woff') format('woff'),
+       url('FelbridgePro-Thin.ttf') format('truetype'),
+       url('FelbridgePro-Thin.svg#FelbridgePro-Thin') format('svg'),
+       url('FelbridgePro-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-ThinItalic';
+  src: url('FelbridgePro-ThinItalic.eot');
+  src: url('FelbridgePro-ThinItalic.woff2') format('woff2'),
+       url('FelbridgePro-ThinItalic.woff') format('woff'),
+       url('FelbridgePro-ThinItalic.ttf') format('truetype'),
+       url('FelbridgePro-ThinItalic.svg#FelbridgePro-ThinItalic') format('svg'),
+       url('FelbridgePro-ThinItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-Regular';
+  src: url('FelbridgePro-Regular.eot');
+  src: url('FelbridgePro-Regular.woff2') format('woff2'),
+       url('FelbridgePro-Regular.woff') format('woff'),
+       url('FelbridgePro-Regular.ttf') format('truetype'),
+       url('FelbridgePro-Regular.svg#FelbridgePro-Regular') format('svg'),
+       url('FelbridgePro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-Italic';
+  src: url('FelbridgePro-Italic.eot');
+  src: url('FelbridgePro-Italic.woff2') format('woff2'),
+       url('FelbridgePro-Italic.woff') format('woff'),
+       url('FelbridgePro-Italic.ttf') format('truetype'),
+       url('FelbridgePro-Italic.svg#FelbridgePro-Italic') format('svg'),
+       url('FelbridgePro-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-Bold';
+  src: url('FelbridgePro-Bold.eot');
+  src: url('FelbridgePro-Bold.woff2') format('woff2'),
+       url('FelbridgePro-Bold.woff') format('woff'),
+       url('FelbridgePro-Bold.ttf') format('truetype'),
+       url('FelbridgePro-Bold.svg#FelbridgePro-Bold') format('svg'),
+       url('FelbridgePro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-BoldItalic';
+  src: url('FelbridgePro-BoldItalic.eot');
+  src: url('FelbridgePro-BoldItalic.woff2') format('woff2'),
+       url('FelbridgePro-BoldItalic.woff') format('woff'),
+       url('FelbridgePro-BoldItalic.ttf') format('truetype'),
+       url('FelbridgePro-BoldItalic.svg#FelbridgePro-BoldItalic') format('svg'),
+       url('FelbridgePro-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-ExtraBold';
+  src: url('FelbridgePro-ExtraBold.eot');
+  src: url('FelbridgePro-ExtraBold.woff2') format('woff2'),
+       url('FelbridgePro-ExtraBold.woff') format('woff'),
+       url('FelbridgePro-ExtraBold.ttf') format('truetype'),
+       url('FelbridgePro-ExtraBold.svg#FelbridgePro-ExtraBold') format('svg'),
+       url('FelbridgePro-ExtraBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-ExtraBoldIt';
+  src: url('FelbridgePro-ExtraBoldIt.eot');
+  src: url('FelbridgePro-ExtraBoldIt.woff2') format('woff2'),
+       url('FelbridgePro-ExtraBoldIt.woff') format('woff'),
+       url('FelbridgePro-ExtraBoldIt.ttf') format('truetype'),
+       url('FelbridgePro-ExtraBoldIt.svg#FelbridgePro-ExtraBoldIt') format('svg'),
+       url('FelbridgePro-ExtraBoldIt.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-Black';
+  src: url('FelbridgePro-Black.eot');
+  src: url('FelbridgePro-Black.woff2') format('woff2'),
+       url('FelbridgePro-Black.woff') format('woff'),
+       url('FelbridgePro-Black.ttf') format('truetype'),
+       url('FelbridgePro-Black.svg#FelbridgePro-Black') format('svg'),
+       url('FelbridgePro-Black.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FelbridgePro-BlackItalic';
+  src: url('FelbridgePro-BlackItalic.eot');
+  src: url('FelbridgePro-BlackItalic.woff2') format('woff2'),
+       url('FelbridgePro-BlackItalic.woff') format('woff'),
+       url('FelbridgePro-BlackItalic.ttf') format('truetype'),
+       url('FelbridgePro-BlackItalic.svg#FelbridgePro-BlackItalic') format('svg'),
+       url('FelbridgePro-BlackItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**
+ * Formatação com weight da font
+ */
+
+ @font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-Thin.eot');
+  src: url('FelbridgePro-Thin.woff2') format('woff2'),
+       url('FelbridgePro-Thin.woff') format('woff'),
+       url('FelbridgePro-Thin.ttf') format('truetype'),
+       url('FelbridgePro-Thin.svg#FelbridgePro-Thin') format('svg'),
+       url('FelbridgePro-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-Light.eot');
+  src: url('FelbridgePro-Light.woff2') format('woff2'),
+       url('FelbridgePro-Light.woff') format('woff'),
+       url('FelbridgePro-Light.ttf') format('truetype'),
+       url('FelbridgePro-Light.svg#FelbridgePro-Light') format('svg'),
+       url('FelbridgePro-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-Regular.eot');
+  src: url('FelbridgePro-Regular.woff2') format('woff2'),
+       url('FelbridgePro-Regular.woff') format('woff'),
+       url('FelbridgePro-Regular.ttf') format('truetype'),
+       url('FelbridgePro-Regular.svg#FelbridgePro-Regular') format('svg'),
+       url('FelbridgePro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-Bold.eot');
+  src: url('FelbridgePro-Bold.woff2') format('woff2'),
+       url('FelbridgePro-Bold.woff') format('woff'),
+       url('FelbridgePro-Bold.ttf') format('truetype'),
+       url('FelbridgePro-Bold.svg#FelbridgePro-Bold') format('svg'),
+       url('FelbridgePro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-Black.eot');
+  src: url('FelbridgePro-Black.woff2') format('woff2'),
+       url('FelbridgePro-Black.woff') format('woff'),
+       url('FelbridgePro-Black.ttf') format('truetype'),
+       url('FelbridgePro-Black.svg#FelbridgePro-Black') format('svg'),
+       url('FelbridgePro-Black.eot?#iefix') format('embedded-opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Felbridge Pro';
+  src: url('FelbridgePro-ExtraBold.eot');
+  src: url('FelbridgePro-ExtraBold.woff2') format('woff2'),
+       url('FelbridgePro-ExtraBold.woff') format('woff'),
+       url('FelbridgePro-ExtraBold.ttf') format('truetype'),
+       url('FelbridgePro-ExtraBold.svg#FelbridgePro-ExtraBold') format('svg'),
+       url('FelbridgePro-ExtraBold.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+

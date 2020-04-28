@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AlternateGothicNo2BT-Regular';
+  src: url('AlternateGothicNo2BT-Regular.woff') format('woff'),
+       url('AlternateGothicNo2BT-Regular.ttf') format('truetype'),
+       url('AlternateGothicNo2BT-Regular.svg#AlternateGothicNo2BT-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alternate_Gothic_No.2_BT';
+  src: url('Alternate_Gothic_No.2_BT.eot');
+  src: url('Alternate_Gothic_No.2_BT.woff2') format('woff2'),
+       url('Alternate_Gothic_No.2_BT.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

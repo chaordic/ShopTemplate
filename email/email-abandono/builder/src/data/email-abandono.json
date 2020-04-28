@@ -1,0 +1,34 @@
+{
+	"id_campanha": "4908",
+	"title": "Rafarillo - Os melhores sapatos masculinos do Brasil.",
+	"header": {
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"img": "http://app.shopconvert.com.br/uploads/imagens/rafarillo/overlay-social-recomendacao/assets/img/logo-rafarillo-190x50.png",
+		"alttext": "Rafarillo - Os melhores sapatos masculinos do Brasil."
+	},
+	"content": {
+		"recomendacao": {
+			"carrosel_item_template": {
+				"title": 				" {title} ",
+				"old_price": 			"de R$ {old_price} ",
+				"price": 				"Por: R$ {price} ",
+				"installments": 		"Ou {installments}x de",
+				"installments_price": 	"{installments_price} no cartão",
+				"btn": 					"Comprar"
+			}
+		},
+		"social_facebook": {
+			"social_call": {
+				"text": "Fique por dentro das novidades!",
+				"facebook_text": "Conecte-se com Facebook",
+				"facebook_alttext": "*Nunca publicaremos nada sem a sua permissão"
+			},
+			"social_thanks": {
+				"text": "Obrigado por se conectar. Confira nossas ofertas exclusivas."
+			}
+		}
+	},
+	"footer": {
+		"img": "http://app.shopconvert.com.br/uploads/imagens/rafarillo/overlay-social-recomendacao/assets/img/powered-by-shopback.png"
+	}
+}

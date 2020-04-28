@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+
+        Overlay v.0.0.1
+
+    </title>
+
+    <style>
+
+        @import url('https://shopbackbr.github.io/ShopTemplate/assets/css/recomendacao/v0.0.0/style.css');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        .t-default{
+
+            font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        .t-default .c-header__title-label{
+
+            font-style: italic;
+            background-color: #FFFFFF;
+            color: #000000;
+
+        }
+
+        .t-default .c-carousel__price{
+
+            font-weight: bold;
+            color: #333333;
+
+        }
+
+        .t-default .c-btn--product{
+
+            background-color: transparent;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 23px;
+            margin-top: 5px;
+            padding: 0;
+
+        }
+
+        .t-default .c-btn--product__icon{
+
+            width: 21px;
+            height: 23px;
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/passarela/2018/02/recomendacao/i1.png);
+            vertical-align: sub;
+
+        }
+
+        .t-default .main__back-clock-top,
+        .t-default .main__back-clock-bottom,
+        .t-default .c-carousel__control{
+
+            background-color: #000000;
+
+        }
+
+
+        .t-default .c-carousel__control:before{
+
+            background-color: #555555;
+
+        }
+
+        .t-default .c-footer__label-title{
+
+            color: #feeab1;
+            font-weight: bold;
+
+        }
+
+        .t-default .c-footer__label-text{
+
+            color: #ffffff;
+
+        }
+
+        [or-check-exists=""]{
+
+            visibility: hidden;
+
+        }
+
+        [or-click-redirect]{
+
+            cursor: pointer;
+
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 10px;
+            bottom: -30px;
+            display: block;
+            width: 169px;
+            height: 15px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+
+        .c-header__title-label, .c-footer__home{
+            background-color: #fff;
+            padding: 5px 0;
+        }
+
+    </style>
+
+    <style type="text/css">
+        .c-columns{
+
+            font-size: 0;
+            width: 90%;
+            margin: 0 5%;
+
+        }
+
+        .c-columns > *{
+
+            display: inline-block;
+            vertical-align: top;
+            font-size: initial;
+            margin-top: 20px;
+
+        }
+
+        .c-btn{
+
+            cursor: pointer;
+
+        }
+
+        .c-btn--push-decline{
+
+            padding: 3px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            border: solid 1px #cccccc;
+            border-radius: 5px;
+            line-height: 22px;
+
+        }
+
+        .c-btn--push-accept{
+
+            padding: 3px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #000;
+            border: solid 1px #000000;
+            border-radius: 5px;
+            line-height: 22px;
+            margin-left: 5px;
+
+        }
+
+        .c-icon--push{
+
+            margin-right: 15px;
+
+        }
+
+        .c-footer{
+            bottom: -6px;
+        }
+    </style>
+
+    <script>
+
+        //AppId do Facebook
+
+        window.facebookId = "2064968930453826";
+
+    </script>
+
+</head>
+<body>
+
+<main class="main t-default">
+
+    <div class="main__back-clock-top js-animate-block"></div>
+    <div class="main__back-clock-bottom js-animate-block"></div>
+
+    <header class="header c-header js-animate-block">
+
+        <button class="c-btn c-btn--close js-close js-animate-block"></button>
+
+        <figure class="c-header__brand">
+
+            <img src="https://via.placeholder.com/183x54?text=LOGO" alt="Passarela" class="c-header__image">
+
+        </figure>
+
+        <div class="c-header__title">
+
+            <h2 class="c-header__title-label js-animate-block js-text-animate" ov-data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam!"></h2>
+
+        </div>
+
+    </header>
+
+    <section class="section c-content">
+
+        <div class="c-carousel">
+
+            <section class="c-carousel__rails js-animate-block">
+
+                <div or-click-redirect="{link}" class="c-carousel__information js-product-ind">
+
+                    <header class="c-carousel__product-header">
+
+                        <h2 class="c-carousel__product-name js-product-name">
+
+                            {name}
+
+                        </h2>
+
+                    </header>
+
+                    <section class="c-carousel__descricao">
+
+                        <div class="c-carousel__price-box">
+
+                            <del or-check-exists="{old-price}" class="c-carousel__old-price">
+
+                                R$ {old-price}
+
+                            </del>
+
+                            <p class="c-carousel__price">
+
+                                R$ {price}
+
+                            </p>
+
+                            <p class="c-carousel__installments">
+
+                                ou {installments}x de R$ {installments-price}
+
+                            </p>
+
+                        </div>
+
+                        <button class="c-btn c-btn--product">
+
+                            <img src="https://via.placeholder.com/162x35?text=Comprar" alt="">
+
+                        </button>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+            <div class="c-carousel__primary-images js-primary-carousel js-animate-block">
+
+                <img or-click-redirect="{link}" {data}src="{image}" alt="{name}">
+
+            </div>
+
+            <div class="c-carousel__secondary-images js-secondary-carousel js-animate-block">
+
+                <img {data}src="{image}" alt="{name}">
+
+            </div>
+
+            <div class="c-carousel__tertiary-images js-tertiary-carousel js-animate-block">
+
+                <img {data}src="{image}" alt="{name}">
+
+            </div>
+
+            <div class="c-carousel__control js-control js-animate-block">
+
+                <button class="c-btn c-btn--control js-control-prev">
+
+                    <img src="https://static.sback.tech/shopconvert/uploads/imagens/passarela/2018/02/recomendacao/left.png" alt="Prev" class="c-btn--control__prev">
+
+                </button>
+
+                <button class="c-btn c-btn--control js-control-next">
+
+                    <img src="https://static.sback.tech/shopconvert/uploads/imagens/passarela/2018/02/recomendacao/right.png" alt="next" class="c-btn--control__next">
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer c-footer js-animate-block">
+
+        <section class="c-footer__home js-facebook--home">
+
+            <h4 class="c-push__title">
+                Que tal ficar por dentro do que acontece na Loja?
+            </h4>
+
+            <div class="c-columns">
+
+                <img src="https://static.sback.tech/shopconvert/uploads/imagens/sua-casa-shop/2018/03/23/recomendacao/icon-push.png" alt="" class="c-icon c-icon--push">
+
+                <button class="c-btn c-btn--push-decline js-decline">Agora não</button>
+                <button class="c-btn c-btn--push-accept js-accept">Permitir</button>
+
+            </div>
+
+        </section>
+
+        <section class="c-footer__thanks is-hide js-facebook--thanks">
+
+            <figure class="c-footer__user-image">
+
+                <img src="" alt="" class="c-footer__image js-facebook--image">
+
+            </figure>
+
+            <blockquote class="c-footer__label-thanks">
+
+                <h2 class="c-footer__label-title">
+
+                    Obrigado por se conectar
+
+                </h2>
+
+                <p class="c-footer__label-text">
+
+                    Somos o maior shopping de atacado on-line <br>
+                    do Brasil! Faça suas escolhas!
+
+                </p>
+
+            </blockquote>
+
+        </section>
+
+    </footer>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script type="text/javascript" src="../../../products/products.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://shopbackbr.github.io/ShopTemplate/assets/recomendacao/v.0.0.0/recomendacao.js?jhgcbshgcbsh"></script>
+<script src="https://shopbackbr.github.io/ShopTemplate/assets/recomendacao/v.0.0.0/global.functions.js?jzxbcjxzbn"></script>
+<script type="text/javascript">
+    top.shopback = top.shopback || {
+        getRecommendations: function(_obj, _callback){
+            _callback({data: $STEP}, null);
+        }
+    };
+</script>
+<script>
+
+    top.spl.redirect = function(){
+
+        var _link = window.top.location.href,
+            _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Recomendacao'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        top.spl.click_only(_link);
+        top.spl.set_cookie('_spl_tr', top.spl.cid, 720);
+
+        setTimeout(function(){
+
+            top.location = _link;
+
+        }, 800);
+
+    };
+
+
+    top.spl.link_transform = function(_link){
+
+        console.log(_link);
+
+        var _hash = "",
+            _utms = {
+
+                'utm_source': 'ShopBack',
+                'utm_medium': 'ShopConvert_Recomendacao'
+
+            };
+
+        if(/(\#)+/.test(_link)){
+
+            _link = _link.split("#");
+            _hash = "#" + _link[1],
+                _link = _link[0];
+
+        }
+
+        if(/(\?)+/.test(_link)){
+
+            _link += "&";
+
+        }else{
+
+            _link += "?";
+
+        }
+
+        for(_utm in _utms){
+
+            _link += _utm + "=" + _utms[_utm] + "&"
+
+        }
+
+        _link = _link.replace(/(\&)$/g, "") + _hash;
+
+        return _link;
+
+    };
+
+</script>
+
+<script>
+
+    var $ID = 7495,
+        $VIEW = false;
+
+    $(window.top).mouseout(function(_evt){
+
+        if(!$VIEW && _evt.clientY < 0){
+
+            // top.spl.show_overlay(top.spl.events["custom_" + $ID]);
+            // top.spl.cid = $ID;
+            $VIEW = true;
+
+            setTimeout(function(){
+
+                sbOV.showOverlayAnimate();
+                sbOV.defineTemplates();
+
+                top.shopback.getRecommendations({}, function($Response, $Err) {
+
+                    var _products = $Response.data,
+                        _objProducts = [];
+
+                    _products.forEach(function(_val, _ind){
+
+                        _val.normal_price = (_val.normal_price != "" && _val.normal_price > 0 && _val.normal_price > _val.price) ? _val.normal_price.toString().sbNumberFormat(): "";
+
+                        _val.price = (_val.price != "" && _val.price > 0) ? _val.price.toString().sbNumberFormat(): "";
+                        _val.installments_price = (_val.installments_price != "" && _val.installments_price > 0) ? _val.installments_price.toString().sbNumberFormat(): "";
+
+                        console.log(_val.link);
+
+                        var _thisObj = {
+
+                            name: _val.title.substring(0, 28) + "...",
+                            'old-price': _val.normal_price,
+                            price: _val.price,
+                            image: _val.image[0],
+                            installments: _val.installments,
+                            "installments-price": _val.installments_price,
+                            link: _val.link,
+                            data: ""
+
+                        };
+
+
+                        _objProducts.push(_thisObj);
+
+                    });
+                    $("#ovteste, #m-backdrop", top.document).show();
+                    sbOV.makeBoxes(_objProducts);
+                    setTimeout(activateFunction, 200);
+                    setTimeout(sbOV.magicCarrosselMake, 100);
+
+                    top.spl = {};
+                    top.spl.close = function () {
+                        $(".t-default").stop().animate({
+                            opacity:0
+                        }, 500, function () {
+                            $(".t-default").hide();
+                            $("#ovteste, #m-backdrop", top.document).hide();
+                        })
+                    }
+
+                });
+
+            }, 100);
+
+        }
+
+    });
+
+
+    setTimeout(function () {
+        if(!$VIEW ){
+
+            // top.spl.show_overlay(top.spl.events["custom_" + $ID]);
+            // top.spl.cid = $ID;
+            $VIEW = true;
+
+            setTimeout(function(){
+
+                sbOV.showOverlayAnimate();
+                sbOV.defineTemplates();
+
+                top.shopback.getRecommendations({}, function($Response, $Err) {
+
+                    var _products = $Response.data,
+                        _objProducts = [];
+
+                    _products.forEach(function(_val, _ind){
+
+                        _val.normal_price = (_val.normal_price != "" && _val.normal_price > 0 && _val.normal_price > _val.price) ? _val.normal_price.toString().sbNumberFormat(): "";
+
+                        _val.price = (_val.price != "" && _val.price > 0) ? _val.price.toString().sbNumberFormat(): "";
+                        _val.installments_price = (_val.installments_price != "" && _val.installments_price > 0) ? _val.installments_price.toString().sbNumberFormat(): "";
+
+                        console.log(_val.link);
+
+                        var _thisObj = {
+
+                            name: _val.title.substring(0, 28) + "...",
+                            'old-price': _val.normal_price,
+                            price: _val.price,
+                            image: _val.image[0],
+                            installments: _val.installments,
+                            "installments-price": _val.installments_price,
+                            link: _val.link,
+                            data: ""
+
+                        };
+
+
+                        _objProducts.push(_thisObj);
+
+                    });
+                    $("#ovteste, #m-backdrop", top.document).show();
+                    sbOV.makeBoxes(_objProducts);
+                    setTimeout(activateFunction, 200);
+                    setTimeout(sbOV.magicCarrosselMake, 100);
+
+                    top.spl = {};
+                    top.spl.close = function () {
+                        $(".t-default").stop().animate({
+                            opacity:0
+                        }, 500, function () {
+                            $(".t-default").hide();
+                            $("#ovteste, #m-backdrop", top.document).hide();
+                        })
+                    }
+
+                });
+
+            }, 100);
+
+        }
+    }, 1500)
+
+
+</script>
+
+</body>
+</html>

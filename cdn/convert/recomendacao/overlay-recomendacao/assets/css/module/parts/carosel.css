@@ -1,0 +1,55 @@
+.c-carosel{
+    font-size: 0;
+}
+
+.c-carosel img{
+    outline: none;
+    cursor: pointer;
+}
+
+.c-carosel--large{
+    width: 90%;
+    height: 350px;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    margin-top: -175px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.c-carosel--thumbnail{
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    width: 40%;
+    height: 90px;
+    z-index: 999999;
+    text-align: center;
+    border-left: solid 2px #CCCCCC;
+    overflow: hidden;
+}
+
+.c-carosel--large,
+.c-carosel--thumbnail{
+    -webkit-transition: all ease-in-out 220ms;
+    -moz-transition: all ease-in-out 220ms;
+    -ms-transition: all ease-in-out 220ms;
+    -o-transition: all ease-in-out 220ms;
+    transition: all ease-in-out 220ms;
+    -webkit-transition-delay: 620ms;
+    -moz-transition-delay: 620ms;
+    -ms-transition-delay: 620ms;
+    -o-transition-delay: 620ms;
+    transition-delay: 620ms;
+}
+.is-hide .c-carosel--large,
+.is-hide .c-carosel--thumbnail{
+    right: -95%;
+}
+
+.c-carosel--thumbnail img{
+    height: 90px;
+    width: initial;
+    display: inline-block;
+}

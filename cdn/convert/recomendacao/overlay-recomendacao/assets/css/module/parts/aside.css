@@ -1,0 +1,37 @@
+.c-aside--powered{
+    background-color: #DDDDDD;
+    width: 15%;
+    height: 570px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 15px;
+    -webkit-transition: all 360ms ease-in;
+    -moz-transition: all 360ms ease-in;
+    -ms-transition: all 360ms ease-in;
+    -o-transition: all 360ms ease-in;
+    transition: all 360ms ease-in;
+}
+
+.c-aside--powered.is-hide{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.c-aside--powered.is-hide .c-link--powered{
+    opacity: 0;
+}
+
+.c-aside--powered .c-link--powered{
+    -webkit-transition: all 120ms ease-in;
+    -moz-transition: all 120ms ease-in;
+    -ms-transition: all 120ms ease-in;
+    -o-transition: all 120ms ease-in;
+    transition: all 120ms ease-in;
+    -webkit-transition-delay: 220ms;
+    -moz-transition-delay: 220ms;
+    -ms-transition-delay: 220ms;
+    -o-transition-delay: 220ms;
+    transition-delay: 220ms;
+}

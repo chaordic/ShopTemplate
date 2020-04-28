@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Tungsten-Bold';
+  src: url('Tungsten-Bold.eot');
+  src: url('Tungsten-Bold.woff2') format('woff2'),
+       url('Tungsten-Bold.woff') format('woff'),
+       url('Tungsten-Bold.ttf') format('truetype'),
+       url('Tungsten-Bold.svg#Tungsten-Bold') format('svg'),
+       url('Tungsten-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Tungsten-Medium';
+  src: url('Tungsten-Medium.eot');
+  src: url('Tungsten-Medium.woff2') format('woff2'),
+       url('Tungsten-Medium.woff') format('woff'),
+       url('Tungsten-Medium.ttf') format('truetype'),
+       url('Tungsten-Medium.svg#Tungsten-Medium') format('svg'),
+       url('Tungsten-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

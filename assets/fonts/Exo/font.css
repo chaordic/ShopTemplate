@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Exo';
+  src: url('Exo-Thin.eot');
+  src: url('Exo-Thin.woff2') format('woff2'),
+       url('Exo-Thin.woff') format('woff'),
+       url('Exo-Thin.ttf') format('truetype'),
+       url('Exo-Thin.svg#Exo') format('svg'),
+       url('Exo-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('Exo-Light.eot');
+  src: url('Exo-Light.woff2') format('woff2'),
+       url('Exo-Light.woff') format('woff'),
+       url('Exo-Light.ttf') format('truetype'),
+       url('Exo-Light.svg#Exo') format('svg'),
+       url('Exo-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('Exo-Medium.eot');
+  src: url('Exo-Medium.woff2') format('woff2'),
+       url('Exo-Medium.woff') format('woff'),
+       url('Exo-Medium.ttf') format('truetype'),
+       url('Exo-Medium.svg#Exo-Medium') format('svg'),
+       url('Exo-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('Exo-Bold.eot');
+  src: url('Exo-Bold.woff2') format('woff2'),
+       url('Exo-Bold.woff') format('woff'),
+       url('Exo-Bold.ttf') format('truetype'),
+       url('Exo-Bold.svg#Exo-Bold') format('svg'),
+       url('Exo-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Exo';
+  src: url('Exo-ExtraBold.eot');
+  src: url('Exo-ExtraBold.woff2') format('woff2'),
+       url('Exo-ExtraBold.woff') format('woff'),
+       url('Exo-ExtraBold.ttf') format('truetype'),
+       url('Exo-ExtraBold.svg#Exo') format('svg'),
+       url('Exo-ExtraBold.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+

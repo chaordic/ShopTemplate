@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swis721 BT Light.eot');
+  src: url('Swis721 BT Light.woff2') format('woff2'),
+       url('Swis721 BT Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swiss721BT-Light.woff') format('woff'),
+       url('Swiss721BT-Light.ttf') format('truetype'),
+       url('Swiss721BT-Light.svg#Swiss721BT-Light') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swis721 BT Regular.eot');
+  src: url('Swis721 BT Regular.woff2') format('woff2'),
+       url('Swis721 BT Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swiss721BT-Roman.woff') format('woff'),
+       url('Swiss721BT-Roman.ttf') format('truetype'),
+       url('Swiss721BT-Roman.svg#Swiss721BT-Roman') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swis721 BT Bold.eot');
+  src: url('Swis721 BT Bold.woff2') format('woff2'),
+       url('Swis721 BT Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swiss721 BT';
+  src: url('Swiss721BT-Bold.woff') format('woff'),
+       url('Swiss721BT-Bold.ttf') format('truetype'),
+       url('Swiss721BT-Bold.svg#Swiss721BT-Bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+

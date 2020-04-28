@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Prater Sans Two';
+  src: url('PraterSansTwo-Bold.eot');
+  src: url('PraterSansTwo-Bold.woff2') format('woff2'),
+       url('PraterSansTwo-Bold.woff') format('woff'),
+       url('PraterSansTwo-Bold.ttf') format('truetype'),
+       url('PraterSansTwo-Bold.svg#PraterSansTwo-Bold') format('svg'),
+       url('PraterSansTwo-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Prater Sans Two';
+  src: url('PraterSansTwo-Regular.eot');
+  src: url('PraterSansTwo-Regular.woff2') format('woff2'),
+       url('PraterSansTwo-Regular.woff') format('woff'),
+       url('PraterSansTwo-Regular.ttf') format('truetype'),
+       url('PraterSansTwo-Regular.svg#PraterSansTwo-Regular') format('svg'),
+       url('PraterSansTwo-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+

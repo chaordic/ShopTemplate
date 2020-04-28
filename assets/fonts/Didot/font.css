@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Didot-Bold';
+  src: url('Didot-Bold.woff') format('woff'),
+       url('Didot-Bold.ttf') format('truetype'),
+       url('Didot-Bold.svg#Didot-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Didot';
+  src: url('Didot.eot');
+  src: url('Didot.woff2') format('woff2'),
+       url('Didot.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

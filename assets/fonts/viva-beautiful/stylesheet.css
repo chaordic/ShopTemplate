@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'viva_beautifulregular';
+    src: url('viva-beautiful.woff2') format('woff2'),
+         url('viva-beautiful.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

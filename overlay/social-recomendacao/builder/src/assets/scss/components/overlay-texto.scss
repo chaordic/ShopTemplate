@@ -1,0 +1,66 @@
+// OVERLAY SHOPBACK TEXTO
+.texto {
+	margin-bottom: 0px;
+
+	// CORES
+	@each $number, $color in $sb_overlay_color {
+		&.cor_#{$number} 	{ color: $color; }
+		&.bg_cor_#{$number} { background-color: $color; }
+	}
+
+	// FONTES
+	@each $number, $family in $sb_overlay_font_family {
+		&.font_#{$number} { font-family: $family; }
+	}
+
+	// ESTILOS
+	&.link { 
+		outline: none;
+		cursor: pointer; 
+
+		// HOVER COLOR ON LINKS
+		@each $number, $color in $sb_overlay_color {
+			&.cor_#{$number}, 
+			&.bg_cor_#{$number} { 
+				&:focus { outline: none; } 
+			}
+			&.cor_#{$number} { 
+				&:hover { color: lighten( $color, 25) !important; } 
+				&:active { color: darken( $color, 5) !important; } 
+			}
+			&.bg_cor_#{$number} { 
+				&:hover { background-color: lighten( $color, 10) !important; } 
+				&:active { background-color: darken( $color, 10) !important; } 
+			}
+		}
+	}
+	&.light 		{ font-weight: 300; }
+	&.regular 		{ font-weight: 400; }
+	&.semi-bold 	{ font-weight: 500; }
+	&.bold 			{ font-weight: 600; }
+	&.bolder 		{ font-weight: 700; }
+	&.italico 		{ font-style: italic; }
+	&.no-decoration { text-decoration: none; }
+	&.line 			{ text-decoration: line-through; }
+	&.caixa-alta 	{ text-transform: uppercase; }
+
+	// TAMANHOS		
+	@each $number, $size in $sb_overlay_font_sizes {
+		&.tamanho_#{$number} {
+			font-size: 		$size;
+			line-height: 	$size + map-get($sb_overlay_font_config, line_height_padding);
+		}
+		&.tamanho_m_#{$number} {
+			@include breakpoint(small only) {
+				font-size: 		($size * 0.8) !important;
+				line-height: 	($size + map-get($sb_overlay_font_config, line_height_padding) *0.8) !important;
+			} 
+		}
+		// BUTTON
+		&.btn_#{$number} { line-height: $size + map-get($sb_overlay_btn_config, btn_height_padding); }
+		
+		// RADIUS
+		&.radius_#{$number} { border-radius: $number * map-get($sb_overlay_btn_config, radius); }
+	}
+
+} //[end] OVERLAY SHOPBACK TEXTO

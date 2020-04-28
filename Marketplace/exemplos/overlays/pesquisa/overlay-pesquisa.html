@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+        Document
+
+    </title>
+
+    <style>
+
+        @import url('https://shopbackbr.github.io/ShopTemplate/assets/fonts/Gotham/font-unicle.css');
+
+        body,
+        body *{
+
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 14px;
+
+            font-family: "Gotham", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        .main.s--pesquisa{
+
+            width: 640px;
+            height: 523px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -262px auto 0;
+            background-image: url(http://via.placeholder.com/640x523?text=BG);
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: transparent;
+
+        }
+
+        .section{
+
+            width: 100%;
+            position: relative;
+
+        }
+
+        .section.s--content{
+
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 60%;
+            height: 413px;
+            margin: 0 auto;
+            margin-top: 44px;
+
+        }
+
+        .s--hide{
+
+            display: none;
+            opacity: 0;
+
+        }
+
+        .header.s--header{
+
+            text-align: center;
+            padding: 5px 15px 0;
+
+        }
+
+        .header.s--header h1{
+
+            font-size: 24px;
+            color: #333333;
+            border-bottom: solid 1px #e4e4e4;
+            padding-bottom: 10px;
+
+        }
+
+        .footer.s--footer{
+
+            width: 354px;
+            margin: 0 auto;
+            border-top: solid 1px #e4e4e4;
+            padding-top: 10px;
+
+        }
+
+        .btn.s--cta{
+
+            display: block;
+            margin: 0 auto;
+            color: #FFFFFF;
+            background-color: #000000;
+            font-weight: 300;
+            padding: 10px;
+
+        }
+
+        .s--back{
+
+            text-decoration: underline;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+
+        }
+
+        .header.s--answer{
+
+            position: relative;
+
+        }
+
+        .list.s--options{
+
+            list-style: none;
+            width: 354px;
+            margin: 0 auto;
+            padding: 0 0 30px;
+
+        }
+
+        .list.s--options li{
+
+            position: relative;
+            padding-left: 30px;
+            font-size: 14px;
+            margin: 15px 0;
+            text-transform: uppercase;
+            cursor: pointer;
+
+        }
+
+        .i.s--check,
+        .header.s--answer i{
+
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            border: solid 1px #acacac;
+            background-color: #fff;
+            position: absolute;
+            left: 4px;
+            top: 0;
+
+        }
+
+        .i.s--check:before,
+        .header.s--answer i:before{
+
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: -4px auto 0;
+            height: 8px;
+            width: 8px;
+            background-color: #acacac;
+            border-radius: 100%;
+            -webkit-transition: all 120ms cubic-bezier(.42, -0.63, .52, 1.92);
+            -moz-transition: all 120ms cubic-bezier(.42, -0.63, .52, 1.92);
+            -ms-transition: all 120ms cubic-bezier(.42, -0.63, .52, 1.92);
+            -o-transition: all 120ms cubic-bezier(.42, -0.63, .52, 1.92);
+            transition: all 120ms cubic-bezier(.42, -0.63, .52, 1.92);
+
+        }
+
+        .list.s--options li:not(:hover) .i.s--check:before{
+
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+
+        }
+
+        .header.s--answer{
+
+            width: 354px;
+            margin: 0 auto;
+            padding-left: 30px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+        }
+
+        .header.s--answer div h3{
+
+            color: #585858;
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 17px;
+            margin-bottom: 10px;
+
+        }
+
+        .header.s--answer div p{
+
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0 0 10px;
+
+        }
+        .s--answer form input{
+
+            border: solid 1px #CCCCCC;
+            background-color: #EEEEEE;
+            width: 70%;
+            margin: 10px auto;
+            display: block;
+            padding: 5px;
+            font-size: 14px;
+
+        }
+
+        .s--answer form input::placeholder{
+
+            color: #000000;
+
+        }
+
+        .btn.s--submit{
+
+            color: #fff;
+            font-weight: 100;
+            background-color: #333333;
+            font-size: 18px;
+            padding: 5px 60px;
+            border-radius: 18px;
+            margin: 10px auto;
+            display: block;
+
+        }
+
+        .btn.s--close {
+
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 19px;
+            color: #333333;
+
+        }
+
+        .poweredby {
+            background-image: url(https://static.sback.tech/shopconvert/uploads/imagens/powered-by-shopback.png?nocache1);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -30px;
+            display: block;
+            width: 192px;
+            height: 25px;
+            opacity: .8;
+            transition: all .2s linear;
+            color: transparent;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main style="display: none;opacity: 0;" class="main s--pesquisa">
+
+    <button class="btn s--close">
+
+        <i class="fa fa-times" aria-hidden="true"></i>
+
+    </button>
+
+    <section class="section s--content">
+
+
+        <header class="header s--header">
+
+            <h1>
+
+                JÁ ESTÁ INDO EMBORA?<br>
+                POR QUE?
+
+            </h1>
+
+        </header>
+
+        <section class="section s--body">
+
+            <section class="s--home">
+
+                <ul class="list s--options">
+
+                    <li data-target="1">
+
+                        <i class="i s--check"></i>
+                        Não encontrei o que procurava
+
+                    </li>
+                    <li data-target="2">
+
+                        <i class="i s--check"></i>
+                        O prazo é muito Longo
+
+                    </li>
+                    <li data-target="3">
+
+                        <i class="i s--check"></i>
+                        Estou com dúvidas sobre o produto
+
+                    </li>
+                    <li data-target="4">
+
+                        <i class="i s--check"></i>
+                        O preço está acima do esperado
+
+                    </li>
+                    <li data-target="5">
+
+                        <i class="i s--check"></i>
+                        Encontrei o mesmo produto mais barato em outra loja
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="s--answer s--hide">
+
+                <header class="header s--answer">
+
+                    <i></i>
+
+                    <div class="opt-1 s--hide">
+                        <h3>
+
+                            Não encontrei o que procurava
+
+                        </h3>
+                        <p>
+
+                            O que você gostaria de comprar?
+                            Cadastre aqui o seu email porque
+                            sempre temos novidades
+
+                        </p>
+                    </div>
+                    <div class="s--hide opt-2">
+
+                        <h3>O prazo é muito Longo</h3>
+                        <p>Cadastre o seu email e entraremos em contato</p>
+
+                    </div>
+
+                    <div class="s--hide opt-3">
+                        <h3>Estou com dúvidas sobre o produto</h3>
+                        <p>Deixe seu nome e email que entraremos em contato para tirarmos as sua dúvidas.</p>
+                    </div>
+
+                    <div class="s--hide opt-4">
+                        <h3>O preço está acima do esperado</h3>
+                        <p>Temos outras opções que podem ajudar você.</p>
+                    </div>
+
+                    <div class="s--hide opt-5">
+                        <h3>Encontrei o mesmo produto mais barato em outra loja</h3>
+                        <p>Deixe seu nome e email e entraremos em contato</p>
+                    </div>
+
+                </header>
+
+                <form>
+
+                    <input name="Nome" id="name" placeholder="Digite seu nome" required type="text">
+                    <input name="Email" id="email" placeholder="Digite seu e-mail" required type="email">
+
+                    <button class="btn s--submit">
+
+                        ENVIAR
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <footer class="footer s--footer">
+
+            <button class="btn s--cta">
+
+                CONTINUAR NO SITE
+
+            </button>
+
+            <a href="javascript: void(0);" class="s--back s--hide">
+
+                VOLTAR
+
+            </a>
+
+        </footer>
+
+    </section>
+
+    <a href="javascript: void(0);" onclick="window.top.location = 'http://www.shopback.com.br';" class="poweredby ir" target="_blank">ShopBack</a>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/9484a7aa31.js"></script>
+
+<script type="text/javascript">
+
+    var __SCOPE = top.document,
+        $OPTIONS = $("[data-target]"),
+        $CLICK = false,
+        $SEND = false,
+        $LABEL = undefined,
+        sendLabel = function(_callBack){
+
+            if(!$SEND){
+
+                $SEND = true;
+                $.post('{base_url}tr/tp/' + top.spl.acc + '/' + top.spl.cid, {
+                    resposta: $LABEL
+                }, _callBack);
+
+            }else{
+
+                _callBack();
+
+            }
+
+        };
+
+    $(".s--back").click(function(){
+
+        $(this).addClass(".s--hide");
+
+        $("section.s--answer").stop().animate({
+
+            opacity: "0"
+
+        }, 120, function(){
+
+            $('section.s--answer').css({
+
+                display: "none"
+
+            });
+
+            $('section.s--home').css({
+
+                display: "block"
+
+            }).stop().animate({
+
+                opacity: "1"
+
+            },120, function(){
+
+                $(".header.s--answer div").addClass("s--hide");
+                $LABEL = undefined;
+
+            });
+
+        });
+
+    });
+
+    $OPTIONS.click(function(){
+
+        var _target = $(this).data('target');
+
+        if(!$CLICK){
+
+            $CLICK = true;
+            // top.spl.click_only(top.location.href);
+
+        }
+
+        $LABEL = $(this).text().trim();
+
+        $("section.s--home").stop().animate({
+
+            opacity: "0"
+
+        }, 120, function(){
+
+            $("section.s--home").css({
+
+                display: "none"
+
+            });
+
+            $(".header.s--answer div").eq(_target - 1).removeClass('s--hide');
+            $(".s--back").removeClass('s--hide');
+
+            $("section.s--answer").css({
+
+                display: "block"
+
+            }).stop().animate({
+
+                opacity: "1"
+
+            }, 120);
+
+
+        });
+
+    });
+
+    $(".s--close").click(function(){
+
+        top.spl.close();
+
+        if($LABEL != undefined){
+
+            sendLabel(top.spl.redirect);
+
+        }
+
+    });
+
+    $(".s--cta").click(function(){
+
+        if($LABEL != undefined){
+
+            sendLabel(top.spl.redirect);
+
+        }else{
+
+            top.spl.redirect();
+
+        }
+
+    });
+
+    $("form").submit(function(){
+
+        return false;
+
+    });
+
+    if(!top.spl){
+        var _show = false;
+        $(window.top).mouseout(function(_evt){
+            if(!_show && _evt.clientY < 0){
+                _show = true;
+                $("#ovteste, #m-backdrop", top.document).show();
+                $(".s--pesquisa").css("display", "block").stop().animate({
+                    opacity: "1"
+                }, 500);
+                top.spl = {};
+                top.spl.close = function(){
+                    $(".s--pesquisa").animate({
+                        opacity: "0"
+                    }, 500, function(){
+                        $(this).css("display", "none");
+                        $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                    });
+                };
+            }
+        });
+    }
+
+    setTimeout(function () {
+        if(!_show){
+            _show = true;
+            $("#ovteste, #m-backdrop", top.document).show();
+            $(".s--pesquisa").css("display", "block").stop().animate({
+                opacity: "1"
+            }, 500);
+            top.spl = {};
+            top.spl.close = function(){
+                $(".s--pesquisa").animate({
+                    opacity: "0"
+                }, 500, function(){
+                    $(this).css("display", "none");
+                    $("#ovteste, #m-backdrop", top.document).css("display", "none");
+                });
+            };
+        }
+    }, 2000);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('HelveticaNeueLTStd-Bd.eot');
+  src: url('HelveticaNeueLTStd-Bd.woff2') format('woff2'),
+       url('HelveticaNeueLTStd-Bd.woff') format('woff'),
+       url('HelveticaNeueLTStd-Bd.ttf') format('truetype'),
+       url('HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg'),
+       url('HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('HelveticaNeueLTStd-Lt.eot');
+  src: url('HelveticaNeueLTStd-Lt.woff2') format('woff2'),
+       url('HelveticaNeueLTStd-Lt.woff') format('woff'),
+       url('HelveticaNeueLTStd-Lt.ttf') format('truetype'),
+       url('HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt') format('svg'),
+       url('HelveticaNeueLTStd-Lt.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('HelveticaNeueLTStd-Md.eot');
+  src: url('HelveticaNeueLTStd-Md.woff2') format('woff2'),
+       url('HelveticaNeueLTStd-Md.woff') format('woff'),
+       url('HelveticaNeueLTStd-Md.ttf') format('truetype'),
+       url('HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg'),
+       url('HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+

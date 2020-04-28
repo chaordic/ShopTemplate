@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+
+        Vitrine - Html
+
+    </title>
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick.css+slick-theme.css)">
+
+    <style type="text/css">
+
+        @import url(https://shopbackbr.github.io/ShopTemplate/assets/fonts/Futura/Std/font.css);
+
+        /*
+        *  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+        */
+        html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+        body{line-height:1}
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+        nav ul{list-style:none}
+        blockquote,q{quotes:none}
+        blockquote:before,blockquote:after,q:before,q:after{content:none}
+        a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+        ins{background-color:#ff9;color:#000;text-decoration:none}
+        mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+        del{text-decoration:line-through}
+        abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+        table{border-collapse:collapse;border-spacing:0}
+        hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+        input,select{vertical-align:middle}
+
+
+        body *{
+
+            font-family: "Futura Std", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+
+        .vitrine{
+
+            width               : 100%;
+            height              : 400px;
+            position            : fixed;
+            left                : 0;
+            top                 : 0;
+
+            background-color    : #ffffff;
+
+        }
+
+
+        .container,
+        .body{
+
+            margin              : 0 auto;
+
+        }
+
+        .btn{
+
+            border              : none;
+            outline             : none;
+            background-color    : transparent;
+            cursor              : pointer;
+
+        }
+
+        .btn-close{
+
+            position            : absolute;
+            top                 : 50%;
+            margin-top          : -10px;
+            right               : 5%;
+            width               : 20px;
+            height              : 20px;
+
+        }
+
+        .btn-close:before,
+        .btn-close:after{
+
+            content             : "";
+            display             : block;
+            position            : absolute;
+            top                 : 0;
+            left                : 8px;
+            width               : 4px;
+            height              : 20px;
+            background-color    : #b6b6b6;
+            border-radius       : 6px;
+
+        }
+
+        .btn-close:before{
+
+            -webkit-transform   : rotateZ(-45deg);
+            -moz-transform      : rotateZ(-45deg);
+            -o-transform        : rotateZ(-45deg);
+            transform           : rotateZ(-45deg);
+        }
+
+        .btn-close:after{
+
+            -webkit-transform   : rotateZ(45deg);
+            -moz-transform      : rotateZ(45deg);
+            -o-transform        : rotateZ(45deg);
+            transform           : rotateZ(45deg);
+
+        }
+
+        .container,
+        .header,
+        .body{
+
+            position            : relative;
+
+        }
+
+        .header{
+
+            border-bottom       : solid 1px #CCCCCC;
+            padding             : 15px 0;
+
+        }
+
+        .header h2{
+
+            color               : #000000;
+            font-size           : 16px;
+            font-weight         : 400;
+
+        }
+
+        .products{
+
+            position            : relative;
+
+        }
+
+        .item-product{
+
+            padding             : 0 20px;
+            -webkit-box-sizing  : border-box;
+            -moz-box-sizing     : border-box;
+            box-sizing          : border-box;
+            cursor              : pointer;
+
+        }
+
+        .item-product .item-image{
+
+            max-width           : 90%;
+            padding             : 0 5%;
+            overflow            : hidden;
+            height              : 130px;
+            margin-bottom       : 5px;
+
+        }
+
+        .item-product .item-image img{
+
+            max-width           : 100%;
+            max-height          : 120px;
+            margin              : 0 auto;
+
+        }
+
+        .item-body-header{
+
+            padding             : 0 0 30px 0;
+
+        }
+
+        .item-body-header h2{
+
+            text-align          : center;
+            color               : #737175;
+            font-size           : 15px;
+            padding             : 0 0 0 0;
+            height              : 60px;
+            font-weight: 500;
+
+        }
+
+        .item-price{
+
+            text-align          : center;
+
+        }
+
+        span.item-price {
+
+            color: #333333;
+            font-weight: 500;
+
+        }
+
+        .item-promocao {
+
+            font-size           : 14px;
+
+        }
+
+        .item-price{
+
+            font-size           : 18px;
+
+        }
+
+        p.item-installments {
+
+            text-align          : center;
+            line-height         : 30px;
+            font-size           : 13px;
+
+        }
+
+        .btn-product {
+
+            text-align          : center;
+            width               : 95%;
+            margin              : 0 auto;
+            padding             : 5px 0;
+            background-color    : #333333;
+            color               : #FFF;
+            font-size           : 19px;
+            font-weight         : 500;
+
+        }
+
+        [installments='']{
+
+            visibility          : hidden;
+            opacity             : 0;
+            pointer-events      : none;
+
+        }
+
+        @media only screen and (min-width: 864px) and (max-width: 1200px){
+
+            .container{
+
+                max-width       : 864px;
+
+            }
+
+            .body{
+
+                width               : 80%;
+
+            }
+
+            .products{
+
+                padding             : 20px 10%;
+
+            }
+
+        }
+
+        @media only screen and (min-width: 1200px){
+
+            .container{
+
+                max-width       : 960px;
+
+            }
+
+            .body{
+
+                width               : 95%;
+
+            }
+
+            .products{
+
+                padding             : 20px 5%;
+
+            }
+
+
+        }
+
+        .load{
+
+            max-width               : 100%;
+            width                   : 220px;
+            margin                  : 0 auto;
+            display                 : block;
+
+        }
+
+        .nextArrow,
+        .prevArrow{
+
+            position                : absolute;
+            top                     : 45%;
+
+        }
+
+        .prevArrow{
+
+            left                    : 2%;
+
+        }
+
+        .nextArrow{
+
+            right                   : 2%;
+
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main class="vitrine">
+
+    <header class="header">
+
+        <section class="container">
+
+            <button class="btn btn-close" ></button>
+
+            <h2>
+
+                LOREM IPSUM DOLOR SIT.
+
+            </h2>
+
+        </section>
+
+
+    </header>
+
+    <section class="body">
+
+        <section class="products">
+
+            <img class="load" src="https://static.shopback.net/shopconvert/uploads/imagens/Overlays/vitrines/load.gif?nkxsbfcjxs" alt="Carregando">
+
+        </section>
+
+        <button class="btn prevArrow">
+
+            <img src="https://static.shopback.net/shopconvert/uploads/imagens/Overlays/vitrines/left.png?nsjkfbsj">
+
+        </button>
+        <button class="btn nextArrow">
+
+            <img src="https://static.shopback.net/shopconvert/uploads/imagens/Overlays/vitrines/right.png?nsjkfbsj">
+
+        </button>
+
+    </section>
+
+
+</main>
+
+<section style="display: none;" id="template">
+
+    {{#items}}
+
+    <div data-magic-click="{{link}}" class="item-product">
+
+        <figure class="item-image">
+
+            <img data-lazy="{{image}}" alt="{{title}}">
+
+        </figure>
+
+        <section class="item-body">
+
+            <header class="item-body-header">
+
+                <h2>
+
+                    {{title}}
+
+                </h2>
+
+            </header>
+
+            <section class="item-body-content">
+
+                <p class="item-price">
+
+                        <span class="item-promocao">
+
+                            De R$ {{normal_price}}
+
+                        </span>
+
+                    <span class="item-price">
+
+                            <b>
+
+                                por R$ {{price}}
+
+                            </b>
+
+                        </span>
+
+                </p>
+
+                <p installments="{{installments}}" class="item-installments">
+
+                    ou {{installments}}x de {{installments_price}}
+
+                </p>
+
+                <button class="btn btn-product">
+
+                    COMPRAR
+
+                </button>
+
+            </section>
+
+        </section>
+
+    </div>
+    {{/items}}
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.migrate/1.4.1/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="https://shopbackbr.github.io/ShopTemplate/assets/libs/plugins/moustache.min.js"></script>
+<script type="text/javascript" src="../../../products/products.js"></script>
+<script type="text/javascript">
+    top.shopback = top.shopback || {
+        getRecommendations: function(_obj, _callback = function(){}){
+            _callback({data: $STEP}, null);
+        }
+    };
+</script>
+<script type="text/javascript">
+
+    String.prototype.sbNumberFormat = function(){
+
+        var n        = this,
+            hasPoint = (/(\.)+/.test(this)) ? true : false;
+
+        if(hasPoint){
+            var int = n.split(".")[0],
+                c   = n.split(".")[1];
+            n   = int;
+        } else {
+            var c = "00";
+        }
+
+        n = (typeof n == "string") ? n.replace(",","") : n.toString();
+        var L = n.length % 3;
+
+        var newValue = false,
+            loop     = "";
+
+        if(n.toString().length > 3){
+            if(L > 0){
+                newValue = n.substring('0', L);
+            } else {
+                newValue = "";
+            }
+
+            loop = n.substring(L, n.length).length / 3;
+
+            for (var i = 0; i < loop; i++) {
+                if(L > 0 || i > 0){
+                    newValue += ".";
+                }
+                newValue += n.substring((L + (i * 3)), (L + (i * 3) + 3));
+            }
+        } else {
+            newValue = n;
+        }
+
+        if(c.length == 2 && parseInt(c) > 0) {
+            newValue += ","+c;
+        } else if (c.length > 2 && parseInt(c) > 0) {
+            newValue += ","+c.substring('0','2');
+        } else if (c.length > 0 && parseInt(c) > 0) {
+            newValue += ","+c+"0";
+        } else {
+            newValue += ",00";
+        }
+        return newValue;
+
+    };
+
+    var Vitrine = {};
+
+    Vitrine.init = ($config) => {
+
+        Vitrine.id = $config.id;
+        Vitrine.objectWithHeight = $config.boxContent,
+            Vitrine.clientScroll = $config.targetScroll;
+        Vitrine.paddingSet = $config.padding;
+        Vitrine.links = (typeof $config.links == "undefined") ? false : $config.links;//tracking: https://zanox.com.br/, utm: ?utml_source=shopback
+
+    };
+
+    Vitrine.showed = false;
+    Vitrine.disable = false;
+
+    Vitrine.activate = () => {
+
+        if(!Vitrine.showed){
+
+            Vitrine.showed = true;
+
+            // top.spl.view(Vitrine.id);
+            // top.spl.cid = Vitrine.id;
+
+        }
+
+        return true;
+
+    }
+
+    Vitrine.styleFrame = {
+
+        width       : '100%',
+        height      : '400px',
+        opacity     : '0',
+        display     : 'none',
+        outline     : 'none',
+        padding     : '0',
+        margin      : '0',
+        position    : 'fixed',
+        bottom      : '-400px',
+        left        : '0',
+        top         : 'auto',
+        right       : 'auto'
+
+    };
+
+    Vitrine.carousselConf = {
+
+        arrows          : true,
+        dots            : false,
+        prevArrow       : $('.prevArrow'),
+        nextArrow       : $('.nextArrow'),
+        slidesToShow    : 4,
+        slidesToScroll  : 1,
+        draggable       : true,
+        infinite        : true,
+        responsive      : [{
+
+            breakpoint: 960,
+            settings: {
+
+                infinite        : true,
+                slidesToShow    : 3,
+                slidesToScroll  : 1,
+                dots            : false
+
+            }
+
+        }, {
+
+            breakpoint: 864,
+            settings: {
+
+                infinite        : true,
+                slidesToShow    : 3,
+                slidesToScroll  : 1,
+                dots            : false
+
+            }
+
+        }]
+
+    };
+
+    Vitrine.customFrameBlock = ($style) => {
+
+        $.extend(Vitrine.styleFrame, $style);
+
+    };
+
+    Vitrine.customCarousselConf = ($newConf) => {
+
+        $.extend(Vitrine.carousselConf, $newConf);
+
+    };
+
+    Vitrine.customFrameBlock = ($style) => {
+
+        $.extend(Vitrine.styleFrame, $style);
+
+    };
+
+    Vitrine.settings = () => {
+
+        Vitrine.frame = $(Vitrine.id, top.document);
+        Vitrine.frame.css(Vitrine.styleFrame);
+
+    };
+
+    Vitrine.makeCarrossel = () => {
+
+        var $Template = $("#template").html();
+        $Products = Vitrine.products;
+        $Products.forEach((v, k) => {
+
+            v.price = (typeof v.price != "undefined") ? v.price.toString().sbNumberFormat() : "";
+            v.installments_price = (typeof v.installments_price != "undefined") ? v.installments_price.toString().sbNumberFormat() : "";
+            v.normal_price = (typeof v.normal_price != "undefined") ? v.normal_price.toString().sbNumberFormat() : "";
+            v.image = v.image[0];
+
+            $Products[k] = v;
+
+        });
+
+        if($(".products").html(Mustache.to_html($Template, {'items': $Products}))){
+
+            $(".products").slick(Vitrine.carousselConf);
+
+        }
+
+
+    };
+
+    Vitrine.scrolling = ($Callback) => {
+
+        var $Window = Vitrine.clientScroll,
+            $Canvas = Vitrine.objectWithHeight,
+            $BoxSetPadding = $(Vitrine.paddingSet, window.top.document),
+            _HEIGHT = 0,
+            $Vitrine = Vitrine.frame,
+            $IsVisible = false,
+            oldPos = 0,
+            nowPos = 0,
+            trigger;
+
+
+
+
+        $BoxSetPadding.css({
+
+            'padding-bottom'    : Vitrine.styleFrame.height
+
+        });
+
+        $Canvas.each(function(){
+
+            _HEIGHT += parseInt($(this).innerHeight());
+
+        });
+        $Window.scroll(($evt) => {
+
+
+
+            trigger = (_HEIGHT - $(window.top).innerHeight());
+            console.log(_HEIGHT);
+            console.log(trigger);
+            console.log($Window.scrollTop());
+            nowPos = $Window.scrollTop();
+            if(nowPos > oldPos && nowPos == trigger && !$IsVisible && !Vitrine.disable){
+
+                $IsVisible = true;
+                $Vitrine.css({
+
+                    display : 'block'
+
+                }).stop().animate({
+
+                    opacity : '1',
+                    bottom  : '0'
+
+                }, 240, () => {
+
+                    if(!Vitrine.showed){
+
+                        Vitrine.activate();
+                        $Callback();
+
+                    }
+
+                });
+
+            }else if(oldPos > nowPos && $IsVisible && !Vitrine.disable){
+
+                $Vitrine.stop().animate({
+
+                    bottom : Vitrine.styleFrame.bottom,
+                    opacity: Vitrine.styleFrame.opacity
+
+                }, 120, () => {
+
+                    $IsVisible = false;
+
+                });
+
+            }
+
+            oldPos = nowPos;
+
+        });
+
+
+    };
+
+    Vitrine.getProducts = ($Filters) => {
+
+        $Filters = (typeof $Filters == 'undefined') ? {} : $Filters;
+        console.log(top.shopback.getRecommendations);
+        top.shopback.getRecommendations($Filters, function($Response, $Err){
+
+            Vitrine.products = $Response.data;
+            Vitrine.makeCarrossel();
+            Vitrine.redirect();
+
+        });
+
+    };
+
+    Vitrine.redirect = () => {
+
+        var $Target     = $('[data-magic-click]');
+
+        $Target.click(function(){
+
+            var $Link       = $(this).attr('data-magic-click'),
+                $Utm        = top.spl.link_transform("").replace("?",""),
+                $Hash       = "";
+
+
+            if(Vitrine.links){
+
+                $Link = Vitrine.links.tracking + $Link;
+                $Utm  = Vitrine.links.utm;
+            }
+
+            if(/(\#)+/.test($Link)){
+
+                $Link = $Link.split("#");
+                $Hash = "#" + $Link[1];
+                $Link = $Link[0];
+
+            }
+
+            $Utm = (/(\?)+/.test($Link)) ? "&" + $Utm : "?" + $Utm;
+
+            $Link = $Link + $Utm + $Hash;
+
+            top.spl.cid = Vitrine.id;
+            top.spl.click_only($Link);
+            top.spl.set_cookie('_spl_tr', Vitrine.id, 720);
+
+            setTimeout(() => {
+
+                window.top.location = $Link;
+
+            }, 800);
+
+        });
+
+
+    };
+
+    Vitrine.hide = () => {
+
+        Vitrine.disable = true;
+
+        Vitrine.frame.stop().animate({
+
+            bottom : Vitrine.styleFrame.bottom,
+            opacity: Vitrine.styleFrame.opacity
+
+        }, 120, () => {
+
+            Vitrine.frame.css({
+
+                display: 'none'
+
+            });
+
+            $(Vitrine.paddingSet, window.top.document).css({
+
+                'padding-bottom': '0'
+
+            });
+
+        });
+
+    };
+
+</script>
+
+<script type="text/javascript">
+    $("body", window.top.document).css("height", "auto");
+    Vitrine.init({
+
+        id : "#ovteste",
+        targetScroll: $(window.top),
+        padding: ".stext-107", //"#footer",
+        boxContent: $("body", window.top.document)
+
+    });
+
+    Vitrine.settings();
+    Vitrine.scrolling(Vitrine.getProducts);
+
+    $(".btn-close").click(($evt) => {
+
+        Vitrine.hide()
+
+    });
+
+
+
+</script>
+
+</body>
+
+</html>

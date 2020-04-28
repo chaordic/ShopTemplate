@@ -1,0 +1,10 @@
+.c-hr{
+    background-color: transparent;
+    border: none;
+}
+
+.c-hr--brand{
+    width: 90%;
+    height: 2px;
+    background-color: #DDDDDD;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "shopback-overlay-social-recomendacao",
+  "version": "1.0.0",
+  "authors": [
+    "Carlos Eduardo Gomes <carlitoshxcx@gmail.com>"
+  ],
+  "description": "ShopBack - Template para overlay social de recomendação.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.16.0",
+    "jquery.maskedinput": "^1.4.1",
+    "slick-carousel": "^1.6.0"
+  }
+}

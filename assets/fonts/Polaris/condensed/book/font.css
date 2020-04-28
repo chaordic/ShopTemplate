@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Polaris Condensed Book';
+  src: url('PolarisCondensed-Book.eot');
+  src: url('PolarisCondensed-Book.woff2') format('woff2'),
+       url('PolarisCondensed-Book.woff') format('woff'),
+       url('PolarisCondensed-Book.ttf') format('truetype'),
+       url('PolarisCondensed-Book.svg#PolarisCondensed-Book') format('svg'),
+       url('PolarisCondensed-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

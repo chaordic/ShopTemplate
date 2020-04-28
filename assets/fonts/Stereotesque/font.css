@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Stereotesque';
+    src: url('Stereotesque-Regular.eot');
+    src: url('Stereotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Stereotesque-Regular.woff2') format('woff2'),
+        url('Stereotesque-Regular.woff') format('woff'),
+        url('Stereotesque-Regular.ttf') format('truetype'),
+        url('Stereotesque-Regular.svg#Stereotesque-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stereotesque';
+    src: url('Stereotesque-Black.eot');
+    src: url('Stereotesque-Black.eot?#iefix') format('embedded-opentype'),
+        url('Stereotesque-Black.woff2') format('woff2'),
+        url('Stereotesque-Black.woff') format('woff'),
+        url('Stereotesque-Black.ttf') format('truetype'),
+        url('Stereotesque-Black.svg#Stereotesque-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stereotesque';
+    src: url('Stereotesque-Medium.eot');
+    src: url('Stereotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Stereotesque-Medium.woff2') format('woff2'),
+        url('Stereotesque-Medium.woff') format('woff'),
+        url('Stereotesque-Medium.ttf') format('truetype'),
+        url('Stereotesque-Medium.svg#Stereotesque-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stereotesque';
+    src: url('Stereotesque-Light.eot');
+    src: url('Stereotesque-Light.eot?#iefix') format('embedded-opentype'),
+        url('Stereotesque-Light.woff2') format('woff2'),
+        url('Stereotesque-Light.woff') format('woff'),
+        url('Stereotesque-Light.ttf') format('truetype'),
+        url('Stereotesque-Light.svg#Stereotesque-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Aero';
+    src: url('Aero.eot');
+    src: url('Aero.eot?#iefix') format('embedded-opentype'),
+        url('Aero.woff2') format('woff2'),
+        url('Aero.woff') format('woff'),
+        url('Aero.ttf') format('truetype'),
+        url('Aero.svg#Aero') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+

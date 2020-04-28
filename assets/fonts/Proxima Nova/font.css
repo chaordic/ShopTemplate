@@ -1,0 +1,21 @@
+@font-face {font-family: "Proxima Nova";
+  src: url("bf9f5d50c1b928ff21436517a1a95ad9.eot"); /* IE9*/
+  src: url("bf9f5d50c1b928ff21436517a1a95ad9.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("bf9f5d50c1b928ff21436517a1a95ad9.woff2") format("woff2"), /* chrome、firefox */
+  url("bf9f5d50c1b928ff21436517a1a95ad9.woff") format("woff"), /* chrome、firefox */
+  url("bf9f5d50c1b928ff21436517a1a95ad9.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("bf9f5d50c1b928ff21436517a1a95ad9.svg#Proxima Nova") format("svg"); /* iOS 4.1- */
+  font-weight: 400;
+}
+
+/*72b6f2c9990bd3d37b8013a59ed78902*/
+
+@font-face {font-family: "Proxima Nova";
+  src: url("72b6f2c9990bd3d37b8013a59ed78902.eot"); /* IE9*/
+  src: url("72b6f2c9990bd3d37b8013a59ed78902.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("72b6f2c9990bd3d37b8013a59ed78902.woff2") format("woff2"), /* chrome、firefox */
+  url("72b6f2c9990bd3d37b8013a59ed78902.woff") format("woff"), /* chrome、firefox */
+  url("72b6f2c9990bd3d37b8013a59ed78902.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("72b6f2c9990bd3d37b8013a59ed78902.svg#Proxima Nova") format("svg"); /* iOS 4.1- */
+  font-weight: 600;
+}

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-lightitalic-webfont.woff2') format('woff2'),
+         url('neosans-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-medium-webfont.woff2') format('woff2'),
+         url('neosans-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-mediumitalic-webfont.woff2') format('woff2'),
+         url('neosans-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-webfont.woff2') format('woff2'),
+         url('neosans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-black-webfont.woff2') format('woff2'),
+         url('neosans-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-blackitalic-webfont.woff2') format('woff2'),
+         url('neosans-blackitalic-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-bold-webfont.woff2') format('woff2'),
+         url('neosans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-bolditalic-webfont.woff2') format('woff2'),
+         url('neosans-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-italic-webfont.woff2') format('woff2'),
+         url('neosans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('neosans-light-webfont.woff2') format('woff2'),
+         url('neosans-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}

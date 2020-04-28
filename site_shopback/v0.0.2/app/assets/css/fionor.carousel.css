@@ -1,0 +1,7 @@
+.fionor-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+  .fionor__item {
+    position: absolute;
+    top: 50%; }

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Semplicita Pro Medium';
+  src: url('SemplicitaPro-Medium.eot');
+  src: url('SemplicitaPro-Medium.woff2') format('woff2'),
+       url('SemplicitaPro-Medium.woff') format('woff'),
+       url('SemplicitaPro-Medium.ttf') format('truetype'),
+       url('SemplicitaPro-Medium.svg#SemplicitaPro-Medium') format('svg'),
+       url('SemplicitaPro-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

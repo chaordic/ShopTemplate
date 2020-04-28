@@ -1,0 +1,40 @@
+# Your project's server will run on localhost:xxxx at this port
+PORT: 3000
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "last 2 versions"
+  - "ie >= 9"
+  - "ios >= 7"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    # - !!js/regexp .foundation-mq
+    # - !!js/regexp ^\.is-.*
+
+
+PATHS:
+  # Path to dist folder
+  dist: "html_overlay_social_recomendacao"
+
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{img,js,scss}/**/*"
+  
+  # Paths to Sass libraries, which can then be loaded with @import
+  sass:
+    - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/foundation-sites/scss"
+    - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/motion-ui/src"
+    - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/slick-carousel/slick/"
+
+  # Paths to JavaScript libraries, which are combined into one file
+  javascript:
+    # Libraries required by Foundation
+    - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/jquery/dist/jquery.js"
+    - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/slick-carousel/slick/slick.js"
+    # - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/jquery-validation/dist/jquery.validate.js"
+    # - "/Users/carloseduardogomes/Desktop/_ShopBack/0_LIBRARY/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'TT Prosto Sans';
+  src: url('TTProstoSans-Bold.eot');
+  src: url('TTProstoSans-Bold.woff2') format('woff2'),
+       url('TTProstoSans-Bold.woff') format('woff'),
+       url('TTProstoSans-Bold.ttf') format('truetype'),
+       url('TTProstoSans-Bold.svg#TTProstoSans-Bold') format('svg'),
+       url('TTProstoSans-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Prosto Sans';
+  src: url('TTProstoSans-Regular.eot');
+  src: url('TTProstoSans-Regular.woff2') format('woff2'),
+       url('TTProstoSans-Regular.woff') format('woff'),
+       url('TTProstoSans-Regular.ttf') format('truetype'),
+       url('TTProstoSans-Regular.svg#TTProstoSans-Regular') format('svg'),
+       url('TTProstoSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Prosto Sans';
+  src: url('TTProstoSans-Light.eot');
+  src: url('TTProstoSans-Light.woff2') format('woff2'),
+       url('TTProstoSans-Light.woff') format('woff'),
+       url('TTProstoSans-Light.ttf') format('truetype'),
+       url('TTProstoSans-Light.svg#TTProstoSans-Light') format('svg'),
+       url('TTProstoSans-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+

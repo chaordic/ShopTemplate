@@ -1,0 +1,26 @@
+copia sempre esse pedaço no inicio
+leftAlerta = posicaoAPartirDe.offset().left;
+topAlerta = posicaoAPartirDe.offset().top;
+
+e depois complementa com a linha abaixo;
+
+left 0%
+leftAlerta -= frame.innerWidth();
+
+left 50%
+leftAlerta -= ( frame.innerWidth() - posicaoAPartirDe.innerWidth() ) / 2;
+
+left 100%
+leftAlerta += posicaoAPartirDe.innerWidth();
+
+
+
+
+top 0%;
+topAlerta -= frame.innerHeight();
+
+top 50%
+topAlerta -= ( frame.innerHeight() - posicaoAPartirDe.innerHeight() ) / 2;
+
+top 100%
+topAlerta += posicaoAPartirDe.innerHeight();

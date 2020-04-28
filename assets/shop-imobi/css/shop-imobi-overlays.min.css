@@ -1,0 +1,733 @@
+* {
+    border: 0;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    user-select: none;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    text-decoration: none;
+}
+html {
+    height: 100vh;
+}
+html,
+body {
+    overflow: hidden;
+}
+/* OUTROS */
+
+.enableSelect {
+    user-select: initial;
+}
+a,
+.close,
+.btnFake,
+button,
+.poweredBy {
+    cursor: pointer;
+}
+/* /OUTROS */
+/* EFEITO DE CLIQUE NOS BOTÕES */
+
+.btnFake {
+    position: relative;
+}
+.btnFake:active {
+    left: 1px;
+    top: 1px;
+}
+/* EFEITO DE CLIQUE NOS BOTÕES */
+/* GRID */
+
+.alignLeft {
+    float: left;
+}
+.alignCenter {
+    margin: 0 auto;
+}
+.alignRight {
+    float: right;
+}
+.height1 {
+    height: 1px;
+}
+.height2 {
+    height: 2px;
+}
+.height3 {
+    height: 3px;
+}
+.height4 {
+    height: 4px;
+}
+.height5 {
+    height: 5px;
+}
+.height10 {
+    height: 10px;
+}
+.height15 {
+    height: 15px;
+}
+.height20 {
+    height: 20px;
+}
+.height25 {
+    height: 25px;
+}
+.height30 {
+    height: 30px;
+}
+.height35 {
+    height: 35px;
+}
+.height40 {
+    height: 40px;
+}
+.height45 {
+    height: 45px;
+}
+.height50 {
+    height: 50px;
+}
+.height55 {
+    height: 55px;
+}
+.height60 {
+    height: 60px;
+}
+.height65 {
+    height: 65px;
+}
+.height70 {
+    height: 70px;
+}
+.height75 {
+    height: 75px;
+}
+.height80 {
+    height: 80px;
+}
+.height85 {
+    height: 85px;
+}
+.height90 {
+    height: 90px;
+}
+.height95 {
+    height: 95px;
+}
+.height100 {
+    height: 100px;
+}
+.width1 {
+    width: 1%;
+}
+.width2 {
+    width: 2%;
+}
+.width3 {
+    width: 3%;
+}
+.width4 {
+    width: 4%;
+}
+.width5 {
+    width: 5%;
+}
+.width6 {
+    width: 6%;
+}
+.width7 {
+    width: 7%;
+}
+.width8 {
+    width: 8%;
+}
+.width9 {
+    width: 9%;
+}
+.width10 {
+    width: 10%;
+}
+.width11 {
+    width: 11%;
+}
+.width12 {
+    width: 12%;
+}
+.width13 {
+    width: 13%;
+}
+.width14 {
+    width: 14%;
+}
+.width15 {
+    width: 15%;
+}
+.width16 {
+    width: 16%;
+}
+.width17 {
+    width: 17%;
+}
+.width18 {
+    width: 18%;
+}
+.width19 {
+    width: 19%;
+}
+.width20 {
+    width: 20%;
+}
+.width21 {
+    width: 21%;
+}
+.width22 {
+    width: 22%;
+}
+.width23 {
+    width: 23%;
+}
+.width24 {
+    width: 24%;
+}
+.width25 {
+    width: 25%;
+}
+.width26 {
+    width: 26%;
+}
+.width27 {
+    width: 27%;
+}
+.width28 {
+    width: 28%;
+}
+.width29 {
+    width: 29%;
+}
+.width30 {
+    width: 30%;
+}
+.width31 {
+    width: 31%;
+}
+.width32 {
+    width: 32%;
+}
+.width33 {
+    width: 33%;
+}
+.width34 {
+    width: 34%;
+}
+.width35 {
+    width: 35%;
+}
+.width36 {
+    width: 36%;
+}
+.width37 {
+    width: 37%;
+}
+.width38 {
+    width: 38%;
+}
+.width39 {
+    width: 39%;
+}
+.width40 {
+    width: 40%;
+}
+.width41 {
+    width: 41%;
+}
+.width42 {
+    width: 42%;
+}
+.width43 {
+    width: 43%;
+}
+.width44 {
+    width: 44%;
+}
+.width45 {
+    width: 45%;
+}
+.width46 {
+    width: 46%;
+}
+.width47 {
+    width: 47%;
+}
+.width48 {
+    width: 48%;
+}
+.width49 {
+    width: 49%;
+}
+.width50 {
+    width: 50%;
+}
+.width51 {
+    width: 51%;
+}
+.width52 {
+    width: 52%;
+}
+.width53 {
+    width: 53%;
+}
+.width54 {
+    width: 54%;
+}
+.width55 {
+    width: 55%;
+}
+.width56 {
+    width: 56%;
+}
+.width57 {
+    width: 57%;
+}
+.width58 {
+    width: 58%;
+}
+.width59 {
+    width: 59%;
+}
+.width60 {
+    width: 60%;
+}
+.width61 {
+    width: 61%;
+}
+.width62 {
+    width: 62%;
+}
+.width63 {
+    width: 63%;
+}
+.width64 {
+    width: 64%;
+}
+.width65 {
+    width: 65%;
+}
+.width66 {
+    width: 66%;
+}
+.width67 {
+    width: 67%;
+}
+.width68 {
+    width: 68%;
+}
+.width69 {
+    width: 69%;
+}
+.width70 {
+    width: 70%;
+}
+.width71 {
+    width: 71%;
+}
+.width72 {
+    width: 72%;
+}
+.width73 {
+    width: 73%;
+}
+.width74 {
+    width: 74%;
+}
+.width75 {
+    width: 75%;
+}
+.width76 {
+    width: 76%;
+}
+.width77 {
+    width: 77%;
+}
+.width78 {
+    width: 78%;
+}
+.width79 {
+    width: 79%;
+}
+.width80 {
+    width: 80%;
+}
+.width81 {
+    width: 81%;
+}
+.width82 {
+    width: 82%;
+}
+.width83 {
+    width: 83%;
+}
+.width84 {
+    width: 84%;
+}
+.width85 {
+    width: 85%;
+}
+.width86 {
+    width: 86%;
+}
+.width87 {
+    width: 87%;
+}
+.width88 {
+    width: 88%;
+}
+.width89 {
+    width: 89%;
+}
+.width90 {
+    width: 90%;
+}
+.width91 {
+    width: 91%;
+}
+.width92 {
+    width: 92%;
+}
+.width93 {
+    width: 93%;
+}
+.width94 {
+    width: 94%;
+}
+.width95 {
+    width: 95%;
+}
+.width96 {
+    width: 96%;
+}
+.width97 {
+    width: 97%;
+}
+.width98 {
+    width: 98%;
+}
+.width99 {
+    width: 99%;
+}
+.width100 {
+    width: 100%;
+}
+.space {
+    background: rgba(0, 0, 0, 0);
+    clear: both;
+    display: block;
+    opacity: 0;
+    width: 1px;
+}
+.boxContainer > * {
+    height: 100%;
+    width: 100%;
+}
+.boxContainer > * {
+    display: none;
+}
+.boxContainer > .tela1,
+.boxContainer > .poweredBy {
+    display: block;
+}
+.boxContainer > * {
+    opacity: 0;
+}
+.boxContainer > *:first-child,
+.boxContainer > .poweredBy {
+    opacity: 1;
+}
+.poweredBy {
+    padding: 10px 0 0 0;
+	height: auto;
+}
+.red {
+    background: rgba(255, 0, 0, 0.3)
+}
+.green {
+    background: rgba(0, 255, 0, 0.3)
+}
+.blue {
+    background: rgba(0, 0, 255, 0.3)
+}
+.black {
+    background: rgba(0, 0, 0, 0.5)
+}
+.white {
+    background: rgba(255, 255, 255, 0.5)
+}
+.textInLeft {
+    text-align: left;
+}
+.textInCenter {
+    text-align: center;
+}
+.textInRight {
+    text-align: right;
+}
+/* /GRID */
+
+b,
+strong {
+    font-weight: 700;
+}
+input:first-of-type {
+    margin-top: 10px;
+}
+input:last-of-type {
+    margin-bottom: 10px;
+}
+.close {
+    position: absolute;
+    z-index: 9999;
+}
+.boxContainer {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+}
+/* TEXTOS */
+
+.texto-top {
+    color: #d10008;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.texto-top2 {
+    color: #001f4d;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.texto-top3 {
+    color: #111111;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+.texto-thanks {
+    color: #333333;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.texto-thanks2 {
+    color: #333333;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+.p1.bloco-opcao-texto {
+    padding: 3px 0 0 0;
+    color: #001f4d;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+.bloco-opcao-texto {
+    padding: 3px 5px 0 5px;
+    color: #111111;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+.simularLink {
+    color: #1a0dab;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+.simularLink:hover,
+.simularLink:active {
+    text-decoration: underline;
+}
+/* /TEXTOS */
+
+input,
+textarea,
+button {
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    margin: 5px 0 5px 0;
+    padding: 0px 10px 0 10px;
+    width: 100%;
+}
+input,
+textarea {
+    color: #111111;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+input {
+    height: 36px;
+}
+input[type='radio'] {
+    max-width: 18px;
+}
+input:first-of-type {
+    margin-top: 10px;
+}
+input:last-of-type {
+    margin-bottom: 10px;
+}
+input.FormNormalizeMargins,
+textarea.FormNormalizeMargin {
+    margin: 5px 0 5px 0;
+}
+.backgroundLateral img {
+    max-width: 118px;
+}
+.invisible {
+    display: none;
+}
+/* BLOCO OPÇÕES */
+
+.bloco-opcao {
+    cursor: pointer;
+}
+.bloco-opcao > div {
+    float: left;
+}
+.bloco-opcao:hover * {
+    color: #001f4d;
+}
+.bloco-opcao:hover .opcao-radius div div,
+.bloco-opcao.active .opcao-radius div div {
+    background: #001f4d;
+}
+.opcao-radiusWrapper {
+    position: relative;
+    top: 2px;
+}
+.opcao-radius {
+    display: block;
+}
+.opcao-radius,
+.opcao-radius * {
+    border-radius: 100%;
+    position: relative;
+}
+.opcao-radius {
+    background: #999999;
+    height: 20px;
+    width: 20px;
+}
+.opcao-radius div {
+    background: #ffffff;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+}
+.opcao-radius div div {
+    background: #ffffff;
+    height: 12px;
+    left: 2px;
+    top: 2px;
+    width: 12px;
+}
+/* BLOCO OPÇÕES */
+
+textarea {
+    height: 80px;
+    line-height: 19px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    resize: none;
+}
+button {
+    background: #001f4d;
+    padding: 7px 10px 7px 10px;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+button > span {
+    display: inline;
+    left: 1px;
+    position: relative;
+    top: -1px;
+}
+button > img {
+    left: -1px;
+    position: relative;
+    top: 1px;
+}
+.boxCheck {
+    margin: 0 auto;
+    text-align: center;
+}
+.boxCheck2 {
+    display: inline-block;
+    margin: 15px auto 15px auto;
+}
+.boxCheck3,
+.boxCheck4 {
+    background: #001f4d;
+    height: 10px;
+    position: relative;
+}
+.boxCheck3 {
+    transform: rotate(45deg);
+    width: 45px;
+}
+.boxCheck4 {
+    left: 17px;
+    top: -29px;
+    transform: rotate(-45deg);
+    width: 100px;
+}

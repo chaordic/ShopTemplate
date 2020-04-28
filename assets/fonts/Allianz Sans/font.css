@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Allianz Sans';
+  src: url('AllianzSans-Light.eot');
+  src: url('AllianzSans-Light.woff2') format('woff2'),
+       url('AllianzSans-Light.woff') format('woff'),
+       url('AllianzSans-Light.ttf') format('truetype'),
+       url('AllianzSans-Light.svg#AllianzSans-Light') format('svg'),
+       url('AllianzSans-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Allianz Sans';
+  src: url('AllianzSans-Regular.eot');
+  src: url('AllianzSans-Regular.woff2') format('woff2'),
+       url('AllianzSans-Regular.woff') format('woff'),
+       url('AllianzSans-Regular.ttf') format('truetype'),
+       url('AllianzSans-Regular.svg#AllianzSans-Regular') format('svg'),
+       url('AllianzSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Allianz Sans';
+  src: url('AllianzSans-Bold.eot');
+  src: url('AllianzSans-Bold.woff2') format('woff2'),
+       url('AllianzSans-Bold.woff') format('woff'),
+       url('AllianzSans-Bold.ttf') format('truetype'),
+       url('AllianzSans-Bold.svg#AllianzSans-Bold') format('svg'),
+       url('AllianzSans-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
