@@ -53,3 +53,5 @@ var stopShowCustomization = function stopShowCustomization(idCampaign) {
   window.top.spl.cid_views = idCampaign;
   window.top.spl.close_views();
 }
+
+//teste
