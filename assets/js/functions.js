@@ -54,4 +54,4 @@ var stopShowCustomization = function stopShowCustomization(idCampaign) {
   window.top.spl.close_views();
 }
 
-//teste
+var cache = 0
